@@ -145,7 +145,7 @@ if ($result->num_rows > 0) {
         </figure>
         <div class="airdrop-currency-info">
             <a href="#" class="popular-tag">Popular</a>
-            <h2 class="h4">Etharum</h2>
+            <h2 class="h4">' . $row["coin_name"] . '</h2>
             <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
