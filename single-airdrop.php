@@ -183,17 +183,17 @@ if ($result->num_rows > 0) {
           <h2 class="h6">Stay Connected!</h2>
           <ul class="giveway-list">
               <li><span><img src="assets/img/icons/social/web.png" alt="Coin"/>Coin</span>: ' . $row["coin_name"] . '</li>
-              <li><span><img src="assets/img/icons/giveway/twitter.png" alt="Coin"/>Est Value</span>: ' . $row["est_value"] . '</li>
-              <li><span><img src="assets/img/icons/giveway/medium.png" alt="Coin"/>Validation</span>: ' . $row["blockchain"] . '</li>
-              <li><span><img src="assets/img/icons/giveway/youtube.png" alt="Coin"/>End Date</span>: ' . $row["end_date"] . '</li>
-              <li><span><img src="assets/img/icons/giveway/facebook.png" alt="Coin"/>Total Spent</span>: ' . $row["tokens"] . '</li>
-              <li><span><img src="assets/img/icons/giveway/instagram.png" alt="Coin"/>Persons</span>: ' . $row["publish_date"] . '</li>
-              <li><span><img src="assets/img/icons/giveway/discord.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
-              <li><span><img src="assets/img/icons/giveway/telegram.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
-              <li><span><img src="assets/img/icons/giveway/blogging.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
-              <li><span><img src="assets/img/icons/giveway/github.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
-              <li><span><img src="assets/img/icons/giveway/reddit.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
-              <li><span><img src="assets/img/icons/giveway/linkedin.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
+              <li><span><img src="assets/img/icons/social/twitter.png" alt="Coin"/>Est Value</span>: ' . $row["est_value"] . '</li>
+              <li><span><img src="assets/img/icons/social/medium.png" alt="Coin"/>Validation</span>: ' . $row["blockchain"] . '</li>
+              <li><span><img src="assets/img/icons/social/youtube.png" alt="Coin"/>End Date</span>: ' . $row["end_date"] . '</li>
+              <li><span><img src="assets/img/icons/social/facebook.png" alt="Coin"/>Total Spent</span>: ' . $row["tokens"] . '</li>
+              <li><span><img src="assets/img/icons/social/instagram.png" alt="Coin"/>Persons</span>: ' . $row["publish_date"] . '</li>
+              <li><span><img src="assets/img/icons/social/discord.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
+              <li><span><img src="assets/img/icons/social/telegram.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
+              <li><span><img src="assets/img/icons/social/blogging.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
+              <li><span><img src="assets/img/icons/social/github.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
+              <li><span><img src="assets/img/icons/social/reddit.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
+              <li><span><img src="assets/img/icons/social/linkedin.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
           </ul>
         </div> 
     
