@@ -191,11 +191,10 @@ if ($result->num_rows > 0) {
               <span><a href="https://example.com"><img src="assets/img/icons/social/discord.png" alt="Coin" width="30" height="30"/></a></span>
               <span><a href="https://example.com"><img src="assets/img/icons/social/telegram.png" alt="Coin" width="30" height="30"/></a></span>
               <span><a href="https://example.com"><img src="assets/img/icons/social/blogging.png" alt="Coin" width="30" height="30"/></a></span>
+              <span><a href="https://example.com"><img src="assets/img/icons/social/github.png" alt="Coin" width="30" height="30"/></a></span>
+              <span><a href="https://example.com"><img src="assets/img/icons/social/reddit.png" alt="Coin" width="30" height="30"/></a></span>
+              <span><a href="https://example.com"><img src="assets/img/icons/social/linkedin.png" alt="Coin" width="30" height="30"/></a></span>
 
-
-              <li><span><img src="assets/img/icons/social/github.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
-              <li><span><img src="assets/img/icons/social/reddit.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
-              <li><span><img src="assets/img/icons/social/linkedin.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
           </ul>
         </div> 
     
