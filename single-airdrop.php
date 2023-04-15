@@ -110,30 +110,7 @@ include('advertise_1.php');
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="single-page-sidebar">
-                                <div class="single-sidebar-item">
-                                    <div class="airdrop-details-area d-flex">
-                                        <figure class="airdrop-currency-thumb">
-                                            <img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop"
-                                                 class="img-fluid"/>
-                                        </figure>
-                                        <div class="airdrop-currency-info">
-                                            <a href="#" class="popular-tag">Popular</a>
-                                            <h2 class="h4">Etharum</h2>
-                                            <div class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star-half-o"></i>
-                                                <i class="fa fa-star-o"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p>A Global Digital Advertising Screen Network Open to Everyone.</p>
-                                    <div class="brand-btn-group">
-                                        <a href="#" class="btn btn-gradiant"><i class="fa fa-download"></i> Whitepapper</a>
-                                        <a href="#" class="btn btn-gradiant">Join Airdrop</a>
-                                    </div>
-                                </div>
+                                
 
                                 <?php
 // Database connection settings
@@ -161,6 +138,33 @@ if ($result->num_rows > 0) {
     
     // Display the details
     echo '<div class="single-sidebar-item">
+    <div class="airdrop-details-area d-flex">
+        <figure class="airdrop-currency-thumb">
+            <img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop"
+                 class="img-fluid"/>
+        </figure>
+        <div class="airdrop-currency-info">
+            <a href="#" class="popular-tag">Popular</a>
+            <h2 class="h4">Etharum</h2>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+        </div>
+    </div>
+    <p>A Global Digital Advertising Screen Network Open to Everyone.</p>
+    <div class="brand-btn-group">
+        <a href="#" class="btn btn-gradiant"><i class="fa fa-download"></i> Whitepapper</a>
+        <a href="#" class="btn btn-gradiant">Join Airdrop</a>
+    </div>
+</div>
+
+
+    
+    <div class="single-sidebar-item">
             <h2 class="h6">Giveaway Details:</h2>
             <ul class="giveway-list">
                 <li><span><img src="assets/img/icons/giveway/coin.png" alt="Coin"/>Coin</span>: ' . $row["coin_name"] . '</li>
