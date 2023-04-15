@@ -155,7 +155,7 @@ if ($result->num_rows > 0) {
             </div>
         </div>
     </div>
-    <p>A Global Digital Advertising Screen Network Open to Everyone.</p>
+    <p>' . $row["coin_tagline"] . '</p>
     <div class="brand-btn-group">
         <a href="#" class="btn btn-gradiant"><i class="fa fa-download"></i> Whitepapper</a>
         <a href="#" class="btn btn-gradiant">Join Airdrop</a>
