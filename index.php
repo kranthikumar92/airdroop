@@ -149,8 +149,6 @@ $dateInterval = $fromDateTime->diff($toDateTime);
 // Extract the difference in days
 $days = $dateInterval->days;
 
-// Display the result
-//echo "The difference in days between {$fromDate} and {$toDate} is: {$daysDifference} days";
 
 
         // Display the details

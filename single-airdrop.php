@@ -135,45 +135,51 @@ include('advertise_1.php');
                                     </div>
                                 </div>
 
-                                <div class="single-sidebar-item">
-                                    <h2 class="h6">Giveaway Details:</h2>
+                                <?php
+// Database connection settings
+$servername = "localhost";
+$username = "calix_web_user";
+$password = "calixworldhhUUh383287HGSHhs";
+$dbname = "calix_cry_world";
 
-                                    <ul class="giveway-list">
-                                        <li>
-                                            <span><img src="assets/img/icons/giveway/coin.png" alt="Coin"/>Coin</span>
-                                            : 2500ETM
-                                        </li>
-                                        <li>
-                                    <span><img src="assets/img/icons/giveway/doller.png"
-                                               alt="Coin"/>Est Value</span>
-                                            : $05
-                                        </li>
-                                        <li>
-                                    <span><img src="assets/img/icons/giveway/check.png"
-                                               alt="Coin"/>Validation</span>
-                                            : 100% Real
-                                        </li>
-                                        <li>
-                                    <span><img src="assets/img/icons/giveway/alerm.png"
-                                               alt="Coin"/>End Date</span>
-                                            : 119 Apr 2018
-                                        </li>
-                                        <li>
-                                            <span><img src="assets/img/icons/giveway/total.png" alt="Coin"/>Total  Spent</span>
-                                            : 895475554ETM
-                                        </li>
-                                        <li>
-                                    <span><img src="assets/img/icons/giveway/person.png"
-                                               alt="Coin"/>Persons</span>
-                                            : 15478
-                                        </li>
-                                        <li>
-                                    <span><img src="assets/img/icons/giveway/flag.png"
-                                               alt="Coin"/>Dificullty</span>
-                                            : Easy
-                                        </li>
-                                    </ul>
-                                </div>
+// Create a connection to the database
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check the connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Query to retrieve the details of the coin with sno = 1
+$sql = "SELECT * FROM airdrop WHERE sno = 1";
+$result = $conn->query($sql);
+
+// Check if the query was successful
+if ($result->num_rows > 0) {
+    // Fetch the result as an associative array
+    $row = $result->fetch_assoc();
+    
+    // Display the details
+    echo '<div class="single-sidebar-item">
+            <h2 class="h6">Giveaway Details:</h2>
+            <ul class="giveway-list">
+                <li><span><img src="assets/img/icons/giveway/coin.png" alt="Coin"/>Coin</span>: ' . $row["coin_name"] . '</li>
+                <li><span><img src="assets/img/icons/giveway/doller.png" alt="Coin"/>Est Value</span>: ' . $row["est_value"] . '</li>
+                <li><span><img src="assets/img/icons/giveway/check.png" alt="Coin"/>Validation</span>: ' . $row["blockchain"] . '</li>
+                <li><span><img src="assets/img/icons/giveway/alerm.png" alt="Coin"/>End Date</span>: ' . $row["end_date"] . '</li>
+                <li><span><img src="assets/img/icons/giveway/total.png" alt="Coin"/>Total Spent</span>: ' . $row["tokens"] . '</li>
+                <li><span><img src="assets/img/icons/giveway/person.png" alt="Coin"/>Persons</span>: ' . $row["publish_date"] . '</li>
+                <li><span><img src="assets/img/icons/giveway/flag.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
+            </ul>
+          </div>';
+} else {
+    echo "No results found.";
+}
+
+// Close the database connection
+$conn->close();
+?>
+
 
                                 <div class="single-sidebar-item">
                                     <h2 class="h6">Required Tools:</h2>
