@@ -105,37 +105,77 @@ include('advertise_1.php');
         <div class="airdrop-listing-wrapper">
             <div class="row">
                 <!-- Single Airdrop Start -->
-                <div class="col-lg-4 col-md-6 col-sm-9 m-auto">
-                    <div class="single-airdrop-wrap">
-                        <div class="airdrop-tags">
-                            <a href="airdrop-listing.php" class="popular">Popular</a>
-                            <a href="airdrop-listing.php" class="running">Running</a>
-                            <a href="#" class="star">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </a>
-                        </div>
-                        <div class="airdrop-content-wrap d-flex">
-                            <div class="aidrop-logo-area">
-                                <figure class="airdrop-icon">
-                                    <a href="single-airdrop.php"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
+                <?php
+// Database connection parameters
+$servername = "localhost";
+$username = "calix_web_user";
+$password = "calixworldhhUUh383287HGSHhs";
+$dbname = "calix_cry_world";
 
-                                    <figcaption class="offer-time">
-                                        <p>28 Days</p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="airdrop-info-wrap">
-                                <h2 class="h4"><a href="single-airdrop.php">Etharum</a></h2>
-                                <p>Free coin for joining</p>
-                                <p class="giveway-text">Giveaway Worth $10</p>
-                            </div>
-                        </div>
+// Create database connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch data from the airdrop table
+$sql = "SELECT * FROM airdrop_coins";
+$result = $conn->query($sql);
+
+// Check if any results are returned
+if ($result->num_rows > 0) {
+    // Loop through each row of data
+    while ($row = $result->fetch_assoc()) {
+        // Extract the data
+        $logo = $row["coin_img"];
+        $name = $row["coin_name"];
+        $days = $row["days"];
+        $tagline = $row["coin_tagline"];
+        $giveaway_worth = $row["est_value"];
+
+        // Display the details
+        echo '<div class="col-lg-4 col-md-6 col-sm-9 m-auto">
+            <div class="single-airdrop-wrap">
+                <div class="airdrop-tags">
+                    <a href="airdrop-listing.php" class="popular">Popular</a>
+                    <a href="airdrop-listing.php" class="running">Running</a>
+                    <a href="#" class="star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </a>
+                </div>
+                <div class="airdrop-content-wrap d-flex">
+                    <div class="aidrop-logo-area">
+                        <figure class="airdrop-icon">
+                            <a href="single-airdrop.php"><img src="'.$logo.'" alt="'.$name.'" class="img-fluid" /></a>
+
+                            <figcaption class="offer-time">
+                                <p>'.$days.' Days</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="airdrop-info-wrap">
+                        <h2 class="h4"><a href="single-airdrop.php">'.$name.'</a></h2>
+                        <p>'.$tagline.'</p>
+                        <p class="giveway-text">Giveaway Worth '.$giveaway_worth.'</p>
                     </div>
                 </div>
+            </div>
+        </div>';
+    }
+} else {
+    echo "No results found.";
+}
+
+// Close database connection
+$conn->close();
+?>
+
                 <!-- Single Airdrop End -->
 
                 <!-- Single Airdrop Start -->
