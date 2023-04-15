@@ -83,7 +83,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-xl">
-                        <a class="navbar-brand" href="index-2.php">
+                        <a class="navbar-brand" href="index.php">
                             <img src="assets/img/logo.png" alt="Logo" />
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"  data-target="#mainMenu">
@@ -92,7 +92,7 @@
 
                         <div class="collapse navbar-collapse" id="mainMenu">
                             <ul class="navbar-nav ml-auto">
-                                <li class="current"><a href="index-2.php">Home</a></li>
+                                <li class="current"><a href="index.php">Home</a></li>
                                 <li><a href="airdrop-listing.php">Airdrops</a></li>
                                 <li><a href="submit.php">Submit Airdrop</a></li>
                                 <li><a href="single-company.php">Company Profile</a></li>

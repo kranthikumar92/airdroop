@@ -84,7 +84,9 @@ include('header.php');
 <!--== Header Area End ==-->
 
 <!--== Currency Rate Area Start ==-->
-
+<?php
+include('ticker_extension.php');
+?>
 <!--== Currency Rate Area End ==-->
 
 <!--== Latest Airdrops Area Start ==-->
