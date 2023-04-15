@@ -140,7 +140,7 @@ if ($result->num_rows > 0) {
     echo '<div class="single-sidebar-item">
     <div class="airdrop-details-area d-flex">
         <figure class="airdrop-currency-thumb">
-            <img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop"
+            <img src="' . $row["coin_img"] . '" alt="' . $row["coin_name"] . '"
                  class="img-fluid"/>
         </figure>
         <div class="airdrop-currency-info">
@@ -157,8 +157,8 @@ if ($result->num_rows > 0) {
     </div>
     <p>' . $row["coin_tagline"] . '</p>
     <div class="brand-btn-group">
-        <a href="#" class="btn btn-gradiant"><i class="fa fa-download"></i> Whitepapper</a>
-        <a href="#" class="btn btn-gradiant">Join Airdrop</a>
+        <a href="' . $row["whitepaper"] . '" class="btn btn-gradiant"><i class="fa fa-download"></i> Whitepapper</a>
+        <a href="' . $row["airdrop_join_link"] . '" class="btn btn-gradiant">Join Airdrop</a>
     </div>
 </div>
 
