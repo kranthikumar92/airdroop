@@ -182,7 +182,7 @@ if ($result->num_rows > 0) {
     <div class="single-sidebar-item">
           <h2 class="h6">Stay Connected!</h2>
           <ul class="giveway-list">
-              <span><img src="assets/img/icons/social/web.png" alt="Coin"/></span>
+              <span><img src="assets/img/icons/social/web.png" alt="Coin" width="30" height="30"/></span>
               <span><img src="assets/img/icons/social/twitter.png" alt=""/>Est Value</span>
               <li><span><img src="assets/img/icons/social/medium.png" alt="Coin"/>Validation</span>: ' . $row["blockchain"] . '</li>
               <li><span><img src="assets/img/icons/social/youtube.png" alt="Coin"/>End Date</span>: ' . $row["end_date"] . '</li>
