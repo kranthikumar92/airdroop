@@ -141,13 +141,7 @@ if ($result->num_rows > 0) {
                 <div class="airdrop-tags">
                     <a href="airdrop-listing.php" class="popular">Popular</a>
                     <a href="airdrop-listing.php" class="running">Running</a>
-                    <a href="#" class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </a>
+                    
                 </div>
                 <div class="airdrop-content-wrap d-flex">
                     <div class="aidrop-logo-area">
