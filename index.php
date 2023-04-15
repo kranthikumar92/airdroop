@@ -78,7 +78,10 @@
     Which is way behind to view this site properly. Please update to a modern browser, At least a real browser. </p>
 <![endif]-->
 
-include 'header.php';
+include('header.php');
+
+</header>
+<!--== Header Area End ==-->
 
 <!--== Currency Rate Area Start ==-->
 <div id="currency-rate-area">

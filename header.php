@@ -110,5 +110,3 @@
         </div>
     </div>
     <!-- Navigation Area End -->
-</header>
-<!--== Header Area End ==-->
