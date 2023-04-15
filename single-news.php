@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
-<!-- Mirrored from codeboxr.net/themedemo/airdroop/single-news.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Apr 2023 10:30:35 GMT -->
+<!-- Mirrored from codeboxr.net/themedemo/airdroop/single-news.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Apr 2023 10:30:35 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -163,7 +163,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-xl">
-                        <a class="navbar-brand" href="index-2.html">
+                        <a class="navbar-brand" href="index-2.php">
                             <img src="assets/img/logo.png" alt="Logo" />
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"  data-target="#mainMenu">
@@ -172,15 +172,15 @@
 
                         <div class="collapse navbar-collapse" id="mainMenu">
                             <ul class="navbar-nav ml-auto">
-                                <li class="current"><a href="index-2.html">Home</a></li>
-                                <li><a href="airdrop-listing.html">Airdrops</a></li>
-                                <li><a href="submit.html">Submit Airdrop</a></li>
-                                <li><a href="single-company.html">Company Profile</a></li>
-                                <li><a href="news.html">News</a></li>
+                                <li class="current"><a href="index-2.php">Home</a></li>
+                                <li><a href="airdrop-listing.php">Airdrops</a></li>
+                                <li><a href="submit.php">Submit Airdrop</a></li>
+                                <li><a href="single-company.php">Company Profile</a></li>
+                                <li><a href="news.php">News</a></li>
                             </ul>
                             <div class="member-area">
                                 <a href="#" class="btn btn-brand" data-toggle="modal" data-target="#loginModal" role="button">Login</a>
-                                <a href="step.html" class="btn btn-blue">Singup</a>
+                                <a href="step.php" class="btn btn-blue">Singup</a>
                                 <a href="#" class="btn btn-round btn-search"><i class="fa fa-search"></i></a>
                             </div>
                         </div>
@@ -197,97 +197,97 @@
 <div id="currency-rate-area">
     <div class="currency-rate-slider">
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-up">(+5.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a  href="single-airdrop.html" class="single-currency-rate">
+        <a  href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-up">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-up">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-up">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-up">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-up">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
@@ -396,7 +396,7 @@
                                 <!-- Single Sidebar Start -->
                                 <div class="single-sidebar-wrap">
                                     <div class="brand-search-form">
-                                        <form action="https://codeboxr.net/themedemo/airdroop/index.html">
+                                        <form action="https://codeboxr.net/themedemo/airdroop/index.php">
                                             <input type="search" placeholder="Type and hit here">
                                             <button type="button"><i class="fa fa-search"></i></button>
                                         </form>
@@ -462,7 +462,7 @@
                     <!-- Single Widget Start -->
                     <div class="col-lg-3 col-sm-6">
                         <div class="single-widget-wrap">
-                            <a href="index-2.html">
+                            <a href="index-2.php">
                                 <img src="assets/img/logo-black.png" alt="Logo" />
                             </a>
                             <div class="about-widget">
@@ -578,7 +578,7 @@
 <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
 
 <!-- Lscache JS  -->
-<script src="assets/vendor/lscache/lscache.min.html"></script>
+<script src="assets/vendor/lscache/lscache.min.php"></script>
 
 <!-- Magnific Popup JS  -->
 <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
@@ -595,5 +595,5 @@
 
 </body>
 
-<!-- Mirrored from codeboxr.net/themedemo/airdroop/single-news.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Apr 2023 10:30:35 GMT -->
+<!-- Mirrored from codeboxr.net/themedemo/airdroop/single-news.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Apr 2023 10:30:35 GMT -->
 </html>

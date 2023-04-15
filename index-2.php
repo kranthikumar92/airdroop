@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
-<!-- Mirrored from codeboxr.net/themedemo/airdroop/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Apr 2023 10:30:30 GMT -->
+<!-- Mirrored from codeboxr.net/themedemo/airdroop/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Apr 2023 10:30:30 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -163,7 +163,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-xl">
-                        <a class="navbar-brand" href="index-2.html">
+                        <a class="navbar-brand" href="index-2.php">
                             <img src="assets/img/logo.png" alt="Logo" />
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"  data-target="#mainMenu">
@@ -172,15 +172,15 @@
 
                         <div class="collapse navbar-collapse" id="mainMenu">
                             <ul class="navbar-nav ml-auto">
-                                <li class="current"><a href="index-2.html">Home</a></li>
-                                <li><a href="airdrop-listing.html">Airdrops</a></li>
-                                <li><a href="submit.html">Submit Airdrop</a></li>
-                                <li><a href="single-company.html">Company Profile</a></li>
-                                <li><a href="news.html">News</a></li>
+                                <li class="current"><a href="index-2.php">Home</a></li>
+                                <li><a href="airdrop-listing.php">Airdrops</a></li>
+                                <li><a href="submit.php">Submit Airdrop</a></li>
+                                <li><a href="single-company.php">Company Profile</a></li>
+                                <li><a href="news.php">News</a></li>
                             </ul>
                             <div class="member-area">
                                 <a href="#" class="btn btn-brand" data-toggle="modal" data-target="#loginModal" role="button">Login</a>
-                                <a href="step.html" class="btn btn-blue">Singup</a>
+                                <a href="step.php" class="btn btn-blue">Singup</a>
                                 <a href="#" class="btn btn-round btn-search"><i class="fa fa-search"></i></a>
                             </div>
                         </div>
@@ -197,97 +197,97 @@
 <div id="currency-rate-area">
     <div class="currency-rate-slider">
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-up">(+5.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a  href="single-airdrop.html" class="single-currency-rate">
+        <a  href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-up">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-up">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-up">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-up">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-up">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
 
         <!-- Single Currency Rate Start -->
-        <a href="single-airdrop.html" class="single-currency-rate">
+        <a href="single-airdrop.php" class="single-currency-rate">
             <p><strong>ETH:</strong>€ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
         </a>
         <!-- Single Currency Rate End -->
@@ -314,8 +314,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-9 m-auto">
                     <div class="single-airdrop-wrap">
                         <div class="airdrop-tags">
-                            <a href="airdrop-listing.html" class="popular">Popular</a>
-                            <a href="airdrop-listing.html" class="running">Running</a>
+                            <a href="airdrop-listing.php" class="popular">Popular</a>
+                            <a href="airdrop-listing.php" class="running">Running</a>
                             <a href="#" class="star">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -327,7 +327,7 @@
                         <div class="airdrop-content-wrap d-flex">
                             <div class="aidrop-logo-area">
                                 <figure class="airdrop-icon">
-                                    <a href="single-airdrop.html"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
+                                    <a href="single-airdrop.php"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
 
                                     <figcaption class="offer-time">
                                         <p>28 Days</p>
@@ -335,7 +335,7 @@
                                 </figure>
                             </div>
                             <div class="airdrop-info-wrap">
-                                <h2 class="h4"><a href="single-airdrop.html">Etharum</a></h2>
+                                <h2 class="h4"><a href="single-airdrop.php">Etharum</a></h2>
                                 <p>Free coin for joining</p>
                                 <p class="giveway-text">Giveaway Worth $10</p>
                             </div>
@@ -348,76 +348,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-9 m-auto">
                     <div class="single-airdrop-wrap">
                         <div class="airdrop-tags">
-                            <a href="airdrop-listing.html" class="popular">Popular</a>
-                            <a href="airdrop-listing.html" class="finished">Close</a>
-                            <a href="#" class="star">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-empty"></i>
-                            </a>
-                        </div>
-                        <div class="airdrop-content-wrap d-flex">
-                            <div class="aidrop-logo-area">
-                                <figure class="airdrop-icon">
-                                    <a href="single-airdrop.html"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
-
-                                    <figcaption class="offer-time">
-                                        <p>28 Days</p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="airdrop-info-wrap">
-                                <h2 class="h4"><a href="single-airdrop.html">Litcoin</a></h2>
-                                <p>Free coin for joining</p>
-                                <p class="giveway-text">Giveaway Worth $10</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Airdrop End -->
-
-                <!-- Single Airdrop Start -->
-                <div class="col-lg-4 col-md-6 col-sm-9 m-auto">
-                    <div class="single-airdrop-wrap">
-                        <div class="airdrop-tags">
-                            <a href="airdrop-listing.html" class="popular">Popular</a>
-                            <a href="airdrop-listing.html" class="running">Running</a>
-                            <a href="#" class="star">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </a>
-                        </div>
-                        <div class="airdrop-content-wrap d-flex">
-                            <div class="aidrop-logo-area">
-                                <figure class="airdrop-icon">
-                                    <a href="single-airdrop.html"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
-
-                                    <figcaption class="offer-time">
-                                        <p>28 Days</p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="airdrop-info-wrap">
-                                <h2 class="h4"><a href="single-airdrop.html">Bitcoin</a></h2>
-                                <p>Free coin for joining</p>
-                                <p class="giveway-text">Giveaway Worth $10</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Airdrop End -->
-
-                <!-- Single Airdrop Start -->
-                <div class="col-lg-4 col-md-6 col-sm-9 m-auto">
-                    <div class="single-airdrop-wrap">
-                        <div class="airdrop-tags">
-                            <a href="airdrop-listing.html" class="feature">Feature</a>
-                            <a href="airdrop-listing.html" class="finished">Close</a>
+                            <a href="airdrop-listing.php" class="popular">Popular</a>
+                            <a href="airdrop-listing.php" class="finished">Close</a>
                             <a href="#" class="star">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -429,7 +361,7 @@
                         <div class="airdrop-content-wrap d-flex">
                             <div class="aidrop-logo-area">
                                 <figure class="airdrop-icon">
-                                    <a href="single-airdrop.html"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
+                                    <a href="single-airdrop.php"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
 
                                     <figcaption class="offer-time">
                                         <p>28 Days</p>
@@ -437,7 +369,7 @@
                                 </figure>
                             </div>
                             <div class="airdrop-info-wrap">
-                                <h2 class="h4"><a href="single-airdrop.html">Litcoin</a></h2>
+                                <h2 class="h4"><a href="single-airdrop.php">Litcoin</a></h2>
                                 <p>Free coin for joining</p>
                                 <p class="giveway-text">Giveaway Worth $10</p>
                             </div>
@@ -450,8 +382,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-9 m-auto">
                     <div class="single-airdrop-wrap">
                         <div class="airdrop-tags">
-                            <a href="airdrop-listing.html" class="regular">Regular</a>
-                            <a href="airdrop-listing.html" class="running">Running</a>
+                            <a href="airdrop-listing.php" class="popular">Popular</a>
+                            <a href="airdrop-listing.php" class="running">Running</a>
                             <a href="#" class="star">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -463,7 +395,7 @@
                         <div class="airdrop-content-wrap d-flex">
                             <div class="aidrop-logo-area">
                                 <figure class="airdrop-icon">
-                                    <a href="single-airdrop.html"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
+                                    <a href="single-airdrop.php"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
 
                                     <figcaption class="offer-time">
                                         <p>28 Days</p>
@@ -471,7 +403,7 @@
                                 </figure>
                             </div>
                             <div class="airdrop-info-wrap">
-                                <h2 class="h4"><a href="single-airdrop.html">Bitcoin</a></h2>
+                                <h2 class="h4"><a href="single-airdrop.php">Bitcoin</a></h2>
                                 <p>Free coin for joining</p>
                                 <p class="giveway-text">Giveaway Worth $10</p>
                             </div>
@@ -484,8 +416,76 @@
                 <div class="col-lg-4 col-md-6 col-sm-9 m-auto">
                     <div class="single-airdrop-wrap">
                         <div class="airdrop-tags">
-                            <a href="airdrop-listing.html" class="finished">Close</a>
-                            <a href="airdrop-listing.html" class="feature">Feature</a>
+                            <a href="airdrop-listing.php" class="feature">Feature</a>
+                            <a href="airdrop-listing.php" class="finished">Close</a>
+                            <a href="#" class="star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-empty"></i>
+                            </a>
+                        </div>
+                        <div class="airdrop-content-wrap d-flex">
+                            <div class="aidrop-logo-area">
+                                <figure class="airdrop-icon">
+                                    <a href="single-airdrop.php"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
+
+                                    <figcaption class="offer-time">
+                                        <p>28 Days</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="airdrop-info-wrap">
+                                <h2 class="h4"><a href="single-airdrop.php">Litcoin</a></h2>
+                                <p>Free coin for joining</p>
+                                <p class="giveway-text">Giveaway Worth $10</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Airdrop End -->
+
+                <!-- Single Airdrop Start -->
+                <div class="col-lg-4 col-md-6 col-sm-9 m-auto">
+                    <div class="single-airdrop-wrap">
+                        <div class="airdrop-tags">
+                            <a href="airdrop-listing.php" class="regular">Regular</a>
+                            <a href="airdrop-listing.php" class="running">Running</a>
+                            <a href="#" class="star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </a>
+                        </div>
+                        <div class="airdrop-content-wrap d-flex">
+                            <div class="aidrop-logo-area">
+                                <figure class="airdrop-icon">
+                                    <a href="single-airdrop.php"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
+
+                                    <figcaption class="offer-time">
+                                        <p>28 Days</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="airdrop-info-wrap">
+                                <h2 class="h4"><a href="single-airdrop.php">Bitcoin</a></h2>
+                                <p>Free coin for joining</p>
+                                <p class="giveway-text">Giveaway Worth $10</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Airdrop End -->
+
+                <!-- Single Airdrop Start -->
+                <div class="col-lg-4 col-md-6 col-sm-9 m-auto">
+                    <div class="single-airdrop-wrap">
+                        <div class="airdrop-tags">
+                            <a href="airdrop-listing.php" class="finished">Close</a>
+                            <a href="airdrop-listing.php" class="feature">Feature</a>
                             <a href="#" class="star">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -497,7 +497,7 @@
                         <div class="airdrop-content-wrap d-flex">
                             <div class="aidrop-logo-area">
                                 <figure class="airdrop-icon">
-                                    <a href="single-airdrop.html"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
+                                    <a href="single-airdrop.php"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
 
                                     <figcaption class="offer-time">
                                         <p>28 Days</p>
@@ -505,7 +505,7 @@
                                 </figure>
                             </div>
                             <div class="airdrop-info-wrap">
-                                <h2 class="h4"><a href="single-airdrop.html">Etharum</a></h2>
+                                <h2 class="h4"><a href="single-airdrop.php">Etharum</a></h2>
                                 <p>Free coin for joining</p>
                                 <p class="giveway-text">Giveaway Worth $10</p>
                             </div>
@@ -518,8 +518,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-9 m-auto">
                     <div class="single-airdrop-wrap">
                         <div class="airdrop-tags">
-                            <a href="airdrop-listing.html" class="popular">Popular</a>
-                            <a href="airdrop-listing.html" class="running">Running</a>
+                            <a href="airdrop-listing.php" class="popular">Popular</a>
+                            <a href="airdrop-listing.php" class="running">Running</a>
                             <a href="#" class="star">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -531,7 +531,7 @@
                         <div class="airdrop-content-wrap d-flex">
                             <div class="aidrop-logo-area">
                                 <figure class="airdrop-icon">
-                                    <a href="single-airdrop.html"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
+                                    <a href="single-airdrop.php"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
 
                                     <figcaption class="offer-time">
                                         <p>28 Days</p>
@@ -539,7 +539,7 @@
                                 </figure>
                             </div>
                             <div class="airdrop-info-wrap">
-                                <h2 class="h4"><a href="single-airdrop.html">Zcash</a></h2>
+                                <h2 class="h4"><a href="single-airdrop.php">Zcash</a></h2>
                                 <p>Free coin for joining</p>
                                 <p class="giveway-text">Giveaway Worth $10</p>
                             </div>
@@ -560,8 +560,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-9 m-auto">
                     <div class="single-airdrop-wrap">
                         <div class="airdrop-tags">
-                            <a href="airdrop-listing.html" class="popular">Popular</a>
-                            <a href="airdrop-listing.html" class="running">Running</a>
+                            <a href="airdrop-listing.php" class="popular">Popular</a>
+                            <a href="airdrop-listing.php" class="running">Running</a>
                             <a href="#" class="star">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -573,7 +573,7 @@
                         <div class="airdrop-content-wrap d-flex">
                             <div class="aidrop-logo-area">
                                 <figure class="airdrop-icon">
-                                    <a href="single-airdrop.html"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
+                                    <a href="single-airdrop.php"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
 
                                     <figcaption class="offer-time">
                                         <p>28 Days</p>
@@ -581,7 +581,7 @@
                                 </figure>
                             </div>
                             <div class="airdrop-info-wrap">
-                                <h2 class="h4"><a href="single-airdrop.html">Ripple</a></h2>
+                                <h2 class="h4"><a href="single-airdrop.php">Ripple</a></h2>
                                 <p>Free coin for joining</p>
                                 <p class="giveway-text">Giveaway Worth $10</p>
                             </div>
@@ -594,8 +594,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-9 m-auto">
                     <div class="single-airdrop-wrap">
                         <div class="airdrop-tags">
-                            <a href="airdrop-listing.html" class="popular">Popular</a>
-                            <a href="airdrop-listing.html" class="running">Running</a>
+                            <a href="airdrop-listing.php" class="popular">Popular</a>
+                            <a href="airdrop-listing.php" class="running">Running</a>
                             <a href="#" class="star">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -607,7 +607,7 @@
                         <div class="airdrop-content-wrap d-flex">
                             <div class="aidrop-logo-area">
                                 <figure class="airdrop-icon">
-                                    <a href="single-airdrop.html"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
+                                    <a href="single-airdrop.php"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
 
                                     <figcaption class="offer-time">
                                         <p>28 Days</p>
@@ -615,7 +615,7 @@
                                 </figure>
                             </div>
                             <div class="airdrop-info-wrap">
-                                <h2 class="h4"><a href="single-airdrop.html">Etharum</a></h2>
+                                <h2 class="h4"><a href="single-airdrop.php">Etharum</a></h2>
                                 <p>Free coin for joining</p>
                                 <p class="giveway-text">Giveaway Worth $10</p>
                             </div>
@@ -628,8 +628,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-9 m-auto">
                     <div class="single-airdrop-wrap">
                         <div class="airdrop-tags">
-                            <a href="airdrop-listing.html" class="popular">Popular</a>
-                            <a href="airdrop-listing.html" class="finished">Close</a>
+                            <a href="airdrop-listing.php" class="popular">Popular</a>
+                            <a href="airdrop-listing.php" class="finished">Close</a>
                             <a href="#" class="star">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -641,7 +641,7 @@
                         <div class="airdrop-content-wrap d-flex">
                             <div class="aidrop-logo-area">
                                 <figure class="airdrop-icon">
-                                    <a href="single-airdrop.html"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
+                                    <a href="single-airdrop.php"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
 
                                     <figcaption class="offer-time">
                                         <p>28 Days</p>
@@ -649,7 +649,7 @@
                                 </figure>
                             </div>
                             <div class="airdrop-info-wrap">
-                                <h2 class="h4"><a href="single-airdrop.html">Litcoin</a></h2>
+                                <h2 class="h4"><a href="single-airdrop.php">Litcoin</a></h2>
                                 <p>Free coin for joining</p>
                                 <p class="giveway-text">Giveaway Worth $10</p>
                             </div>
@@ -662,8 +662,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-9 m-auto">
                     <div class="single-airdrop-wrap">
                         <div class="airdrop-tags">
-                            <a href="airdrop-listing.html" class="popular">Popular</a>
-                            <a href="airdrop-listing.html" class="running">Running</a>
+                            <a href="airdrop-listing.php" class="popular">Popular</a>
+                            <a href="airdrop-listing.php" class="running">Running</a>
                             <a href="#" class="star">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -675,7 +675,7 @@
                         <div class="airdrop-content-wrap d-flex">
                             <div class="aidrop-logo-area">
                                 <figure class="airdrop-icon">
-                                    <a href="single-airdrop.html"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
+                                    <a href="single-airdrop.php"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
 
                                     <figcaption class="offer-time">
                                         <p>28 Days</p>
@@ -683,7 +683,7 @@
                                 </figure>
                             </div>
                             <div class="airdrop-info-wrap">
-                                <h2 class="h4"><a href="single-airdrop.html">Bitcoin</a></h2>
+                                <h2 class="h4"><a href="single-airdrop.php">Bitcoin</a></h2>
                                 <p>Free coin for joining</p>
                                 <p class="giveway-text">Giveaway Worth $10</p>
                             </div>
@@ -696,8 +696,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-9 m-auto">
                     <div class="single-airdrop-wrap">
                         <div class="airdrop-tags">
-                            <a href="airdrop-listing.html" class="popular">Popular</a>
-                            <a href="airdrop-listing.html" class="finished">Close</a>
+                            <a href="airdrop-listing.php" class="popular">Popular</a>
+                            <a href="airdrop-listing.php" class="finished">Close</a>
                             <a href="#" class="star">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -709,7 +709,7 @@
                         <div class="airdrop-content-wrap d-flex">
                             <div class="aidrop-logo-area">
                                 <figure class="airdrop-icon">
-                                    <a href="single-airdrop.html"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
+                                    <a href="single-airdrop.php"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
 
                                     <figcaption class="offer-time">
                                         <p>28 Days</p>
@@ -717,7 +717,7 @@
                                 </figure>
                             </div>
                             <div class="airdrop-info-wrap">
-                                <h2 class="h4"><a href="single-airdrop.html">Litcoin</a></h2>
+                                <h2 class="h4"><a href="single-airdrop.php">Litcoin</a></h2>
                                 <p>Free coin for joining</p>
                                 <p class="giveway-text">Giveaway Worth $10</p>
                             </div>
@@ -730,8 +730,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-9 m-auto">
                     <div class="single-airdrop-wrap">
                         <div class="airdrop-tags">
-                            <a href="airdrop-listing.html" class="popular">Popular</a>
-                            <a href="airdrop-listing.html" class="running">Running</a>
+                            <a href="airdrop-listing.php" class="popular">Popular</a>
+                            <a href="airdrop-listing.php" class="running">Running</a>
                             <a href="#" class="star">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -743,7 +743,7 @@
                         <div class="airdrop-content-wrap d-flex">
                             <div class="aidrop-logo-area">
                                 <figure class="airdrop-icon">
-                                    <a href="single-airdrop.html"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
+                                    <a href="single-airdrop.php"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
 
                                     <figcaption class="offer-time">
                                         <p>28 Days</p>
@@ -751,7 +751,7 @@
                                 </figure>
                             </div>
                             <div class="airdrop-info-wrap">
-                                <h2 class="h4"><a href="single-airdrop.html">Bitcoin</a></h2>
+                                <h2 class="h4"><a href="single-airdrop.php">Bitcoin</a></h2>
                                 <p>Free coin for joining</p>
                                 <p class="giveway-text">Giveaway Worth $10</p>
                             </div>
@@ -764,8 +764,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-9 m-auto">
                     <div class="single-airdrop-wrap">
                         <div class="airdrop-tags">
-                            <a href="airdrop-listing.html" class="popular">Popular</a>
-                            <a href="airdrop-listing.html" class="running">Running</a>
+                            <a href="airdrop-listing.php" class="popular">Popular</a>
+                            <a href="airdrop-listing.php" class="running">Running</a>
                             <a href="#" class="star">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -777,7 +777,7 @@
                         <div class="airdrop-content-wrap d-flex">
                             <div class="aidrop-logo-area">
                                 <figure class="airdrop-icon">
-                                    <a href="single-airdrop.html"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
+                                    <a href="single-airdrop.php"><img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop" class="img-fluid" /></a>
 
                                     <figcaption class="offer-time">
                                         <p>28 Days</p>
@@ -785,7 +785,7 @@
                                 </figure>
                             </div>
                             <div class="airdrop-info-wrap">
-                                <h2 class="h4"><a href="single-airdrop.html">Etharum</a></h2>
+                                <h2 class="h4"><a href="single-airdrop.php">Etharum</a></h2>
                                 <p>Free coin for joining</p>
                                 <p class="giveway-text">Giveaway Worth $10</p>
                             </div>
@@ -799,7 +799,7 @@
         <div class="row">
             <div class="col-lg-12 col-sm-9 m-auto text-center">
                 <div class="view-all-airdrop-btn">
-                    <a href="airdrop-listing.html" class="btn btn-view-all">WE HAVE 365 ACTIVE AIRDROPS. <span>VIEW THEM ALL  <i class="fa fa-long-arrow-right"></i></span></a>
+                    <a href="airdrop-listing.php" class="btn btn-view-all">WE HAVE 365 ACTIVE AIRDROPS. <span>VIEW THEM ALL  <i class="fa fa-long-arrow-right"></i></span></a>
                 </div>
             </div>
         </div>
@@ -828,7 +828,7 @@
                     <figure class="single-popular-company">
                         <img src="assets/img/images/compnay-logo-1.jpg" alt="Company" class="img-fluid"/>
                         <figcaption class="company-hvr">
-                            <a href="single-company.html" class="btn">View Airdrops</a>
+                            <a href="single-company.php" class="btn">View Airdrops</a>
                         </figcaption>
                     </figure>
                 </div>
@@ -839,7 +839,7 @@
                     <figure class="single-popular-company">
                         <img src="assets/img/images/compnay-logo-2.jpg" alt="Company" class="img-fluid"/>
                         <figcaption class="company-hvr">
-                            <a href="single-company.html" class="btn">View Airdrops</a>
+                            <a href="single-company.php" class="btn">View Airdrops</a>
                         </figcaption>
                     </figure>
                 </div>
@@ -850,7 +850,7 @@
                     <figure class="single-popular-company">
                         <img src="assets/img/images/compnay-logo-3.jpg" alt="Company" class="img-fluid"/>
                         <figcaption class="company-hvr">
-                            <a href="single-company.html" class="btn">View Airdrops</a>
+                            <a href="single-company.php" class="btn">View Airdrops</a>
                         </figcaption>
                     </figure>
                 </div>
@@ -861,7 +861,7 @@
                     <figure class="single-popular-company">
                         <img src="assets/img/images/compnay-logo-4.jpg" alt="Company" class="img-fluid"/>
                         <figcaption class="company-hvr">
-                            <a href="single-company.html" class="btn">View Airdrops</a>
+                            <a href="single-company.php" class="btn">View Airdrops</a>
                         </figcaption>
                     </figure>
                 </div>
@@ -872,7 +872,7 @@
                     <figure class="single-popular-company">
                         <img src="assets/img/images/compnay-logo-5.jpg" alt="Company" class="img-fluid"/>
                         <figcaption class="company-hvr">
-                            <a href="single-company.html" class="btn">View Airdrops</a>
+                            <a href="single-company.php" class="btn">View Airdrops</a>
                         </figcaption>
                     </figure>
                 </div>
@@ -883,7 +883,7 @@
                     <figure class="single-popular-company">
                         <img src="assets/img/images/compnay-logo-6.jpg" alt="Company" class="img-fluid"/>
                         <figcaption class="company-hvr">
-                            <a href="single-company.html" class="btn">View Airdrops</a>
+                            <a href="single-company.php" class="btn">View Airdrops</a>
                         </figcaption>
                     </figure>
                 </div>
@@ -894,7 +894,7 @@
                     <figure class="single-popular-company">
                         <img src="assets/img/images/compnay-logo-7.jpg" alt="Company" class="img-fluid"/>
                         <figcaption class="company-hvr">
-                            <a href="single-company.html" class="btn">View Airdrops</a>
+                            <a href="single-company.php" class="btn">View Airdrops</a>
                         </figcaption>
                     </figure>
                 </div>
@@ -932,15 +932,15 @@
                 <div class="col-lg-4 col-md-6">
                     <article class="single-latest-news-wrap">
                         <figure class="news-thumbnail">
-                            <a href="single-news.html"><img src="assets/img/images/latest-news-1.jpg" alt="News"
+                            <a href="single-news.php"><img src="assets/img/images/latest-news-1.jpg" alt="News"
                                              class="img-fluid"/></a>
                         </figure>
                         <div class="news-content">
-                            <a href="single-news.html" class="post-time">2 hour Ago</a>
-                            <h2 class="h5"><a href="single-news.html">BitCoin Anaounce 50k Free Coin</a></h2>
+                            <a href="single-news.php" class="post-time">2 hour Ago</a>
+                            <h2 class="h5"><a href="single-news.php">BitCoin Anaounce 50k Free Coin</a></h2>
                             <p>This is a big project of our company, we are happy to completed this type projec which
                                 are get world famous award</p>
-                            <a href="single-news.html" class="btn btn-gradiant">More</a>
+                            <a href="single-news.php" class="btn btn-gradiant">More</a>
                         </div>
                     </article>
                 </div>
@@ -950,15 +950,15 @@
                 <div class="col-lg-4 col-md-6">
                     <article class="single-latest-news-wrap">
                         <figure class="news-thumbnail">
-                            <a href="single-news.html"><img src="assets/img/images/latest-news-2.jpg" alt="News"
+                            <a href="single-news.php"><img src="assets/img/images/latest-news-2.jpg" alt="News"
                                              class="img-fluid"/></a>
                         </figure>
                         <div class="news-content">
-                            <a href="single-news.html" class="post-time">3 hour Ago</a>
-                            <h2 class="h5"><a href="single-news.html">BitCoin Anaounce 50k Free Coin</a></h2>
+                            <a href="single-news.php" class="post-time">3 hour Ago</a>
+                            <h2 class="h5"><a href="single-news.php">BitCoin Anaounce 50k Free Coin</a></h2>
                             <p>This is a big project of our company, we are happy to completed this type projec which
                                 are get world famous award</p>
-                            <a href="single-news.html" class="btn btn-gradiant">More</a>
+                            <a href="single-news.php" class="btn btn-gradiant">More</a>
                         </div>
                     </article>
                 </div>
@@ -968,15 +968,15 @@
                 <div class="col-lg-4 col-md-6">
                     <article class="single-latest-news-wrap">
                         <figure class="news-thumbnail">
-                            <a href="single-news.html"><img src="assets/img/images/latest-news-3.jpg" alt="News"
+                            <a href="single-news.php"><img src="assets/img/images/latest-news-3.jpg" alt="News"
                                              class="img-fluid"/></a>
                         </figure>
                         <div class="news-content">
-                            <a href="single-news.html" class="post-time">5 hour Ago</a>
-                            <h2 class="h5"><a href="single-news.html">BitCoin Anaounce 50k Free Coin</a></h2>
+                            <a href="single-news.php" class="post-time">5 hour Ago</a>
+                            <h2 class="h5"><a href="single-news.php">BitCoin Anaounce 50k Free Coin</a></h2>
                             <p>This is a big project of our company, we are happy to completed this type projec which
                                 are get world famous award</p>
-                            <a href="single-news.html" class="btn btn-gradiant">More</a>
+                            <a href="single-news.php" class="btn btn-gradiant">More</a>
                         </div>
                     </article>
                 </div>
@@ -986,15 +986,15 @@
                 <div class="col-lg-4 col-md-6">
                     <article class="single-latest-news-wrap">
                         <figure class="news-thumbnail">
-                            <a href="single-news.html"><img src="assets/img/images/latest-news-4.jpg" alt="News"
+                            <a href="single-news.php"><img src="assets/img/images/latest-news-4.jpg" alt="News"
                                              class="img-fluid"/></a>
                         </figure>
                         <div class="news-content">
-                            <a href="single-news.html" class="post-time">5 hour Ago</a>
-                            <h2 class="h5"><a href="single-news.html">BitCoin Anaounce 50k Free Coin</a></h2>
+                            <a href="single-news.php" class="post-time">5 hour Ago</a>
+                            <h2 class="h5"><a href="single-news.php">BitCoin Anaounce 50k Free Coin</a></h2>
                             <p>This is a big project of our company, we are happy to completed this type projec which
                                 are get world famous award</p>
-                            <a href="single-news.html" class="btn btn-gradiant">More</a>
+                            <a href="single-news.php" class="btn btn-gradiant">More</a>
                         </div>
                     </article>
                 </div>
@@ -1004,15 +1004,15 @@
                 <div class="col-lg-4 col-md-6">
                     <article class="single-latest-news-wrap">
                         <figure class="news-thumbnail">
-                            <a href="single-news.html"><img src="assets/img/images/latest-news-5.jpg" alt="News"
+                            <a href="single-news.php"><img src="assets/img/images/latest-news-5.jpg" alt="News"
                                              class="img-fluid"/></a>
                         </figure>
                         <div class="news-content">
-                            <a href="single-news.html" class="post-time">7 hour Ago</a>
-                            <h2 class="h5"><a href="single-news.html">BitCoin Anaounce 50k Free Coin</a></h2>
+                            <a href="single-news.php" class="post-time">7 hour Ago</a>
+                            <h2 class="h5"><a href="single-news.php">BitCoin Anaounce 50k Free Coin</a></h2>
                             <p>This is a big project of our company, we are happy to completed this type projec which
                                 are get world famous award</p>
-                            <a href="single-news.html" class="btn btn-gradiant">More</a>
+                            <a href="single-news.php" class="btn btn-gradiant">More</a>
                         </div>
                     </article>
                 </div>
@@ -1051,7 +1051,7 @@
                     <!-- Single Widget Start -->
                     <div class="col-lg-3 col-sm-6">
                         <div class="single-widget-wrap">
-                            <a href="index-2.html">
+                            <a href="index-2.php">
                                 <img src="assets/img/logo-black.png" alt="Logo" />
                             </a>
                             <div class="about-widget">
@@ -1167,7 +1167,7 @@
 <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
 
 <!-- Lscache JS  -->
-<script src="assets/vendor/lscache/lscache.min.html"></script>
+<script src="assets/vendor/lscache/lscache.min.php"></script>
 
 <!-- Magnific Popup JS  -->
 <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
@@ -1184,5 +1184,5 @@
 
 </body>
 
-<!-- Mirrored from codeboxr.net/themedemo/airdroop/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Apr 2023 10:30:30 GMT -->
+<!-- Mirrored from codeboxr.net/themedemo/airdroop/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Apr 2023 10:30:30 GMT -->
 </html>
