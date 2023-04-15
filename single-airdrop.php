@@ -183,14 +183,16 @@ if ($result->num_rows > 0) {
           <h2 class="h6">Stay Connected!</h2>
           <ul class="giveway-list">
               <span><a href="https://example.com"><img src="assets/img/icons/social/web.png" alt="Coin" width="30" height="30"/></a></span>
-              <span><img src="assets/img/icons/social/twitter.png" alt=""/>Est Value</span>
-              <li><span><img src="assets/img/icons/social/medium.png" alt="Coin"/>Validation</span>: ' . $row["blockchain"] . '</li>
-              <li><span><img src="assets/img/icons/social/youtube.png" alt="Coin"/>End Date</span>: ' . $row["end_date"] . '</li>
-              <li><span><img src="assets/img/icons/social/facebook.png" alt="Coin"/>Total Spent</span>: ' . $row["tokens"] . '</li>
-              <li><span><img src="assets/img/icons/social/instagram.png" alt="Coin"/>Persons</span>: ' . $row["publish_date"] . '</li>
-              <li><span><img src="assets/img/icons/social/discord.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
-              <li><span><img src="assets/img/icons/social/telegram.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
-              <li><span><img src="assets/img/icons/social/blogging.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
+              <span><a href="https://example.com"><img src="assets/img/icons/social/twitter.png" alt="Coin" width="30" height="30"/></a></span>
+              <span><a href="https://example.com"><img src="assets/img/icons/social/medium.png" alt="Coin" width="30" height="30"/></a></span>
+              <span><a href="https://example.com"><img src="assets/img/icons/social/youtube.png" alt="Coin" width="30" height="30"/></a></span>
+              <span><a href="https://example.com"><img src="assets/img/icons/social/facebook.png" alt="Coin" width="30" height="30"/></a></span>
+              <span><a href="https://example.com"><img src="assets/img/icons/social/instagram.png" alt="Coin" width="30" height="30"/></a></span>
+              <span><a href="https://example.com"><img src="assets/img/icons/social/discord.png" alt="Coin" width="30" height="30"/></a></span>
+              <span><a href="https://example.com"><img src="assets/img/icons/social/telegram.png" alt="Coin" width="30" height="30"/></a></span>
+              <span><a href="https://example.com"><img src="assets/img/icons/social/blogging.png" alt="Coin" width="30" height="30"/></a></span>
+
+
               <li><span><img src="assets/img/icons/social/github.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
               <li><span><img src="assets/img/icons/social/reddit.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
               <li><span><img src="assets/img/icons/social/linkedin.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
