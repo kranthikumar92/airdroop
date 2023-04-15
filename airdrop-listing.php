@@ -94,13 +94,13 @@ include('ticker_extension.php');
 <div id="page-content-wrapper" class="section-padding">
     <div class="container">
         <!--== Header Ads Start ==-->
-<div class="row">
-    <div class="col-md-12 m-auto">
-        <div class="ads-content-wrap">
-            <a href="#" class="d-block"><img src="assets/img/images/advisement.jpg" class="img-fluid" alt="Ads"/></a>
-        </div>
-    </div>
-</div>
+
+<!--== Advertise 1 Start ==-->
+<?php
+include('advertise_1.php');
+?>
+<!--== Advertise 1 End ==-->
+
 <!--== Header Ads End ==-->
 
         <div class="row">
@@ -536,8 +536,6 @@ include('footer.php');
 <!-- custom js: custom js file is added for easy custom js code  -->
  <script src="assets/js/custom.js"></script>
 
-<!-- custom js: custom scripts for theme style switcher for demo purpose  -->
-<script id="switcherhandle" src="assets/switcher/switcher.js"></script>
 
 
 </body>
