@@ -165,7 +165,7 @@ if ($result->num_rows > 0) {
 
     
     <div class="single-sidebar-item">
-            <h2 class="h6">Giveaway Details:</h2>
+            <h2 class="h6">Airdrop Details:</h2>
             <ul class="giveway-list">
                 <li><span><img src="assets/img/icons/giveway/coin.png" alt="Coin"/>Coin</span>: ' . $row["coin_name"] . '</li>
                 <li><span><img src="assets/img/icons/giveway/doller.png" alt="Coin"/>Est Value</span>: ' . $row["est_value"] . '</li>
@@ -175,7 +175,24 @@ if ($result->num_rows > 0) {
                 <li><span><img src="assets/img/icons/giveway/person.png" alt="Coin"/>Persons</span>: ' . $row["publish_date"] . '</li>
                 <li><span><img src="assets/img/icons/giveway/flag.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
             </ul>
-          </div>';
+          </div>
+          
+          
+    
+    <div class="single-sidebar-item">
+          <h2 class="h6">Stay Connected!</h2>
+          <ul class="giveway-list">
+              <li><span><img src="assets/img/icons/giveway/coin.png" alt="Coin"/>Coin</span>: ' . $row["coin_name"] . '</li>
+              <li><span><img src="assets/img/icons/giveway/doller.png" alt="Coin"/>Est Value</span>: ' . $row["est_value"] . '</li>
+              <li><span><img src="assets/img/icons/giveway/check.png" alt="Coin"/>Validation</span>: ' . $row["blockchain"] . '</li>
+              <li><span><img src="assets/img/icons/giveway/alerm.png" alt="Coin"/>End Date</span>: ' . $row["end_date"] . '</li>
+              <li><span><img src="assets/img/icons/giveway/total.png" alt="Coin"/>Total Spent</span>: ' . $row["tokens"] . '</li>
+              <li><span><img src="assets/img/icons/giveway/person.png" alt="Coin"/>Persons</span>: ' . $row["publish_date"] . '</li>
+              <li><span><img src="assets/img/icons/giveway/flag.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
+          </ul>
+        </div> 
+    
+          ';
 } else {
     echo "No results found.";
 }
@@ -185,73 +202,7 @@ $conn->close();
 ?>
 
 
-                                <div class="single-sidebar-item">
-                                    <h2 class="h6">Required Tools:</h2>
-                                    <div class="required-tools d-flex">
-                                        <div class="single-tool-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="facebook">
-                                                <label class="custom-control-label" for="facebook">facebook</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="single-tool-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="twitter">
-                                                <label class="custom-control-label" for="twitter">twitter</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="single-tool-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="email">
-                                                <label class="custom-control-label" for="email">email</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="single-tool-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="linkedin">
-                                                <label class="custom-control-label" for="linkedin">linkedin</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="single-tool-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="reddit">
-                                                <label class="custom-control-label" for="reddit">Reddit</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="single-tool-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="github">
-                                                <label class="custom-control-label" for="github">github</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="single-tool-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="vimeo">
-                                                <label class="custom-control-label" for="vimeo">vimeo</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="single-tool-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="wechat">
-                                                <label class="custom-control-label" for="wechat">wechat</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="single-tool-item">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="instagram">
-                                                <label class="custom-control-label" for="instagram">instagram</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                
 
                                 <div class="single-sidebar-item">
                                     <div class="convert-currency">
