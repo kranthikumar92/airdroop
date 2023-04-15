@@ -94,6 +94,12 @@ include('ticker_extension.php');
     <div class="container">
         <!--== Header Ads Start ==-->
 
+<!--== Advertise 1 Start ==-->
+<?php
+include('advertise_1.php');
+?>
+<!--== Advertise 1 End ==-->
+
 <!--== Header Ads End ==-->
 
         <div class="airdrop-listing-wrapper">
