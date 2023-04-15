@@ -1,0 +1,10 @@
+Apr 15, 2023 3:46:51 PM hudson.remoting.jnlp.Main createEngine
+INFO: Setting up agent: worker
+Apr 15, 2023 3:46:51 PM hudson.remoting.Engine startEngine
+INFO: Using Remoting version: 3107.v665000b_51092
+Apr 15, 2023 3:46:51 PM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
+INFO: Using /var/www/html/airdroop/remoting as a remoting work directory
+Apr 15, 2023 3:46:51 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: WebSocket connection open
+Apr 15, 2023 3:46:51 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Connected
