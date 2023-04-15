@@ -77,9 +77,9 @@
 <p class="browsehappy">We are Extreamly sorry, But the browser you are using is probably from when civilization started.
     Which is way behind to view this site properly. Please update to a modern browser, At least a real browser. </p>
 <![endif]-->
-
+<?php
 include('header.php');
-
+?>
 </header>
 <!--== Header Area End ==-->
 
