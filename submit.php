@@ -324,8 +324,7 @@ include('footer.php');
 <!-- custom js: custom js file is added for easy custom js code  -->
  <script src="assets/js/custom.js"></script>
 
-<!-- custom js: custom scripts for theme style switcher for demo purpose  -->
-<script id="switcherhandle" src="assets/switcher/switcher.js"></script>
+
 
 
 </body>
