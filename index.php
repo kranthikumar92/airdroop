@@ -131,9 +131,27 @@ if ($result->num_rows > 0) {
         // Extract the data
         $logo = $row["coin_img"];
         $name = $row["coin_name"];
-        $days = $row["days"];
+        $date = $row["end_date"];
         $tagline = $row["coin_tagline"];
         $giveaway_worth = $row["est_value"];
+
+        // Define the 'from' and 'to' dates
+$fromDate = date('Y-m-d'); // Format: yyyy-mm-dd
+$toDate = $date; // Format: yyyy-mm-dd
+
+// Convert the dates to DateTime objects
+$fromDateTime = new DateTime($fromDate);
+$toDateTime = new DateTime($toDate);
+
+// Calculate the difference between the dates
+$dateInterval = $fromDateTime->diff($toDateTime);
+
+// Extract the difference in days
+$days = $dateInterval->days;
+
+// Display the result
+//echo "The difference in days between {$fromDate} and {$toDate} is: {$daysDifference} days";
+
 
         // Display the details
         echo '<div class="col-lg-4 col-md-6 col-sm-9 m-auto">
