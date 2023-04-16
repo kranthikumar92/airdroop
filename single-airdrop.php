@@ -211,7 +211,7 @@ $conn->close();
 // Database connection settings
 
 // Query to retrieve the details of the coin with sno = 1
-$sql1 = "SELECT * FROM airdrop_coin_social WHERE sno = 1";
+$sql1 = "SELECT * FROM airdrop_coin_social WHERE sno = '1'";
 $result1 = $conn->query($sql1);
 
 // Check if the query was successful
