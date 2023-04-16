@@ -137,7 +137,7 @@ if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
 
     // Determine the CSS class for status
-    $statusClass = ($row['status'] == 'active') ? 'green' : 'grey';
+    $statusClass = ($row['status'] == 'ended') ? 'green' : 'grey';
     
     // Display the details
     echo '<div class="single-sidebar-item">
