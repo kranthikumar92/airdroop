@@ -17,6 +17,20 @@ html{font-size:62.5%}body,ol,ul{font-family:Roboto,sans-serif;font-size:16px;lin
     padding: 5px 10px;
 }
 
+.single-airdrop-page-wrap .single-page-sidebar .single-sidebar-item .airdrop-details-area .airdrop-currency-info .popular-tag-end {
+    background-color: #2c302bf1;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 1;
+    font-weight: 600;
+    padding: 5px 10px;
+}
+
 .single-airdrop-page-wrap .single-page-sidebar .single-sidebar-item .airdrop-details-area .airdrop-currency-info .popular-tag i.fa {
     color: #45bb31;
     font-size: 13px;
