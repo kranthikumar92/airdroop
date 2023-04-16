@@ -255,21 +255,9 @@ $offset = ($page - 1) * $items_per_page;
 
                                 <!-- Single Airdrop Start -->
                                 <?php
-// Database connection parameters
-$servername = "localhost";
-$username = "calix_web_user";
-$password = "calixworldhhUUh383287HGSHhs";
-$dbname = "calix_cry_world";
 
-// Create database connection
-$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-$sql = "SELECT * FROM airdrop_coins";
+$sql = "SELECT * FROM airdrop_coins LIMIT $items_per_page OFFSET $offset";
 $result = mysqli_query($conn, $sql);
 while ($row = mysqli_fetch_assoc($result)) {
     $airdrop_sno = $row['sno'];
