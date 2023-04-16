@@ -216,6 +216,43 @@ include('advertise_1.php');
 
                         <div class="col-lg-8">
                             <div class="listing-airdrop-wrap">
+<!-- Pagination PHP code Area Start -->
+                            <?php
+// Retrieve the 'page' parameter from the URL
+$page = isset($_GET['page']) ? $_GET['page'] : 1;
+
+// Set the number of items per page
+$items_per_page = 1;
+
+// Database connection parameters
+$servername = "localhost";
+$username = "calix_web_user";
+$password = "calixworldhhUUh383287HGSHhs";
+$dbname = "calix_cry_world";
+
+// Create database connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch total number of rows in the table
+$sql_total_rows = "SELECT COUNT(*) as total_rows FROM airdrop_coins";
+$result_total_rows = mysqli_query($conn, $sql_total_rows);
+$row_total_rows = mysqli_fetch_assoc($result_total_rows);
+$total_rows = $row_total_rows['total_rows'];
+
+// Calculate total number of pages
+$total_pages = ceil($total_rows / $items_per_page);
+
+// Calculate the offset for the query based on the current page number
+$offset = ($page - 1) * $items_per_page;
+?>
+<!-- Pagination Php Code Area End -->
+
+
                                 <!-- Single Airdrop Start -->
                                 <?php
 // Database connection parameters
@@ -296,39 +333,8 @@ $days = $dateInterval->days;
                             </div>
 
                             <!-- Pagination Area Start -->
-                            <?php
-// Retrieve the 'page' parameter from the URL
-$page = isset($_GET['page']) ? $_GET['page'] : 1;
-
-// Set the number of items per page
-$items_per_page = 1;
-
-// Database connection parameters
-$servername = "localhost";
-$username = "calix_web_user";
-$password = "calixworldhhUUh383287HGSHhs";
-$dbname = "calix_cry_world";
-
-// Create database connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Fetch total number of rows in the table
-$sql_total_rows = "SELECT COUNT(*) as total_rows FROM airdrop_coins";
-$result_total_rows = mysqli_query($conn, $sql_total_rows);
-$row_total_rows = mysqli_fetch_assoc($result_total_rows);
-$total_rows = $row_total_rows['total_rows'];
-
-// Calculate total number of pages
-$total_pages = ceil($total_rows / $items_per_page);
-
-// Calculate the offset for the query based on the current page number
-$offset = ($page - 1) * $items_per_page;
-
+                            
+<?php
 // Fetch data from airdrop_coins table with pagination
 $sql_page = "SELECT * FROM airdrop_coins LIMIT $items_per_page OFFSET $offset";
 $result_page = mysqli_query($conn, $sql_page);
