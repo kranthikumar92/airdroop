@@ -181,8 +181,6 @@ if ($result->num_rows > 0) {
     echo "No results found.";
 }
 
-// Close the database connection
-
 ?>
 
 <?php
@@ -259,8 +257,7 @@ if ($result1->num_rows > 0) {
     echo "No social links found.";
 }
 
-// Close the database connection
-$conn->close();
+
 ?>
 
 
@@ -271,6 +268,11 @@ $conn->close();
                         <div class="col-lg-8">
                             <article class="single-airdrop-details">
                                 <h2 class="h4">Project Information:</h2>
+                                <?php
+                                echo  . $row["airdrop_description"] . ;
+                                // Close the database connection
+                                $conn->close();
+                                ?>
                                 <p>At Gabrotech, we have a vision to disrupt the loyalty rewards market and hand back
                                     the control ewards rules to the public. Our open-loop decentralized ecosystem,
                                     Gabro, aims to provide consumers with the ability to instantly redeem and manage
