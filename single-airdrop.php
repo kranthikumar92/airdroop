@@ -274,9 +274,6 @@ if ($result1->num_rows > 0) {
                                 ?>
                                 
 
-                                <a href="#"><img src="assets/img/images/listing-advise.jpg" alt="advisement"
-                                                 class="img-fluid"/></a>
-                                
 
                                 <div class="project-video">
                                     <h2 class="h4">Step by Step Guide:</h2>
