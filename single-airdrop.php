@@ -273,9 +273,11 @@ if ($result1->num_rows > 0) {
                                 $conn->close();
                                 ?>
                                 <br>
+                                <?php
+                                include ('advertise_airdrop_page.php');
 
-                                    <a href="#"><img src="assets/img/images/listing-advise.jpg" alt="advisement"
-                                                     class="img-fluid"/></a>
+                                ?>
+                                    
                                 </div>
                             </article>
 
