@@ -144,8 +144,8 @@ if ($result->num_rows > 0) {
                  class="img-fluid"/>
         </figure>
         <div class="airdrop-currency-info">
-            <a href="#" class="popular-tag">' . $row["status"] . '</a>
-            <h2 class="h4">' . $row["coin_name"] . '</h2>
+            <a href="#" class="popular-tag <?php echo ($row['status'] == 'active') ? 'green' : 'grey'; ?>"><?php echo $row['status']; ?></a>
+            <h2 class="h4"><?php echo $row['coin_name']; ?></h2>
         </div>
     </div>
     <p>' . $row["coin_tagline"] . '</p>
