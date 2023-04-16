@@ -306,7 +306,7 @@ $days = $dateInterval->days;
             <h3 class="price-currency d-inline-block align-middle"><?php echo $row['est_value']; ?></h3>
            
         </div>
-        <div class="price-name">Net Worth</div>
+        <div class="price-name">Airdrop Reward</div>
     </div>
 
     <h2 class="<?php echo $statusClass; ?>"><?php echo $row['status']; ?></h2>
