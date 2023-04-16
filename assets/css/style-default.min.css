@@ -1598,6 +1598,29 @@ button.close:active,button.close:focus,button.close:hover{
     -ms-transform:translateY(-50%);
     transform:translateY(-50%)
 }
+.single-listing-airdrop .pinpost-end{
+    background-color:#2c302bf1;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    color:#fff;
+    display:inline-block;
+    font-size:14px;
+    font-size:1.4rem;
+    line-height:1.5;
+    font-weight:500;
+    padding:3px 8px;
+    text-transform:capitalize;
+    margin-left:5px;
+    position:absolute;
+    right:20px;
+    top:0;
+    -webkit-transform:translateY(-50%);
+    -moz-transform:translateY(-50%);
+    -o-transform:translateY(-50%);
+    -ms-transform:translateY(-50%);
+    transform:translateY(-50%)
+}
 .single-listing-airdrop .airdrop-details-area{
     align-items:center
 }
