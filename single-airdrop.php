@@ -234,19 +234,19 @@ if ($result1->num_rows > 0) {
     // Display the details
     echo '<div class="single-sidebar-item">
           <h2 class="h6">Stay Connected!</h2>
-          <ul class="giveway-list">';
+          <ul class="giveway-list" style="display: flex; gap: 10px;">'; // Added gap style
 
     // Check if each link exists, and display the corresponding span only if it does
     if (!empty($row1["website_link"])) {
-        echo '<span><a href="' . $row1["website_link"] . '"><img src="assets/img/icons/social/web.png" alt="Coin" width="30" height="30"/></a></span>';
+        echo '<li><a href="' . $row1["website_link"] . '"><img src="assets/img/icons/social/web.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
     }
 
     if (!empty($row1["join_link"])) {
-        echo '<span><a href="' . $row1["join_link"] . '"><img src="assets/img/icons/social/twitter.png" alt="Coin" width="30" height="30"/></a></span>';
+        echo '<li><a href="' . $row1["join_link"] . '"><img src="assets/img/icons/social/twitter.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
     }
 
     if (!empty($row1["medium_link"])) {
-        echo '<span><a href="' . $row1["medium_link"] . '"><img src="assets/img/icons/social/medium.png" alt="Coin" width="30" height="30"/></a></span>';
+        echo '<li><a href="' . $row1["medium_link"] . '"><img src="assets/img/icons/social/medium.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
     }
 
     // Add more links here following the same pattern
@@ -260,6 +260,7 @@ if ($result1->num_rows > 0) {
 // Close the database connection
 $conn->close();
 ?>
+
 
                                 
 
