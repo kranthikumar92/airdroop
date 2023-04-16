@@ -271,7 +271,7 @@ $statusClass = ($row['status'] == 'active') ? 'popular-tag' : 'popular-tag-end';
         <div class="price-name">Net Worth</div>
     </div>
 
-    <span class="pinpost">Pin post</span>
+    
 </div>
 
 <?php
