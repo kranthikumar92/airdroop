@@ -131,7 +131,7 @@ if ($conn->connect_error) {
 }
 
 // Query to retrieve the details of the coin with sno = 1
-$sql = "SELECT * FROM airdrop_coins WHERE sno = 1";
+$sql = "SELECT * FROM airdrop_coins WHERE sno = '$airdrop_id'";
 $result = $conn->query($sql);
 
 // Check if the query was successful
