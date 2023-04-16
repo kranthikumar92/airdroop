@@ -157,7 +157,7 @@ if ($result->num_rows > 0) {
     </div>
     <p>' . $row["coin_tagline"] . '</p>
     <div class="brand-btn-group">
-        <a href="' . $row["whitepaper"] . '" class="btn btn-gradiant"><i class="fa fa-download"></i> Whitepapper</a>
+        <a href="' . $row["whitepaper"] . '" target="_blank" class="btn btn-gradiant"><i class="fa fa-download"></i> Whitepapper</a>
         <a href="' . $row["airdrop_join_link"] . '" class="btn btn-gradiant">Join Airdrop</a>
     </div>
 </div>
