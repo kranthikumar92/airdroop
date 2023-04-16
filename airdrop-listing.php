@@ -148,13 +148,7 @@ include('advertise_1.php');
                                                         <option value="Min">Min</option>
                                                     </select>
                                                 </div>
-                                                <div class="rating-star">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-half-empty"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
