@@ -232,9 +232,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Fetch data from airdrop_coins table
-$sql = "SELECT `sno`, `coin_name`, `coin_img`, `coin_tagline`, `airdrop_description`, `airdrop_steps`, `whitepaper`, `tokens`, `est_value`, `end_date`, `referral_available`, `referral_link`, `blockchain`, `website_link`, `airdrop_join_link`, `publish_date`, `status` FROM `airdrop_coins`";
+$sql = "SELECT * FROM airdrop_coins";
 $result = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_assoc($result)) {
+    $airdrop_sno = $row['sno'];
+
+    // Fetch data from airdrop_coin_social table based on airdrop_sno
+    $sql_social = "SELECT * FROM airdrop_coin_social WHERE airdrop_sno = '$airdrop_sno'";
+    $result_social = mysqli_query($conn, $sql_social);
+    $row_social = mysqli_fetch_assoc($result_social);
 
 // Determine the CSS class for status
 $statusClass = "";
@@ -243,33 +249,35 @@ $statusClass = "";
 while ($row = mysqli_fetch_assoc($result)) {
     $statusClass = ($row['status'] == 'active') ? 'popular-tag' : 'popular-tag-end';
     ?>
-    <div class="single-listing-airdrop d-block d-sm-flex">
-        <div class="airdrop-details-area d-flex">
-            <figure class="airdrop-currency-thumb">
-                <a href="single-airdrop.php"><img src="<?php echo $row['coin_img']; ?>" alt="Airdrop"/></a>
-            </figure>
-            <div class="airdrop-currency-info">
-                <h2 class="h6"><a href="single-airdrop.php"><?php echo $row['coin_name']; ?></a><a href="airdrop-listing.php" class="<?php echo $statusClass; ?>"><?php echo $row['status']; ?></a></h2>
-                <p class="offer-time"><?php echo $row['days']; ?> days</p>
-            </div>
+    <!-- Display fetched data -->
+<div class="single-listing-airdrop d-block d-sm-flex">
+    <div class="airdrop-details-area d-flex">
+        <figure class="airdrop-currency-thumb">
+            <a href="single-airdrop.php"><img src="<?php echo $row['coin_img']; ?>" alt="Airdrop"/></a>
+        </figure>
+        <div class="airdrop-currency-info">
+            <h2 class="h6"><a href="single-airdrop.php"><?php echo $row['coin_name']; ?></a><a href="airdrop-listing.php" class="<?php echo $statusClass; ?>"><?php echo $row['status']; ?></a></h2>
+            <p class="offer-time"><?php echo $row['days']; ?> days</p>
         </div>
-        <div class="airdrop-social-icons d-sm-none d-md-block">
-            <a href="<?php echo $row_social['join_link']; ?>"><i class="fa fa-send"></i></a>
-            <a href="<?php echo $row_social['website_link']; ?>"><i class="fa fa-envelope"></i></a>
-            <a href="<?php echo $row_social['reddit_link']; ?>"><i class="fa fa-reddit-alien"></i></a>
-            <a href="<?php echo $row_social['youtube_link']; ?>"><i class="fa fa-youtube"></i></a>
-        </div>
-        <div class="airdrop-pricing-area">
-            <div class="price-unit ">
-                <h3 class="price-currency d-inline-block align-middle"><?php echo $row['est_value']; ?></h3>
-                <img src="assets/img/icons/doller.png" alt="doller" class="img-fluid d-inline-block align-middle"/>
-            </div>
-            <div class="price-name">Net Worth</div>
-        </div>
-
-        <span class="pinpost">Pin post</span>
     </div>
-    <?php
+    <div class="airdrop-social-icons d-sm-none d-md-block">
+        <?php if ($row_social['join_link']): ?><a href="<?php echo $row_social['join_link']; ?>"><i class="fa fa-send"></i></a><?php endif; ?>
+        <?php if ($row_social['website_link']): ?><a href="<?php echo $row_social['website_link']; ?>"><i class="fa fa-envelope"></i></a><?php endif; ?>
+        <?php if ($row_social['reddit_link']): ?><a href="<?php echo $row_social['reddit_link']; ?>"><i class="fa fa-reddit-alien"></i></a><?php endif; ?>
+        <?php if ($row_social['youtube_link']): ?><a href="<?php echo $row_social['youtube_link']; ?>"><i class="fa fa-youtube"></i></a><?php endif; ?>
+    </div>
+    <div class="airdrop-pricing-area">
+        <div class="price-unit ">
+            <h3 class="price-currency d-inline-block align-middle"><?php echo $row['est_value']; ?></h3>
+            <img src="assets/img/icons/doller.png" alt="doller" class="img-fluid d-inline-block align-middle"/>
+        </div>
+        <div class="price-name">Net Worth</div>
+    </div>
+
+    <span class="pinpost">Pin post</span>
+</div>
+
+<?php
 }
 ?>
 
