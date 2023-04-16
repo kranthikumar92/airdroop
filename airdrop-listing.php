@@ -239,7 +239,7 @@ $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 
 // Fetch data from airdrop_coin_social table
-$sql_social = "SELECT `sno`, `airdrop_sno`, `website_link`, `join_link`, `twitter_link`, `medium_link`, `youtube_link`, `facebook_link`, `instagram_link`, `discord_link`, `telegram_link`, `blog_link`, `github_link`, `reddit_link`, `linkedin_link` FROM `airdrop_coin_social` WHERE `sno_airdrop` = " . $row['sno'];
+$sql_social = "SELECT `sno`, `airdrop_sno`, `website_link`, `join_link`, `twitter_link`, `medium_link`, `youtube_link`, `facebook_link`, `instagram_link`, `discord_link`, `telegram_link`, `blog_link`, `github_link`, `reddit_link`, `linkedin_link` FROM `airdrop_coin_social` WHERE `airdrop_sno` = " . $row['sno'];
 $result_social = mysqli_query($conn, $sql_social);
 $row_social = mysqli_fetch_assoc($result_social);
 ?>
