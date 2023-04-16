@@ -207,6 +207,47 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 
+<?php
+// Database connection settings
+
+// Query to retrieve the details of the coin with sno = 1
+$sql1 = "SELECT * FROM airdrop_coin_social WHERE sno = 1";
+$result1 = $conn->query($sql1);
+
+// Check if the query was successful
+if ($result1->num_rows > 0) {
+    // Fetch the result as an associative array
+    $row1 = $result1->fetch_assoc();
+    
+    // Display the details
+    echo '<div class="single-sidebar-item">
+          <h2 class="h6">Stay Connected!</h2>
+          <ul class="giveway-list">';
+
+    // Check if each link exists, and display the corresponding span only if it does
+    if (!empty($row1["website_link"])) {
+        echo '<span><a href="' . $row1["website_link"] . '"><img src="assets/img/icons/social/web.png" alt="Coin" width="30" height="30"/></a></span>';
+    }
+
+    if (!empty($row1["join_link"])) {
+        echo '<span><a href="' . $row1["join_link"] . '"><img src="assets/img/icons/social/twitter.png" alt="Coin" width="30" height="30"/></a></span>';
+    }
+
+    if (!empty($row1["medium_link"])) {
+        echo '<span><a href="' . $row1["medium_link"] . '"><img src="assets/img/icons/social/medium.png" alt="Coin" width="30" height="30"/></a></span>';
+    }
+
+    // Add more links here following the same pattern
+
+    echo '</ul>
+        </div>';
+} else {
+    echo "No results found.";
+}
+
+// Close the database connection
+$conn->close();
+?>
 
                                 
 
