@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
-
+<?php
+// Retrieve the 'id' parameter from the URL
+$airdrop_id = $_GET['id'];
+?>
 <!-- Mirrored from codeboxr.net/themedemo/airdroop/airdrop-listing.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Apr 2023 10:30:30 GMT -->
 <head>
     <meta charset="utf-8">
@@ -232,7 +235,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM airdrop_coins";
+$sql = "SELECT * FROM airdrop_coins where sno = '$airdrop_id'";
 $result = mysqli_query($conn, $sql);
 while ($row = mysqli_fetch_assoc($result)) {
     $airdrop_sno = $row['sno'];
