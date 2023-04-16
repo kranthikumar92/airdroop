@@ -263,11 +263,8 @@ if ($result1->num_rows > 0) {
                                 <h2 class="h4">Airdrop Details:</h2>
                                 <?php
                                 echo  $row["airdrop_description"];
-                                
                                 ?>
                                 
-
-
                                 <div class="project-video">
                                     <h2 class="h4">Step by Step Guide:</h2>
                                     <?php
@@ -275,9 +272,7 @@ if ($result1->num_rows > 0) {
                                 // Close the database connection
                                 $conn->close();
                                 ?>
-                                    
-
-                                    
+                                <br>
 
                                     <a href="#"><img src="assets/img/images/listing-advise.jpg" alt="advisement"
                                                      class="img-fluid"/></a>
