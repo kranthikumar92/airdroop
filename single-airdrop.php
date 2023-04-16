@@ -137,7 +137,7 @@ if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
 
     // Determine the CSS class for status
-    $statusClass = ($row['status'] == 'active') ? 'popular-tag' : 'popular-tag-end';
+    $statusClass = ($row['status'] == 'active') ? 'popular-tag-end' : 'popular-tag-end';
     
     // Display the details
     echo '<div class="single-sidebar-item">
