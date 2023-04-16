@@ -244,7 +244,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 // Determine the CSS class for status
 $statusClass = "";
-$statusClass = ($row['status'] == 'active') ? 'popular-tag' : 'popular-tag-end';
+$statusClass = ($row['status'] == 'active') ? 'pinpost' : 'popular-tag-end';
     ?>
     <!-- Display fetched data -->
 <div class="single-listing-airdrop d-block d-sm-flex">
@@ -271,8 +271,7 @@ $statusClass = ($row['status'] == 'active') ? 'popular-tag' : 'popular-tag-end';
         <div class="price-name">Net Worth</div>
     </div>
 
-
-    <h2 class="pinpost"><?php echo $row['status']; ?></h2>
+    <h2 class="<?php echo $statusClass; ?>"><?php echo $row['status']; ?></h2>
 </div>
 
 <?php
