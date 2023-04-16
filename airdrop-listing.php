@@ -330,10 +330,10 @@ $total_pages = ceil($total_rows / $items_per_page);
 $offset = ($page - 1) * $items_per_page;
 
 // Fetch data from airdrop_coins table with pagination
-$sql = "SELECT * FROM airdrop_coins LIMIT $items_per_page OFFSET $offset";
-$result = mysqli_query($conn, $sql);
+$sql_page = "SELECT * FROM airdrop_coins LIMIT $items_per_page OFFSET $offset";
+$result_page = mysqli_query($conn, $sql_page);
 
-while ($row = mysqli_fetch_assoc($result)) {
+while ($row_page = mysqli_fetch_assoc($result_page)) {
     // Your code to display the fetched data goes here
     // ...
 }
