@@ -244,7 +244,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 // Determine the CSS class for status
 $statusClass = "";
-$statusClass = ($row['status'] == 'activea') ? 'pinpost' : 'pinpost-end';
+$statusClass = ($row['status'] == 'active') ? 'pinpost' : 'pinpost-end';
     ?>
     <!-- Display fetched data -->
 <div class="single-listing-airdrop d-block d-sm-flex">
