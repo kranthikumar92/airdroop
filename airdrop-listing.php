@@ -242,7 +242,11 @@ $row = mysqli_fetch_assoc($result);
 $sql_social = "SELECT `sno`, `airdrop_sno`, `website_link`, `join_link`, `twitter_link`, `medium_link`, `youtube_link`, `facebook_link`, `instagram_link`, `discord_link`, `telegram_link`, `blog_link`, `github_link`, `reddit_link`, `linkedin_link` FROM `airdrop_coin_social` WHERE `airdrop_sno` = " . $row['sno'];
 $result_social = mysqli_query($conn, $sql_social);
 $row_social = mysqli_fetch_assoc($result_social);
+
+// Determine the CSS class for status
+$statusClass = ($row['status'] == 'active') ? 'popular-tag' : 'popular-tag-end';
 ?>
+
 
 <!-- Display fetched data -->
 <div class="single-listing-airdrop d-block d-sm-flex">
@@ -251,7 +255,7 @@ $row_social = mysqli_fetch_assoc($result_social);
             <a href="single-airdrop.php"><img src="<?php echo $row['coin_img']; ?>" alt="Airdrop"/></a>
         </figure>
         <div class="airdrop-currency-info">
-            <h2 class="h6"><a href="single-airdrop.php"><?php echo $row['coin_name']; ?></a><a href="airdrop-listing.php" class="popular-tag">Popular</a></h2>
+            <h2 class="h6"><a href="single-airdrop.php"><?php echo $row['coin_name']; ?></a><a href="airdrop-listing.php" class="popular-tag"><?php echo $row['status']; ?></a></h2>
             <p class="offer-time"><?php echo $row['days']; ?> days</p>
         </div>
     </div>
