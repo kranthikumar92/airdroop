@@ -267,11 +267,10 @@ if ($result1->num_rows > 0) {
 
                         <div class="col-lg-8">
                             <article class="single-airdrop-details">
-                                <h2 class="h4">Project Information:</h2>
+                                <h2 class="h4">Airdrop Details:</h2>
                                 <?php
                                 echo  $row["airdrop_description"];
-                                // Close the database connection
-                                $conn->close();
+                                
                                 ?>
                                 
 
@@ -280,10 +279,13 @@ if ($result1->num_rows > 0) {
                                 
 
                                 <div class="project-video">
-                                    <h2 class="h4">Project Video:</h2>
-                                    <p>At Gabrotech, we have a vision to disrupt the loyalty rewards market and hand
-                                        back the control ewards rules to the public. Our open-loop decentralized
-                                        ecosystem.</p>
+                                    <h2 class="h4">Step by Step Guide:</h2>
+                                    <?php
+                                echo  $row["airdrop_steps"];
+                                // Close the database connection
+                                $conn->close();
+                                ?>
+                                    
 
                                     
 
