@@ -236,6 +236,7 @@ $sql = "SELECT * FROM airdrop_coins";
 $result = mysqli_query($conn, $sql);
 while ($row = mysqli_fetch_assoc($result)) {
     $airdrop_sno = $row['sno'];
+    $date = $row["end_date"];
 
     // Fetch data from airdrop_coin_social table based on airdrop_sno
     $sql_social = "SELECT * FROM airdrop_coin_social WHERE airdrop_sno = '$airdrop_sno'";
@@ -245,6 +246,20 @@ while ($row = mysqli_fetch_assoc($result)) {
 // Determine the CSS class for status
 $statusClass = "";
 $statusClass = ($row['status'] == 'active') ? 'pinpost' : 'pinpost-end';
+
+// Define the 'from' and 'to' dates
+$fromDate = date('Y-m-d'); // Format: yyyy-mm-dd
+$toDate = $date; // Format: yyyy-mm-dd
+
+// Convert the dates to DateTime objects
+$fromDateTime = new DateTime($fromDate);
+$toDateTime = new DateTime($toDate);
+
+// Calculate the difference between the dates
+$dateInterval = $fromDateTime->diff($toDateTime);
+
+// Extract the difference in days
+$days = $dateInterval->days;
     ?>
     <!-- Display fetched data -->
 <div class="single-listing-airdrop d-block d-sm-flex">
@@ -254,7 +269,7 @@ $statusClass = ($row['status'] == 'active') ? 'pinpost' : 'pinpost-end';
         </figure>
         <div class="airdrop-currency-info">
             <h2 class="h6"><a href="single-airdrop.php"><?php echo $row['coin_name']; ?></a></h2>
-            <p class="offer-time"><?php echo $row['days']; ?> days</p>
+            <p class="offer-time"><?php $days; ?> days</p>
         </div>
     </div>
     <div class="airdrop-social-icons d-sm-none d-md-block">
