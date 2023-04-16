@@ -158,54 +158,7 @@ include('advertise_1.php');
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12 col-md-6">
-                                        <div class="single-filter-item">
-                                            <h2 class="h6 ">Required Tools</h2>
-                                            <div class="required-tools d-flex">
-                                                <div class="single-tool-item">
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="facebook">
-                                                        <label class="custom-control-label" for="facebook">facebook</label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="single-tool-item">
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="twitter">
-                                                        <label class="custom-control-label" for="twitter">twitter</label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="single-tool-item">
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="email">
-                                                        <label class="custom-control-label" for="email">email</label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="single-tool-item">
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="linkedin">
-                                                        <label class="custom-control-label" for="linkedin">linkedin</label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="single-tool-item">
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="reddit">
-                                                        <label class="custom-control-label" for="reddit">Reddit</label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="single-tool-item">
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="github">
-                                                        <label class="custom-control-label" for="github">github</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
 
