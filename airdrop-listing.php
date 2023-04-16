@@ -269,7 +269,7 @@ $days = $dateInterval->days;
         </figure>
         <div class="airdrop-currency-info">
             <h2 class="h6"><a href="single-airdrop.php"><?php echo $row['coin_name']; ?></a></h2>
-            <p class="offer-time"><?php $days; ?> days</p>
+            <p class="offer-time"><?php echo $days; ?> days</p>
         </div>
     </div>
     <div class="airdrop-social-icons d-sm-none d-md-block">
