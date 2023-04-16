@@ -138,20 +138,7 @@ include('advertise_1.php');
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12 col-md-6">
-                                        <div class="single-filter-item">
-                                            <h2 class="h6 ">Rating</h2>
-                                            <div class="rating-menu d-flex">
-                                                <div class="rating-select">
-                                                    <select name="airdrop-rating" id="airdrop-rating" class="wide">
-                                                        <option value="Max">Max</option>
-                                                        <option value="Min">Min</option>
-                                                    </select>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                     
                                 </div>
                             </div>
