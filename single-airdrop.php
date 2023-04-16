@@ -209,9 +209,13 @@ $conn->close();
 
 <?php
 // Database connection settings
+$servername = "localhost";
+$username = "calix_web_user";
+$password = "calixworldhhUUh383287HGSHhs";
+$dbname = "calix_cry_world";
 
 // Query to retrieve the details of the coin with sno = 1
-$sql1 = "SELECT * FROM airdrop_coin_social WHERE sno = '1'";
+$sql1 = "SELECT * FROM airdrop_coin_social WHERE airdrop_sno = '1'";
 $result1 = $conn->query($sql1);
 
 // Check if the query was successful
