@@ -135,6 +135,9 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Fetch the result as an associative array
     $row = $result->fetch_assoc();
+
+    // Determine the CSS class for status
+    $statusClass = ($row['status'] == 'active') ? 'green' : 'grey';
     
     // Display the details
     echo '<div class="single-sidebar-item">
@@ -144,8 +147,8 @@ if ($result->num_rows > 0) {
                  class="img-fluid"/>
         </figure>
         <div class="airdrop-currency-info">
-            <a href="#" class="popular-tag <?php echo ($row['status'] == 'active') ? 'green' : 'grey'; ?>"><?php echo $row['status']; ?></a>
-            <h2 class="h4"><?php echo $row['coin_name']; ?></h2>
+            a href="#" class="popular-tag ' . $statusClass . '">' . $row["status"] . '</a>
+            <h2 class="h4">' . $row["coin_name"] . '</h2>
         </div>
     </div>
     <p>' . $row["coin_tagline"] . '</p>
