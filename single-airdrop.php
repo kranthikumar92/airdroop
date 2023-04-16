@@ -220,47 +220,47 @@ if ($result1->num_rows > 0) {
     }
 
     if (!empty($row1["twitter_link"])) {
-        echo '<li><a href="' . $row1["twitter_link"] . '"><img src="assets/img/icons/social/twitter.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
+        echo '<li><a href="' . $row1["twitter_link"] . '" target="_blank"><img src="assets/img/icons/social/twitter.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
     }
 
     if (!empty($row1["medium_link"])) {
-        echo '<li><a href="' . $row1["medium_link"] . '"><img src="assets/img/icons/social/medium.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
+        echo '<li><a href="' . $row1["medium_link"] . '" target="_blank"><img src="assets/img/icons/social/medium.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
     }
 
     if (!empty($row1["youtube_link"])) {
-        echo '<li><a href="' . $row1["youtube_link"] . '"><img src="assets/img/icons/social/youtube.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
+        echo '<li><a href="' . $row1["youtube_link"] . '" target="_blank"><img src="assets/img/icons/social/youtube.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
     }
 
     if (!empty($row1["facebook_link"])) {
-        echo '<li><a href="' . $row1["facebook_link"] . '"><img src="assets/img/icons/social/facebook.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
+        echo '<li><a href="' . $row1["facebook_link"] . '" target="_blank"><img src="assets/img/icons/social/facebook.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
     }
 
     if (!empty($row1["instagram_link"])) {
-        echo '<li><a href="' . $row1["instagram_link"] . '"><img src="assets/img/icons/social/instagram.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
+        echo '<li><a href="' . $row1["instagram_link"] . '" target="_blank"><img src="assets/img/icons/social/instagram.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
     }
 
     if (!empty($row1["discord_link"])) {
-        echo '<li><a href="' . $row1["discord_link"] . '"><img src="assets/img/icons/social/discord.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
+        echo '<li><a href="' . $row1["discord_link"] . '" target="_blank"><img src="assets/img/icons/social/discord.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
     }
 
     if (!empty($row1["telegram_link"])) {
-        echo '<li><a href="' . $row1["telegram_link"] . '"><img src="assets/img/icons/social/telegram.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
+        echo '<li><a href="' . $row1["telegram_link"] . '" target="_blank"><img src="assets/img/icons/social/telegram.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
     }
 
     if (!empty($row1["blog_link"])) {
-        echo '<li><a href="' . $row1["blog_link"] . '"><img src="assets/img/icons/social/blogging.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
+        echo '<li><a href="' . $row1["blog_link"] . '" target="_blank"><img src="assets/img/icons/social/blogging.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
     }
 
     if (!empty($row1["github_link"])) {
-        echo '<li><a href="' . $row1["github_link"] . '"><img src="assets/img/icons/social/github.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
+        echo '<li><a href="' . $row1["github_link"] . '" target="_blank"><img src="assets/img/icons/social/github.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
     }
 
     if (!empty($row1["reddit_link"])) {
-        echo '<li><a href="' . $row1["reddit_link"] . '"><img src="assets/img/icons/social/reddit.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
+        echo '<li><a href="' . $row1["reddit_link"] . '" target="_blank"><img src="assets/img/icons/social/reddit.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
     }
 
     if (!empty($row1["linkedim_link"])) {
-        echo '<li><a href="' . $row1["linkedin_link"] . '"><img src="assets/img/icons/social/linkedin.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
+        echo '<li><a href="' . $row1["linkedin_link"] . '" target="_blank"><img src="assets/img/icons/social/linkedin.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
     }
 
     // Add more links here following the same pattern
