@@ -360,35 +360,7 @@ if ($result1->num_rows > 0) {
                                     <!-- Single Airdrop End -->
 
                                     <!-- Single Airdrop Start -->
-                                    <div class="single-airdrop-wrap">
-                                        <div class="airdrop-tags">
-                                            <a href="#" class="popular">Popular</a>
-                                            <a href="#" class="running">Running</a>
-                                            <a href="#" class="star">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </a>
-                                        </div>
-                                        <div class="airdrop-content-wrap d-flex">
-                                            <div class="aidrop-logo-area">
-                                                <figure class="airdrop-icon">
-                                                    <img src="assets/img/images/latest-airdrop-logo.png" alt="Airdrop"
-                                                         class="img-fluid"/>
-                                                    <figcaption class="offer-time">
-                                                        <p>28 Days</p>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                            <div class="airdrop-info-wrap">
-                                                <h2 class="h4">Etharum</h2>
-                                                <p>Free coin for joining</p>
-                                                <p class="giveway-text">Giveaway Worth $10</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                     <!-- Single Airdrop End -->
                                 </div>
                             </div>
