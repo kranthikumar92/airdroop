@@ -273,19 +273,7 @@ if ($result1->num_rows > 0) {
                                 // Close the database connection
                                 $conn->close();
                                 ?>
-                                <p>At Gabrotech, we have a vision to disrupt the loyalty rewards market and hand back
-                                    the control ewards rules to the public. Our open-loop decentralized ecosystem,
-                                    Gabro, aims to provide consumers with the ability to instantly redeem and manage
-                                    multiple loyalty points, and exchange them freely on a single blockchain enabled
-                                    platform.</p>
-
-                                <p>The total value of the loyalty rewards program market is estimated to be at a
-                                    staggering US$500 billion. While an average household has enrolled to an average of
-                                    25 programs, the actual utilisation of these reward points vary from 10%to 80%,
-                                    depending on sector. Surveys show that 78% of customers are generally not happy with
-                                    their loyalty programs. In addition, Loyalty Program Operators (LPO) make it hard
-                                    for customers to redeem points as many LPOs think that expired points becomes a form
-                                    of </p>
+                                
 
                                 <a href="#"><img src="assets/img/images/listing-advise.jpg" alt="advisement"
                                                  class="img-fluid"/></a>
