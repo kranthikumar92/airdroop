@@ -244,7 +244,7 @@ $result_social = mysqli_query($conn, $sql_social);
 $row_social = mysqli_fetch_assoc($result_social);
 
 // Determine the CSS class for status
-$statusClass = ($row['status'] == 'active') ? 'popular-tag-end' : 'popular-tag-end';
+$statusClass = ($row['status'] == 'active') ? 'popular-tag' : 'popular-tag-end';
 ?>
 
 
