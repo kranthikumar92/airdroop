@@ -218,8 +218,7 @@ include('advertise_1.php');
                             <div class="listing-airdrop-wrap">
                                 <!-- Single Airdrop Start -->
                                 <?php
-
-                                // Database connection parameters
+// Database connection parameters
 $servername = "localhost";
 $username = "calix_web_user";
 $password = "calixworldhhUUh383287HGSHhs";
@@ -234,47 +233,46 @@ if ($conn->connect_error) {
 }
 
 // Fetch data from airdrop_coins table
-$sql = "SELECT `sno`, `coin_name`, `coin_img`, `coin_tagline`, `airdrop_description`, `airdrop_steps`, `whitepaper`, `tokens`, `est_value`, `end_date`, `referral_available`, `referral_link`, `blockchain`, `website_link`, `airdrop_join_link`, `publish_date`, `status` FROM `airdrop_coins` WHERE `sno` = 1";
+$sql = "SELECT `sno`, `coin_name`, `coin_img`, `coin_tagline`, `airdrop_description`, `airdrop_steps`, `whitepaper`, `tokens`, `est_value`, `end_date`, `referral_available`, `referral_link`, `blockchain`, `website_link`, `airdrop_join_link`, `publish_date`, `status` FROM `airdrop_coins`";
 $result = mysqli_query($conn, $sql);
-$row = mysqli_fetch_assoc($result);
-
-// Fetch data from airdrop_coin_social table
-$sql_social = "SELECT `sno`, `airdrop_sno`, `website_link`, `join_link`, `twitter_link`, `medium_link`, `youtube_link`, `facebook_link`, `instagram_link`, `discord_link`, `telegram_link`, `blog_link`, `github_link`, `reddit_link`, `linkedin_link` FROM `airdrop_coin_social` WHERE `airdrop_sno` = " . $row['sno'];
-$result_social = mysqli_query($conn, $sql_social);
-$row_social = mysqli_fetch_assoc($result_social);
 
 // Determine the CSS class for status
-$statusClass = ($row['status'] == 'active') ? 'popular-tag' : 'popular-tag-end';
+$statusClass = "";
+
+// Iterate through each row and display fetched data
+while ($row = mysqli_fetch_assoc($result)) {
+    $statusClass = ($row['status'] == 'active') ? 'popular-tag' : 'popular-tag-end';
+    ?>
+    <div class="single-listing-airdrop d-block d-sm-flex">
+        <div class="airdrop-details-area d-flex">
+            <figure class="airdrop-currency-thumb">
+                <a href="single-airdrop.php"><img src="<?php echo $row['coin_img']; ?>" alt="Airdrop"/></a>
+            </figure>
+            <div class="airdrop-currency-info">
+                <h2 class="h6"><a href="single-airdrop.php"><?php echo $row['coin_name']; ?></a><a href="airdrop-listing.php" class="<?php echo $statusClass; ?>"><?php echo $row['status']; ?></a></h2>
+                <p class="offer-time"><?php echo $row['days']; ?> days</p>
+            </div>
+        </div>
+        <div class="airdrop-social-icons d-sm-none d-md-block">
+            <a href="<?php echo $row_social['join_link']; ?>"><i class="fa fa-send"></i></a>
+            <a href="<?php echo $row_social['website_link']; ?>"><i class="fa fa-envelope"></i></a>
+            <a href="<?php echo $row_social['reddit_link']; ?>"><i class="fa fa-reddit-alien"></i></a>
+            <a href="<?php echo $row_social['youtube_link']; ?>"><i class="fa fa-youtube"></i></a>
+        </div>
+        <div class="airdrop-pricing-area">
+            <div class="price-unit ">
+                <h3 class="price-currency d-inline-block align-middle"><?php echo $row['est_value']; ?></h3>
+                <img src="assets/img/icons/doller.png" alt="doller" class="img-fluid d-inline-block align-middle"/>
+            </div>
+            <div class="price-name">Net Worth</div>
+        </div>
+
+        <span class="pinpost">Pin post</span>
+    </div>
+    <?php
+}
 ?>
 
-
-<!-- Display fetched data -->
-<div class="single-listing-airdrop d-block d-sm-flex">
-    <div class="airdrop-details-area d-flex">
-        <figure class="airdrop-currency-thumb">
-            <a href="single-airdrop.php"><img src="<?php echo $row['coin_img']; ?>" alt="Airdrop"/></a>
-        </figure>
-        <div class="airdrop-currency-info">
-            <h2 class="h6"><a href="single-airdrop.php"><?php echo $row['coin_name']; ?></a><a href="airdrop-listing.php" class="<?php echo $statusClass; ?>"><?php echo $row['status']; ?></a></h2>
-            <p class="offer-time"><?php echo $row['days']; ?> days</p>
-        </div>
-    </div>
-    <div class="airdrop-social-icons d-sm-none d-md-block">
-        <a href="<?php echo $row_social['join_link']; ?>"><i class="fa fa-send"></i></a>
-        <a href="<?php echo $row_social['website_link']; ?>"><i class="fa fa-envelope"></i></a>
-        <a href="<?php echo $row_social['reddit_link']; ?>"><i class="fa fa-reddit-alien"></i></a>
-        <a href="<?php echo $row_social['youtube_link']; ?>"><i class="fa fa-youtube"></i></a>
-    </div>
-    <div class="airdrop-pricing-area">
-        <div class="price-unit ">
-            <h3 class="price-currency d-inline-block align-middle"><?php echo $row['est_value']; ?></h3>
-            <img src="assets/img/icons/doller.png" alt="doller" class="img-fluid d-inline-block align-middle"/>
-        </div>
-        <div class="price-name">Net Worth</div>
-    </div>
-
-    <span class="pinpost">Pin post</span>
-</div>
 
                                 <!-- Single Airdrop End -->
 
