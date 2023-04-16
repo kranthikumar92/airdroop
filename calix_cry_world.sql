@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2023 at 10:00 PM
+-- Generation Time: Apr 16, 2023 at 09:39 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -52,7 +52,7 @@ CREATE TABLE `airdrop_coins` (
 --
 
 INSERT INTO `airdrop_coins` (`sno`, `coin_name`, `coin_img`, `coin_tagline`, `airdrop_description`, `airdrop_steps`, `whitepaper`, `tokens`, `est_value`, `end_date`, `referral_available`, `referral_link`, `blockchain`, `website_link`, `airdrop_join_link`, `publish_date`, `status`) VALUES
-(1, 'Test Coin', 'https://calixworld.com/wp-content/uploads/2023/04/crypto-pink-bnb-1.webp', 'PNB3 is The Worlds first AI-Based Cryptocurrency media portal.', 'PNB3 is The Worlds first AI-Based Cryptocurrency media portal. Its designed to collect large amounts of data about the cryptocurrency industry, label training data and analyze the data for correlations and patterns, and use these patterns to make predictions about future states.', 'Tewst Steps', 'https://twitter.com/calixworldcrypt', '2000 TEST', '$15', '2023-04-28', 'yes', 'https://twitter.com/calixworldcrypt', 'Ethereum', 'https://twitter.com/calixworldcrypt', 'https://twitter.com/calixworldcrypt', '2023-04-16', 'active');
+(1, 'Pink BNB 2nd Promo', 'https://calixworld.com/wp-content/uploads/2023/04/crypto-pink-bnb-1.webp', 'PNB3 is The Worlds first AI-Based Cryptocurrency media portal.', 'PNB3 is The Worlds first AI-Based Cryptocurrency media portal. Its designed to collect large amounts of data about the cryptocurrency industry, label training data and analyze the data for correlations and patterns, and use these patterns to make predictions about future states.\n\nThis system consists of 3 major layers, user interface(UI), crawler, and Artificial intelligence(AI). Each layer has different roles to give users the best and fastest experience. Pink BNB is giveaway a total amount of $10.000 worth of PNB tokens to random 2.000 users, for completing listed tasks.Additional Referral rewards:Top 1: $30 in PNB tokensTop 2-10: $25 in PNB tokensTop 11-50: $20 in PNB tokensTop 51-100: $15 in PNB tokensTop 101-200: $10 in PNB tokens', '<span style=\"color: var(--wp--preset--color--black); font-family: var(--wp--preset--font-family--kumbh-sans); font-size: var(--wp--preset--typography--font-size--big); font-weight: var(--wp--custom--typography--font-weight--bold);\">Step by step guide</span>\n<div class=\"provider-steps\">\n<div id=\"task1\" class=\"step\">\n<div class=\"step-number\">1. Chat with the <a href=\"https://t.me/pinkbnb\" target=\"_blank\" rel=\"sponsored noopener noreferrer\">Pink BNB\'s Telegram Bot</a></div>\n</div>\n<div id=\"task2\" class=\"step\">\n<div class=\"step-number\">2. Join <a href=\"https://t.me/pinkbnb\" target=\"_blank\" rel=\"sponsored noopener noreferrer\">Pink BNB\'s Telegram Group</a></div>\n</div>\n<div id=\"task3\" class=\"step\">\n<div class=\"step-number\">3. Join <a href=\"https://t.me/pnbworld\" target=\"_blank\" rel=\"sponsored noopener noreferrer\">Pink BNB\'s Telegram Announcement Channel</a></div>\n</div>\n<div id=\"task4\" class=\"step\">\n<div class=\"step-number\">4. Follow <a href=\"https://twitter.com/pnbworld\" target=\"_blank\" rel=\"sponsored noopener noreferrer\">Pink BNB\'s Twitter Page</a> and retweet the pinned tweet</div>\n</div>\n<div id=\"task5\" class=\"step\">\n<div class=\"step-number\">5. Submit your details to the Bot</div>\n</div>\n</div>', 'https://twitter.com/calixworldcrypt', '2000 TEST', '$15', '2023-04-28', 'yes', 'https://twitter.com/calixworldcrypt', 'Ethereum', 'https://twitter.com/calixworldcrypt', 'https://twitter.com/calixworldcrypt', '2023-04-16', 'active');
 
 -- --------------------------------------------------------
 
@@ -83,7 +83,7 @@ CREATE TABLE `airdrop_coin_social` (
 --
 
 INSERT INTO `airdrop_coin_social` (`sno`, `airdrop_sno`, `website_link`, `join_link`, `twitter_link`, `medium_link`, `youtube_link`, `facebook_link`, `instagram_link`, `discord_link`, `telegram_link`, `blog_link`, `github_link`, `reddit_link`, `linkedin_link`) VALUES
-(1, '1', 'https://calixworld.com', 'https://calixworld.com', 'https://twitter.com/calixworldcrypt', NULL, NULL, NULL, NULL, 'https://discord.gg/bNUdHQFF3d', 'https://t.me/calixcryptoworld', NULL, NULL, NULL, NULL);
+(1, '1', 'https://calixworld.com', 'https://calixworld.com', 'https://twitter.com/calixworldcrypt', '', '', '', '', 'https://discord.gg/bNUdHQFF3d', 'https://t.me/calixcryptoworld', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
