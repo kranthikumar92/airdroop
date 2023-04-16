@@ -216,7 +216,7 @@ if ($result1->num_rows > 0) {
 
     // Check if each link exists, and display the corresponding span only if it does
     if (!empty($row1["website_link"])) {
-        echo '<li><a href="' . $row1["website_link"] . '"><img src="assets/img/icons/social/web.png" target="_blank" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
+        echo '<li><a href="' . $row1["website_link"] . '" target="_blank"><img src="assets/img/icons/social/web.png" alt="Coin" width="30" height="30"/></a></li>'; // Wrapped in <li> for list item
     }
 
     if (!empty($row1["twitter_link"])) {
