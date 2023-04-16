@@ -253,10 +253,8 @@ $offset = ($page - 1) * $items_per_page;
 <!-- Pagination Php Code Area End -->
 
 
-                                <!-- Single Airdrop Start -->
+                                <!-- Airdrop List Start -->
                                 <?php
-
-
 $sql = "SELECT * FROM airdrop_coins LIMIT $items_per_page OFFSET $offset";
 $result = mysqli_query($conn, $sql);
 while ($row = mysqli_fetch_assoc($result)) {
@@ -317,6 +315,7 @@ $days = $dateInterval->days;
 <?php
 }
 ?>
+                                <!-- Airdrop List End -->
 
                             </div>
 
