@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
-
+<?php
+// Retrieve the 'id' parameter from the URL
+$airdrop_id = $_GET['id'];
+?>
 <!-- Mirrored from codeboxr.net/themedemo/airdroop/single-airdrop.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Apr 2023 10:30:32 GMT -->
 <head>
     <meta charset="utf-8">
@@ -183,7 +186,7 @@ if ($result->num_rows > 0) {
 // Database connection settings
 
 // Query to retrieve the details of the coin with sno = 1
-$sql1 = "SELECT * FROM airdrop_coin_social WHERE airdrop_sno = 1";
+$sql1 = "SELECT * FROM airdrop_coin_social WHERE airdrop_sno = '$airdrop_id'";
 $result1 = $conn->query($sql1);
 
 // Check if the query was successful
