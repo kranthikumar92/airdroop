@@ -269,7 +269,7 @@ if ($result1->num_rows > 0) {
                             <article class="single-airdrop-details">
                                 <h2 class="h4">Project Information:</h2>
                                 <?php
-                                echo  '$row["airdrop_description"]';
+                                echo  $row["airdrop_description"];
                                 // Close the database connection
                                 $conn->close();
                                 ?>
