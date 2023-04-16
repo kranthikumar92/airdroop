@@ -277,15 +277,7 @@ if ($result1->num_rows > 0) {
 
                                 <a href="#"><img src="assets/img/images/listing-advise.jpg" alt="advisement"
                                                  class="img-fluid"/></a>
-                                <p>At Gabrotech, we have a vision to disrupt the loyalty rewards market and hand back
-                                    the control ewards rules to the public. Our open-loop decentralized ecosystem,
-                                    Gabro, aims to provide consumers with the ability to instantly redeem and manage
-                                    multiple loyalty points, and exchange them freely on a single blockchain enabled
-                                    platform.</p>
-
-                                <img src="assets/img/images/single-airdrop.png" alt="advisement" class="img-fluid"/>
-                                <a href="#"><img src="assets/img/images/listing-advise.jpg" alt="advisement"
-                                                 class="img-fluid"/></a>
+                                
 
                                 <div class="project-video">
                                     <h2 class="h4">Project Video:</h2>
@@ -293,15 +285,7 @@ if ($result1->num_rows > 0) {
                                         back the control ewards rules to the public. Our open-loop decentralized
                                         ecosystem.</p>
 
-                                    <figure class="video-overlay">
-                                        <img src="assets/img/images/video-overlay-bg.jpg" alt="Video BG"
-                                             class="img-fluid"/>
-
-                                        <figcaption class="video-overlay-btn">
-                                            <a href="https://player.vimeo.com/video/250154019?title=0&amp;portrait=0&amp;byline=0&amp;autoplay=1&amp;loop=1"
-                                               class="btn btn-play video-popup"><i class="fa fa-play"></i></a>
-                                        </figcaption>
-                                    </figure>
+                                    
 
                                     <a href="#"><img src="assets/img/images/listing-advise.jpg" alt="advisement"
                                                      class="img-fluid"/></a>
