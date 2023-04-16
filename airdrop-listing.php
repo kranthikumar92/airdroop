@@ -255,7 +255,7 @@ $statusClass = ($row['status'] == 'active') ? 'popular-tag' : 'popular-tag-end';
             <a href="single-airdrop.php"><img src="<?php echo $row['coin_img']; ?>" alt="Airdrop"/></a>
         </figure>
         <div class="airdrop-currency-info">
-            <h2 class="h6"><a href="single-airdrop.php"><?php echo $row['coin_name']; ?></a><a href="airdrop-listing.php" class="popular-tag"><?php echo $row['status']; ?></a></h2>
+            <h2 class="h6"><a href="single-airdrop.php"><?php echo $row['coin_name']; ?></a><a href="airdrop-listing.php" class="<?php echo $statusClass; ?>"><?php echo $row['status']; ?></a></h2>
             <p class="offer-time"><?php echo $row['days']; ?> days</p>
         </div>
     </div>
