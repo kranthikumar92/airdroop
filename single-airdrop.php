@@ -144,7 +144,7 @@ if ($result->num_rows > 0) {
                  class="img-fluid"/>
         </figure>
         <div class="airdrop-currency-info">
-            <a href="#" class="popular-tag">Popular</a>
+            <a href="#" class="popular-tag">' . $row["status"] . '</a>
             <h2 class="h4">' . $row["coin_name"] . '</h2>
         </div>
     </div>
@@ -273,6 +273,7 @@ if ($result1->num_rows > 0) {
                                 $conn->close();
                                 ?>
                                 <br>
+
                                 <?php
                                 include ('advertise_airdrop_page.php');
 
