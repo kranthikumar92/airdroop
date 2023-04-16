@@ -146,19 +146,12 @@ if ($result->num_rows > 0) {
         <div class="airdrop-currency-info">
             <a href="#" class="popular-tag">Popular</a>
             <h2 class="h4">' . $row["coin_name"] . '</h2>
-            <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-half-o"></i>
-                <i class="fa fa-star-o"></i>
-            </div>
         </div>
     </div>
     <p>' . $row["coin_tagline"] . '</p>
     <div class="brand-btn-group">
         <a href="' . $row["whitepaper"] . '" target="_blank" class="btn btn-gradiant"><i class="fa fa-download"></i> Whitepapper</a>
-        <a href="' . $row["airdrop_join_link"] . '" class="btn btn-gradiant">Join Airdrop</a>
+        <a href="' . $row["airdrop_join_link"] . '" target="_blank" class="btn btn-gradiant">Join Airdrop</a>
     </div>
 </div>
 
