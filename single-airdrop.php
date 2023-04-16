@@ -277,50 +277,6 @@ $conn->close();
 
 
                                 
-
-                                <div class="single-sidebar-item">
-                                    <div class="convert-currency">
-                                        <h2 class="h4">Currency Convert:</h2>
-                                        <div class="convert-calculator">
-                                            <form action="#" method="get" class="convertform" data-busy="0" data-apikey="2WJ4BTFMAH6SCZVC">
-                                                <div class="calculator-items">
-                                                    <div class="single-cal-item d-flex">
-                                                        <div class="coin-type">
-                                                            <select class="wide fromcurfield" name="fromcurfield">
-                                                                <option value="BTC">BTC</option>
-                                                                <option value="ETH">ETH</option>
-                                                                <option value="LTC">LTC</option>
-                                                            </select>
-                                                        </div>
-
-                                                        <div class="coin-amount">
-                                                            <input type="text" placeholder="From Value" value="1" class="fromcurvalue" name="fromcurvalue" required />
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="single-cal-item d-flex">
-                                                        <div class="coin-type">
-                                                            <select class="wide tocurfield" name="tocurfield">
-                                                                <option value="USD">USD</option>
-                                                                <option value="EUR">EUR</option>
-                                                                <option value="CAD">CAD</option>
-                                                            </select>
-                                                        </div>
-
-                                                        <div class="coin-amount">
-                                                            <input type="text" placeholder="Converted Value" value="" class="tocurvalue" name="tocurvalue" />
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="offer-button">
-                                                        <button class="btn btn-gradiant btn-convert" type="submit">Convert</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
