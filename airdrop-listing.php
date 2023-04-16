@@ -219,7 +219,7 @@ include('advertise_1.php');
                                 <!-- Single Airdrop Start -->
                                 <?php
 
-                                // Database connection parameters
+// Database connection parameters
 $servername = "localhost";
 $username = "calix_web_user";
 $password = "calixworldhhUUh383287HGSHhs";
@@ -234,18 +234,19 @@ if ($conn->connect_error) {
 }
 
 // Fetch data from airdrop_coins table
-$sql = "SELECT `sno`, `coin_name`, `coin_img`, `coin_tagline`, `airdrop_description`, `airdrop_steps`, `whitepaper`, `tokens`, `est_value`, `end_date`, `referral_available`, `referral_link`, `blockchain`, `website_link`, `airdrop_join_link`, `publish_date`, `status` FROM `airdrop_coins` WHERE `sno` = 1";
+$sql = "SELECT `sno`, `coin_name`, `coin_img`, `coin_tagline`, `airdrop_description`, `airdrop_steps`, `whitepaper`, `tokens`, `est_value`, `end_date`, `referral_available`, `referral_link`, `blockchain`, `website_link`, `airdrop_join_link`, `publish_date`, `status` FROM `airdrop_coins`";
 $result = mysqli_query($conn, $sql);
-$row = mysqli_fetch_assoc($result);
 
-// Fetch data from airdrop_coin_social table
-$sql_social = "SELECT `sno`, `airdrop_sno`, `website_link`, `join_link`, `twitter_link`, `medium_link`, `youtube_link`, `facebook_link`, `instagram_link`, `discord_link`, `telegram_link`, `blog_link`, `github_link`, `reddit_link`, `linkedin_link` FROM `airdrop_coin_social` WHERE `airdrop_sno` = " . $row['sno'];
-$result_social = mysqli_query($conn, $sql_social);
-$row_social = mysqli_fetch_assoc($result_social);
+// Loop through each row and display fetched data
+while ($row = mysqli_fetch_assoc($result)) {
+    // Fetch data from airdrop_coin_social table
+    $sql_social = "SELECT `sno`, `airdrop_sno`, `website_link`, `join_link`, `twitter_link`, `medium_link`, `youtube_link`, `facebook_link`, `instagram_link`, `discord_link`, `telegram_link`, `blog_link`, `github_link`, `reddit_link`, `linkedin_link` FROM `airdrop_coin_social` WHERE `airdrop_sno` = " . $row['sno'];
+    $result_social = mysqli_query($conn, $sql_social);
+    $row_social = mysqli_fetch_assoc($result_social);
 
-// Determine the CSS class for status
-$statusClass = ($row['status'] == 'active') ? 'popular-tag' : 'popular-tag-end';
-?>
+    // Determine the CSS class for status
+    $statusClass = ($row['status'] == 'active') ? 'popular-tag' : 'popular-tag-end';
+    ?>
 
 
 <!-- Display fetched data -->
