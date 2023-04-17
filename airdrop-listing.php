@@ -123,7 +123,7 @@ include('advertise_1.php');
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 
 // Set the number of items per page
-$items_per_page = 2;
+$items_per_page = 10;
 
 // Database connection parameters
 $servername = "localhost";
