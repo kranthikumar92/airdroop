@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2023 at 06:47 PM
+-- Generation Time: Apr 17, 2023 at 06:59 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -108,8 +108,8 @@ CREATE TABLE `new_airdrop_requests` (
   `project_name` varchar(100) NOT NULL,
   `email` varchar(500) NOT NULL,
   `designation` varchar(100) NOT NULL,
-  `ico_start_date` date NOT NULL,
-  `ico_end_date` date NOT NULL,
+  `ico_start_date` varchar(50) NOT NULL,
+  `ico_end_date` varchar(50) NOT NULL,
   `total_airdrop_value` varchar(50) NOT NULL,
   `individual_reward_value` varchar(50) NOT NULL,
   `referral_bonus` varchar(100) NOT NULL,
