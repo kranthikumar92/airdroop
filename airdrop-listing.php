@@ -124,22 +124,6 @@ include('advertise_1.php');
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12 col-md-6">
-                                        <div class="single-filter-item">
-                                            <h2 class="h6 ">Date</h2>
-                                            <div class="date-menu">
-                                                <form action="#" method="post" class="d-flex">
-                                                    <input type="text" class="datepicker" id="datefrom" data-rangeto="#dateto"
-                                                           placeholder="12/07/18"/>
-                                                    <p class="range_to">to</p>
-                                                    <input type="text" class="datepicker" id="dateto" data-rangefrom="#datefrom"
-                                                           placeholder="21/07/18"/>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    
                                 </div>
                             </div>
 
