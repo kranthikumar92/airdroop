@@ -159,7 +159,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_stmt_bind_param($stmt, "dssssssdddssssss", $reference, $coinName, $projectName, $email, $designation, $icoStartDate, $icoEndDate, $totalAirdropValue, $individualRewardValue, $referralBonus, $coinRateAgainstUSD, $projectTelegramLink, $projectTwitterLink, $projectDiscordLink, $projectContactTelegramID, $moreInformation);
     $result = mysqli_stmt_execute($stmt);
     if ($result) {
-        echo . $coin_name ."airdrop listing submitted successfully. Reference number: " . $reference;
+        echo $coin_name "airdrop listing submitted successfully. Reference number: " . $reference;
     } else {
         echo "Error: " . mysqli_stmt_error($stmt);
     }
