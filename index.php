@@ -150,6 +150,8 @@ $dateInterval = $fromDateTime->diff($toDateTime);
 // Extract the difference in days
 $days = $dateInterval->days;
 
+// Determine the CSS class for status
+$statusClass = ($row['status'] == 'active') ? 'running' : 'popular';
 
 
         // Display the details
