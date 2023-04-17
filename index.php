@@ -135,6 +135,7 @@ if ($result->num_rows > 0) {
         $tagline = $row["coin_tagline"];
         $giveaway_worth = $row["est_value"];
         $sno = $row["sno"];
+        $coin_status = $row["status"];
 
         // Define the 'from' and 'to' dates
 $fromDate = date('Y-m-d'); // Format: yyyy-mm-dd
@@ -158,8 +159,7 @@ $statusClass = ($row['status'] == 'active') ? 'running' : 'popular';
         echo '<div class="col-lg-4 col-md-6 col-sm-9 m-auto">
             <div class="single-airdrop-wrap">
                 <div class="airdrop-tags">
-                    <a href="airdrop-listing.php" class="' . $statusClass . '">Popular</a>
-                    <a href="airdrop-listing.php" class="running">Running</a>
+                    <a href="airdrop-listing.php" class="' . $statusClass . '">' . $coin_status . '</a>
                     
                 </div>
                 <div class="airdrop-content-wrap d-flex">
