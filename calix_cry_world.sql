@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2023 at 06:59 PM
+-- Generation Time: Apr 17, 2023 at 07:05 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -119,7 +119,7 @@ CREATE TABLE `new_airdrop_requests` (
   `project_discord_link` varchar(500) NOT NULL,
   `project_contact_telegram_id` varchar(500) NOT NULL,
   `more_information` text NOT NULL,
-  `status` varchar(20) NOT NULL
+  `status` varchar(20) NOT NULL DEFAULT 'submitted'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
