@@ -170,7 +170,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 mysqli_close($conn);
 ?>
 </h2>
-                                        
+                                            <div class="submit-btn">
+                                            <a href="airdrop-listing.php"><button class="btn btn-gradiant">Back to Airdrops List</button></a>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
