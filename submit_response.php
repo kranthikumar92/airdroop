@@ -33,9 +33,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $reference = mt_rand(10000000, 99999999);
 
     // Insert form data into database
-    $sql = "INSERT INTO new_airdrop_requests (reference, coin_name, project_name, email, designation, ico_start_date, ico_end_date, total_airdrop_value, individual_reward_value, referral_bonus, coin_rate_against_usd, project_telegram_link, project_twitter_link, project_discord_link, project_contact_telegram_id, more_information) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO new_airdrop_requests (reference, coin_name, project_name, email, designation, ico_start_date, ico_end_date, total_airdrop_value, individual_reward_value, referral_bonus, coin_rate_against_usd, project_telegram_link, project_twitter_link, project_discord_link, project_contact_telegram_id, more_information, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($conn, $sql);
-    mysqli_stmt_bind_param($stmt, "dssssssdddssssss", $reference, $coinName, $projectName, $email, $designation, $icoStartDate, $icoEndDate, $totalAirdropValue, $individualRewardValue, $referralBonus, $coinRateAgainstUSD, $projectTelegramLink, $projectTwitterLink, $projectDiscordLink, $projectContactTelegramID, $moreInformation);
+    mysqli_stmt_bind_param($stmt, "dssssssdddssssss", $reference, $coinName, $projectName, $email, $designation, $icoStartDate, $icoEndDate, $totalAirdropValue, $individualRewardValue, $referralBonus, $coinRateAgainstUSD, $projectTelegramLink, $projectTwitterLink, $projectDiscordLink, $projectContactTelegramID, $moreInformation, "submitted");
     $result = mysqli_stmt_execute($stmt);
     if ($result) {
         echo "Form data added to database successfully. Reference number: " . $reference;
