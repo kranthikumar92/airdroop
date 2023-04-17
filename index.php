@@ -134,6 +134,7 @@ if ($result->num_rows > 0) {
         $date = $row["end_date"];
         $tagline = $row["coin_tagline"];
         $giveaway_worth = $row["est_value"];
+        $sno = $row["sno"];
 
         // Define the 'from' and 'to' dates
 $fromDate = date('Y-m-d'); // Format: yyyy-mm-dd
@@ -170,7 +171,7 @@ $days = $dateInterval->days;
                         </figure>
                     </div>
                     <div class="airdrop-info-wrap">
-                        <h2 class="h4"><a href="single-airdrop.php">'.$name.'</a></h2>
+                        <h2 class="h4"><a href="single-airdrop.php?id='.$sno.'">'.$name.'</a></h2>
                         <p>'.$tagline.'</p>
                         <p class="giveway-text">Giveaway Worth '.$giveaway_worth.'</p>
                     </div>
