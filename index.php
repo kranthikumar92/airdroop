@@ -158,7 +158,7 @@ $statusClass = ($row['status'] == 'active') ? 'running' : 'popular';
         echo '<div class="col-lg-4 col-md-6 col-sm-9 m-auto">
             <div class="single-airdrop-wrap">
                 <div class="airdrop-tags">
-                    <a href="airdrop-listing.php" class="popular">Popular</a>
+                    <a href="airdrop-listing.php" class="' . $statusClass . '">Popular</a>
                     <a href="airdrop-listing.php" class="running">Running</a>
                     
                 </div>
