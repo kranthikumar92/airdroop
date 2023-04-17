@@ -197,10 +197,11 @@ $days = $dateInterval->days;
         </div>
     </div>
     <div class="airdrop-social-icons d-sm-none d-md-block">
-        <?php if ($row_social['join_link']): ?><a href="<?php echo $row_social['join_link']; ?>" target="_blank"><i class="fa fa-facebook-official"></i></a><?php endif; ?>
-        <?php if ($row_social['website_link']): ?><a href="<?php echo $row_social['website_link']; ?>" target="_blank"><i class="fa fa-facebook-official"></i></a><?php endif; ?>
-        <?php if ($row_social['reddit_link']): ?><a href="<?php echo $row_social['reddit_link']; ?>" target="_blank"><i class="fa fa-reddit-alien"></i></a><?php endif; ?>
-        <?php if ($row_social['youtube_link']): ?><a href="<?php echo $row_social['youtube_link']; ?>" target="_blank"><i class="fa fa-youtube"></i></a><?php endif; ?>
+        <?php if ($row_social['website_link']): ?><a href="<?php echo $row_social['website_link']; ?>" target="_blank"><i class="fa fa-firefox"></i></a><?php endif; ?>
+        <?php if ($row_social['facebook_link']): ?><a href="<?php echo $row_social['facebook_link']; ?>" target="_blank"><i class="fa fa-facebook-official"></i></a><?php endif; ?>
+        <?php if ($row_social['twitter_link']): ?><a href="<?php echo $row_social['twitter_link']; ?>" target="_blank"><i class="fa fa-twitter-square"></i></a><?php endif; ?>
+        <?php if ($row_social['discord_link']): ?><a href="<?php echo $row_social['discord_link']; ?>" target="_blank"><i class="fa fa-youtube"></i></a><?php endif; ?>
+        <?php if ($row_social['telegram_link']): ?><a href="<?php echo $row_social['telegram_link']; ?>" target="_blank"><i class="fa fa-telegram"></i></a><?php endif; ?>
     </div>
     <div class="airdrop-pricing-area">
         <div class="price-unit ">
