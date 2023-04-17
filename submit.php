@@ -111,7 +111,7 @@ include('ticker_extension.php');
                         <div class="row">
                             <div class="col-lg-2 d-none d-lg-block">
                                 <div class="step-page-adsvisement">
-                                    <a href="submit_response.php"><img src="assets/img/images/advisement-vertical.jpg" alt="Advisement"
+                                    <a href="#"><img src="assets/img/images/advisement-vertical.jpg" alt="Advisement"
                                                      class="img-fluid"/></a>
                                 </div>
                             </div>
@@ -120,7 +120,7 @@ include('ticker_extension.php');
                                 <div class="airdrop-submit-form-area">
                                     <div class="airdrop-form">
                                         <h2 class="h3 step-title">List Your Coin</h2>
-                                        <form action="#" method="post">
+                                        <form action="submit_response.php" method="post">
                                             <div class="input-row">
                                                 <div class="row">
                                                     <div class="col-md-6">
