@@ -163,7 +163,7 @@ $days = $dateInterval->days;
                 <div class="airdrop-content-wrap d-flex">
                     <div class="aidrop-logo-area">
                         <figure class="airdrop-icon">
-                            <a href="single-airdrop.php"><img src="'.$logo.'" alt="'.$name.'" class="img-fluid" /></a>
+                            <a href="single-airdrop.php?id='.$sno.'"><img src="'.$logo.'" alt="'.$name.'" class="img-fluid" /></a>
 
                             <figcaption class="offer-time">
                                 <p>'.$days.' Days</p>
