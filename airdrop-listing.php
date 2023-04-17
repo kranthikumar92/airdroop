@@ -109,23 +109,6 @@ include('advertise_1.php');
                 <div class="airdrop-listing-page-wrap">
                     <div class="row">
                         <div class="col-lg-4">
-                            <div class="airdrop-listing-filter">
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-6">
-                                        <div class="single-filter-item">
-                                            <h2 class="h6 ">Sort By</h2>
-                                            <div class="sorting-menu">
-                                                <select name="airdrop-sorting" id="airdrop-sorting" class="wide">
-                                                    <option value="Latest Airdrop">Latest Airdrop</option>
-                                                    <option value="Feature Airdrop">Feature Airdrop</option>
-                                                    <option value="Best Sell">Best Sell</option>
-                                                    <option value="Best Rating">Best Rating</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="sidebar-advisement d-none d-lg-block">
                                 <a href="#"><img src="assets/img/images/slidebar-ads.jpg" alt="Advisement"/></a>
