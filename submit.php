@@ -111,7 +111,7 @@ include('ticker_extension.php');
                         <div class="row">
                             <div class="col-lg-2 d-none d-lg-block">
                                 <div class="step-page-adsvisement">
-                                    <a href="#"><img src="assets/img/images/advisement-vertical.jpg" alt="Advisement"
+                                    <a href="submit_response.php"><img src="assets/img/images/advisement-vertical.jpg" alt="Advisement"
                                                      class="img-fluid"/></a>
                                 </div>
                             </div>
@@ -125,13 +125,13 @@ include('ticker_extension.php');
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="single-input-item">
-                                                            <input type="text" placeholder="Coin Name"/>
+                                                            <input type="text" placeholder="Coin Name" name="coin_name" id="coin_name"/>
                                                         </div>
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <div class="single-input-item">
-                                                            <input type="text" placeholder="Project Name"/>
+                                                            <input type="text" placeholder="Project Name" name="project_name" id="project_name"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -141,20 +141,20 @@ include('ticker_extension.php');
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="single-input-item">
-                                                            <input type="email" placeholder="Email"/>
+                                                            <input type="email" placeholder="Email" name="email" id="email"/>
                                                         </div>
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <div class="single-input-item">
-                                                            <select name="country" id="country" class="wide">
-                                                                <option disabled selected>Your Position this Project
+                                                            <select name="designation" id="designation" class="wide">
+                                                                <option disabled selected>Designation at Project
                                                                 </option>
-                                                                <option value="bangladesh">bangladesh</option>
-                                                                <option value="Developer">Developer</option>
-                                                                <option value="deisigner">deisigner</option>
-                                                                <option value="marketer">marketer</option>
-                                                                <option value="owner">owner</option>
+                                                                <option value="founder">Founder</option>
+                                                                <option value="cofounder">Co-Founder</option>
+                                                                <option value="it-team">IT Team</option>
+                                                                <option value="manager">Manager</option>
+                                                                
                                                             </select>
                                                         </div>
                                                     </div>
@@ -166,14 +166,14 @@ include('ticker_extension.php');
                                                     <div class="col-md-6">
                                                         <div class="single-input-item">
                                                             <input type="text" placeholder="ICO Start Date"
-                                                                   class="datepicker"/>
+                                                                   class="datepicker" name="ico_start_date" id="ico_start_date"/>
                                                         </div>
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <div class="single-input-item">
                                                             <input type="text" placeholder="ICO End Date"
-                                                                   class="datepicker"/>
+                                                                   class="datepicker" name="ico_end_date" id="ico_end_date"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -183,13 +183,13 @@ include('ticker_extension.php');
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="single-input-item">
-                                                            <input type="text" placeholder="Total Airdrop Amount"/>
+                                                            <input type="text" placeholder="Total Airdrop Value ($)" name="total_airdrop_value" id="total_airdrop_value"/>
                                                         </div>
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <div class="single-input-item">
-                                                            <input type="text" placeholder="Each Person Get"/>
+                                                            <input type="text" placeholder="Individual Reward Value ($)" name="individual_reward_value" id="individual_reward_value"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -199,13 +199,13 @@ include('ticker_extension.php');
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="single-input-item">
-                                                            <input type="text" placeholder="Refarrel Bonus"/>
+                                                            <input type="text" placeholder="Referral Bonus" name="referral_bonus" id="referral_bonus"/>
                                                         </div>
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <div class="single-input-item">
-                                                            <input type="text" placeholder="Coin Rate Against USD"/>
+                                                            <input type="text" placeholder="Coin Rate Against USD" name="coin_rate_against_usd" id="coin_rate_against_usd"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -215,7 +215,7 @@ include('ticker_extension.php');
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="single-input-item">
-                                                            <input type="url" placeholder="Project Telegram Link"/>
+                                                            <input type="url" placeholder="Project Telegram Link" name="project_telegram_link" id="project_telegram_link"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -225,7 +225,7 @@ include('ticker_extension.php');
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="single-input-item">
-                                                            <input type="url" placeholder="Project Twitter Link"/>
+                                                            <input type="url" placeholder="Project Twitter Link" name="project_twitter_link" id="project_twitter_link"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -235,7 +235,27 @@ include('ticker_extension.php');
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="single-input-item">
-                                                                <textarea name="info" id="info" cols="30"
+                                                            <input type="url" placeholder="Project Discord Link" name="project_discord_link" id="project_discord_link"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-row">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="single-input-item">
+                                                            <input type="url" placeholder="Project Contact Telegram ID" name="project_contact_telegram_id" id="project_contact_telegram_id"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-row">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="single-input-item">
+                                                                <textarea name="more_information" id="more_information" cols="50"
                                                                           rows="6"
                                                                           placeholder="More Information About Your Project"></textarea>
                                                         </div>
