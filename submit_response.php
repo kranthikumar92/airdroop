@@ -175,10 +175,9 @@ mysqli_close($conn);
                                             </div>
                                             </div>
 
-
-                                        <h2 class="h3 step-title">Latest Airdrops </h2>
                                             <!-- Latest Airdrop Start -->
                                             <div class="airdrop-listing-wrapper">
+                                            <h2 class="h3 step-title">Latest Airdrops </h2>
             <div class="row">
                 
                                             <?php
