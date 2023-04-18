@@ -196,7 +196,7 @@ if ($conn->connect_error) {
 }
 
 // Fetch data from the airdrop table
-$sql_insert = "SELECT * FROM airdrop_coins LIMIT 4";
+$sql_insert = "SELECT * FROM airdrop_coins WHERE status='active' LIMIT 4";
 $result_insert = $conn->query($sql_insert);
 
 // Check if any results are returned
