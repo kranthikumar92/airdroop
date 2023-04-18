@@ -176,10 +176,10 @@ mysqli_close($conn);
                                             </div>
 
                                             <!-- Latest Airdrop Start -->
+                                            <h2 class="h3 step-title">Latest Airdrops </h2>
                                             <div class="airdrop-listing-wrapper">
                                             
             <div class="row">
-            <h2 class="h3 step-title">Latest Airdrops </h2>
                 
                                             <?php
 // Database connection parameters
