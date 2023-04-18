@@ -121,7 +121,7 @@ if ($conn->connect_error) {
 }
 
 // Fetch data from the airdrop table
-$sql = "SELECT * FROM airdrop_coins";
+$sql = "SELECT * FROM airdrop_coins WHERE status='active' ORDER BY sno DESC LIMIT 9";
 $result = $conn->query($sql);
 
 // Check if any results are returned
