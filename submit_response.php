@@ -237,13 +237,11 @@ $statusClass = ($row['status'] == 'active') ? 'running' : 'popular';
             <div class="single-airdrop-wrap">
                 <div class="airdrop-tags">
                     <a href="single-airdrop.php?id='.$sno.'" class="feature">' . $coin_status . '</a>
-                    
                 </div>
                 <div class="airdrop-content-wrap d-flex">
                     <div class="aidrop-logo-area">
                         <figure class="airdrop-icon">
                             <a href="single-airdrop.php?id='.$sno.'"><img src="'.$logo.'" alt="'.$name.'" class="img-fluid" /></a>
-
                             <figcaption class="offer-time">
                                 <p>'.$days.' Days</p>
                             </figcaption>
