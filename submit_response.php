@@ -189,21 +189,21 @@ if ($conn->connect_error) {
 }
 
 // Fetch data from the airdrop table
-$sql = "SELECT * FROM airdrop_coins LIMIT 4";
-$result = $conn->query($sql);
+$sql_insert = "SELECT * FROM airdrop_coins LIMIT 4";
+$result_insert = $conn->query($sql_insert);
 
 // Check if any results are returned
-if ($result->num_rows > 0) {
+if ($result_insert->num_rows > 0) {
     // Loop through each row of data
-    while ($row = $result->fetch_assoc()) {
+    while ($row_insert = $result_insert->fetch_assoc()) {
         // Extract the data
-        $logo = $row["coin_img"];
-        $name = $row["coin_name"];
-        $date = $row["end_date"];
-        $tagline = $row["coin_tagline"];
-        $giveaway_worth = $row["est_value"];
-        $sno = $row["sno"];
-        $coin_status = $row["status"];
+        $logo = $row_insert["coin_img"];
+        $name = $row_insert["coin_name"];
+        $date = $row_insert["end_date"];
+        $tagline = $row_insert["coin_tagline"];
+        $giveaway_worth = $row_insert["est_value"];
+        $sno = $row_insert["sno"];
+        $coin_status = $row_insert["status"];
 
         // Define the 'from' and 'to' dates
 $fromDate = date('Y-m-d'); // Format: yyyy-mm-dd
