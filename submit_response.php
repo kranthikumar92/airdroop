@@ -231,7 +231,7 @@ $statusClass = ($row['status'] == 'active') ? 'running' : 'popular';
 
 
         // Display the details
-        echo '<h2 class="h3.span step-title">Latest Airdrops </h2>';
+       
         echo '<div class="col-lg-6 col-md-9 col-sm-9 m-auto">
             <div class="single-airdrop-wrap">
                 <div class="airdrop-tags">
