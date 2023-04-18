@@ -173,6 +173,10 @@ mysqli_close($conn);
                                             <div class="submit-btn">
                                             <a href="airdrop-listing.php"><button class="btn btn-gradiant">Back to Airdrops List</button></a>
                                             </div>
+                                            <!-- Latest Airdrop Start -->
+                                            <div class="airdrop-listing-wrapper">
+            <div class="row">
+                
                                             <?php
 // Database connection parameters
 $servername = "localhost";
@@ -256,6 +260,9 @@ $statusClass = ($row['status'] == 'active') ? 'running' : 'popular';
 // Close database connection
 $conn->close();
 ?>
+</div>
+        </div>
+        <!-- Latest Airdrop End -->
                                     </div>
                                 </div>
                             </div>
