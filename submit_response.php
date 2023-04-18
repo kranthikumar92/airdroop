@@ -159,7 +159,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_stmt_bind_param($stmt, "dssssssdddssssss", $reference, $coinName, $projectName, $email, $designation, $icoStartDate, $icoEndDate, $totalAirdropValue, $individualRewardValue, $referralBonus, $coinRateAgainstUSD, $projectTelegramLink, $projectTwitterLink, $projectDiscordLink, $projectContactTelegramID, $moreInformation);
     $result = mysqli_stmt_execute($stmt);
     if ($result) {
-        echo "airdrop listing submitted successfully. Reference number: " . $reference;
+        echo "Airdrop listing submitted successfully. Reference number: " . $reference;
     } else {
         echo "Error: " . mysqli_stmt_error($stmt);
     }
@@ -173,6 +173,89 @@ mysqli_close($conn);
                                             <div class="submit-btn">
                                             <a href="airdrop-listing.php"><button class="btn btn-gradiant">Back to Airdrops List</button></a>
                                             </div>
+                                            <?php
+// Database connection parameters
+$servername = "localhost";
+$username = "calix_web_user";
+$password = "calixworldhhUUh383287HGSHhs";
+$dbname = "calix_cry_world";
+
+// Create database connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch data from the airdrop table
+$sql = "SELECT * FROM airdrop_coins LIMIT 4";
+$result = $conn->query($sql);
+
+// Check if any results are returned
+if ($result->num_rows > 0) {
+    // Loop through each row of data
+    while ($row = $result->fetch_assoc()) {
+        // Extract the data
+        $logo = $row["coin_img"];
+        $name = $row["coin_name"];
+        $date = $row["end_date"];
+        $tagline = $row["coin_tagline"];
+        $giveaway_worth = $row["est_value"];
+        $sno = $row["sno"];
+        $coin_status = $row["status"];
+
+        // Define the 'from' and 'to' dates
+$fromDate = date('Y-m-d'); // Format: yyyy-mm-dd
+$toDate = $date; // Format: yyyy-mm-dd
+
+// Convert the dates to DateTime objects
+$fromDateTime = new DateTime($fromDate);
+$toDateTime = new DateTime($toDate);
+
+// Calculate the difference between the dates
+$dateInterval = $fromDateTime->diff($toDateTime);
+
+// Extract the difference in days
+$days = $dateInterval->days;
+
+// Determine the CSS class for status
+$statusClass = ($row['status'] == 'active') ? 'running' : 'popular';
+
+
+        // Display the details
+        echo '<div class="col-lg-4 col-md-6 col-sm-9 m-auto">
+            <div class="single-airdrop-wrap">
+                <div class="airdrop-tags">
+                    <a href="single-airdrop.php?id='.$sno.'" class="' . $statusClass . '">' . $coin_status . '</a>
+                    
+                </div>
+                <div class="airdrop-content-wrap d-flex">
+                    <div class="aidrop-logo-area">
+                        <figure class="airdrop-icon">
+                            <a href="single-airdrop.php?id='.$sno.'"><img src="'.$logo.'" alt="'.$name.'" class="img-fluid" /></a>
+
+                            <figcaption class="offer-time">
+                                <p>'.$days.' Days</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="airdrop-info-wrap">
+                        <h2 class="h4"><a href="single-airdrop.php?id='.$sno.'">'.$name.'</a></h2>
+                        <p>'.$tagline.'</p>
+                        <p class="giveway-text">Giveaway Worth '.$giveaway_worth.'</p>
+                    </div>
+                </div>
+            </div>
+        </div>';
+    }
+} else {
+    echo "No results found.";
+}
+
+// Close database connection
+$conn->close();
+?>
                                     </div>
                                 </div>
                             </div>
