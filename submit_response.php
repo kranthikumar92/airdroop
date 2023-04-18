@@ -234,7 +234,7 @@ $statusClass = ($row['status'] == 'active') ? 'running' : 'popular';
         echo '<div class="col-lg-6 col-md-9 col-sm-9 m-auto">
             <div class="single-airdrop-wrap">
                 <div class="airdrop-tags">
-                    <a href="single-airdrop.php?id='.$sno.'" class="' . $statusClass . '">' . $coin_status . '</a>
+                    <a href="single-airdrop.php?id='.$sno.'" class="feature">' . $coin_status . '</a>
                     
                 </div>
                 <div class="airdrop-content-wrap d-flex">
