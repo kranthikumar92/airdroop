@@ -175,7 +175,10 @@ mysqli_close($conn);
                                             </div>
                                             </div>
 
-
+                                            <div class="col-lg-8">
+                                <div class="airdrop-submit-form-area">
+                                    <div class="airdrop-form">
+                                        <h2 class="h3 step-title">Latest Airdrops </h2>
                                             <!-- Latest Airdrop Start -->
                                             <div class="airdrop-listing-wrapper">
             <div class="row">
