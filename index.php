@@ -398,6 +398,4 @@ include('footer.php');
 
 
 </body>
-
-<!-- Mirrored from codeboxr.net/themedemo/airdroop/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Apr 2023 10:30:16 GMT -->
 </html>
