@@ -107,32 +107,58 @@ include('advertise_1.php');
             <div class="row">
                 <!-- Single Latest Blog Start -->
                 
-    <?php
-    // Establish a database connection
-    $servername = "localhost";
-    $username = "calix_web_user";
-    $password = "calixworldhhUUh383287HGSHhs";
-    $dbname = "calix_cry_world";
-    
-    // Create database connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-    $sql = "SELECT * FROM blog_posts WHERE status = 'active' ORDER BY created_at DESC";
-    $result = $conn->query($sql);
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $post_id = $row['id'];
-            $title = $row['title'];
-            $content = $row['content'];
-            $image = $row['feature_image'];
-            $created_at = $row['created_at'];
-            $content_sub = (strlen($content) > 90) ? substr($content, 0, 100).'...' : $content;
-    ?>
-            <div class="col-lg-4 col-md-6">
+                <?php
+// Establish a database connection
+$servername = "localhost";
+$username = "calix_web_user";
+$password = "calixworldhhUUh383287HGSHhs";
+$dbname = "calix_cry_world";
+
+// Number of items per page
+$items_per_page = 6;
+
+// Create database connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Get total number of posts
+$total_posts_query = "SELECT COUNT(*) as count FROM blog_posts WHERE status = 'active'";
+$total_posts_result = $conn->query($total_posts_query);
+$total_posts_row = $total_posts_result->fetch_assoc();
+$total_posts = $total_posts_row['count'];
+
+// Calculate total number of pages
+$total_pages = ceil($total_posts / $items_per_page);
+
+// Get current page from query string
+$current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+
+// Check if current page is within range
+if ($current_page < 1 || $current_page > $total_pages) {
+    $current_page = 1;
+}
+
+// Calculate offset
+$offset = ($current_page - 1) * $items_per_page;
+
+// Get posts for current page
+$sql = "SELECT * FROM blog_posts WHERE status = 'active' ORDER BY created_at DESC LIMIT $items_per_page OFFSET $offset";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $post_id = $row['id'];
+        $title = $row['title'];
+        $content = $row['content'];
+        $image = $row['feature_image'];
+        $created_at = $row['created_at'];
+        $content_sub = (strlen($content) > 90) ? substr($content, 0, 100).'...' : $content;
+?>
+        <div class="col-lg-4 col-md-6">
             <article class="single-latest-news-wrap">
                 <figure class="news-thumbnail">
                     <a href="single-news.php?id=<?php echo $post_id ?>"><img src="<?php echo $image ?>" alt="News" class="img-fluid"/></a>
@@ -144,14 +170,15 @@ include('advertise_1.php');
                     <a href="single-news.php?id=<?php echo $post_id ?>" class="btn btn-gradiant">More</a>
                 </div>
             </article>
-            </div>
-    <?php
-        }
-    } else {
-        echo "No posts found.";
+        </div>
+<?php
     }
-    $conn->close();
-    ?>
+} else {
+    echo "No posts found.";
+}
+
+$conn->close();
+?>
     
                 <!-- Single Latest Blog End -->
 
@@ -161,21 +188,28 @@ include('advertise_1.php');
         </div>
 
         <!-- Pagination Area Start -->
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="pagination-area-wrap text-center">
-                    <div class="pagination-nav">
-                        <a href="#"><i class="fa fa-angle-left"></i></a>
-                        <a href="#">1</a>
-                        <a href="#" class="current">2</a>
-                        <a href="#">3</a>
-                        <a href="#">...</a>
-                        <a href="#">99</a>
-                        <a href="#"><i class="fa fa-angle-right"></i></a>
-                    </div>
-                </div>
-            </div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="pagination-area-wrap text-center">
+            <div class="pagination-nav">
+                <?php if ($current_page > 1): ?>
+                    <a href="?page=<?php echo $current_page - 1 ?>" class="prev page-numbers">&laquo; Previous</a>
+                <?php endif; ?>
+                <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+                <?php if ($i == $current_page): ?>
+                    <span class="page-numbers current"><?php echo $i ?></span>
+                <?php else: ?>
+                    <a href="?page=<?php echo $i ?>" class="page-numbers"><?php echo $i ?></a>
+                <?php endif; ?>
+            <?php endfor; ?>
+
+            <?php if ($current_page < $total_pages): ?>
+                <a href="?page=<?php echo $current_page + 1 ?>" class="next page-numbers">Next &raquo;</a>
+            <?php endif; ?>
         </div>
+    </div>
+</div>
+</div>
         <!-- Pagination Area End -->
 
     </div>
