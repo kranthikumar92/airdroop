@@ -208,12 +208,12 @@ if (mysqli_num_rows($result) > 0) {
 
                                 <!-- Single Sidebar Start -->
                                 <div class="single-sidebar-wrap">
-                                    <h4 class="sidebar-title">Categories</h4>
+                                    <h4 class="sidebar-title">Active Airdrops</h4>
                                     <div class="sidebar-body">
                                     <?php
 
 // Fetch data from the airdrop table
-$sql_airdrop = "SELECT * FROM airdrop_coins WHERE status='active' ORDER BY sno DESC LIMIT 9";
+$sql_airdrop = "SELECT * FROM airdrop_coins WHERE status='active' ORDER BY sno DESC LIMIT 4";
 $result_airdrop = $conn->query($sql_airdrop);
 
 // Check if any results are returned
