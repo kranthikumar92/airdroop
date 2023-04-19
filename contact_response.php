@@ -102,7 +102,6 @@ include('ticker_extension.php');
                             <div class="col-lg-10 m-auto text-center">
                                 <div class="step-page-header">
                                     <h2>Contact Us</h2>
-                                    <p>Fill below form and submit. We will get back to you in 24 hours.</p>
                                 </div>
                             </div>
                         </div>
@@ -118,60 +117,145 @@ include('ticker_extension.php');
                             <div class="col-lg-8">
                                 <div class="airdrop-submit-form-area">
                                     <div class="airdrop-form">
-                                        <form action="contact_response.php" method="post">
-                                            <div class="input-row">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="single-input-item">
-                                                            <input type="text" placeholder="Full Name" name="full_name" id="full_name"/>
-                                                        </div>
-                                                    </div>
+                                        <h2 class="h3 step-title"><?php
+// Connect to the database
+$servername = "localhost";
+$username = "calix_web_user";
+$password = "calixworldhhUUh383287HGSHhs";
+$dbname = "calix_cry_world";
 
-                                                    <div class="col-md-6">
-                                                        <div class="single-input-item">
-                                                            <input type="email" placeholder="Email" name="email" id="email"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+$conn = mysqli_connect("localhost", $username, $password, $dbname);
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 
-                                            <div class="input-row">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="single-input-item">
-                                                            <input type="url" placeholder="Social Link (Telegram, Twitter,...)" name="social_link" id="social_link"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get form data
+    $fullName = $_POST["full_name"];
+    $email = $_POST["email"];
+    $socialLink = $_POST["social_link"];
+    $descriptionContact = $_POST["description_contact"];
+    $publishDate = curdate();
+    $status_cur = "submitted";
 
-                                            <div class="input-row">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="single-input-item">
-                                                                <textarea name="description_contact" id="description_contact" cols="50"
-                                                                          rows="6"
-                                                                          placeholder="Describe your issue..."></textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+    // Generate unique reference number with 8 digits
+    $reference = mt_rand(10000000, 99999999);
 
-                                            <div class="form-checkboxes">
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                           id="privacy">
-                                                    <label class="custom-control-label" for="privacy">
-                                                    I have read and agree to the Privacy Policy
-                                                        </label>
-                                                </div>
-                                            </div>
+    // Insert form data into database
+    $sql = "INSERT INTO contact_form (reference, full_name, email, social_link, description_contact, publish_date, status) VALUES (?, ?, ?, ?, ?, ?)";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "dssssssdddssssss", $reference, $fullName, $email, $socialLink, $descriptionContact, $publishDate, $status_cur);
+    $result = mysqli_stmt_execute($stmt);
+    if ($result) {
+        echo "Contact form submitted successfully. Reference number: " . $reference;
+    } else {
+        echo "Error: " . mysqli_stmt_error($stmt);
+    }
+    mysqli_stmt_close($stmt);
+}
 
+// Close database connection
+mysqli_close($conn);
+?>
+</h2>
                                             <div class="submit-btn">
-                                                <button class="btn btn-gradiant">List Airdrop</button>
+                                            <a href="index.php"><button class="btn btn-gradiant">Back to Home Page</button></a>
                                             </div>
-                                        </form>
-                                    </div>
+                                            </div>
+
+                                            <!-- Latest Airdrop Start -->
+                                    <!--        <h2 class="h3 step-title" style="color: white;">Latest Airdrops </h2> -->
+                                            <div class="airdrop-listing-wrapper">
+                                            
+            <div class="row">
+                
+                                            <?php
+// Database connection parameters
+$servername = "localhost";
+$username = "calix_web_user";
+$password = "calixworldhhUUh383287HGSHhs";
+$dbname = "calix_cry_world";
+
+// Create database connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch data from the airdrop table
+$sql_insert = "SELECT * FROM airdrop_coins WHERE status='active' ORDER BY sno DESC LIMIT 4";
+$result_insert = $conn->query($sql_insert);
+
+// Check if any results are returned
+if ($result_insert->num_rows > 0) {
+    // Loop through each row of data
+    while ($row_insert = $result_insert->fetch_assoc()) {
+        // Extract the data
+        $logo = $row_insert["coin_img"];
+        $name = $row_insert["coin_name"];
+        $date = $row_insert["end_date"];
+        $tagline = $row_insert["coin_tagline"];
+        $giveaway_worth = $row_insert["est_value"];
+        $sno = $row_insert["sno"];
+        $coin_status = $row_insert["status"];
+
+        // Define the 'from' and 'to' dates
+$fromDate = date('Y-m-d'); // Format: yyyy-mm-dd
+$toDate = $date; // Format: yyyy-mm-dd
+
+// Convert the dates to DateTime objects
+$fromDateTime = new DateTime($fromDate);
+$toDateTime = new DateTime($toDate);
+
+// Calculate the difference between the dates
+$dateInterval = $fromDateTime->diff($toDateTime);
+
+// Extract the difference in days
+$days = $dateInterval->days;
+
+// Determine the CSS class for status
+$statusClass = ($row['status'] == 'active') ? 'running' : 'popular';
+
+
+        // Display the details
+       
+        echo '<div class="col-lg-6 col-md-9 col-sm-9 m-auto">
+            <div class="single-airdrop-wrap">
+                <div class="airdrop-tags">
+                    <a href="single-airdrop.php?id='.$sno.'" class="feature">' . $coin_status . '</a>
+                </div>
+                <div class="airdrop-content-wrap d-flex">
+                    <div class="aidrop-logo-area">
+                        <figure class="airdrop-icon">
+                            <a href="single-airdrop.php?id='.$sno.'"><img src="'.$logo.'" alt="'.$name.'" class="img-fluid" /></a>
+                            <figcaption class="offer-time">
+                                <p>'.$days.' Days</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="airdrop-info-wrap">
+                        <h2 class="h4"><a href="single-airdrop.php?id='.$sno.'">'.$name.'</a></h2>
+                        <p>'.$tagline.'</p>
+                        <p class="giveway-text">Giveaway Worth '.$giveaway_worth.'</p>
+                    </div>
+                </div>
+            </div>
+        </div>';
+    }
+} else {
+    echo "No results found.";
+}
+
+// Close database connection
+$conn->close();
+?>
+</div>
+        </div>
+        <!-- Latest Airdrop End -->
+                                   
                                 </div>
                             </div>
 
