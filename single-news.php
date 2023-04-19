@@ -169,7 +169,17 @@ if (mysqli_num_rows($result) > 0) {
                                     </div>
                                 </footer>
                             </article>
+                            <?php
+} else {
+  // No rows were returned, so display an error message
+  echo "No blog post found with ID 1";
+}
+
+// Close the database connection
+mysqli_close($conn);
+?>
                         </div>
+
                         <!-- News content Area End -->
 
                         <!-- Sidebar Area Start -->
