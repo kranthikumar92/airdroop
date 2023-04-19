@@ -266,9 +266,13 @@ $statusClass = ($row_airdrop['status'] == 'active') ? 'running' : 'popular';
 ?>
                                     </div>
                                 </div>
-                                <!-- Single Sidebar End -->
+                                
+                                <!-- Advertsiment Single Sidebar End -->
+                                <div class="sidebar-advisement d-md-none d-lg-block">
+                                    <a href="#"><img src="assets/img/images/slidebar-ads.jpg" alt="Advisement"/></a>
+                                </div>
+                                <!-- Advertsiment Single Sidebar Start -->
 
-                                <!-- Single Sidebar Start -->
                                 <div class="single-sidebar-wrap d-none d-lg-block">
                                     <h4 class="sidebar-title">Tags</h4>
                                     
