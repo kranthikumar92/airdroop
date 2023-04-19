@@ -199,7 +199,7 @@ if (mysqli_num_rows($result) > 0) {
                                 <!-- Single Sidebar Start -->
                                 <div class="single-sidebar-wrap">
                                     <div class="brand-search-form">
-                                        <form action="search.php" method="get">
+                                        <form action="search-blog.php" method="get">
                                             <input type="search" name="tag" placeholder="Type and hit here">
                                             <button type="submit"><i class="fa fa-search"></i></button>
                                         </form>
