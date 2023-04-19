@@ -202,7 +202,7 @@ if (mysqli_num_rows($result) > 0) {
                                     <?php
 
 // Fetch data from the airdrop table
-$sql_airdrop = "SELECT * FROM airdrop_coins WHERE status='active' ORDER BY sno DESC LIMIT 4";
+$sql_airdrop = "SELECT * FROM airdrop_coins WHERE status='active' ORDER BY sno DESC LIMIT 2";
 $result_airdrop = $conn->query($sql_airdrop);
 
 // Check if any results are returned
