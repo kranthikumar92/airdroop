@@ -104,6 +104,7 @@ include('advertise_1.php');
 <!--== Header Ads End ==-->
 
 <h3>Blog results for " <?php echo $_GET['tag'];?> "</h3>
+<br>
 <!-- Pagination PHP code Area Start -->
 <?php
 // Retrieve the 'page' and 'id' parameter from the URL
