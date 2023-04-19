@@ -108,7 +108,7 @@ include('advertise_1.php');
                 <!-- Single Latest Blog Start -->
                 <div class="col-lg-4 col-md-6">
     <?php
-    / Establish a database connection
+    // Establish a database connection
     $servername = "localhost";
     $username = "calix_web_user";
     $password = "calixworldhhUUh383287HGSHhs";
