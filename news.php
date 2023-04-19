@@ -130,7 +130,7 @@ include('advertise_1.php');
             $content = $row['content'];
             $image = $row['feature_image'];
             $created_at = $row['created_at'];
-            $content_sub = (strlen($content) > 40) ? substr($content, 0, 50).'...' : $content;
+            $content_sub = (strlen($content) > 90) ? substr($content, 0, 100).'...' : $content;
     ?>
             <div class="col-lg-4 col-md-6">
             <article class="single-latest-news-wrap">
