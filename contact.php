@@ -160,14 +160,6 @@ include('ticker_extension.php');
                                             <div class="form-checkboxes">
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input"
-                                                           id="user-agree">
-                                                    <label class="custom-control-label" for="user-agree"> I have
-                                                        read and agree to the
-                                                        <a href="#">User Agreement.</a></label>
-                                                </div>
-
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"
                                                            id="privacy">
                                                     <label class="custom-control-label" for="privacy">I understand I
                                                         may need to take additional steps in order to be eligible to
