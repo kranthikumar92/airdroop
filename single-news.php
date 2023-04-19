@@ -184,7 +184,7 @@ if (mysqli_num_rows($result) > 0) {
 <?php
 } else {
     // No rows were returned, so display an error message
-    echo "No blog post found with ID 1";
+    echo "No blog post found";
 }
 ?>
 
@@ -260,7 +260,7 @@ $statusClass = ($row_airdrop['status'] == 'active') ? 'running' : 'popular';
         ';
     }
 } else {
-    echo "No results found.";
+    echo "No Active Airdrops found.";
 }
 
 ?>
