@@ -126,6 +126,9 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// retrive permanent link
+$perm_link = urlencode(get_permalink());
+
 // Query to retrieve blog post with ID 1
 $sql = "SELECT * FROM blog_posts WHERE id = 1";
 $result = mysqli_query($conn, $sql);
@@ -165,7 +168,7 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="col-8">
                     <div class="shareonsocial">
                         <span>Share:</span>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $perm_link; ?>" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-linkedin"></i></a>
                         <a href="#"><i class="fa fa-vimeo"></i></a>
