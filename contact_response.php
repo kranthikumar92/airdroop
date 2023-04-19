@@ -117,14 +117,15 @@ include('ticker_extension.php');
                             <div class="col-lg-8">
                                 <div class="airdrop-submit-form-area">
                                     <div class="airdrop-form">
-                                        <h2 class="h3 step-title"><?php
+                                        <h2 class="h3 step-title">
+                                        <?php
 // Connect to the database
 $servername = "localhost";
 $username = "calix_web_user";
 $password = "calixworldhhUUh383287HGSHhs";
 $dbname = "calix_cry_world";
 
-$conn = mysqli_connect("localhost", $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
@@ -143,19 +144,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $reference = mt_rand(10000000, 99999999);
 
     // Insert form data into database
-    $sql = "INSERT INTO contact_form (reference, full_name, email, social_link, description_contact, publish_date) VALUES ($reference, $fullName, $email, $socialLink, $descriptionContact, $publishDate, $status_cur)";
-    $result = mysqli_stmt_execute($sql);
+    $sql = "INSERT INTO contact_form (reference, full_name, email, social_link, description_contact, publish_date, status_cur) VALUES ($reference, '$fullName', '$email', '$socialLink', '$descriptionContact', '$publishDate', '$status_cur')";
+    $result = mysqli_query($conn, $sql);
     if ($result) {
         echo "Contact form submitted successfully. Reference number: " . $reference;
     } else {
-        echo "Error: " . mysqli_stmt_error($sql);
+        echo "Error: " . mysqli_error($conn);
     }
-    mysqli_stmt_close($sql);
 }
 
 // Close database connection
 mysqli_close($conn);
 ?>
+
 </h2>
                                             <div class="submit-btn">
                                             <a href="contact.php"><button class="btn btn-gradiant">Back to Contact Page</button></a>
