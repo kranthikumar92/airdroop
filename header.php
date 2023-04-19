@@ -56,6 +56,7 @@
                                 <li><a href="airdrop-listing.php">Airdrops</a></li>
                                 <li><a href="submit.php">Submit Airdrop</a></li>
                                 <li><a href="news.php">News</a></li>
+                                <li><a href="contact.php">Contact</a></li>
                             </ul>
                             <div class="member-area">
                                 <a href="#" class="btn btn-round btn-search"><i class="fa fa-search"></i></a>
