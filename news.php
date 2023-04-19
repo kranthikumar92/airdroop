@@ -130,6 +130,7 @@ include('advertise_1.php');
             $content = $row['content'];
             $image = $row['feature_image'];
             $created_at = $row['created_at'];
+            $content_sub = (strlen($content) > 40) ? substr($content, 0, 50).'...' : $content;
     ?>
             <article class="single-latest-news-wrap">
                 <figure class="news-thumbnail">
@@ -138,7 +139,7 @@ include('advertise_1.php');
                 <div class="news-content">
                     <a href="single-news.php?id=<?php echo $post_id ?>" class="post-time"><?php echo $created_at ?></a>
                     <h2 class="h5"><a href="single-news.php?id=<?php echo $post_id ?>"><?php echo $title ?></a></h2>
-                    <p><?php echo $content ?></p>
+                    <p><?php echo $content_sub ?></p>
                     <a href="single-news.php?id=<?php echo $post_id ?>" class="btn btn-gradiant">More</a>
                 </div>
             </article>
