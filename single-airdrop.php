@@ -166,7 +166,7 @@ if ($result->num_rows > 0) {
     <div class="single-sidebar-item">
             <h2 class="h6">Airdrop Details:</h2>
             <ul class="giveway-list">
-                <li><span><img src="assets/img/icons/giveway/coin.png" alt="Coin"/>Blockchain</span>: ' . $row["blockchain"] . '</li>
+                <li><span><img src="assets/img/icons/giveway/blockchain.png" alt="Coin"/>Blockchain</span>: ' . $row["blockchain"] . '</li>
                 <li><span><img src="assets/img/icons/giveway/doller.png" alt="Coin"/>Est Value</span>: ' . $row["est_value"] . '</li>
                 <li><span><img src="assets/img/icons/giveway/total.png" alt="Coin"/>Tokens</span>: ' . $row["tokens"] . '</li>
                 <li><span><img src="assets/img/icons/giveway/alerm.png" alt="Coin"/>End Date</span>: ' . $row["end_date"] . '</li>
