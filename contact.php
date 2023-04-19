@@ -118,7 +118,6 @@ include('ticker_extension.php');
                             <div class="col-lg-8">
                                 <div class="airdrop-submit-form-area">
                                     <div class="airdrop-form">
-                                        <h2 class="h3 step-title">List Your Coin</h2>
                                         <form action="submit_response.php" method="post">
                                             <div class="input-row">
                                                 <div class="row">
