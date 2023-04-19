@@ -147,7 +147,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO contact_form (reference, full_name, email, social_link, description_contact, publish_date, status) VALUES ($reference, '$fullName', '$email', '$socialLink', '$descriptionContact', '$publishDate', '$status_cur')";
     $result = mysqli_query($conn, $sql);
     if ($result) {
-        echo "Contact form submitted successfully. Reference number: " . $reference;
+        echo "Contact form submitted successfully. Reference number: C" . $reference;
     } else {
         echo "Error: " . mysqli_error($conn);
     }
