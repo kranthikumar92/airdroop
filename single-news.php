@@ -227,7 +227,7 @@ if ($result_airdrop->num_rows > 0) {
         $tagline = $row_airdrop["coin_tagline"];
         $giveaway_worth = $row_airdrop["est_value"];
         $sno = $row_airdrop["sno"];
-        $coin_status = $row_airdrop["status"];
+      //  $coin_status = $row_airdrop["status"];
         $tagline_sub = (strlen($tagline) > 20) ? substr($tagline, 0, 30).'...' : $tagline;
 
         // Define the 'from' and 'to' dates
@@ -251,10 +251,7 @@ $statusClass = ($row_airdrop['status'] == 'active') ? 'running' : 'popular';
         // Display the details
         echo '
             <div class="single-airdrop-wrap">
-                <div class="airdrop-tags">
-                    <a href="single-airdrop.php?id='.$sno.'" class="' . $statusClass . '">' . ucfirst($coin_status) . '</a>
-                    
-                </div>
+                
                 <div class="airdrop-content-wrap d-flex">
                     <div class="aidrop-logo-area">
                         <figure class="airdrop-icon">
