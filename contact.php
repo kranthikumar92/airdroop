@@ -101,7 +101,7 @@ include('ticker_extension.php');
                         <div class="row">
                             <div class="col-lg-10 m-auto text-center">
                                 <div class="step-page-header">
-                                    <h2>List Your Coin Offer in Airdrop List</h2>
+                                    <h2>Contact Us!</h2>
                                     <p>Promises advanced end-to-end encrypted chat messaging, decentralized storage,
                                         calling, video calling, inbox, voice messages etc.</p>
                                 </div>
