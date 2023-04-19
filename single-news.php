@@ -169,6 +169,18 @@ if (mysqli_num_rows($result) > 0) {
                         <a href="https://twitter.com/intent/tweet?url=<?php echo urlencode('https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
                         <a href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo urlencode('https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>   
                     </div>
+                    <div class="post-tags">
+                        <span>Tags:</span>
+                        <?php
+                        // Get the tags for the blog post
+                        $post_tags = explode(",", $post['tags']);
+                        // Loop through the tags and create links
+                        foreach ($post_tags as $tag) {
+                        $tag_link = str_replace(' ', '-', strtolower($tag));
+                        echo '<a href="#' . $tag_link . '" class="post-tag">' . $tag . '</a>';
+                        }
+                        ?>
+                        </div>
                 </div>
                 <div class="col-4 m-auto text-right">
                     <form method="post">
