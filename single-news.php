@@ -110,15 +110,15 @@ include('advertise_1.php');
                     <div class="row">
                         <!-- News content Area Start -->
                         <div class="col-lg-8">
-                            <!--Retrive data from db (blog) -->
-<?php
-// Establish a database connection
-$servername = "localhost";
-$username = "calix_web_user";
-$password = "calixworldhhUUh383287HGSHhs";
-$dbname = "calix_cry_world";
+    <!--Retrieve data from db (blog) -->
+    <?php
+    // Establish a database connection
+    $servername = "localhost";
+    $username = "calix_web_user";
+    $password = "calixworldhhUUh383287HGSHhs";
+    $dbname = "calix_cry_world";
 
-// Create database connection
+    // Create database connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
@@ -132,48 +132,61 @@ $result = mysqli_query($conn, $sql);
 
 // Check if the query returned any rows
 if (mysqli_num_rows($result) > 0) {
-  // Fetch the first row as an associative array
-  $post = mysqli_fetch_assoc($result);
-?>
-                            <article class="single-news-content-wrap">
-                                <header class="article-head">
-                                    <figure class="single-news-thumb">
-                                        <img src="<?php echo $post['feature_image']; ?>" class="img-fluid" alt="<?php echo $post['title']; ?>">
-                                    </figure>
-                                    <div class="single-news-meta">
-                                        <h1 class="h3"><?php echo $post['title']; ?></h1>
-                                        <div class="posting-info">
-                                            <a href="#"><?php echo $post['created_at']; ?></a> • Posted by: <a href="#"><?php echo $post['author']; ?></a>
-                                        </div>
-                                    </div>
-                                </header>
-                                <section class="news-details">
-                                <?php echo $post['content']; ?>
-                                </section>
-                                <footer class="post-share">
-                                    <div class="row no-gutters ">
-                                        <div class="col-8">
-                                            <div class="shareonsocial">
-                                                <span>Share:</span>
-                                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                                <a href="#"><i class="fa fa-vimeo"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="col-4 m-auto text-right">
-                                            <div class="post-like-comm">
-                                                <a href="#"><i class="fa fa-thumbs-o-up"></i><?php echo $post['likes']; ?></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </footer>
-                            </article>
-                            <?php
+    // Fetch the first row as an associative array
+    $post = mysqli_fetch_assoc($result);
+    $likes = $post['likes'];
+    // Check if the user clicked the like button
+    if (isset($_POST['like'])) {
+        $likes++;
+        // Update the likes count in the database
+        $update_sql = "UPDATE blog_posts SET likes = $likes WHERE id = 1";
+        mysqli_query($conn, $update_sql);
+    }
+    ?>
+    <article class="single-news-content-wrap">
+        <header class="article-head">
+            <figure class="single-news-thumb">
+                <img src="<?php echo $post['feature_image']; ?>" class="img-fluid"
+                     alt="<?php echo $post['title']; ?>">
+            </figure>
+            <div class="single-news-meta">
+                <h1 class="h3"><?php echo $post['title']; ?></h1>
+                <div class="posting-info">
+                    <a href="#"><?php echo $post['created_at']; ?></a> • Posted by: <a
+                            href="#"><?php echo $post['author']; ?></a>
+                </div>
+            </div>
+        </header>
+        <section class="news-details">
+            <?php echo $post['content']; ?>
+        </section>
+        <footer class="post-share">
+            <div class="row no-gutters ">
+                <div class="col-8">
+                    <div class="shareonsocial">
+                        <span>Share:</span>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-vimeo"></i></a>
+                    </div>
+                </div>
+                <div class="col-4 m-auto text-right">
+                    <form method="post">
+                        <div class="post-like-comm">
+                            <button type="submit" name="like"><i class="fa fa-thumbs-o-up"></i><?php echo $likes; ?></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </footer>
+    </article>
+<?php
 } else {
-  // No rows were returned, so display an error message
-  echo "No blog post found with ID 1";
+    // No rows were returned, so display an error message
+    echo "No blog post found with ID 1";
 }
+
 
 // Close the database connection
 mysqli_close($conn);
