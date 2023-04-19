@@ -136,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $socialLink = $_POST["social_link"];
     $descriptionContact = $_POST["description_contact"];
-    $publishDate = curdate();
+    $publishDate = date("Y-m-d");
     $status_cur = "submitted";
 
     // Generate unique reference number with 8 digits
