@@ -107,20 +107,36 @@ include('advertise_1.php');
             <div class="row">
                 <!-- Single Latest Blog Start -->
                 <div class="col-lg-4 col-md-6">
-                    <article class="single-latest-news-wrap">
-                        <figure class="news-thumbnail">
-                            <a href="single-news.php"><img src="assets/img/images/latest-news-1.jpg" alt="News"
-                                                            class="img-fluid"/></a>
-                        </figure>
-                        <div class="news-content">
-                            <a href="single-news.php" class="post-time">2 hour Ago</a>
-                            <h2 class="h5"><a href="single-news.php">BitCoin Anaounce 50k Free Coin</a></h2>
-                            <p>This is a big project of our company, we are happy to completed this type projec which
-                                are get world famous award</p>
-                            <a href="single-news.php" class="btn btn-gradiant">More</a>
-                        </div>
-                    </article>
+    <?php
+    $sql = "SELECT * FROM blog_posts WHERE status = 'active' ORDER BY created_at DESC";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $post_id = $row['id'];
+            $title = $row['title'];
+            $content = $row['content'];
+            $image = $row['feature_image'];
+            $created_at = $row['created_at'];
+    ?>
+            <article class="single-latest-news-wrap">
+                <figure class="news-thumbnail">
+                    <a href="single-news.php?id=<?php echo $post_id ?>"><img src="<?php echo $image ?>" alt="News" class="img-fluid"/></a>
+                </figure>
+                <div class="news-content">
+                    <a href="single-news.php?id=<?php echo $post_id ?>" class="post-time"><?php echo $created_at ?></a>
+                    <h2 class="h5"><a href="single-news.php?id=<?php echo $post_id ?>"><?php echo $title ?></a></h2>
+                    <p><?php echo $content ?></p>
+                    <a href="single-news.php?id=<?php echo $post_id ?>" class="btn btn-gradiant">More</a>
                 </div>
+            </article>
+    <?php
+        }
+    } else {
+        echo "No posts found.";
+    }
+    $conn->close();
+    ?>
+    
                 <!-- Single Latest Blog End -->
 
                 <!-- Single Latest Blog Start -->
