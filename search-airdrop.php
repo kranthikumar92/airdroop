@@ -102,7 +102,7 @@ include('advertise_1.php');
 <!--== Advertise 1 End ==-->
 
 <!--== Header Ads End ==-->
-
+<h3>Search results for keyword " <?php echo $_GET['search'];?> "</h3>
         <div class="row">
             <div class="col-lg-12">
                 <!-- Airdrop Listing Page Content Start -->
