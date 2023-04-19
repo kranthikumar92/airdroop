@@ -140,7 +140,7 @@ if (mysqli_num_rows($result) > 0) {
     if (isset($_POST['like'])) {
         $likes++;
         // Update the likes count in the database
-        $update_sql = "UPDATE blog_posts SET likes = $likes WHERE id = 1";
+        $update_sql = "UPDATE blog_posts SET likes = $likes WHERE id = $blog_id";
         mysqli_query($conn, $update_sql);
     }
     ?>
