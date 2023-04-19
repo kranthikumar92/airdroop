@@ -108,6 +108,19 @@ include('advertise_1.php');
                 <!-- Single Latest Blog Start -->
                 <div class="col-lg-4 col-md-6">
     <?php
+    / Establish a database connection
+    $servername = "localhost";
+    $username = "calix_web_user";
+    $password = "calixworldhhUUh383287HGSHhs";
+    $dbname = "calix_cry_world";
+    
+    // Create database connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
     $sql = "SELECT * FROM blog_posts WHERE status = 'active' ORDER BY created_at DESC";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
