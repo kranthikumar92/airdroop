@@ -160,7 +160,7 @@ mysqli_close($conn);
 ?>
 </h2>
                                             <div class="submit-btn">
-                                            <a href="index.php"><button class="btn btn-gradiant">Back to Home Page</button></a>
+                                            <a href="contact.php"><button class="btn btn-gradiant">Back to Contact Page</button></a>
                                             </div>
                                             </div>
 
