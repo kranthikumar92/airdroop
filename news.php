@@ -102,26 +102,48 @@ include('advertise_1.php');
 <!--== Advertise 1 End ==-->
 
 <!--== Header Ads End ==-->
+<!-- Pagination PHP code Area Start -->
+<?php
+// Retrieve the 'page' parameter from the URL
+$page = isset($_GET['page']) ? $_GET['page'] : 1;
 
+// Set the number of items per page
+$items_per_page = 6;
+
+// Database connection parameters
+$servername = "localhost";
+$username = "calix_web_user";
+$password = "calixworldhhUUh383287HGSHhs";
+$dbname = "calix_cry_world";
+
+// Create database connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch total number of rows in the table
+$sql_total_rows = "SELECT COUNT(*) as total_rows FROM blog_posts WHERE status = 'active'";
+$result_total_rows = mysqli_query($conn, $sql_total_rows);
+$row_total_rows = mysqli_fetch_assoc($result_total_rows);
+$total_rows = $row_total_rows['total_rows'];
+
+// Calculate total number of pages
+$total_pages = ceil($total_rows / $items_per_page);
+
+// Calculate the offset for the query based on the current page number
+$offset = ($page - 1) * $items_per_page;
+?>
+<!-- Pagination Php Code Area End -->
         <div class="latest-news-content">
             <div class="row">
                 <!-- Single Latest Blog Start -->
                 
     <?php
     // Establish a database connection
-    $servername = "localhost";
-    $username = "calix_web_user";
-    $password = "calixworldhhUUh383287HGSHhs";
-    $dbname = "calix_cry_world";
-    
-    // Create database connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-    $sql = "SELECT * FROM blog_posts WHERE status = 'active' ORDER BY created_at DESC";
+    $sql = "SELECT * FROM blog_posts WHERE status = 'active' ORDER BY created_at DESC LIMIT $items_per_page OFFSET $offset";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
@@ -150,7 +172,6 @@ include('advertise_1.php');
     } else {
         echo "No posts found.";
     }
-    $conn->close();
     ?>
     
                 <!-- Single Latest Blog End -->
@@ -161,22 +182,35 @@ include('advertise_1.php');
         </div>
 
         <!-- Pagination Area Start -->
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="pagination-area-wrap text-center">
-                    <div class="pagination-nav">
-                        <a href="#"><i class="fa fa-angle-left"></i></a>
-                        <a href="#">1</a>
-                        <a href="#" class="current">2</a>
-                        <a href="#">3</a>
-                        <a href="#">...</a>
-                        <a href="#">99</a>
-                        <a href="#"><i class="fa fa-angle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Pagination Area End -->
+                            
+<?php
+// Fetch data from airdrop_coins table with pagination
+$sql_page = "SELECT * FROM blog_posts LIMIT $items_per_page OFFSET $offset";
+$result_page = mysqli_query($conn, $sql_page);
+
+while ($row_page = mysqli_fetch_assoc($result_page)) {
+    // Your code to display the fetched data goes here
+    // ...
+}
+
+// Display pagination links
+echo "<div class='pagination-area-wrap text-center'>";
+echo "<div class='pagination-nav'>";
+if ($page > 1) {
+    echo "<a href='?page=" . ($page - 1) . "'><i class='fa fa-angle-left'></i></a>";
+}
+for ($i = 1; $i <= $total_pages; $i++) {
+    echo "<a href='?page=" . $i . "' " . ($i == $page ? "class='current'" : "") . ">" . $i . "</a>";
+}
+if ($page < $total_pages) {
+    echo "<a href='?page=" . ($page + 1) . "'><i class='fa fa-angle-right'></i></a>";
+}
+echo "</div>";
+echo "</div>";
+
+// Close database connection
+mysqli_close($conn);
+?>
 
     </div>
 </div>
