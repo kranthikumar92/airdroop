@@ -249,7 +249,7 @@ $statusClass = ($row_airdrop['status'] == 'active') ? 'running' : 'popular';
 
 
         // Display the details
-        echo '<div class="col-lg-4 col-md-6 col-sm-9 m-auto">
+        echo '
             <div class="single-airdrop-wrap">
                 <div class="airdrop-tags">
                     <a href="single-airdrop.php?id='.$sno.'" class="' . $statusClass . '">' . ucfirst($coin_status) . '</a>
@@ -272,7 +272,7 @@ $statusClass = ($row_airdrop['status'] == 'active') ? 'running' : 'popular';
                     </div>
                 </div>
             </div>
-        </div>';
+        ';
     }
 } else {
     echo "No results found.";
