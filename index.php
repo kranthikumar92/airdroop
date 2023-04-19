@@ -136,7 +136,7 @@ if ($result->num_rows > 0) {
         $giveaway_worth = $row["est_value"];
         $sno = $row["sno"];
         $coin_status = $row["status"];
-        $tagline_sub = (strlen($tagline) > 20) ? substr($tagline, 0, 10).'...' : $tagline;
+        $tagline_sub = (strlen($tagline) > 20) ? substr($tagline, 0, 30).'...' : $tagline;
 
         // Define the 'from' and 'to' dates
 $fromDate = date('Y-m-d'); // Format: yyyy-mm-dd
