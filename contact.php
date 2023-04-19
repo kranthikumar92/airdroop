@@ -172,6 +172,98 @@ include('ticker_extension.php');
                                             </div>
                                         </form>
                                     </div>
+
+                                    <!-- Latest Airdrop Start -->
+                                    <!--        <h2 class="h3 step-title" style="color: white;">Latest Airdrops </h2> -->
+                                    <div class="airdrop-listing-wrapper">
+                                            
+                                            <div class="row">
+                                                
+                                                                            <?php
+                                // Database connection parameters
+                                $servername = "localhost";
+                                $username = "calix_web_user";
+                                $password = "calixworldhhUUh383287HGSHhs";
+                                $dbname = "calix_cry_world";
+                                
+                                // Create database connection
+                                $conn = new mysqli($servername, $username, $password, $dbname);
+                                
+                                // Check connection
+                                if ($conn->connect_error) {
+                                    die("Connection failed: " . $conn->connect_error);
+                                }
+                                
+                                // Fetch data from the airdrop table
+                                $sql_insert = "SELECT * FROM airdrop_coins WHERE status='active' ORDER BY sno DESC LIMIT 4";
+                                $result_insert = $conn->query($sql_insert);
+                                
+                                // Check if any results are returned
+                                if ($result_insert->num_rows > 0) {
+                                    // Loop through each row of data
+                                    while ($row_insert = $result_insert->fetch_assoc()) {
+                                        // Extract the data
+                                        $logo = $row_insert["coin_img"];
+                                        $name = $row_insert["coin_name"];
+                                        $date = $row_insert["end_date"];
+                                        $tagline = $row_insert["coin_tagline"];
+                                        $giveaway_worth = $row_insert["est_value"];
+                                        $sno = $row_insert["sno"];
+                                        $coin_status = $row_insert["status"];
+                                
+                                        // Define the 'from' and 'to' dates
+                                $fromDate = date('Y-m-d'); // Format: yyyy-mm-dd
+                                $toDate = $date; // Format: yyyy-mm-dd
+                                
+                                // Convert the dates to DateTime objects
+                                $fromDateTime = new DateTime($fromDate);
+                                $toDateTime = new DateTime($toDate);
+                                
+                                // Calculate the difference between the dates
+                                $dateInterval = $fromDateTime->diff($toDateTime);
+                                
+                                // Extract the difference in days
+                                $days = $dateInterval->days;
+                                
+                                // Determine the CSS class for status
+                                $statusClass = ($row['status'] == 'active') ? 'running' : 'popular';
+                                
+                                
+                                        // Display the details
+                                       
+                                        echo '<div class="col-lg-6 col-md-9 col-sm-9 m-auto">
+                                            <div class="single-airdrop-wrap">
+                                                <div class="airdrop-tags">
+                                                    <a href="single-airdrop.php?id='.$sno.'" class="feature">' . $coin_status . '</a>
+                                                </div>
+                                                <div class="airdrop-content-wrap d-flex">
+                                                    <div class="aidrop-logo-area">
+                                                        <figure class="airdrop-icon">
+                                                            <a href="single-airdrop.php?id='.$sno.'"><img src="'.$logo.'" alt="'.$name.'" class="img-fluid" /></a>
+                                                            <figcaption class="offer-time">
+                                                                <p>'.$days.' Days</p>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                    <div class="airdrop-info-wrap">
+                                                        <h2 class="h4"><a href="single-airdrop.php?id='.$sno.'">'.$name.'</a></h2>
+                                                        <p>'.$tagline.'</p>
+                                                        <p class="giveway-text">Giveaway Worth '.$giveaway_worth.'</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>';
+                                    }
+                                } else {
+                                    echo "No results found.";
+                                }
+                                
+                                // Close database connection
+                                $conn->close();
+                                ?>
+                                </div>
+                                        </div>
+                                        <!-- Latest Airdrop End -->
                                 </div>
                             </div>
 
