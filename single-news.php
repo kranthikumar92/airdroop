@@ -196,6 +196,29 @@ if (mysqli_num_rows($result) > 0) {
                         <div class="col-lg-4 order-first order-lg-last">
                             <div class="sidebar-area-wrap">
                                 <!-- Single Sidebar Start -->
+                                <div class="single-sidebar-wrap d-none d-lg-block">
+                                    <h4 class="sidebar-title">Tags</h4>
+                                    
+                                    <?php
+    // Get the tags for the blog post
+    $post_tags = explode(",", $post['tags']);
+?>
+<div class="sidebar-body">
+    <div class="tags">
+        <?php
+        // Loop through the tags and create links
+        foreach ($post_tags as $tag) {
+            $tag_link = str_replace(' ', '-', strtolower($tag));
+            echo '<a href="#' . $tag_link . '" class="post-tag">' . $tag . '</a>';
+        }
+        ?>
+    </div>
+</div> 
+
+                                </div>
+                                <!-- Single Sidebar End -->
+                                
+                                <!-- Single Sidebar Start -->
                                 <div class="single-sidebar-wrap">
                                     <h4 class="sidebar-title">Active Airdrops</h4>
                                     <div class="sidebar-body">
@@ -265,29 +288,6 @@ $statusClass = ($row_airdrop['status'] == 'active') ? 'running' : 'popular';
 
 ?>
                                     </div>
-                                </div>
-                                <!-- Single Sidebar End -->
-
-                                <!-- Single Sidebar Start -->
-                                <div class="single-sidebar-wrap d-none d-lg-block">
-                                    <h4 class="sidebar-title">Tags</h4>
-                                    
-                                    <?php
-    // Get the tags for the blog post
-    $post_tags = explode(",", $post['tags']);
-?>
-<div class="sidebar-body">
-    <div class="tags">
-        <?php
-        // Loop through the tags and create links
-        foreach ($post_tags as $tag) {
-            $tag_link = str_replace(' ', '-', strtolower($tag));
-            echo '<a href="#' . $tag_link . '" class="post-tag">' . $tag . '</a>';
-        }
-        ?>
-    </div>
-</div> 
-
                                 </div>
                                 <!-- Single Sidebar End -->
                             </div>
