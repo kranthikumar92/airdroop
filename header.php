@@ -95,14 +95,8 @@
                                 <li class="current"><a href="index.php">Home</a></li>
                                 <li><a href="airdrop-listing.php">Airdrops</a></li>
                                 <li><a href="submit.php">Submit Airdrop</a></li>
-                                <li><a href="single-company.php">Company Profile</a></li>
                                 <li><a href="news.php">News</a></li>
                             </ul>
-                            <div class="member-area">
-                                <a href="#" class="btn btn-brand" data-toggle="modal" data-target="#loginModal" role="button">Login</a>
-                                <a href="step.php" class="btn btn-blue">Singup</a>
-                                <a href="#" class="btn btn-round btn-search"><i class="fa fa-search"></i></a>
-                            </div>
                         </div>
                     </nav>
                 </div>
