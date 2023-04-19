@@ -149,7 +149,7 @@ include('advertise_1.php');
     }
     $conn->close();
     ?>
-    
+    </div>
                 <!-- Single Latest Blog End -->
 
                 <!-- Single Latest Blog Start -->
