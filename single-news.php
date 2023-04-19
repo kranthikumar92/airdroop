@@ -110,57 +110,45 @@ include('advertise_1.php');
                     <div class="row">
                         <!-- News content Area Start -->
                         <div class="col-lg-8">
+                            <!--Retrive data from db (blog) -->
+<?php
+// Establish a database connection
+$servername = "localhost";
+$username = "calix_web_user";
+$password = "calixworldhhUUh383287HGSHhs";
+$dbname = "calix_cry_world";
+
+// Create database connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Query to retrieve blog post with ID 1
+$sql = "SELECT * FROM blog_posts WHERE id = 1";
+$result = mysqli_query($conn, $sql);
+
+// Check if the query returned any rows
+if (mysqli_num_rows($result) > 0) {
+  // Fetch the first row as an associative array
+  $post = mysqli_fetch_assoc($result);
+?>
                             <article class="single-news-content-wrap">
                                 <header class="article-head">
                                     <figure class="single-news-thumb">
-                                        <img src="assets/img/images/single-news.jpg" class="img-fluid" alt="News">
+                                        <img src="<?php echo $post['feature_image']; ?>" class="img-fluid" alt="<?php echo $post['title']; ?>">
                                     </figure>
                                     <div class="single-news-meta">
-                                        <h1 class="h3">Awesome Article for Memory of Campus Life</h1>
+                                        <h1 class="h3"><?php echo $post['title']; ?></h1>
                                         <div class="posting-info">
-                                            <a href="#">23 May 2017</a> • Posted by: <a href="#">Admin</a>
+                                            <a href="#"><?php echo $post['created_at']; ?></a> • Posted by: <a href="#"><?php echo $post['author']; ?></a>
                                         </div>
                                     </div>
                                 </header>
                                 <section class="news-details">
-                                    <p>Lorem ipsum condimentum ligula. Fusce fringilla magna non sapien dictum, eget
-                                        faucibus
-                                        dui maximus. Donec fringilla vel mi consequat tempor. </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis diam erat.
-                                        Duvelit
-                                        lecspoe a blandit sit amet, tempor at lorem. Donec ultricies, lorem sed ultrices
-                                        interdum, leo luctfiiius sem, vel vulputate diam ipsum sed lorem. Donec tempor
-                                        arcu
-                                        nisl, et molestie massa hhisque ut. Nunc at rutrum leo. Mauris metus mauris,
-                                        tridd. </p>
-                                    <p>Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam
-                                        nonh
-                                        edunt urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices
-                                        erat.
-                                        Praesent vdd warius ultricemassa at faucibus. Aenean dignissim, orci sed
-                                        faucibus
-                                        pharetra, dui mi dir ssim tortor, sit amet ntum mi ligula sit amet augue.
-                                        Pellentesqs
-                                        placerat. </p>
-                                    <img src="assets/img/images/single-news.jpg" class="img-fluid" alt="News">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <h5>The Guest Series</h5>
-                                            <p> Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum.
-                                                Aliquam
-                                                non tidunt urna. Integer tincidunt nec nisl vitae Proin sed ultrices
-                                                erat. </p>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <h5>How and why</h5>
-                                            <p>Aenean dignissim, orci sed faucibus nissim tortor, sit amet condimentum
-                                                mi ligula sit amet augue. </p>
-                                        </div>
-                                    </div>
-                                    <blockquote class="blockquote">
-                                        Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat. Praesent
-                                        varius ultrices massa at faucibus.
-                                    </blockquote>
+                                <?php echo $post['content']; ?>
                                 </section>
                                 <footer class="post-share">
                                     <div class="row no-gutters ">
@@ -175,8 +163,7 @@ include('advertise_1.php');
                                         </div>
                                         <div class="col-4 m-auto text-right">
                                             <div class="post-like-comm">
-                                                <a href="#"><i class="fa fa-thumbs-o-up"></i>20</a>
-                                                <a href="#"><i class="fa fa-comment-o"></i>15</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up"></i><?php echo $post['likes']; ?></a>
                                             </div>
                                         </div>
                                     </div>
