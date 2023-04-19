@@ -139,7 +139,7 @@ include('ticker_extension.php');
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="single-input-item">
-                                                            <input type="url" placeholder="Project Telegram Link" name="project_telegram_link" id="project_telegram_link"/>
+                                                            <input type="url" placeholder="Social Link (Telegram, Twitter,.." name="telegram_link" id="telegram_link"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -149,39 +149,9 @@ include('ticker_extension.php');
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="single-input-item">
-                                                            <input type="url" placeholder="Project Twitter Link" name="project_twitter_link" id="project_twitter_link"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="input-row">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="single-input-item">
-                                                            <input type="url" placeholder="Project Discord Link" name="project_discord_link" id="project_discord_link"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="input-row">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="single-input-item">
-                                                            <input type="url" placeholder="Project Contact Telegram ID" name="project_contact_telegram_id" id="project_contact_telegram_id"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="input-row">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="single-input-item">
-                                                                <textarea name="more_information" id="more_information" cols="50"
+                                                                <textarea name="description_contact" id="description_contact" cols="50"
                                                                           rows="6"
-                                                                          placeholder="More Information About Your Project"></textarea>
+                                                                          placeholder="Describe your issue..."></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
