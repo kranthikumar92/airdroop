@@ -336,8 +336,8 @@ $total_active = $row_total_rows['total_active'];
                 <div class="col-lg-4 col-md-6">
                     <div class="single-latest-news-wrap latest-airdrop-offer">
                         <h2 class="h3">Are you looking latest airdrop offer?</h2>
-                        <a href="#" class="btn btn-offer">Get Offer</a>
-                        <p>You Also Can Listed Your Offer, If you Want Please <a href="#">Click Here</a></p>
+                        <a href="submit.php" class="btn btn-offer">Get Offer</a>
+                        <p>You Also Can Listed Your Offer, If you Want Please <a href="submit.php">Click Here</a></p>
                     </div>
                 </div>
             </div>
