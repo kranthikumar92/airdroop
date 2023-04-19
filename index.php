@@ -195,10 +195,31 @@ $conn->close();
             </div>
         </div>
 
+        <!--Retrive Data from db (no of active listing) -->
+        <?php
+        // Database connection parameters
+$servername = "localhost";
+$username = "calix_web_user";
+$password = "calixworldhhUUh383287HGSHhs";
+$dbname = "calix_cry_world";
+
+// Create database connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+// Query to retrieve total number of active airdrops
+$sql_total_rows = "SELECT COUNT(*) AS total_active FROM airdrop_coins WHERE status = 'active'";
+$result_total_rows = mysqli_query($conn, $sql_total_rows);
+$row_total_rows = mysqli_fetch_assoc($result_total_rows);
+$total_active = $row_total_rows['total_active'];
+?>
         <div class="row">
             <div class="col-lg-12 col-sm-9 m-auto text-center">
                 <div class="view-all-airdrop-btn">
-                    <a href="airdrop-listing.php" class="btn btn-view-all">WE HAVE 365 ACTIVE AIRDROPS. <span>VIEW THEM ALL  <i class="fa fa-long-arrow-right"></i></span></a>
+                <a href="airdrop-listing.php" class="btn btn-view-all">WE HAVE <?php echo $total_active; ?> ACTIVE AIRDROPS. <span>VIEW THEM ALL  <i class="fa fa-long-arrow-right"></i></span></a>
                 </div>
             </div>
         </div>
