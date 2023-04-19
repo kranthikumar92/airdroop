@@ -125,7 +125,7 @@ if ($conn->connect_error) {
 }
 
 // Fetch total number of rows in the table
-$sql_total_rows = "SELECT COUNT(*) as total_rows FROM blog_posts WHERE status = 'active'";
+$sql_total_rows = "SELECT COUNT(*) as total_rows FROM blog_posts WHERE status = 'active' AND tags LIKE '%$tag%'";
 $result_total_rows = mysqli_query($conn, $sql_total_rows);
 $row_total_rows = mysqli_fetch_assoc($result_total_rows);
 $total_rows = $row_total_rows['total_rows'];
@@ -141,39 +141,46 @@ $offset = ($page - 1) * $items_per_page;
             <div class="row">
                 <!-- Single Latest Blog Start -->
                 
-    <?php
-    // Establish a database connection
+                <?php
+// Establish a database connection
+if (isset($_GET['tag'])) {
+    // If a tag is provided in the URL, search for blog posts with that tag
+    $tag = $_GET['tag'];
+    $sql = "SELECT * FROM blog_posts WHERE status = 'active' AND tags LIKE '%$tag%' ORDER BY created_at DESC LIMIT $items_per_page OFFSET $offset";
+} else {
+    // Otherwise, show all active blog posts
     $sql = "SELECT * FROM blog_posts WHERE status = 'active' ORDER BY created_at DESC LIMIT $items_per_page OFFSET $offset";
-    $result = $conn->query($sql);
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $post_id = $row['id'];
-            $title = $row['title'];
-            $content = $row['content'];
-            $image = $row['feature_image'];
-            $created_at = $row['created_at'];
-            $content_sub = (strlen($content) > 90) ? substr($content, 0, 100).'...' : $content;
-    ?>
-            <div class="col-lg-4 col-md-6">
-            <article class="single-latest-news-wrap">
-                <figure class="news-thumbnail">
-                    <a href="single-news.php?id=<?php echo $post_id ?>"><img src="<?php echo $image ?>" alt="News" class="img-fluid"/></a>
-                </figure>
-                <div class="news-content">
-                    <a href="single-news.php?id=<?php echo $post_id ?>" class="post-time"><?php echo $created_at ?></a>
-                    <h2 class="h5"><a href="single-news.php?id=<?php echo $post_id ?>"><?php echo $title ?></a></h2>
-                    <p><?php echo $content_sub ?></p>
-                    <a href="single-news.php?id=<?php echo $post_id ?>" class="btn btn-gradiant">More</a>
-                </div>
-            </article>
+}
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $post_id = $row['id'];
+        $title = $row['title'];
+        $content = $row['content'];
+        $image = $row['feature_image'];
+        $created_at = $row['created_at'];
+        $content_sub = (strlen($content) > 90) ? substr($content, 0, 100).'...' : $content;
+?>
+        <div class="col-lg-4 col-md-6">
+        <article class="single-latest-news-wrap">
+            <figure class="news-thumbnail">
+                <a href="single-news.php?id=<?php echo $post_id ?>"><img src="<?php echo $image ?>" alt="News" class="img-fluid"/></a>
+            </figure>
+            <div class="news-content">
+                <a href="single-news.php?id=<?php echo $post_id ?>" class="post-time"><?php echo $created_at ?></a>
+                <h2 class="h5"><a href="single-news.php?id=<?php echo $post_id ?>"><?php echo $title ?></a></h2>
+                <p><?php echo $content_sub ?></p>
+                <a href="single-news.php?id=<?php echo $post_id ?>" class="btn btn-gradiant">More</a>
             </div>
-    <?php
-        }
-    } else {
-        echo "No posts found.";
+        </article>
+        </div>
+<?php
     }
-    ?>
-    
+} else {
+    echo "No posts found.";
+}
+?>
+
                 <!-- Single Latest Blog End -->
 
                 
