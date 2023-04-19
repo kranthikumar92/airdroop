@@ -139,7 +139,7 @@ include('ticker_extension.php');
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="single-input-item">
-                                                            <input type="url" placeholder="Social Link (Telegram, Twitter,.." name="telegram_link" id="telegram_link"/>
+                                                            <input type="url" placeholder="Social Link (Telegram, Twitter,...)" name="telegram_link" id="telegram_link"/>
                                                         </div>
                                                     </div>
                                                 </div>
