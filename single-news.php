@@ -210,15 +210,77 @@ if (mysqli_num_rows($result) > 0) {
                                 <div class="single-sidebar-wrap">
                                     <h4 class="sidebar-title">Categories</h4>
                                     <div class="sidebar-body">
-                                        <ul class="brand-unorderlist">
-                                            <li><a href="#">Scholership</a></li>
-                                            <li><a href="#">Alumni</a></li>
-                                            <li><a href="#">Events</a></li>
-                                            <li><a href="#">Member</a></li>
-                                            <li><a href="#">Tour</a></li>
-                                            <li><a href="#">Current Student</a></li>
+                                    <?php
 
-                                        </ul>
+// Fetch data from the airdrop table
+$sql_airdrop = "SELECT * FROM airdrop_coins WHERE status='active' ORDER BY sno DESC LIMIT 9";
+$result_airdrop = $conn->query($sql_airdrop);
+
+// Check if any results are returned
+if ($result_airdrop->num_rows > 0) {
+    // Loop through each row of data
+    while ($row_airdrop = $result_airdrop->fetch_assoc()) {
+        // Extract the data
+        $logo = $row_airdrop["coin_img"];
+        $name = $row_airdrop["coin_name"];
+        $date = $row_airdrop["end_date"];
+        $tagline = $row_airdrop["coin_tagline"];
+        $giveaway_worth = $row_airdrop["est_value"];
+        $sno = $row_airdrop["sno"];
+        $coin_status = $row_airdrop["status"];
+        $tagline_sub = (strlen($tagline) > 20) ? substr($tagline, 0, 30).'...' : $tagline;
+
+        // Define the 'from' and 'to' dates
+$fromDate = date('Y-m-d'); // Format: yyyy-mm-dd
+$toDate = $date; // Format: yyyy-mm-dd
+
+// Convert the dates to DateTime objects
+$fromDateTime = new DateTime($fromDate);
+$toDateTime = new DateTime($toDate);
+
+// Calculate the difference between the dates
+$dateInterval = $fromDateTime->diff($toDateTime);
+
+// Extract the difference in days
+$days = $dateInterval->days;
+
+// Determine the CSS class for status
+$statusClass = ($row_airdrop['status'] == 'active') ? 'running' : 'popular';
+
+
+        // Display the details
+        echo '<div class="col-lg-4 col-md-6 col-sm-9 m-auto">
+            <div class="single-airdrop-wrap">
+                <div class="airdrop-tags">
+                    <a href="single-airdrop.php?id='.$sno.'" class="' . $statusClass . '">' . ucfirst($coin_status) . '</a>
+                    
+                </div>
+                <div class="airdrop-content-wrap d-flex">
+                    <div class="aidrop-logo-area">
+                        <figure class="airdrop-icon">
+                            <a href="single-airdrop.php?id='.$sno.'"><img src="'.$logo.'" alt="'.$name.'" class="img-fluid" /></a>
+
+                            <figcaption class="offer-time">
+                                <p>'.$days.' Days</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="airdrop-info-wrap">
+                        <h2 class="h4"><a href="single-airdrop.php?id='.$sno.'">'.$name.'</a></h2>
+                        <p>'.$tagline_sub.'</p>
+                        <p class="giveway-text">Giveaway Worth '.$giveaway_worth.'</p>
+                    </div>
+                </div>
+            </div>
+        </div>';
+    }
+} else {
+    echo "No results found.";
+}
+
+// Close database connection
+$conn->close();
+?>
                                     </div>
                                 </div>
                                 <!-- Single Sidebar End -->
