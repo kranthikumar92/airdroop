@@ -161,9 +161,9 @@ include('ticker_extension.php');
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input"
                                                            id="privacy">
-                                                    <label class="custom-control-label" for="privacy">I understand I
-                                                        may need to take additional steps in order to be eligible to
-                                                        receive tokens</label>
+                                                    <label class="custom-control-label" for="privacy">
+                                                    I have read and agree to the Privacy Policy
+                                                        </label>
                                                 </div>
                                             </div>
 
