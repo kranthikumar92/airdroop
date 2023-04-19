@@ -163,13 +163,14 @@ if (mysqli_num_rows($result) > 0) {
         <footer class="post-share">
             <div class="row no-gutters ">
                 <div class="col-8">
-                    <div class="shareonsocial">
-                        <span>Share:</span>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-vimeo"></i></a>
-                    </div>
+                <div class="shareonsocial">
+                     <span>Share:</span>
+                     <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+                     <a href="#"><i class="fa fa-twitter"></i></a>
+                     <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-vimeo"></i></a>
+                </div>
+
                 </div>
                 <div class="col-4 m-auto text-right">
                     <form method="post">
