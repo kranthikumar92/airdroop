@@ -198,13 +198,14 @@ if (mysqli_num_rows($result) > 0) {
                             <div class="sidebar-area-wrap">
                                 <!-- Single Sidebar Start -->
                                 <div class="single-sidebar-wrap">
-                                    <div class="brand-search-form">
-                                        <form action="https://codeboxr.net/themedemo/airdroop/index.html">
-                                            <input type="search" placeholder="Type and hit here">
-                                            <button type="button"><i class="fa fa-search"></i></button>
-                                        </form>
-                                    </div>
-                                </div>
+    <div class="brand-search-form">
+        <form action="search.php" method="get">
+            <input type="search" name="tag" placeholder="Type and hit here">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+</div>
+
                                 <!-- Single Sidebar End -->
                         
                         
