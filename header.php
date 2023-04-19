@@ -29,31 +29,6 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <div class="login-content-wrap airdrop-form">
-                    <form action="#" method="post">
-                        <div class="single-input-item">
-                            <input type="text" placeholder="Username"/>
-                        </div>
-
-                        <div class="single-input-item">
-                            <input type="password" placeholder="Password"/>
-                        </div>
-
-                        <div class="single-input-item">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input"
-                                       id="remember">
-                                <label class="custom-control-label" for="remember">Remember Me</label>
-                            </div>
-                        </div>
-
-                        <div class="single-input-item">
-                            <button class="btn btn-gradiant">Login</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
         </div>
     </div>
 </div>
