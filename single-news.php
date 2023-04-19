@@ -160,18 +160,6 @@ if (mysqli_num_rows($result) > 0) {
         <section class="news-details">
             <?php echo $post['content']; ?>
         </section>
-        <div class="post-share">
-                        <span>Tags:</span>
-                        <?php
-                        // Get the tags for the blog post
-                        $post_tags = explode(",", $post['tags']);
-                        // Loop through the tags and create links
-                        foreach ($post_tags as $tag) {
-                        $tag_link = str_replace(' ', '-', strtolower($tag));
-                        echo '<a href="#' . $tag_link . '" class="post-tag">' . $tag . '</a>';
-                        }
-                        ?>
-                    </div>
         <footer class="post-share">
             <div class="row no-gutters ">
                 <div class="col-8">
@@ -198,11 +186,8 @@ if (mysqli_num_rows($result) > 0) {
     // No rows were returned, so display an error message
     echo "No blog post found with ID 1";
 }
-
-
-// Close the database connection
-mysqli_close($conn);
 ?>
+
                         </div>
 
                         <!-- News content Area End -->
@@ -241,18 +226,37 @@ mysqli_close($conn);
                                 <!-- Single Sidebar Start -->
                                 <div class="single-sidebar-wrap d-none d-lg-block">
                                     <h4 class="sidebar-title">Popular Tags</h4>
-                                    <div class="sidebar-body">
-                                        <div class="tags">
-                                            <a href="#">Bootstrap</a>
-                                            <a href="#">Design</a>
-                                            <a href="#">web</a>
-                                            <a class="active" href="#">custom</a>
-                                            <a href="#">wordpres</a>
-                                            <a href="#">Art</a>
-                                            <a href="#">our team</a>
-                                            <a href="#">Classic</a>
-                                        </div>
-                                    </div>
+                                    
+                                    <?php
+    // Get the tags for the blog post
+    $post_tags = explode(",", $post['tags']);
+?>
+<div class="sidebar-body">
+    <div class="tags">
+        <?php
+        // Loop through the tags and create links
+        foreach ($post_tags as $tag) {
+            $tag_link = str_replace(' ', '-', strtolower($tag));
+            echo '<a href="#' . $tag_link . '" class="post-tag">' . $tag . '</a>';
+        }
+        ?>
+    </div>
+</div> 
+<!-- The above code will output the tags in the following format: -->
+<!-- <div class="sidebar-body">
+    <div class="tags">
+        <a href="#bootstrap" class="post-tag">Bootstrap</a>
+        <a href="#design" class="post-tag">Design</a>
+        <a href="#web" class="post-tag">web</a>
+        <a href="#custom" class="active post-tag">custom</a>
+        <a href="#wordpres" class="post-tag">wordpres</a>
+        <a href="#art" class="post-tag">Art</a>
+        <a href="#our-team" class="post-tag">our team</a>
+        <a href="#classic" class="post-tag">Classic</a>
+    </div>
+</div> -->
+
+
                                 </div>
                                 <!-- Single Sidebar End -->
                             </div>
@@ -267,7 +271,11 @@ mysqli_close($conn);
     </div>
 </div>
 <!--== Page Content Wrapper End ==-->
+<?php
 
+// Close the database connection
+mysqli_close($conn);
+?>
 
 <!--== Footer Area Start ==-->
 <?php
