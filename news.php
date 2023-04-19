@@ -104,7 +104,7 @@ include('advertise_1.php');
 <!--== Header Ads End ==-->
 <!-- Pagination PHP code Area Start -->
 <?php
-// Retrieve the 'page' parameter from the URL
+// Retrieve the 'page' and 'id' parameter from the URL
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 
 // Set the number of items per page

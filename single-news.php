@@ -112,6 +112,7 @@ include('advertise_1.php');
                         <div class="col-lg-8">
     <!--Retrieve data from db (blog) -->
     <?php
+    $blog_id = $_GET['id'];
     // Establish a database connection
     $servername = "localhost";
     $username = "calix_web_user";
@@ -127,7 +128,7 @@ if ($conn->connect_error) {
 }
 
 // Query to retrieve blog post with ID 1
-$sql = "SELECT * FROM blog_posts WHERE id = 1";
+$sql = "SELECT * FROM blog_posts WHERE id = $blog_id";
 $result = mysqli_query($conn, $sql);
 
 // Check if the query returned any rows
