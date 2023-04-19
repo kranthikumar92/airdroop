@@ -123,87 +123,13 @@ include('ticker_extension.php');
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="single-input-item">
-                                                            <input type="text" placeholder="Coin Name" name="coin_name" id="coin_name"/>
+                                                            <input type="text" placeholder="Full Name" name="full_name" id="full_name"/>
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-md-6">
-                                                        <div class="single-input-item">
-                                                            <input type="text" placeholder="Project Name" name="project_name" id="project_name"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="input-row">
-                                                <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="single-input-item">
                                                             <input type="email" placeholder="Email" name="email" id="email"/>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-6">
-                                                        <div class="single-input-item">
-                                                            <select name="designation" id="designation" class="wide">
-                                                                <option disabled selected>Designation at Project
-                                                                </option>
-                                                                <option value="founder">Founder</option>
-                                                                <option value="cofounder">Co-Founder</option>
-                                                                <option value="it-team">IT Team</option>
-                                                                <option value="manager">Manager</option>
-                                                                
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="input-row">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="single-input-item">
-                                                            <input type="text" placeholder="ICO Start Date"
-                                                                   class="datepicker" name="ico_start_date" id="ico_start_date"/>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-6">
-                                                        <div class="single-input-item">
-                                                            <input type="text" placeholder="ICO End Date"
-                                                                   class="datepicker" name="ico_end_date" id="ico_end_date"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="input-row">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="single-input-item">
-                                                            <input type="text" placeholder="Total Airdrop Value ($)" name="total_airdrop_value" id="total_airdrop_value"/>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-6">
-                                                        <div class="single-input-item">
-                                                            <input type="text" placeholder="Individual Reward Value ($)" name="individual_reward_value" id="individual_reward_value"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="input-row">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="single-input-item">
-                                                            <input type="text" placeholder="Referral Bonus" name="referral_bonus" id="referral_bonus"/>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-6">
-                                                        <div class="single-input-item">
-                                                            <input type="text" placeholder="Coin Rate Against USD" name="coin_rate_against_usd" id="coin_rate_against_usd"/>
                                                         </div>
                                                     </div>
                                                 </div>
