@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2023 at 09:12 AM
+-- Generation Time: Apr 19, 2023 at 04:02 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -125,6 +125,23 @@ INSERT INTO `blog_posts` (`id`, `title`, `feature_image`, `content`, `author`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contact_form`
+--
+
+CREATE TABLE `contact_form` (
+  `sno` int(50) NOT NULL,
+  `reference` int(50) NOT NULL,
+  `full_name` varchar(500) NOT NULL,
+  `email` varchar(500) NOT NULL,
+  `social_link` varchar(500) NOT NULL,
+  `description_contact` text NOT NULL,
+  `publish_date` varchar(50) NOT NULL,
+  `status` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `new_airdrop_requests`
 --
 
@@ -187,6 +204,12 @@ ALTER TABLE `blog_posts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `contact_form`
+--
+ALTER TABLE `contact_form`
+  ADD PRIMARY KEY (`sno`);
+
+--
 -- Indexes for table `new_airdrop_requests`
 --
 ALTER TABLE `new_airdrop_requests`
@@ -219,6 +242,12 @@ ALTER TABLE `airdrop_coin_social`
 --
 ALTER TABLE `blog_posts`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `contact_form`
+--
+ALTER TABLE `contact_form`
+  MODIFY `sno` int(50) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `new_airdrop_requests`
