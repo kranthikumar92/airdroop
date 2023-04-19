@@ -168,11 +168,11 @@ if ($result->num_rows > 0) {
             <ul class="giveway-list">
                 <li><span><img src="assets/img/icons/giveway/coin.png" alt="Coin"/>Blockchain</span>: ' . $row["blockchain"] . '</li>
                 <li><span><img src="assets/img/icons/giveway/doller.png" alt="Coin"/>Est Value</span>: ' . $row["est_value"] . '</li>
-                <li><span><img src="assets/img/icons/giveway/check.png" alt="Coin"/>Tokens</span>: ' . $row["tokens"] . '</li>
+                <li><span><img src="assets/img/icons/giveway/total.png" alt="Coin"/>Tokens</span>: ' . $row["tokens"] . '</li>
                 <li><span><img src="assets/img/icons/giveway/alerm.png" alt="Coin"/>End Date</span>: ' . $row["end_date"] . '</li>
-                <li><span><img src="assets/img/icons/giveway/total.png" alt="Coin"/>Referral</span>: ' . $row["referral_available"] . '</li>
+                <li><span><img src="assets/img/icons/giveway/person.png" alt="Coin"/>Referral</span>: ' . $row["referral_available"] . '</li>
                 <li><span><img src="assets/img/icons/giveway/person.png" alt="Coin"/>Published on</span>: ' . $row["publish_date"] . '</li>
-                <li><span><img src="assets/img/icons/giveway/flag.png" alt="Coin"/>Difficulty</span>: ' . $row["status"] . '</li>
+                <li><span><img src="assets/img/icons/giveway/check.png" alt="Coin"/>Status</span>: ' . $row["status"] . '</li>
             </ul>
           </div>  
           ';
