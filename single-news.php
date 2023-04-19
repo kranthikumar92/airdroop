@@ -263,8 +263,6 @@ $statusClass = ($row_airdrop['status'] == 'active') ? 'running' : 'popular';
     echo "No results found.";
 }
 
-// Close database connection
-$conn->close();
 ?>
                                     </div>
                                 </div>
