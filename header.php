@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-lg-8  m-auto">
                 <div class="search-form-wrap">
-                    <form action="#" method="post">
-                        <input type="search" placeholder="type keyword and hit enter" />
+                    <form action="search-airdrop.php" method="get">
+                        <input type="search" name="search" placeholder="type keyword and hit enter" />
                         <i class="cursor"></i>
                         <button class="btn sr-only"><i class="fa fa-search"></i></button>
                     </form>
