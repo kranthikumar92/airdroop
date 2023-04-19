@@ -144,7 +144,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $reference = mt_rand(10000000, 99999999);
 
     // Insert form data into database
-    $sql = "INSERT INTO contact_form (reference, full_name, email, social_link, description_contact, publish_date, status_cur) VALUES ($reference, '$fullName', '$email', '$socialLink', '$descriptionContact', '$publishDate', '$status_cur')";
+    $sql = "INSERT INTO contact_form (reference, full_name, email, social_link, description_contact, publish_date, status) VALUES ($reference, '$fullName', '$email', '$socialLink', '$descriptionContact', '$publishDate', '$status_cur')";
     $result = mysqli_query($conn, $sql);
     if ($result) {
         echo "Contact form submitted successfully. Reference number: " . $reference;
