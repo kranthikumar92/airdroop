@@ -165,7 +165,7 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="col-8">
                     <div class="shareonsocial">
                         <span>Share:</span>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode('https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-linkedin"></i></a>
                         <a href="#"><i class="fa fa-vimeo"></i></a>
