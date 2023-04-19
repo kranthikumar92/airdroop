@@ -106,7 +106,7 @@ include('advertise_1.php');
         <div class="latest-news-content">
             <div class="row">
                 <!-- Single Latest Blog Start -->
-                <div class="col-lg-4 col-md-6">
+                
     <?php
     // Establish a database connection
     $servername = "localhost";
@@ -132,6 +132,7 @@ include('advertise_1.php');
             $created_at = $row['created_at'];
             $content_sub = (strlen($content) > 40) ? substr($content, 0, 50).'...' : $content;
     ?>
+            <div class="col-lg-4 col-md-6">
             <article class="single-latest-news-wrap">
                 <figure class="news-thumbnail">
                     <a href="single-news.php?id=<?php echo $post_id ?>"><img src="<?php echo $image ?>" alt="News" class="img-fluid"/></a>
@@ -143,6 +144,7 @@ include('advertise_1.php');
                     <a href="single-news.php?id=<?php echo $post_id ?>" class="btn btn-gradiant">More</a>
                 </div>
             </article>
+            </div>
     <?php
         }
     } else {
@@ -150,7 +152,7 @@ include('advertise_1.php');
     }
     $conn->close();
     ?>
-    </div>
+    
                 <!-- Single Latest Blog End -->
 
                 
