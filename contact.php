@@ -168,7 +168,7 @@ include('ticker_extension.php');
                                             </div>
 
                                             <div class="submit-btn">
-                                                <button class="btn btn-gradiant">List Airdrop</button>
+                                                <button class="btn btn-gradiant">Submit</button>
                                             </div>
                                         </form>
                                     </div>
