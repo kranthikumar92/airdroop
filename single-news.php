@@ -225,7 +225,7 @@ if (mysqli_num_rows($result) > 0) {
 
                                 <!-- Single Sidebar Start -->
                                 <div class="single-sidebar-wrap d-none d-lg-block">
-                                    <h4 class="sidebar-title">Popular Tags</h4>
+                                    <h4 class="sidebar-title">Tags</h4>
                                     
                                     <?php
     // Get the tags for the blog post
@@ -242,20 +242,6 @@ if (mysqli_num_rows($result) > 0) {
         ?>
     </div>
 </div> 
-<!-- The above code will output the tags in the following format: -->
-<!-- <div class="sidebar-body">
-    <div class="tags">
-        <a href="#bootstrap" class="post-tag">Bootstrap</a>
-        <a href="#design" class="post-tag">Design</a>
-        <a href="#web" class="post-tag">web</a>
-        <a href="#custom" class="active post-tag">custom</a>
-        <a href="#wordpres" class="post-tag">wordpres</a>
-        <a href="#art" class="post-tag">Art</a>
-        <a href="#our-team" class="post-tag">our team</a>
-        <a href="#classic" class="post-tag">Classic</a>
-    </div>
-</div> -->
-
 
                                 </div>
                                 <!-- Single Sidebar End -->
