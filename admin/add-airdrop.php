@@ -111,11 +111,13 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="input3" class="col-sm-2 control-label form-label">Password</label>
+                  <label for="input2" class="col-sm-2 control-label form-label">Tokens</label>
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" id="input3" placeholder="Password">
+                    <input type="text" class="form-control form-control-radius" id="input2">
                   </div>
                 </div>
+
+                
 
                 <div class="form-group">
                   <label for="input4" class="col-sm-2 control-label form-label">Disable</label>
