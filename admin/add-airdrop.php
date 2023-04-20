@@ -132,12 +132,19 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label form-label">Referal Available</label>
+                  <label class="col-sm-4 control-label form-label">Referral Available</label>
                   <div class="col-sm-8">
                     <select class="selectpicker">
                         <option>Yes</option>
                         <option>No</option>
                       </select>                  
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input002" class="col-sm-2 control-label form-label">Referral Link</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="input002">
                   </div>
                 </div>
 
