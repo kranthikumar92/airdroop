@@ -24,22 +24,8 @@
     </ul>
   </li>
   <li><a href="widgets.html"><span class="icon color14"><i class="fa fa-paper-plane-o"></i></span>Airdrop Requests</a></li>
-  <li><a href="calendar.html"><span class="icon color8"><i class="fa fa-calendar-o"></i></span>Calendar<span class="label label-danger">NEW</span></a></li>
-  <li><a href="typography.html"><span class="icon color12"><i class="fa fa-font"></i></span>Typography</a></li>
-  <li><a href="#"><span class="icon color14"><i class="fa fa-paper-plane-o"></i></span>Extra Pages<span class="caret"></span></a>
-    <ul>
-      <li><a href="social-profile.html">Social Profile</a></li>
-      <li><a href="invoice.html">Invoice<span class="label label-danger">NEW</span></a></li>
-      <li><a href="login.html">Login Page</a></li>
-      <li><a href="register.html">Register</a></li>
-      <li><a href="forgot-password.html">Forgot Password</a></li>
-      <li><a href="lockscreen.html">Lockscreen</a></li>
-      <li><a href="blank.html">Blank Page</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="404.html">404 Page</a></li>
-      <li><a href="500.html">500 Page</a></li>
-    </ul>
-  </li>
+  <li><a href="calendar.html"><span class="icon color8"><i class="fa fa-calendar-o"></i></span>Ads Corner<span class="label label-danger">NEW</span></a></li>
+  
 </ul>
 
 <ul class="sidebar-panel nav">
