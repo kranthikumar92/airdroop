@@ -19,10 +19,6 @@ $publist_date = date('Y-m-d');
 // get the name of the uploaded file
 $target_file = $target_dir . basename($_FILES["image"]["name"]);
 
-// Check if file already exists
-if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
-} else {
 
 // move the uploaded file to the target directory
 if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
@@ -50,7 +46,6 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
     echo "Error uploading image.";
-}
 }
 
 // close the connection
