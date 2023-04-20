@@ -191,7 +191,7 @@
                   <label class="col-sm-2 control-label form-label">Airdrop Description</label>
                   <div class="col-sm-10">
                     <div class="panel-body">
-                      <div name="airdrop_description" id="summernote">Write Description of Airdrop</div>
+                      <textarea name="airdrop_description" id="summernote">Write Description of Airdrop</textarea>
                     </div>
                   </div>
                 </div>
