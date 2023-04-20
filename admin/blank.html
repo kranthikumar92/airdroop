@@ -1,720 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>aside - Bootstrap 4 web application</title>
-  <meta name="description" content="Responsive, Bootstrap, BS4" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+  <head>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kode is a Premium Bootstrap Admin Template, It's responsive, clean coded and mobile friendly">
+  <meta name="keywords" content="bootstrap, admin, dashboard, flat admin template, responsive," />
+  <title>Kode - Premium Bootstrap Admin Template</title>
 
-  <!-- for ios 7 style, multi-resolution icon of 152x152 -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
-  <link rel="apple-touch-icon" href="images/logo.png">
-  <meta name="apple-mobile-web-app-title" content="Flatkit">
-  <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <link rel="shortcut icon" sizes="196x196" href="images/logo.png">
-  
-  <!-- style -->
-  <link rel="stylesheet" href="css/animate.css/animate.min.css" type="text/css" />
-  <link rel="stylesheet" href="css/glyphicons/glyphicons.css" type="text/css" />
-  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css" />
-  <link rel="stylesheet" href="css/material-design-icons/material-design-icons.css" type="text/css" />
-  <link rel="stylesheet" href="css/ionicons/css/ionicons.min.css" type="text/css" />
-  <link rel="stylesheet" href="css/simple-line-icons/css/simple-line-icons.css" type="text/css" />
-  <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+  <!-- ========== Css Files ========== -->
+  <link href="css/root.css" rel="stylesheet">
 
-  <!-- build:css css/styles/app.min.css -->
-  <link rel="stylesheet" href="css/styles/app.css" type="text/css" />
-  <link rel="stylesheet" href="css/styles/style.css" type="text/css" />
-  <!-- endbuild -->
-  <link rel="stylesheet" href="css/styles/font.css" type="text/css" />
-</head>
-<body>
-  <div class="app" id="app">
+  </head>
+  <body>
+  <!-- Start Page Loading -->
+  <div class="loading"><img src="img/loading.gif" alt="loading-img"></div>
+  <!-- End Page Loading -->
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+  <!-- START TOP -->
+  <div id="top" class="clearfix">
 
-<!-- ############ LAYOUT START-->
+  	<!-- Start App Logo -->
+  	<div class="applogo">
+  		<a href="index.html" class="logo">kode</a>
+  	</div>
+  	<!-- End App Logo -->
 
-  <!-- aside -->
-  <div id="aside" class="app-aside fade nav-dropdown black">
-    <!-- fluid app aside -->
-    <div class="navside dk" data-layout="column">
-      <div class="navbar no-radius">
-        <!-- brand -->
-        <a href="index.html" class="navbar-brand">
-        	<div data-ui-include="'images/logo.svg'"></div>
-        	<img src="images/logo.png" alt="." class="hide">
-        	<span class="hidden-folded inline">aside</span>
-        </a>
-        <!-- / brand -->
+    <!-- Start Sidebar Show Hide Button -->
+    <a href="#" class="sidebar-open-button"><i class="fa fa-bars"></i></a>
+    <a href="#" class="sidebar-open-button-mobile"><i class="fa fa-bars"></i></a>
+    <!-- End Sidebar Show Hide Button -->
+
+    <!-- Start Searchbox -->
+    <form class="searchform">
+      <input type="text" class="searchbox" id="searchbox" placeholder="Search">
+      <span class="searchbutton"><i class="fa fa-search"></i></span>
+    </form>
+    <!-- End Searchbox -->
+
+    <!-- Start Top Menu -->
+    <ul class="topmenu">
+      <li><a href="#">Files</a></li>
+      <li><a href="#">Authors</a></li>
+      <li class="dropdown">
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle">My Files <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Videos</a></li>
+          <li><a href="#">Pictures</a></li>
+          <li><a href="#">Blog Posts</a></li>
+        </ul>
+      </li>
+    </ul>
+    <!-- End Top Menu -->
+
+    <!-- Start Sidepanel Show-Hide Button -->
+    <a href="#sidepanel" class="sidepanel-open-button"><i class="fa fa-outdent"></i></a>
+    <!-- End Sidepanel Show-Hide Button -->
+
+    <!-- Start Top Right -->
+    <ul class="top-right">
+
+    <li class="dropdown link">
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle hdbutton">Create New <span class="caret"></span></a>
+        <ul class="dropdown-menu dropdown-menu-list">
+          <li><a href="#"><i class="fa falist fa-paper-plane-o"></i>Product or Item</a></li>
+          <li><a href="#"><i class="fa falist fa-font"></i>Blog Post</a></li>
+          <li><a href="#"><i class="fa falist fa-file-image-o"></i>Image Gallery</a></li>
+          <li><a href="#"><i class="fa falist fa-file-video-o"></i>Video Gallery</a></li>
+        </ul>
+    </li>
+
+    <li class="link">
+      <a href="#" class="notifications">6</a>
+    </li>
+
+    <li class="dropdown link">
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle profilebox"><img src="img/profileimg.png" alt="img"><b>Jonathan Doe</b><span class="caret"></span></a>
+        <ul class="dropdown-menu dropdown-menu-list dropdown-menu-right">
+          <li role="presentation" class="dropdown-header">Profile</li>
+          <li><a href="#"><i class="fa falist fa-inbox"></i>Inbox<span class="badge label-danger">4</span></a></li>
+          <li><a href="#"><i class="fa falist fa-file-o"></i>Files</a></li>
+          <li><a href="#"><i class="fa falist fa-wrench"></i>Settings</a></li>
+          <li class="divider"></li>
+          <li><a href="#"><i class="fa falist fa-lock"></i> Lockscreen</a></li>
+          <li><a href="#"><i class="fa falist fa-power-off"></i> Logout</a></li>
+        </ul>
+    </li>
+
+    </ul>
+    <!-- End Top Right -->
+
+  </div>
+  <!-- END TOP -->
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+<!-- START SIDEBAR -->
+<div class="sidebar clearfix">
+
+<ul class="sidebar-panel nav">
+  <li class="sidetitle">MAIN</li>
+  <li><a href="index.html"><span class="icon color5"><i class="fa fa-home"></i></span>Dashboard<span class="label label-default">2</span></a></li>
+  <li><a href="mailbox.html"><span class="icon color6"><i class="fa fa-envelope-o"></i></span>Mailbox<span class="label label-default">19</span></a></li>
+  <li><a href="#"><span class="icon color7"><i class="fa fa-flask"></i></span>UI Elements<span class="caret"></span></a>
+    <ul>
+      <li><a href="icons.html">Icons</a></li>
+      <li><a href="tabs.html">Tabs</a></li>
+      <li><a href="buttons.html">Buttons</a></li>
+      <li><a href="panels.html">Panels</a></li>
+      <li><a href="notifications.html">Notifications</a></li>
+      <li><a href="modal-boxes.html">Modal Boxes</a></li>
+      <li><a href="progress-bars.html">Progress Bars</a></li>
+      <li><a href="others.html">Others<span class="label label-danger">NEW</span></a></li>
+    </ul>
+  </li>
+  <li><a href="charts.html"><span class="icon color8"><i class="fa fa-bar-chart"></i></span>Charts</a></li>
+  <li><a href="#"><span class="icon color9"><i class="fa fa-th"></i></span>Tables<span class="caret"></span></a>
+    <ul>
+      <li><a href="basic-table.html">Basic Tables</a></li>
+      <li><a href="data-table.html">Data Tables</a></li>
+    </ul>
+  </li>
+  <li><a href="#"><span class="icon color10"><i class="fa fa-check-square-o"></i></span>Forms<span class="caret"></span></a>
+    <ul>
+      <li><a href="form-elements.html">Form Elements</a></li>
+      <li><a href="layouts.html">Form Layouts</a></li>
+      <li><a href="text-editors.html">Text Editors</a></li>
+    </ul>
+  </li>
+  <li><a href="widgets.html"><span class="icon color11"><i class="fa fa-diamond"></i></span>Widgets</a></li>
+  <li><a href="calendar.html"><span class="icon color8"><i class="fa fa-calendar-o"></i></span>Calendar<span class="label label-danger">NEW</span></a></li>
+  <li><a href="typography.html"><span class="icon color12"><i class="fa fa-font"></i></span>Typography</a></li>
+  <li><a href="#"><span class="icon color14"><i class="fa fa-paper-plane-o"></i></span>Extra Pages<span class="caret"></span></a>
+    <ul>
+      <li><a href="social-profile.html">Social Profile</a></li>
+      <li><a href="invoice.html">Invoice<span class="label label-danger">NEW</span></a></li>
+      <li><a href="login.html">Login Page</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="forgot-password.html">Forgot Password</a></li>
+      <li><a href="lockscreen.html">Lockscreen</a></li>
+      <li><a href="blank.html">Blank Page</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="404.html">404 Page</a></li>
+      <li><a href="500.html">500 Page</a></li>
+    </ul>
+  </li>
+</ul>
+
+<ul class="sidebar-panel nav">
+  <li class="sidetitle">MORE</li>
+  <li><a href="grid.html"><span class="icon color15"><i class="fa fa-columns"></i></span>Grid System</a></li>
+  <li><a href="maps.html"><span class="icon color7"><i class="fa fa-map-marker"></i></span>Maps</a></li>
+  <li><a href="customizable.html"><span class="icon color10"><i class="fa fa-lightbulb-o"></i></span>Customizable</a></li>
+  <li><a href="helper-classes.html"><span class="icon color8"><i class="fa fa-code"></i></span>Helper Classes</a></li>
+  <li><a href="changelogs.html"><span class="icon color12"><i class="fa fa-file-text-o"></i></span>Changelogs</a></li>
+</ul>
+
+<div class="sidebar-plan">
+  Pro Plan<a href="#" class="link">Upgrade</a>
+  <div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+  </div>
+</div>
+<span class="space">42 GB / 100 GB</span>
+</div>
+
+</div>
+<!-- END SIDEBAR -->
+<!-- //////////////////////////////////////////////////////////////////////////// --> 
+
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+<!-- START CONTENT -->
+<div class="content">
+
+  <!-- Start Page Header -->
+  <div class="page-header">
+    <h1 class="title">Blank Page</h1>
+      <ol class="breadcrumb">
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="#">Extra Pages</a></li>
+        <li class="active">Blank Page</li>
+      </ol>
+
+    <!-- Start Page Header Right Div -->
+    <div class="right">
+      <div class="btn-group" role="group" aria-label="...">
+        <a href="index.html" class="btn btn-light">Dashboard</a>
+        <a href="#" class="btn btn-light"><i class="fa fa-refresh"></i></a>
+        <a href="#" class="btn btn-light"><i class="fa fa-search"></i></a>
+        <a href="#" class="btn btn-light" id="topstats"><i class="fa fa-line-chart"></i></a>
       </div>
-      <div data-flex class="hide-scroll">
-          <nav class="scroll nav-stacked nav-stacked-rounded nav-color">
-            
-            <ul class="nav" data-ui-nav>
-              <li class="nav-header hidden-folded">
-                <span class="text-xs">Main</span>
-              </li>
-              <li>
-                <a href="dashboard.html" class="b-danger">
-                  <span class="nav-icon text-white no-fade">
-                    <i class="ion-filing"></i>
-                  </span>
-                  <span class="nav-text">Dashboard</span>
-                </a>
-              </li>
-              <li>
-                <a href="app.project.html" class="b-success">
-                  <span class="nav-icon text-white no-fade">
-                    <i class="ion-android-apps"></i>
-                  </span>
-                  <span class="nav-text">Projects</span>
-                </a>
-              </li>
-              <li>
-                <a href="app.inbox.html" class="b-info">
-                  <span class="nav-icon text-white no-fade">
-                    <i class="ion-email"></i>
-                  </span>
-                  <span class="nav-text">Inbox</span>
-                </a>
-              </li>
-              <li>
-                <a href="app.message.html" class="b-default">
-                  <span class="nav-label">
-                    <b class="label label-xs rounded danger"></b>
-                  </span>
-                  <span class="nav-icon">
-                    <i class="ion-chatbubble-working"></i>
-                  </span>
-                  <span class="nav-text">Messages</span>
-                </a>
-              </li>
-              <li>
-                <a href="app.contact.html" class="b-default">
-                  <span class="nav-icon">
-                    <i class="ion-person"></i>
-                  </span>
-                  <span class="nav-text">Contacts</span>
-                </a>
-              </li>
-            
-              <li class="nav-header hidden-folded m-t">
-                <span class="text-xs">UI Elements</span>
-              </li>
-              <li>
-                <a>
-                  <span class="nav-caret">
-                    <i class="fa fa-caret-down"></i>
-                  </span>
-                  <span class="nav-icon">
-                    <i class="ion-plus-circled"></i>
-                  </span>
-                  <span class="nav-text">UI kit</span>
-                </a>
-                <ul class="nav-sub nav-mega nav-mega-3">
-                  <li>
-                    <a href="ui.arrow.html" >
-                      <span class="nav-text">Arrow</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui.box.html" >
-                      <span class="nav-text">Box</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui.button.html" >
-                      <span class="nav-text">Button</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui.color.html" >
-                      <span class="nav-text">Color</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui.dropdown.html" >
-                      <span class="nav-text">Dropdown</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui.grid.html" >
-                      <span class="nav-text">Grid</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui.icon.html" >
-                      <span class="nav-text">Icon</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui.label.html" >
-                      <span class="nav-text">Label</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui.list.html" >
-                      <span class="nav-text">List Group</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui.modal.html" >
-                      <span class="nav-text">Modal</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui.nav.html" >
-                      <span class="nav-text">Nav</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui.progress.html" >
-                      <span class="nav-text">Progress</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui.social.html" >
-                      <span class="nav-text">Social</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui.sortable.html" >
-                      <span class="nav-text">Sortable</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui.streamline.html" >
-                      <span class="nav-text">Streamline</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui.timeline.html" >
-                      <span class="nav-text">Timeline</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="map.vector.html" >
-                      <span class="nav-text">Vector Map</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="ui.widget.html" >
-                      <span class="nav-text">Widget</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            
-              <li>
-                <a>
-                  <span class="nav-caret">
-                    <i class="fa fa-caret-down"></i>
-                  </span>
-                  <span class="nav-icon">
-                    <i class="ion-ios-photos"></i>
-                  </span>
-                  <span class="nav-text">Pages</span>
-                </a>
-                <ul class="nav-sub nav-mega">
-                  <li>
-                    <a href="profile.html" >
-                      <span class="nav-text">Profile</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="setting.html" >
-                      <span class="nav-text">Setting</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="search.html" >
-                      <span class="nav-text">Search</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="faq.html" >
-                      <span class="nav-text">FAQ</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="gallery.html" >
-                      <span class="nav-text">Gallery</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="invoice.html" >
-                      <span class="nav-text">Invoice</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="price.html" >
-                      <span class="nav-text">Price</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="blank.html" >
-                      <span class="nav-text">Blank</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="signin.html" >
-                      <span class="nav-text">Sign In</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="signup.html" >
-                      <span class="nav-text">Sign Up</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="forgot-password.html" >
-                      <span class="nav-text">Forgot Password</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="lockme.html" >
-                      <span class="nav-text">Lockme Screen</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="404.html" >
-                      <span class="nav-text">Error 404</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="505.html" >
-                      <span class="nav-text">Error 505</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            
-              <li>
-                <a>
-                  <span class="nav-caret">
-                    <i class="fa fa-caret-down"></i>
-                  </span>
-                  <span class="nav-icon">
-                    <i class="ion-checkmark-circled"></i>
-                  </span>
-                  <span class="nav-text">Form</span>
-                </a>
-                <ul class="nav-sub">
-                  <li>
-                    <a href="form.layout.html" >
-                      <span class="nav-text">Form Layout</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="form.element.html" >
-                      <span class="nav-text">Form Element</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="form.validation.html" >
-                      <span class="nav-text">Form Validation</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="form.select.html" >
-                      <span class="nav-text">Select</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="form.editor.html" >
-                      <span class="nav-text">Editor</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="form.picker.html">
-                      <span class="nav-text">Picker</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="form.wizard.html">
-                      <span class="nav-text">Wizard</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="form.dropzone.html" class="no-ajax" >
-                      <span class="nav-text">File Upload</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="form.calendar.html">
-                      <span class="nav-text">Calendar</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            
-              <li>
-                <a>
-                  <span class="nav-caret">
-                    <i class="fa fa-caret-down"></i>
-                  </span>
-                  <span class="nav-icon">
-                    <i class="ion-ios-grid-view"></i>
-                  </span>
-                  <span class="nav-text">Tables</span>
-                </a>
-                <ul class="nav-sub">
-                  <li>
-                    <a href="static.html" >
-                      <span class="nav-text">Static table</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="datatable.html" >
-                      <span class="nav-text">Datatable</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="footable.html" >
-                      <span class="nav-text">Footable</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>
-                  <span class="nav-caret">
-                    <i class="fa fa-caret-down"></i>
-                  </span>
-                  <span class="nav-icon">
-                    <i class="ion-pie-graph"></i>
-                  </span>
-                  <span class="nav-text">Charts</span>
-                </a>
-                <ul class="nav-sub">
-                  <li>
-                    <a href="chart.html" >
-                      <span class="nav-text">Chart</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="chartjs.html" >
-                      <span class="nav-text">Chartjs</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a>
-                      <span class="nav-caret">
-                        <i class="fa fa-caret-down"></i>
-                      </span>
-                      <span class="nav-text">Echarts</span>
-                    </a>
-                    <ul class="nav-sub">
-                      <li>
-                        <a href="echarts-line.html" >
-                          <span class="nav-text">line</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="echarts-bar.html" >
-                          <span class="nav-text">Bar</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="echarts-pie.html" >
-                          <span class="nav-text">Pie</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="echarts-scatter.html" >
-                          <span class="nav-text">Scatter</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="echarts-radar-chord.html" >
-                          <span class="nav-text">Radar &amp; Chord</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="echarts-gauge-funnel.html" >
-                          <span class="nav-text">Gauges &amp; Funnel</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="echarts-map.html" >
-                          <span class="nav-text">Map</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
+    </div>
+    <!-- End Page Header Right Div -->
+
+  </div>
+  <!-- End Page Header -->
+
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+<!-- START CONTAINER -->
+<div class="container-default">
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+</div>
+<!-- END CONTAINER -->
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+
+
+<!-- Start Footer -->
+<div class="row footer">
+  <div class="col-md-6 text-left">
+  Copyright © 2015 <a href="http://themeforest.net/user/egemem/portfolio" target="_blank">Egemem</a> All rights reserved.
+  </div>
+  <div class="col-md-6 text-right">
+    Design and Developed by <a href="http://themeforest.net/user/egemem/portfolio" target="_blank">Egemem</a>
+  </div> 
+</div>
+<!-- End Footer -->
+
+
+</div>
+<!-- End Content -->
+ <!-- //////////////////////////////////////////////////////////////////////////// --> 
+
+<!-- //////////////////////////////////////////////////////////////////////////// --> 
+<!-- START SIDEPANEL -->
+<div role="tabpanel" class="sidepanel">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#today" aria-controls="today" role="tab" data-toggle="tab">TODAY</a></li>
+    <li role="presentation"><a href="#tasks" aria-controls="tasks" role="tab" data-toggle="tab">TASKS</a></li>
+    <li role="presentation"><a href="#chat" aria-controls="chat" role="tab" data-toggle="tab">CHAT</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+
+    <!-- Start Today -->
+    <div role="tabpanel" class="tab-pane active" id="today">
+
+      <div class="sidepanel-m-title">
+        Today
+        <span class="left-icon"><a href="#"><i class="fa fa-refresh"></i></a></span>
+        <span class="right-icon"><a href="#"><i class="fa fa-file-o"></i></a></span>
       </div>
-      <div data-flex-no-shrink>
-        <div class="nav-fold dropup">
-          <a data-toggle="dropdown">
-              <div class="pull-left">
-                <div class="inline"><span class="avatar w-40 grey">JR</span></div>
-                <img src="images/a0.jpg" alt="..." class="w-40 img-circle hide">
-              </div>
-              <div class="clear hidden-folded p-x">
-                <span class="block _500 text-muted">Jean Reyes</span>
-                <div class="progress-xxs m-y-sm lt progress">
-                    <div class="progress-bar info" style="width: 15%;">
-                    </div>
-                </div>
-              </div>
+
+      <div class="gn-title">NEW</div>
+
+      <ul class="list-w-title">
+        <li>
+          <a href="#">
+            <span class="label label-danger">ORDER</span>
+            <span class="date">9 hours ago</span>
+            <h4>New Jacket 2.0</h4>
+            Etiam auctor porta augue sit amet facilisis. Sed libero nisi, scelerisque.
           </a>
-          <div class="dropdown-menu w dropdown-menu-scale ">
-            <a class="dropdown-item" href="profile.html">
-              <span>Profile</span>
-            </a>
-            <a class="dropdown-item" href="setting.html">
-              <span>Settings</span>
-            </a>
-            <a class="dropdown-item" href="app.inbox.html">
-              <span>Inbox</span>
-            </a>
-            <a class="dropdown-item" href="app.message.html">
-              <span>Message</span>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="docs.html">
-              Need help?
-            </a>
-            <a class="dropdown-item" href="signin.html">Sign out</a>
-          </div>
-        </div>
+        </li>
+        <li>
+          <a href="#">
+            <span class="label label-success">COMMENT</span>
+            <span class="date">14 hours ago</span>
+            <h4>Bill Jackson</h4>
+            Etiam auctor porta augue sit amet facilisis. Sed libero nisi, scelerisque.
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="label label-info">MEETING</span>
+            <span class="date">at 2:30 PM</span>
+            <h4>Developer Team</h4>
+            Etiam auctor porta augue sit amet facilisis. Sed libero nisi, scelerisque.
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="label label-warning">EVENT</span>
+            <span class="date">3 days left</span>
+            <h4>Birthday Party</h4>
+            Etiam auctor porta augue sit amet facilisis. Sed libero nisi, scelerisque.
+          </a>
+        </li>
+      </ul>
+
+    </div>
+    <!-- End Today -->
+
+    <!-- Start Tasks -->
+    <div role="tabpanel" class="tab-pane" id="tasks">
+
+      <div class="sidepanel-m-title">
+        To-do List
+        <span class="left-icon"><a href="#"><i class="fa fa-pencil"></i></a></span>
+        <span class="right-icon"><a href="#"><i class="fa fa-trash"></i></a></span>
       </div>
-    </div>
-  </div>
-  <!-- / -->
-  
-  <!-- content -->
-  <div id="content" class="app-content box-shadow-z2 bg pjax-container" role="main">
-    <div class="app-header white bg b-b">
-          <div class="navbar" data-pjax>
-                <a data-toggle="modal" data-target="#aside" class="navbar-item pull-left hidden-lg-up p-r m-a-0">
-                  <i class="ion-navicon"></i>
-                </a>
-                <div class="navbar-item pull-left h5" id="pageTitle">Blank</div>
-                <!-- nabar right -->
-                <ul class="nav navbar-nav pull-right">
-                  <li class="nav-item dropdown pos-stc-xs">
-                    <a class="nav-link" data-toggle="dropdown">
-                      <i class="ion-android-search w-24"></i>
-                    </a>
-                    <div class="dropdown-menu text-color w-md animated fadeInUp pull-right">
-                      <!-- search form -->
-                      <form class="navbar-form form-inline navbar-item m-a-0 p-x v-m" role="search">
-                        <div class="form-group l-h m-a-0">
-                          <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search projects...">
-                            <span class="input-group-btn">
-                              <button type="submit" class="btn white b-a no-shadow"><i class="fa fa-search"></i></button>
-                            </span>
-                          </div>
-                        </div>
-                      </form>
-                      <!-- / search form -->
-                    </div>
-                  </li>
-                  <li class="nav-item dropdown pos-stc-xs">
-                    <a class="nav-link clear" data-toggle="dropdown">
-                      <i class="ion-android-notifications-none w-24"></i>
-                      <span class="label up p-a-0 danger"></span>
-                    </a>
-                    <!-- dropdown -->
-                    <div class="dropdown-menu pull-right w-xl animated fadeIn no-bg no-border no-shadow">
-                        <div class="scrollable" style="max-height: 220px">
-                          <ul class="list-group list-group-gap m-a-0">
-                            <li class="list-group-item dark-white box-shadow-z0 b">
-                              <span class="pull-left m-r">
-                                <img src="images/a0.jpg" alt="..." class="w-40 img-circle">
-                              </span>
-                              <span class="clear block">
-                                Use awesome <a href="#" class="text-primary">animate.css</a><br>
-                                <small class="text-muted">10 minutes ago</small>
-                              </span>
-                            </li>
-                            <li class="list-group-item dark-white box-shadow-z0 b">
-                              <span class="pull-left m-r">
-                                <img src="images/a1.jpg" alt="..." class="w-40 img-circle">
-                              </span>
-                              <span class="clear block">
-                                <a href="#" class="text-primary">Joe</a> Added you as friend<br>
-                                <small class="text-muted">2 hours ago</small>
-                              </span>
-                            </li>
-                            <li class="list-group-item dark-white text-color box-shadow-z0 b">
-                              <span class="pull-left m-r">
-                                <img src="images/a2.jpg" alt="..." class="w-40 img-circle">
-                              </span>
-                              <span class="clear block">
-                                <a href="#" class="text-primary">Danie</a> sent you a message<br>
-                                <small class="text-muted">1 day ago</small>
-                              </span>
-                            </li>
-                          </ul>
-                        </div>
-                    </div>
-                    <!-- / dropdown -->
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link clear" data-toggle="dropdown">
-                      <span class="avatar w-32">
-                        <img src="images/a3.jpg" class="w-full rounded" alt="...">
-                      </span>
-                    </a>
-                    <div class="dropdown-menu w dropdown-menu-scale pull-right">
-                      <a class="dropdown-item" href="profile.html">
-                        <span>Profile</span>
-                      </a>
-                      <a class="dropdown-item" href="setting.html">
-                        <span>Settings</span>
-                      </a>
-                      <a class="dropdown-item" href="app.inbox.html">
-                        <span>Inbox</span>
-                      </a>
-                      <a class="dropdown-item" href="app.message.html">
-                        <span>Message</span>
-                      </a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="docs.html">
-                        Need help?
-                      </a>
-                      <a class="dropdown-item" href="signin.html">Sign out</a>
-                    </div>
-                  </li>
-                </ul>
-                <!-- / navbar right -->
-          </div>
-    </div>
-    <div class="app-footer white bg p-a b-t">
-      <div class="pull-right text-sm text-muted">Version 1.0.1</div>
-      <span class="text-sm text-muted">&copy; Copyright.</span>
-    </div>
-    <div class="app-body">
 
-<!-- ############ PAGE START-->
-<!-- only need a height for layout 4 -->
-<div style="min-height: 200px"></div>
+      <div class="gn-title">TODAY</div>
 
-<!-- ############ PAGE END-->
+      <ul class="todo-list">
+        <li class="checkbox checkbox-primary">
+          <input id="checkboxside1" type="checkbox"><label for="checkboxside1">Add new products</label>
+        </li>
+        
+        <li class="checkbox checkbox-primary">
+          <input id="checkboxside2" type="checkbox"><label for="checkboxside2"><b>May 12, 6:30 pm</b> Meeting with Team</label>
+        </li>
+        
+        <li class="checkbox checkbox-warning">
+          <input id="checkboxside3" type="checkbox"><label for="checkboxside3">Design Facebook page</label>
+        </li>
+        
+        <li class="checkbox checkbox-info">
+          <input id="checkboxside4" type="checkbox"><label for="checkboxside4">Send Invoice to customers</label>
+        </li>
+        
+        <li class="checkbox checkbox-danger">
+          <input id="checkboxside5" type="checkbox"><label for="checkboxside5">Meeting with developer team</label>
+        </li>
+      </ul>
 
-    </div>
-  </div>
-  <!-- / -->
+      <div class="gn-title">TOMORROW</div>
+      <ul class="todo-list">
+        <li class="checkbox checkbox-warning">
+          <input id="checkboxside6" type="checkbox"><label for="checkboxside6">Redesign our company blog</label>
+        </li>
+        
+        <li class="checkbox checkbox-success">
+          <input id="checkboxside7" type="checkbox"><label for="checkboxside7">Finish client work</label>
+        </li>
+        
+        <li class="checkbox checkbox-info">
+          <input id="checkboxside8" type="checkbox"><label for="checkboxside8">Call Johnny from Developer Team</label>
+        </li>
 
-  
-  <!-- ############ SWITHCHER START-->
-    <div id="switcher">
-      <div class="switcher dark-white" id="sw-theme">
-        <a href="#" data-ui-toggle-class="active" data-ui-target="#sw-theme" class="dark-white sw-btn">
-          <i class="fa fa-gear text-muted"></i>
-        </a>
-        <div class="box-header">
-          <a href="https://themeforest.net/item/aside-dashboard-ui-kit/17903768?ref=flatfull" class="btn btn-xs rounded danger pull-right">BUY</a>
-          <strong>Theme Switcher</strong>
-        </div>
-        <div class="box-divider"></div>
-        <div class="box-body">
-          <p id="settingLayout" class="hidden-md-down">
-            <label class="md-check m-y-xs" data-target="folded">
-              <input type="checkbox">
-              <i></i>
-              <span>Folded Aside</span>
-            </label>
-            <label class="m-y-xs pointer" data-ui-fullscreen data-target="fullscreen">
-              <span class="fa fa-expand fa-fw m-r-xs"></span>
-              <span>Fullscreen Mode</span>
-            </label>
-          </p>
-          <p>Colors:</p>
-          <p data-target="color">
-            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
-              <input type="radio" name="color" value="primary">
-              <i class="primary"></i>
-            </label>
-            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
-              <input type="radio" name="color" value="accent">
-              <i class="accent"></i>
-            </label>
-            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
-              <input type="radio" name="color" value="warn">
-              <i class="warn"></i>
-            </label>
-            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
-              <input type="radio" name="color" value="success">
-              <i class="success"></i>
-            </label>
-            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
-              <input type="radio" name="color" value="info">
-              <i class="info"></i>
-            </label>
-            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
-              <input type="radio" name="color" value="warning">
-              <i class="warning"></i>
-            </label>
-            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
-              <input type="radio" name="color" value="danger">
-              <i class="danger"></i>
-            </label>
-          </p>
-          <p>Themes:</p>
-          <div data-target="bg" class="clearfix">
-            <label class="radio radio-inline m-a-0 ui-check ui-check-lg">
-              <input type="radio" name="theme" value="">
-              <i class="light"></i>
-            </label>
-            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-lg">
-              <input type="radio" name="theme" value="grey">
-              <i class="grey"></i>
-            </label>
-            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-lg">
-              <input type="radio" name="theme" value="dark">
-              <i class="dark"></i>
-            </label>
-            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-lg">
-              <input type="radio" name="theme" value="black">
-              <i class="black"></i>
-            </label>
-          </div>
-        </div>
+      </ul>
+    </div>    
+    <!-- End Tasks -->
+
+    <!-- Start Chat -->
+    <div role="tabpanel" class="tab-pane" id="chat">
+
+      <div class="sidepanel-m-title">
+        Friend List
+        <span class="left-icon"><a href="#"><i class="fa fa-pencil"></i></a></span>
+        <span class="right-icon"><a href="#"><i class="fa fa-trash"></i></a></span>
       </div>
-    </div>
-  <!-- ############ SWITHCHER END-->
 
-<!-- ############ LAYOUT END-->
+      <div class="gn-title">ONLINE MEMBERS (3)</div>
+      <ul class="group">
+        <li class="member"><a href="#"><img src="img/profileimg.png" alt="img"><b>Allice Mingham</b>Los Angeles</a><span class="status online"></span></li>
+        <li class="member"><a href="#"><img src="img/profileimg2.png" alt="img"><b>James Throwing</b>Las Vegas</a><span class="status busy"></span></li>
+        <li class="member"><a href="#"><img src="img/profileimg3.png" alt="img"><b>Fred Stonefield</b>New York</a><span class="status away"></span></li>
+        <li class="member"><a href="#"><img src="img/profileimg4.png" alt="img"><b>Chris M. Johnson</b>California</a><span class="status online"></span></li>
+      </ul>
+
+      <div class="gn-title">OFFLINE MEMBERS (8)</div>
+     <ul class="group">
+        <li class="member"><a href="#"><img src="img/profileimg5.png" alt="img"><b>Allice Mingham</b>Los Angeles</a><span class="status offline"></span></li>
+        <li class="member"><a href="#"><img src="img/profileimg6.png" alt="img"><b>James Throwing</b>Las Vegas</a><span class="status offline"></span></li>
+      </ul>
+
+      <form class="search">
+        <input type="text" class="form-control" placeholder="Search a Friend...">
+      </form>
+    </div>
+    <!-- End Chat -->
+
   </div>
 
-<!-- build:js scripts/app.min.js -->
-<!-- jQuery -->
-  <script src="libs/jquery/dist/jquery.js"></script>
-<!-- Bootstrap -->
-  <script src="libs/tether/dist/js/tether.min.js"></script>
-  <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
-<!-- core -->
-  <script src="libs/jQuery-Storage-API/jquery.storageapi.min.js"></script>
-  <script src="libs/PACE/pace.min.js"></script>
-  <script src="libs/jquery-pjax/jquery.pjax.js"></script>
-  <script src="libs/blockUI/jquery.blockUI.js"></script>
-  <script src="libs/jscroll/jquery.jscroll.min.js"></script>
+</div>
+<!-- END SIDEPANEL -->
+<!-- //////////////////////////////////////////////////////////////////////////// --> 
 
-  <script src="scripts/config.lazyload.js"></script>
-  <script src="scripts/ui-load.js"></script>
-  <script src="scripts/ui-jp.js"></script>
-  <script src="scripts/ui-include.js"></script>
-  <script src="scripts/ui-device.js"></script>
-  <script src="scripts/ui-form.js"></script>
-  <script src="scripts/ui-modal.js"></script>
-  <script src="scripts/ui-nav.js"></script>
-  <script src="scripts/ui-list.js"></script>
-  <script src="scripts/ui-screenfull.js"></script>
-  <script src="scripts/ui-scroll-to.js"></script>
-  <script src="scripts/ui-toggle-class.js"></script>
-  <script src="scripts/ui-taburl.js"></script>
-  <script src="scripts/app.js"></script>
-  <script src="scripts/ajax.js"></script>
-<!-- endbuild -->
+
+
+<!-- ================================================
+jQuery Library
+================================================ -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+<!-- ================================================
+Bootstrap Core JavaScript File
+================================================ -->
+<script src="js/bootstrap/bootstrap.min.js"></script>
+
+<!-- ================================================
+Plugin.js - Some Specific JS codes for Plugin Settings
+================================================ -->
+<script type="text/javascript" src="js/plugins.js"></script>
+
+
 </body>
 </html>
