@@ -125,6 +125,18 @@
                 </div>
 
                 <div class="form-group">
+                  <label for="exampleInputAmount" class="col-sm-2 control-label form-label">Est Value</label>
+                  <div class="col-sm-10">
+                    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                    <div class="input-group">
+                      <div class="input-group-addon"><i class="fa fa-usd"></i></div>
+                      <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                      <div class="input-group-addon">.00</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
                   <label for="input002" class="col-sm-2 control-label form-label">End Date</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" id="input002">
