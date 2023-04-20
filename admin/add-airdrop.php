@@ -37,7 +37,7 @@
 <!-- ############ LAYOUT START-->
 
   <!-- aside -->
-  <div id="aside" class="app-aside fade nav-dropdown black">
+  <div id="aside" class="app-aside nav-dropdown black">
     <!-- fluid app aside -->
     <div class="navside dk" data-layout="column">
       <div class="navbar no-radius">
@@ -49,11 +49,11 @@
         </a>
         <!-- / brand -->
       </div>
-      <div data-flex>
+      <div data-flex class="hide-scroll">
           <nav class="scroll nav-stacked nav-stacked-rounded nav-color">
             
             <ul class="nav" data-ui-nav>
-              <li class="nav-header">
+              <li class="nav-header hidden-folded">
                 <span class="text-xs">Main</span>
               </li>
               <li>
