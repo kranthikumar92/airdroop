@@ -79,53 +79,53 @@
       <div class="panel panel-default">
         <div class="panel-body table-responsive">
 
-            <table id="example0" class="table display">
-                <thead>
-                    <tr>
-                        <th>sno</th>
-                        <th>Coin Name</th>
-                        <th>Est Value</th>
-                        <th>Referral available</th>
-                        <th>End date</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-             
-                <tfoot>
-                    <tr>
-                        <th>sno</th>
-                        <th>Coin Name</th>
-                        <th>Est Value</th>
-                        <th>Referral available</th>
-                        <th>End date</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </tfoot>
-             
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>System Architect</td>
-                        <td>$ 100</td>
-                        <td>Yes</td>
-                        <td>2011/04/25</td>
-                        <td>Active</td>
-                        <td><a href="edit-airdrop?id=" class="btn btn-warning">Edit</a> <a href="delete-airdrop?id=" class="btn btn-danger">Delete</a></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Junior Technical Author</td>
-                        <td>$ 100</td>
-                        <td>No</td>
-                        <td>2009/01/12</td>
-                        <td>End</td>
-                        <td><a href="edit-airdrop?id=" class="btn btn-warning">Edit</a> <a href="delete-airdrop?id=" class="btn btn-danger">Delete</a></td>
-                    </tr>
-                    
-                </tbody>
-            </table>
+        <?php
+// Database connection parameters
+$servername = "localhost";
+$username = "calix_web_user";
+$password = "calixworldhhUUh383287HGSHhs";
+$dbname = "calix_cry_world";
+
+// Create database connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Retrieve data from the airdrop_coins table
+$sql = "SELECT * FROM airdrop_coins";
+$result = $conn->query($sql);
+
+// Create a table with the retrieved data
+if ($result->num_rows > 0) {
+    echo "<table id='example0' class='table display'>";
+    echo "<thead><tr><th>sno</th><th>Coin Name</th><th>Est Value</th><th>Referral available</th><th>End date</th><th>Status</th><th>Action</th></tr></thead>";
+    echo "<tfoot><tr><th>sno</th><th>Coin Name</th><th>Est Value</th><th>Referral available</th><th>End date</th><th>Status</th><th>Action</th></tr></tfoot>";
+    echo "<tbody>";
+
+    while ($row = $result->fetch_assoc()) {
+        echo "<tr>";
+        echo "<td>" . $row["sno"] . "</td>";
+        echo "<td>" . $row["coin_name"] . "</td>";
+        echo "<td>" . $row["est_value"] . "</td>";
+        echo "<td>" . $row["referral_available"] . "</td>";
+        echo "<td>" . $row["end_date"] . "</td>";
+        echo "<td>" . $row["status"] . "</td>";
+        echo "<td><a href='edit-airdrop?id=" . $row["sno"] . "' class='btn btn-warning'>Edit</a> <a href='delete-airdrop?id=" . $row["sno"] . "' class='btn btn-danger'>Delete</a></td>";
+        echo "</tr>";
+    }
+
+    echo "</tbody></table>";
+} else {
+    echo "No data found.";
+}
+
+// Close database connection
+$conn->close();
+?>
+
 
 
         </div>
