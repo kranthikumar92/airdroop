@@ -225,8 +225,7 @@ $result = $conn->query($sql);
                   echo "<td>" . $row["referral_available"] . "</td>";
                   echo "<td>" . $row["end_date"] . "</td>";
                   echo "<td>" . $row["status"] . "</td>";
-                  echo '<td><a href="edit_airdrop.php?id=' . $row["sno"] . '" class="btn btn-outline-secondary btn-icon-text">Edit <i class="mdi mdi-file-check btn-icon-append"></i></a>
-                  <a href="edit_airdrop.php?id=' . $row["sno"] . '" class="btn btn-outline-danger btn-icon-text">Delete <i class="mdi mdi-file-check btn-icon-append"></i></a></td>';
+                  echo '<td><a href="edit_airdrop.php?id=' . $row["sno"] . '" class="btn btn-outline-secondary btn-icon-text">Edit <i class="mdi mdi-file-check btn-icon-append"></i></a><a href="edit_airdrop.php?id=' . $row["sno"] . '" class="btn btn-outline-danger btn-icon-text">Delete <i class="mdi mdi-file-check btn-icon-append"></i></a></td>';
                   echo "</tr>";
                 }
               } else {
