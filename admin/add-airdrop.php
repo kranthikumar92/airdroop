@@ -82,13 +82,6 @@
               <form class="form-horizontal">
 
                 <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">Static Field</label>
-                  <div class="col-sm-10">
-                    <p class="form-control-static">email@example.com</p>
-                  </div>
-                </div>
-
-                <div class="form-group">
                   <label for="input002" class="col-sm-2 control-label form-label">Airdrop Title</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" id="input002">
@@ -145,8 +138,6 @@
                    </fieldset>
                   </div>
                 </div>
-
-                
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Referral Available</label>
