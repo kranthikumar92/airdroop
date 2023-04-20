@@ -44,63 +44,7 @@
             </div>
             <div class="row">
               
-                  <div class="card-body">
-                    <p class="card-description">Add class <code>.form-check-{color}</code> for checkbox and radio controls in theme colors</p>
-                    <form>
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <div class="form-check form-check-primary">
-                              <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" checked> Primary </label>
-                            </div>
-                            <div class="form-check form-check-success">
-                              <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" checked> Success </label>
-                            </div>
-                            <div class="form-check form-check-info">
-                              <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" checked> Info </label>
-                            </div>
-                            <div class="form-check form-check-danger">
-                              <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" checked> Danger </label>
-                            </div>
-                            <div class="form-check form-check-warning">
-                              <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" checked> Warning </label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <div class="form-check form-check-primary">
-                              <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="ExampleRadio1" id="ExampleRadio1" checked> Primary </label>
-                            </div>
-                            <div class="form-check form-check-success">
-                              <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="ExampleRadio2" id="ExampleRadio2" checked> Success </label>
-                            </div>
-                            <div class="form-check form-check-info">
-                              <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="ExampleRadio3" id="ExampleRadio3" checked> Info </label>
-                            </div>
-                            <div class="form-check form-check-danger">
-                              <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="ExampleRadio4" id="ExampleRadio4" checked> Danger </label>
-                            </div>
-                            <div class="form-check form-check-warning">
-                              <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="ExampleRadio5" id="ExampleRadio5" checked> Warning </label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
+                  
               <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
