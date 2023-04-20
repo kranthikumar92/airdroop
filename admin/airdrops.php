@@ -202,7 +202,6 @@ $result = $conn->query($sql);
       <div class="card">
         <div class="card-body">
           <h4 class="card-title">All Airdrops List</h4>
-          <a href="edit_form.php" class="btn btn-primary mb-2">Edit Airdrops</a>
           <table class="table table-bordered">
             <thead>
               <tr>
