@@ -13,7 +13,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 // define the directory where the images will be stored
-$target_dir = "../airdrop_imgs/";
+$target_dir = "airdrop_imgs/";
 $publist_date = date('Y-m-d');
 
 // get the name of the uploaded file
