@@ -201,7 +201,7 @@
                   <div class="col-sm-10">
                     <div class="panel-body">
                       <div id="summernote">Write Description of Airdrop</div>
-                      </div>
+                      
                     </div>
                   </div>
                 </div>
@@ -210,7 +210,7 @@
                   <label class="col-sm-2 control-label form-label">Airdrop Steps Guide</label>
                   <div class="col-sm-10">
                     <div class="panel-body">
-                      <div id="summernote">Step by Step Guide::</div>
+                      <div id="summernote">Step by Step Guide</div>
                       </div>
                     </div>
                   </div>
