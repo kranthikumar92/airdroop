@@ -132,7 +132,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-4 control-label form-label">Referral Available</label>
+                  <label class="col-sm-2 control-label form-label">Referral Available</label>
                   <div class="col-sm-8">
                     <select class="selectpicker">
                         <option>Yes</option>
