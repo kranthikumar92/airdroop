@@ -40,6 +40,10 @@ if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
     // close the statement
     mysqli_stmt_close($stmt);
 } else {
+    ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
     echo "Error uploading image.";
 }
 
