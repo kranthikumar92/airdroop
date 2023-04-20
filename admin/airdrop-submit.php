@@ -17,11 +17,11 @@ $target_dir = "airdrop_imgs/";
 $publist_date = date('Y-m-d');
 
 // get the name of the uploaded file
-$target_file = $target_dir . basename($_FILES["image"]["name"]);
+$target_file = $target_dir . basename($_FILES["file"]["name"]);
 
 
 // move the uploaded file to the target directory
-if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
     // prepare the SQL statement
     $sql = "INSERT INTO airdrop_coins (coin_title, coin_img, airdrop_tagline, airdrop_description, airdrop_steps, whitepaper, tokens, est_value, end_date, referral_available, referral_link, blockchain, website_link, airdrop_join_link, publish_date, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
