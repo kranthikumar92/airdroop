@@ -204,6 +204,14 @@
                 </div>
 
                 <div class="form-group">
+                  <label for="file">Select image to upload:</label>
+                  <div class="col-sm-10">
+                    <input type="file" name="file" id="file"><br>
+                  </div>
+                </div>
+
+
+                <div class="form-group">
                   <label class="col-sm-2 control-label form-label"></label>
                   <div class="col-sm-10">
                     <button type="submit" class="btn btn-default">Submit</button>
