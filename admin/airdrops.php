@@ -115,7 +115,7 @@ $statusClass = ($row['status'] == 'active') ? 'green' : 'red';
         echo "<td>" . $row["est_value"] . "</td>";
         echo "<td>" . $row["referral_available"] . "</td>";
         echo "<td>" . $row["end_date"] . "</td>";
-        echo "<td  style='color:red'>" . $row["status"] . "</td>";
+        echo "<td  style='color:" . $statusClass . "'>" . $row["status"] . "</td>";
         echo "<td><a href='edit-airdrop.php?id=" . $row["sno"] . "' class='btn btn-warning'>Edit</a> <a href='delete-airdrop.php?id=" . $row["sno"] . "' class='btn btn-danger'>Delete</a></td>";
         echo "</tr>";
     }
