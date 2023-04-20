@@ -196,6 +196,15 @@
                   </div>
                 </div>
 
+                <div class="form-group">
+                  <label class="col-sm-2 control-label form-label">Status</label>
+                    <div class="panel-body">
+                      <div id="summernote">Hello Summernote</div>
+                        <button class="btn btn-default">Send Post</button>
+                      </div>
+                    </div>
+                </div>
+
 
               </form> 
 
@@ -206,13 +215,6 @@
 
   </div>
   <!-- End Row -->
-
-  
-  
-
-
-
-
 
 </div>
 <!-- END CONTAINER -->
