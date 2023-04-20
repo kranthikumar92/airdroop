@@ -112,7 +112,7 @@ $check_sql = "SELECT * FROM airdrop_coins WHERE coin_name = '$coin_name'";
 $check_result = mysqli_query($conn, $check_sql);
 
 if (mysqli_num_rows($check_result) > 0) {
-    echo "<h2>Airdrop Listing with the same Coin Name already exists.</h2>";
+    echo "<h2 style='color:red'>Airdrop Listing with the same Coin Name already exists.</h2>";
     mysqli_close($conn);
 }
 
