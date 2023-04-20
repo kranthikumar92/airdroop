@@ -79,6 +79,7 @@
     <div class="col-md-12">
       <div class="panel panel-default">
             <div class="panel-body">
+            <div class="form-group">
             <?php
 
 // Enable error reporting
@@ -130,7 +131,7 @@ mysqli_close($conn);
 
 ?>
 
-        <div class="form-group">
+        
                   
                   <div class="col-sm-10">
                   <a href="airdrops.php" class="btn btn-default">Back to Airdrops List</a>
