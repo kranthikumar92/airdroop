@@ -106,6 +106,15 @@ $file_extension = pathinfo($original_filename, PATHINFO_EXTENSION);
 $new_filename = uniqid() . "." . $file_extension; // Generate a unique filename
 $target_file = $target_dir . $new_filename;
 
+// Check if coin_name already exists
+$coin_name = mysqli_real_escape_string($conn, $_POST['airdrop_title']);
+$check_sql = "SELECT * FROM airdrop_coins WHERE coin_name = '$coin_name'";
+$check_result = mysqli_query($conn, $check_sql);
+
+if (mysqli_num_rows($check_result) > 0) {
+    die("Error: Airdrop Listing with the same Coin Name already exists.");
+}
+
 // Move the uploaded file to the target directory
 if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
 
