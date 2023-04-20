@@ -78,8 +78,6 @@
 
     <div class="col-md-12">
       <div class="panel panel-default">
-
-
             <div class="panel-body">
               <form class="form-horizontal">
 
@@ -91,17 +89,17 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="input002" class="col-sm-2 control-label form-label">Normal</label>
+                  <label for="input002" class="col-sm-2 control-label form-label">AIrdrop Title</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" id="input002">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="input001" class="col-sm-2 control-label form-label">Help Text</label>
+                  <label for="input001" class="col-sm-2 control-label form-label">Airdrop or Project Tagline</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" id="input001">
-                    <span id="helpBlock" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                    <span id="helpBlock" class="help-block">Write Airdrop or Crypto Project Tagline in 50 letters.</span>
                   </div>
                 </div>
 
