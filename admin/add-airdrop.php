@@ -198,7 +198,7 @@
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Airdrop Description</label>
-                  <div class="col-sm-8">
+                  <div class="col-sm-10">
                     <div class="panel-body">
                       <div id="summernote">Hello Summernote</div>
                       </div>
