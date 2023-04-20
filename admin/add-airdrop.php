@@ -66,25 +66,6 @@
               </li>
               
               <li>
-                <a href="app.inbox.html" class="b-info">
-                  <span class="nav-icon text-white no-fade">
-                    <i class="ion-email"></i>
-                  </span>
-                  <span class="nav-text">Inbox</span>
-                </a>
-              </li>
-              <li>
-                <a href="app.message.html" class="b-default">
-                  <span class="nav-label">
-                    <b class="label label-xs rounded danger"></b>
-                  </span>
-                  <span class="nav-icon">
-                    <i class="ion-chatbubble-working"></i>
-                  </span>
-                  <span class="nav-text">Messages</span>
-                </a>
-              </li>
-              <li>
                 <a href="app.contact.html" class="b-default">
                   <span class="nav-icon">
                     <i class="ion-person"></i>
