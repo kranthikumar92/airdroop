@@ -64,14 +64,7 @@
                   <span class="nav-text">Dashboard</span>
                 </a>
               </li>
-              <li>
-                <a href="app.project.html" class="b-success">
-                  <span class="nav-icon text-white no-fade">
-                    <i class="ion-android-apps"></i>
-                  </span>
-                  <span class="nav-text">Projects</span>
-                </a>
-              </li>
+              
               <li>
                 <a href="app.inbox.html" class="b-info">
                   <span class="nav-icon text-white no-fade">
