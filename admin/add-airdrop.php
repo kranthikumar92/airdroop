@@ -202,7 +202,7 @@
                       <textarea class="form-control" rows="3" id="textarea1" placeholder="Type Step by Step Guide of Airdrop..."></textarea>
                   </div>
                 </div>
-
+                <button type="submit" class="btn btn-default">Submit</button>
               </form> 
 
             </div>
