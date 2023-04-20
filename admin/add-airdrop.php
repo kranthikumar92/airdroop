@@ -200,7 +200,6 @@
                   <label class="col-sm-2 control-label form-label">Airdrop Description</label>
                     <div class="panel-body">
                       <div id="summernote">Hello Summernote</div>
-                        <button class="btn btn-default">Send Post</button>
                       </div>
                     </div>
                 </div>
@@ -305,6 +304,13 @@ $(document).ready(function() {
 });
 </script>
 
+<!-- ================================================
+Bootstrap WYSIHTML5
+================================================ -->
+<!-- main file -->
+<script type="text/javascript" src="js/bootstrap-wysihtml5/wysihtml5-0.3.0.min.js"></script>
+<!-- bootstrap file -->
+<script type="text/javascript" src="js/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
 <!-- ================================================
 Summernote
 ================================================ -->
