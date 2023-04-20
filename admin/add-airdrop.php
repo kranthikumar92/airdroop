@@ -117,6 +117,20 @@
                   </div>
                 </div>
 
+                <div class="form-group">
+                  <label for="input002" class="col-sm-2 control-label form-label">Est Value ($)</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="input002">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input002" class="col-sm-2 control-label form-label">End Date</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="input002">
+                  </div>
+                </div>
+
                 
                 <div class="form-group">
                   <label for="input4" class="col-sm-2 control-label form-label">Disable</label>
