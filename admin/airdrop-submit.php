@@ -133,7 +133,7 @@ mysqli_close($conn);
         <div class="form-group">
                   
                   <div class="col-sm-10">
-                    <button type="submit" class="btn btn-default">Submit</button>
+                  <a href="#" class="btn btn-default">Back to Airdrops List</a>
                   </div>
                 </div>
 
