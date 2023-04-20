@@ -207,7 +207,7 @@ $result = $conn->query($sql);
             <thead>
               <tr>
                 <th> sno </th>
-                <th> Coin Name </th>
+                <th> Title </th>
                 <th> Est Value </th>
                 <th> Referral </th>
                 <th> End Date </th>
@@ -222,7 +222,7 @@ $result = $conn->query($sql);
                   echo "<td>" . $row["sno"] . "</td>";
                   echo "<td>" . $row["coin_name"] . "</td>";
                   echo "<td>" . $row["est_value"] . "</td>";
-                  echo "<td>" . $row["referral"] . "</td>";
+                  echo "<td>" . $row["referral_available"] . "</td>";
                   echo "<td>" . $row["end_date"] . "</td>";
                   echo "<td>" . $row["status"] . "</td>";
                   echo "</tr>";
