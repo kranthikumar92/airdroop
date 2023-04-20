@@ -199,77 +199,7 @@
                 
 
                 
-                <div class="form-group">
-                  <label for="input4" class="col-sm-2 control-label form-label">Disable</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="input4" placeholder="Disable Input" disabled>
-                  </div>
-                </div>
-
-                <div class="form-group has-success">
-                  <label for="input6" class="col-sm-2 control-label form-label">Input with success</label>
-                  <div class="col-sm-10">
-                      <input type="text" class="form-control" id="input6">
-                  </div>
-                </div>
-
-                <div class="form-group has-warning">
-                  <label for="input7" class="col-sm-2 control-label form-label">Input with warning</label>
-                  <div class="col-sm-10">
-                      <input type="text" class="form-control" id="input7">
-                  </div>
-                </div>
-
-                <div class="form-group has-error">
-                  <label for="input8" class="col-sm-2 control-label form-label">Input with warning</label>
-                  <div class="col-sm-10">
-                      <input type="text" class="form-control" id="input8">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">Readonly input</label>
-                  <div class="col-sm-10">
-                    <input class="form-control" type="text" placeholder="Readonly input here…" readonly>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputAmount" class="col-sm-2 control-label form-label">With Icons</label>
-                  <div class="col-sm-10">
-                    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-                    <div class="input-group">
-                      <div class="input-group-addon"><i class="fa fa-usd"></i></div>
-                      <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
-                      <div class="input-group-addon">.00</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputAmount2" class="col-sm-2 control-label form-label">Another With Icons</label>
-                  <div class="col-sm-10">
-                    <label class="sr-only" for="exampleInputAmount2">Login</label>
-                    <div class="input-group">
-                      <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                      <input type="text" class="form-control" id="exampleInputAmount2" placeholder="Username">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">Textarea</label>
-                  <div class="col-sm-10">
-                      <textarea class="form-control" rows="3" id="textarea1" placeholder="Type your message..."></textarea>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">With a Line</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control form-control-line" placeholder="What is your name?">
-                  </div>
-                </div>
+               
 
 
               </form> 
