@@ -100,7 +100,7 @@ $result = $conn->query($sql);
 
 // Create a table with the retrieved data
 if ($result->num_rows > 0) {
-    echo "<table id='example0' class='table display'>";
+    echo "<table id='airdrop-listing' class='table display'>";
     echo "<thead><tr><th>sno</th><th>Coin Name</th><th>Est Value</th><th>Referral available</th><th>End date</th><th>Status</th><th>Action</th></tr></thead>";
     echo "<tfoot><tr><th>sno</th><th>Coin Name</th><th>Est Value</th><th>Referral available</th><th>End date</th><th>Status</th><th>Action</th></tr></tfoot>";
     echo "<tbody>";
