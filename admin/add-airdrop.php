@@ -124,14 +124,14 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="input002" class="col-sm-2 control-label form-label">End Date</label>
+                  <label for="end_date" class="col-sm-2 control-label form-label">End Date</label>
                   <div class="col-sm-10">
                   <fieldset>
                     <div class="control-group">
                       <div class="controls">
                        <div class="input-prepend input-group">
                          <span class="add-on input-group-addon"><i class="fa fa-calendar"></i></span>
-                         <input type="text" name="file" id="file" class="form-control" value="04/20/2023"/> 
+                         <input type="text" name="end_date" id="end_date" class="form-control" value="04/20/2023"/> 
                        </div>
                       </div>
                     </div>
@@ -142,7 +142,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Referral Available</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker" name="file" id="file">
+                    <select class="selectpicker" name="referral_available" id="referral_available">
                         <option>Yes</option>
                         <option>No</option>
                       </select>                  
@@ -150,37 +150,37 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="input002" class="col-sm-2 control-label form-label">Referral Link</label>
+                  <label for="referral_link" class="col-sm-2 control-label form-label">Referral Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="file" id="file">
+                    <input type="text" class="form-control" name="referral_link" id="referral_link">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="input002" class="col-sm-2 control-label form-label">Blockchain</label>
+                  <label for="blockchain" class="col-sm-2 control-label form-label">Blockchain</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="file" id="file">
+                    <input type="text" class="form-control" name="blockchain" id="blockchain">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="input002" class="col-sm-2 control-label form-label">Website Link</label>
+                  <label for="website_link" class="col-sm-2 control-label form-label">Website Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="file" id="file">
+                    <input type="text" class="form-control" name="website_link" id="website_link">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="input002" class="col-sm-2 control-label form-label">Airdrop Join Link</label>
+                  <label for="airdrop_join_link" class="col-sm-2 control-label form-label">Airdrop Join Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="file" id="file">
+                    <input type="text" class="form-control" name="airdrop_join_link" id="airdrop_join_link">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Status</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker" name="file" id="file">
+                    <select class="selectpicker" name="status" id="status">
                         <option>Active</option>
                         <option>Ended</option>
                       </select>                  
@@ -191,7 +191,7 @@
                   <label class="col-sm-2 control-label form-label">Airdrop Description</label>
                   <div class="col-sm-10">
                     <div class="panel-body">
-                      <div name="file" id="file">Write Description of Airdrop</div>
+                      <div name="airdrop_description" id="airdrop_description">Write Description of Airdrop</div>
                     </div>
                   </div>
                 </div>
@@ -199,12 +199,12 @@
                <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Step by Step Guide</label>
                   <div class="col-sm-10">
-                      <textarea class="form-control" rows="3" name="file" id="file" placeholder="Type Step by Step Guide of Airdrop..."></textarea>
+                      <textarea class="form-control" rows="3" name="step_by_step_guide" id="step_by_step_guide" placeholder="Type Step by Step Guide of Airdrop..."></textarea>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="file" class="col-sm-2 control-label form-label">Select image to upload:</label>
+                  <label class="col-sm-2 control-label form-label">Select image to upload:</label>
                   <div class="col-sm-10">
                     <input type="file" class="form-control" name="file" id="file"><br>
                   </div>
