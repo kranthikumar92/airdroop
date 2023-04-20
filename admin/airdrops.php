@@ -78,7 +78,7 @@
     <div class="col-md-12">
       <div class="panel panel-default">
         <div class="panel-title">
-          DAtaTables
+          Crypto Airdrops List
         </div>
         <div class="panel-body table-responsive">
 
