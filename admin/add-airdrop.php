@@ -143,8 +143,8 @@
                   <label class="col-sm-2 control-label form-label">Referral Available</label>
                   <div class="col-sm-8">
                     <select class="selectpicker" name="referral_available" id="referral_available">
-                        <option>Yes</option>
-                        <option>No</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
                       </select>                  
                   </div>
                 </div>
@@ -181,8 +181,8 @@
                   <label class="col-sm-2 control-label form-label">Status</label>
                   <div class="col-sm-8">
                     <select class="selectpicker" name="status" id="status">
-                        <option>Active</option>
-                        <option>Ended</option>
+                    <option value="active">Active</option>
+                    <option value="ended">Ended</option>
                       </select>                  
                   </div>
                 </div>
