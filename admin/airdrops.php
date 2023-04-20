@@ -105,6 +105,9 @@ if ($result->num_rows > 0) {
     echo "<tfoot><tr><th>sno</th><th>Coin Name</th><th>Est Value</th><th>Referral available</th><th>End date</th><th>Status</th><th>Action</th></tr></tfoot>";
     echo "<tbody>";
 
+// Determine the CSS class for status
+$statusClass = ($row['status'] == 'active') ? 'green' : 'red';
+
     while ($row = $result->fetch_assoc()) {
         echo "<tr>";
         echo "<td>" . $row["sno"] . "</td>";
@@ -112,7 +115,7 @@ if ($result->num_rows > 0) {
         echo "<td>" . $row["est_value"] . "</td>";
         echo "<td>" . $row["referral_available"] . "</td>";
         echo "<td>" . $row["end_date"] . "</td>";
-        echo "<td>" . $row["status"] . "</td>";
+        echo "<td  style='color:red'>" . $row["status"] . "</td>";
         echo "<td><a href='edit-airdrop.php?id=" . $row["sno"] . "' class='btn btn-warning'>Edit</a> <a href='delete-airdrop.php?id=" . $row["sno"] . "' class='btn btn-danger'>Delete</a></td>";
         echo "</tr>";
     }
