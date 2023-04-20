@@ -66,28 +66,6 @@
   </div>
   <!-- End Page Header -->
 
-  <!-- Start Presentation -->
-  <div class="row presentation">
-
-    <div class="col-lg-8 col-md-6 titles">
-      <span class="icon color9-bg"><i class="fa fa-check-square-o"></i></span>
-      <h1>Form Elements</h1>
-      <h4>Responsive and user-friendly form elements</h4>
-    </div>
-
-    <div class="col-lg-4 col-md-6">
-      <ul class="list-unstyled list">
-        <li><i class="fa fa-check"></i>Simplicity<li>
-        <li><i class="fa fa-check"></i>Based on <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a><li>
-        <li><i class="fa fa-check"></i><a href="https://github.com/flatlogic/awesome-bootstrap-checkbox" target="_blank">Awesome Bootstrap Checkbox</a><li>
-        <li><i class="fa fa-check"></i><a href="http://www.bootstraptoggle.com/" target="_blank">Bootstrap Toggle</a><li>
-        <li><i class="fa fa-check"></i><a href="http://silviomoreto.github.io/bootstrap-select/" target="_blank">Bootstrap Select</a><li>
-      </ul>
-    </div>
-
-  </div>
-  <!-- End Presentation -->
-
 
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
 <!-- START CONTAINER -->
