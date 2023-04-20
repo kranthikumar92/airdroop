@@ -138,7 +138,7 @@
                       <div class="controls">
                        <div class="input-prepend input-group">
                          <span class="add-on input-group-addon"><i class="fa fa-calendar"></i></span>
-                         <input type="text" id="date-picker" class="form-control" value="03/18/2015"/> 
+                         <input type="text" id="date-picker" class="form-control" value="04/20/2023"/> 
                        </div>
                       </div>
                     </div>
