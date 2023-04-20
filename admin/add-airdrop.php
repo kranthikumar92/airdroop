@@ -53,7 +53,7 @@
           <nav class="scroll nav-stacked nav-stacked-rounded nav-color">
             
             <ul class="nav" data-ui-nav>
-              <li class="nav-header hidden-folded">
+              <li class="nav-header">
                 <span class="text-xs">Main</span>
               </li>
               <li>
