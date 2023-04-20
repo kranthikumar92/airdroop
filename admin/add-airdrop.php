@@ -82,42 +82,42 @@
               <form class="form-horizontal">
 
                 <div class="form-group">
-                  <label for="input002" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="file" id="file">
+                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="input001" class="col-sm-2 control-label form-label">Airdrop or Project Tagline</label>
+                  <label for="airdrop_tagline" class="col-sm-2 control-label form-label">Airdrop or Project Tagline</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="file" id="file">
+                    <input type="text" class="form-control" name="airdrop_tagline" id="airdrop_tagline">
                     <span id="helpBlock" class="help-block">Write Airdrop or Crypto Project Tagline in 50 letters.</span>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="input002" class="col-sm-2 control-label form-label">Whitepaper</label>
+                  <label for="whitepaper" class="col-sm-2 control-label form-label">Whitepaper</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="file" id="file">
+                    <input type="text" class="form-control" name="whitepaper" id="whitepaper">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="input002" class="col-sm-2 control-label form-label">Tokens</label>
+                  <label for="tokens" class="col-sm-2 control-label form-label">Tokens</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="file" id="file">
+                    <input type="text" class="form-control" name="tokens" id="tokens">
                   </div>
                 </div>
 
               
                 <div class="form-group">
-                  <label for="exampleInputAmount" class="col-sm-2 control-label form-label">Est Value</label>
+                  <label for="est_value" class="col-sm-2 control-label form-label">Est Value</label>
                   <div class="col-sm-10">
-                    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                    <label class="sr-only" for="est_value">Amount (in dollars)</label>
                     <div class="input-group">
                       <div class="input-group-addon"><i class="fa fa-usd"></i></div>
-                      <input type="text" class="form-control" name="file" id="file" placeholder="Amount">
+                      <input type="text" class="form-control" name="est_value" id="est_value" placeholder="Amount">
                       
                     </div>
                   </div>
