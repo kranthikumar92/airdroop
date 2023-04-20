@@ -148,6 +148,39 @@
                   </div>
                 </div>
 
+                <div class="form-group">
+                  <label for="input002" class="col-sm-2 control-label form-label">Blockchain</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="input002">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input002" class="col-sm-2 control-label form-label">Website Link</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="input002">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input002" class="col-sm-2 control-label form-label">Airdrop Join Link</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="input002">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label form-label">Status</label>
+                  <div class="col-sm-8">
+                    <select class="selectpicker">
+                        <option>Active</option>
+                        <option>Ended</option>
+                      </select>                  
+                  </div>
+                </div>
+
+                
+
                 
                 <div class="form-group">
                   <label for="input4" class="col-sm-2 control-label form-label">Disable</label>
