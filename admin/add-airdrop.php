@@ -197,7 +197,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">Status</label>
+                  <label class="col-sm-2 control-label form-label">Airdrop Description</label>
                     <div class="panel-body">
                       <div id="summernote">Hello Summernote</div>
                         <button class="btn btn-default">Send Post</button>
