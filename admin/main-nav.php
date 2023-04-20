@@ -30,11 +30,8 @@
 
 <ul class="sidebar-panel nav">
   <li class="sidetitle">MORE</li>
-  <li><a href="grid.html"><span class="icon color15"><i class="fa fa-columns"></i></span>Grid System</a></li>
-  <li><a href="maps.html"><span class="icon color7"><i class="fa fa-map-marker"></i></span>Maps</a></li>
-  <li><a href="customizable.html"><span class="icon color10"><i class="fa fa-lightbulb-o"></i></span>Customizable</a></li>
-  <li><a href="helper-classes.html"><span class="icon color8"><i class="fa fa-code"></i></span>Helper Classes</a></li>
-  <li><a href="changelogs.html"><span class="icon color12"><i class="fa fa-file-text-o"></i></span>Changelogs</a></li>
+  <li><a href="grid.html"><span class="icon color15"><i class="fa fa-columns"></i></span>Profile</a></li>
+  <li><a href="maps.html"><span class="icon color7"><i class="fa fa-map-marker"></i></span>Menu 2</a></li>
 </ul>
 
 <div class="sidebar-plan">
