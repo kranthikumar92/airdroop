@@ -211,6 +211,7 @@ $result = $conn->query($sql);
                 <th> Referral </th>
                 <th> End Date </th>
                 <th> Status </th>
+                <th> Action </th>
               </tr>
             </thead>
             <tbody>
@@ -224,6 +225,7 @@ $result = $conn->query($sql);
                   echo "<td>" . $row["referral_available"] . "</td>";
                   echo "<td>" . $row["end_date"] . "</td>";
                   echo "<td>" . $row["status"] . "</td>";
+                  echo "s";
                   echo "</tr>";
                 }
               } else {
