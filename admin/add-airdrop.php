@@ -131,6 +131,16 @@
                   </div>
                 </div>
 
+                <div class="form-group">
+                  <label class="col-sm-4 control-label form-label">Referal Available</label>
+                  <div class="col-sm-8">
+                    <select class="selectpicker">
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>                  
+                  </div>
+                </div>
+
                 
                 <div class="form-group">
                   <label for="input4" class="col-sm-2 control-label form-label">Disable</label>
