@@ -496,7 +496,7 @@
                 <a data-toggle="modal" data-target="#aside" class="navbar-item pull-left hidden-lg-up p-r m-a-0">
                   <i class="ion-navicon"></i>
                 </a>
-                <div class="navbar-item pull-left h5" id="pageTitle">Element</div>
+                <div class="navbar-item pull-left h5" id="pageTitle">Add Airdrop Listing</div>
                 <!-- nabar right -->
                 <ul class="nav navbar-nav pull-right">
                   <li class="nav-item dropdown pos-stc-xs">
