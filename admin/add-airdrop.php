@@ -205,16 +205,7 @@
                   </div>
                 </div>
 
-                <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">Airdrop Steps Guide</label>
-                  <div class="col-sm-10">
-                    <div class="panel-body">
-                      <div id="summernote1">Step by Step Guide</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group">
+               <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Step by Step Guide</label>
                   <div class="col-sm-10">
                       <textarea class="form-control" rows="3" id="textarea1" placeholder="Type Step by Step Guide of Airdrop..."></textarea>
