@@ -104,7 +104,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="input2" class="col-sm-2 control-label form-label">Rounded</label>
+                  <label for="input2" class="col-sm-2 control-label form-label">Whitepaper</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control form-control-radius" id="input2">
                   </div>
