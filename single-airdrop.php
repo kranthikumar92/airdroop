@@ -146,7 +146,7 @@ if ($result->num_rows > 0) {
     echo '<div class="single-sidebar-item">
     <div class="airdrop-details-area d-flex">
         <figure class="airdrop-currency-thumb">
-            <img src="' . $row["coin_img"] . '" alt="' . $row["coin_name"] . '"
+            <img src="airdrop_imgs/' . $row["coin_img"] . '" alt="' . $row["coin_name"] . '"
                  class="img-fluid"/>
         </figure>
         <div class="airdrop-currency-info">
