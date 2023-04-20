@@ -113,7 +113,7 @@ if ($result->num_rows > 0) {
         echo "<td>" . $row["referral_available"] . "</td>";
         echo "<td>" . $row["end_date"] . "</td>";
         echo "<td>" . $row["status"] . "</td>";
-        echo "<td><a href='edit-airdrop?id=" . $row["sno"] . "' class='btn btn-warning'>Edit</a> <a href='delete-airdrop?id=" . $row["sno"] . "' class='btn btn-danger'>Delete</a></td>";
+        echo "<td><a href='edit-airdrop.php?id=" . $row["sno"] . "' class='btn btn-warning'>Edit</a> <a href='delete-airdrop.php?id=" . $row["sno"] . "' class='btn btn-danger'>Delete</a></td>";
         echo "</tr>";
     }
 
