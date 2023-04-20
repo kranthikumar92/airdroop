@@ -76,7 +76,10 @@
   <!-- Start Row -->
   <div class="row">
 
-  <?php
+    <div class="col-md-12">
+      <div class="panel panel-default">
+            <div class="panel-body">
+            <?php
 
 // Enable error reporting
 ini_set('display_errors', 1);
@@ -126,6 +129,11 @@ if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
 mysqli_close($conn);
 
 ?>
+
+            </div>
+
+      </div>
+    </div>
 
   </div>
   <!-- End Row -->
