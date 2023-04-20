@@ -56,7 +56,7 @@
 
   <!-- Start Page Header -->
   <div class="page-header">
-    <h1 class="title">Data Tables</h1>
+    <h1 class="title">Crypto Airdrops Listing</h1>
       <ol class="breadcrumb">
         <li><a href="airdrops.php">Airdrop</a></li>
         <li class="active">Airdrops List</li>
@@ -77,9 +77,6 @@
     <!-- Start Panel -->
     <div class="col-md-12">
       <div class="panel panel-default">
-        <div class="panel-title">
-          <h3>Crypto Airdrops Listing</h3>
-        </div>
         <div class="panel-body table-responsive">
 
             <table id="example0" class="table display">
