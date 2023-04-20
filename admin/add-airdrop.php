@@ -206,7 +206,7 @@
                 <div class="form-group">
                   <label for="file" class="col-sm-2 control-label form-label">Select image to upload:</label>
                   <div class="col-sm-10">
-                    <input type="file" name="file" id="file"><br>
+                    <input type="file" class="form-control" name="file" id="file"><br>
                   </div>
                 </div>
 
