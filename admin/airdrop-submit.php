@@ -115,7 +115,13 @@ if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
 
     // Execute the statement
     if (mysqli_query($conn, $sql)) {
-        echo "Airdrop data inserted successfully.";
+        echo "Airdrop Listing Added Successfully.";
+        <div class="form-group">
+                  <label class="col-sm-2 control-label form-label"></label>
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                  </div>
+                </div>
     } else {
         echo "Error: " . mysqli_error($conn);
     }
@@ -129,6 +135,13 @@ if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
 mysqli_close($conn);
 
 ?>
+
+        <div class="form-group">
+                  <label class="col-sm-2 control-label form-label"></label>
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn btn-default">Back to Airdrop Listing</button>
+                  </div>
+                </div>
 
             </div>
 
