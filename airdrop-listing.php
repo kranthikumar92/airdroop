@@ -156,7 +156,7 @@ $offset = ($page - 1) * $items_per_page;
 
                                 <!-- Airdrop List Start -->
                                 <?php
-$sql = "SELECT * FROM airdrop_coins LIMIT $items_per_page OFFSET $offset";
+$sql = "SELECT * FROM airdrop_coins WHERE status='active' ORDER BY sno DESC LIMIT $items_per_page OFFSET $offset";
 $result = mysqli_query($conn, $sql);
 while ($row = mysqli_fetch_assoc($result)) {
     $airdrop_sno = $row['sno'];
