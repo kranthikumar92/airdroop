@@ -112,6 +112,7 @@
                         <td>Yes</td>
                         <td>2011/04/25</td>
                         <td>Active</td>
+                        <td><a href="edit-airdrop?id=" class="btn btn-warning">Edit</a> <a href="delete-airdrop?id=" class="btn btn-danger">Delete</a></td>
                     </tr>
                     <tr>
                         <td>2</td>
