@@ -127,8 +127,6 @@ mysqli_close($conn);
 
 ?>
 
-        
-                  
                   <div class="col-sm-10">
                   <a href="airdrops.php" class="btn btn-default">Back to Airdrops List</a>
                   <a href="add-airdrop.php" class="btn btn-default">Click Here to New Airdrop Listing</a>
