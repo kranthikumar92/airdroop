@@ -210,7 +210,7 @@
                   <label class="col-sm-2 control-label form-label">Airdrop Steps Guide</label>
                   <div class="col-sm-10">
                     <div class="panel-body">
-                      <div id="summernote">Step by Step Guide</div>
+                      <div id="summernote">Step by Step Guide::</div>
                       </div>
                     </div>
                   </div>
