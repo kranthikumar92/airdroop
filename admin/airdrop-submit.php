@@ -113,6 +113,7 @@ $check_result = mysqli_query($conn, $check_sql);
 
 if (mysqli_num_rows($check_result) > 0) {
     echo "Error: Airdrop Listing with the same Coin Name already exists.";
+    mysqli_close($conn);
 }
 
 // Move the uploaded file to the target directory
