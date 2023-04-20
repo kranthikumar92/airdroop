@@ -84,14 +84,14 @@
                 <div class="form-group">
                   <label for="input002" class="col-sm-2 control-label form-label">Airdrop Title</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="input002">
+                    <input type="text" class="form-control" name="file" id="file">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="input001" class="col-sm-2 control-label form-label">Airdrop or Project Tagline</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="input001">
+                    <input type="text" class="form-control" name="file" id="file">
                     <span id="helpBlock" class="help-block">Write Airdrop or Crypto Project Tagline in 50 letters.</span>
                   </div>
                 </div>
@@ -99,14 +99,14 @@
                 <div class="form-group">
                   <label for="input002" class="col-sm-2 control-label form-label">Whitepaper</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="input002">
+                    <input type="text" class="form-control" name="file" id="file">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="input002" class="col-sm-2 control-label form-label">Tokens</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="input002">
+                    <input type="text" class="form-control" name="file" id="file">
                   </div>
                 </div>
 
@@ -117,7 +117,7 @@
                     <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
                     <div class="input-group">
                       <div class="input-group-addon"><i class="fa fa-usd"></i></div>
-                      <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                      <input type="text" class="form-control" name="file" id="file" placeholder="Amount">
                       
                     </div>
                   </div>
@@ -131,7 +131,7 @@
                       <div class="controls">
                        <div class="input-prepend input-group">
                          <span class="add-on input-group-addon"><i class="fa fa-calendar"></i></span>
-                         <input type="text" id="date-picker" class="form-control" value="04/20/2023"/> 
+                         <input type="text" name="file" id="file" class="form-control" value="04/20/2023"/> 
                        </div>
                       </div>
                     </div>
@@ -142,7 +142,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Referral Available</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker">
+                    <select class="selectpicker" name="file" id="file">
                         <option>Yes</option>
                         <option>No</option>
                       </select>                  
@@ -152,35 +152,35 @@
                 <div class="form-group">
                   <label for="input002" class="col-sm-2 control-label form-label">Referral Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="input002">
+                    <input type="text" class="form-control" name="file" id="file">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="input002" class="col-sm-2 control-label form-label">Blockchain</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="input002">
+                    <input type="text" class="form-control" name="file" id="file">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="input002" class="col-sm-2 control-label form-label">Website Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="input002">
+                    <input type="text" class="form-control" name="file" id="file">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="input002" class="col-sm-2 control-label form-label">Airdrop Join Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="input002">
+                    <input type="text" class="form-control" name="file" id="file">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Status</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker">
+                    <select class="selectpicker" name="file" id="file">
                         <option>Active</option>
                         <option>Ended</option>
                       </select>                  
@@ -191,7 +191,7 @@
                   <label class="col-sm-2 control-label form-label">Airdrop Description</label>
                   <div class="col-sm-10">
                     <div class="panel-body">
-                      <div id="summernote">Write Description of Airdrop</div>
+                      <div name="file" id="file">Write Description of Airdrop</div>
                     </div>
                   </div>
                 </div>
@@ -199,7 +199,7 @@
                <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Step by Step Guide</label>
                   <div class="col-sm-10">
-                      <textarea class="form-control" rows="3" id="textarea1" placeholder="Type Step by Step Guide of Airdrop..."></textarea>
+                      <textarea class="form-control" rows="3" name="file" id="file" placeholder="Type Step by Step Guide of Airdrop..."></textarea>
                   </div>
                 </div>
 
