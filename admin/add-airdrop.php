@@ -204,6 +204,24 @@
                       </div>
                     </div>
                 </div>
+                <div class="col-md-12">
+      <div class="panel panel-default">
+
+        <div class="panel-title">
+          Summernote
+        </div>
+
+            <div class="panel-body">
+
+              <form>
+                <div id="summernote">Hello Summernote</div>
+                <button class="btn btn-default">Send Post</button>
+              </form>
+
+            </div>
+
+      </div>
+    </div>
 
 
               </form> 
