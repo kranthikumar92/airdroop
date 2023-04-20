@@ -89,7 +89,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="input002" class="col-sm-2 control-label form-label">AIrdrop Title</label>
+                  <label for="input002" class="col-sm-2 control-label form-label">Airdrop Title</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" id="input002">
                   </div>
@@ -104,21 +104,20 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="input2" class="col-sm-2 control-label form-label">Whitepaper</label>
+                  <label for="input002" class="col-sm-2 control-label form-label">Whitepaper</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control form-control-radius" id="input2">
+                    <input type="text" class="form-control" id="input002">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="input2" class="col-sm-2 control-label form-label">Tokens</label>
+                  <label for="input002" class="col-sm-2 control-label form-label">Tokens</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control form-control-radius" id="input2">
+                    <input type="text" class="form-control" id="input002">
                   </div>
                 </div>
 
                 
-
                 <div class="form-group">
                   <label for="input4" class="col-sm-2 control-label form-label">Disable</label>
                   <div class="col-sm-10">
