@@ -204,24 +204,7 @@
                       </div>
                     </div>
                 </div>
-                <div class="col-md-12">
-      <div class="panel panel-default">
-
-        <div class="panel-title">
-          Summernote
-        </div>
-
-            <div class="panel-body">
-
-              <form>
-                <div id="summernote">Hello Summernote</div>
-                <button class="btn btn-default">Send Post</button>
-              </form>
-
-            </div>
-
-      </div>
-    </div>
+                
 
 
               </form> 
@@ -319,6 +302,21 @@ $(document).ready(function() {
   }, function(start, end, label) {
     console.log(start.toISOString(), end.toISOString(), label);
   });
+});
+</script>
+
+<!-- ================================================
+Summernote
+================================================ -->
+<script type="text/javascript" src="js/summernote/summernote.min.js"></script>
+
+<script>
+  /* BOOTSTRAP WYSIHTML5 */
+  $('.textarea').wysihtml5();
+
+  /* SUMMERNOTE*/
+  $(document).ready(function() {
+  $('#summernote').summernote();
 });
 </script>
 
