@@ -140,7 +140,7 @@ if ($conn->connect_error) {
 }
 
 // Fetch total number of rows in the table
-$sql_total_rows = "SELECT COUNT(*) as total_rows FROM airdrop_coins";
+$sql_total_rows = "SELECT COUNT(*) as total_rows FROM airdrop_coins WHERE status='active'";
 $result_total_rows = mysqli_query($conn, $sql_total_rows);
 $row_total_rows = mysqli_fetch_assoc($result_total_rows);
 $total_rows = $row_total_rows['total_rows'];
