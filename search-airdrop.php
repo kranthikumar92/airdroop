@@ -159,7 +159,7 @@ $offset = ($page - 1) * $items_per_page;
                                 // If a tag is provided in the URL, search for blog posts with that tag
                                 $tag = $_GET['search'];
 
-$sql = "SELECT * FROM airdrop_coins WHERE coin_name ORDER BY sno DESC LIKE '%$tag%' LIMIT $items_per_page OFFSET $offset";
+$sql = "SELECT * FROM airdrop_coins WHERE coin_name LIKE '%$tag%' ORDER BY sno DESC LIMIT $items_per_page OFFSET $offset";
 $result = mysqli_query($conn, $sql);
 while ($row = mysqli_fetch_assoc($result)) {
     $airdrop_sno = $row['sno'];
