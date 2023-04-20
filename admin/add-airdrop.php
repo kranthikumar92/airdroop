@@ -130,10 +130,10 @@
                   </div>
                 </div>
 
-                <div class="col-md-12 col-lg-3">
-                <h5>Airdrop End Date</h5>
-                 <form class="form-horizontal">
-                   <fieldset>
+                <div class="form-group">
+                  <label for="input002" class="col-sm-2 control-label form-label">End Date</label>
+                  <div class="col-sm-10">
+                  <fieldset>
                     <div class="control-group">
                       <div class="controls">
                        <div class="input-prepend input-group">
@@ -143,8 +143,10 @@
                       </div>
                     </div>
                    </fieldset>
-                 </form>
-              </div>
+                  </div>
+                </div>
+
+                
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Referral Available</label>
