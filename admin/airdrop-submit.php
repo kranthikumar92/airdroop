@@ -29,7 +29,7 @@ if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
     $stmt = mysqli_prepare($conn, $sql);
 
     // bind the parameters with form data
-    mysqli_stmt_bind_param($stmt, "ssssssssssssss", $_POST['airdrop_title'], $target_file, $_POST['airdrop_tagline'], $_POST['summernote'], $_POST['step_by_step_guide'], $_POST['whitepaper'], $_POST['tokens'], $_POST['est_value'], $_POST['end_date'], $_POST['referral_available'], $_POST['referral_link'], $_POST['blockchain'], $_POST['website_link'], $_POST['airdrop_join_link'], $publist_date, $_POST['status']);
+    mysqli_stmt_bind_param($stmt, "ssssssssssssss", $_POST['airdrop_title'], "$target_file", $_POST['airdrop_tagline'], $_POST['summernote'], $_POST['step_by_step_guide'], $_POST['whitepaper'], $_POST['tokens'], $_POST['est_value'], $_POST['end_date'], $_POST['referral_available'], $_POST['referral_link'], $_POST['blockchain'], $_POST['website_link'], $_POST['airdrop_join_link'], $publist_date, $_POST['status']);
 
     // execute the statement
     if (mysqli_stmt_execute($stmt)) {
