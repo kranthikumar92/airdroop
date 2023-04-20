@@ -106,9 +106,10 @@ if ($result->num_rows > 0) {
     echo "<tbody>";
 
 // Determine the CSS class for status
-$statusClass = ($row['status'] == 'active') ? 'green' : 'green';
+
 
     while ($row = $result->fetch_assoc()) {
+        $statusClass = ($row['status'] == 'active') ? 'green' : 'red';
         echo "<tr>";
         echo "<td>" . $row["sno"] . "</td>";
         echo "<td>" . $row["coin_name"] . "</td>";
