@@ -213,6 +213,16 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label form-label">Status</label>
+                  <div class="col-sm-8">
+                    <select class="selectpicker">
+                        <option>Active</option>
+                        <option>Ended</option>
+                      </select>                  
+                  </div>
+                </div>
                 
 
 
