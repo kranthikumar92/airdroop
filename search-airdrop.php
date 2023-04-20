@@ -192,7 +192,7 @@ $days = $dateInterval->days;
 <div class="single-listing-airdrop d-block d-sm-flex">
     <div class="airdrop-details-area d-flex">
         <figure class="airdrop-currency-thumb">
-            <a href="single-airdrop.php?id=<?php echo $row['sno']; ?>"><img src="<?php echo $row['coin_img']; ?>" alt="Airdrop"/></a>
+            <a href="single-airdrop.php?id=<?php echo $row['sno']; ?>"><img src="airdrop_imgs/<?php echo $row['coin_img']; ?>" alt="Airdrop"/></a>
         </figure>
         <div class="airdrop-currency-info">
             <h2 class="h6"><a href="single-airdrop.php?id=<?php echo $row['sno']; ?>"><?php echo $row['coin_name']; ?></a></h2>
