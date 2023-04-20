@@ -21,15 +21,15 @@
   <body>
     <div class="container-scroller">
       <!-- Partial Navigation Start-->
-      <?php
-include('partial-nav.php');
-?>
+        <?php
+            include('partial-nav.php');
+        ?>
         <!-- Partial Navigation End -->
       <div class="container-fluid page-body-wrapper">
         <!-- Main Navigation Start-->
         <?php
-include('main-nav.php');
-?>
+            include('main-nav.php');
+        ?>
         <!-- Main Navigation End -->
         <div class="main-panel">
         <?php
