@@ -225,11 +225,11 @@ $result = $conn->query($sql);
                   echo "<td>" . $row["referral_available"] . "</td>";
                   echo "<td>" . $row["end_date"] . "</td>";
                   echo "<td>" . $row["status"] . "</td>";
-                  echo "s";
+                  echo '<td><a href="edit_airdrop.php?id=' . $row["sno"] . '" class="btn btn-outline-secondary btn-icon-text">Edit <i class="mdi mdi-file-check btn-icon-append"></i></a></td>';
                   echo "</tr>";
                 }
               } else {
-                echo "<tr><td colspan='6'>No Airdrops found</td></tr>";
+                echo "<tr><td colspan='7'>No Airdrops found</td></tr>";
               }
               ?>
             </tbody>
