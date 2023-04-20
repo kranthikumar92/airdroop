@@ -49,7 +49,7 @@
         </a>
         <!-- / brand -->
       </div>
-      <div data-flex class="hide-scroll">
+      <div data-flex>
           <nav class="scroll nav-stacked nav-stacked-rounded nav-color">
             
             <ul class="nav" data-ui-nav>
