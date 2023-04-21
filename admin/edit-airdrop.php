@@ -219,7 +219,7 @@ if (mysqli_num_rows($result) > 0) {
                   <label class="col-sm-2 control-label form-label">Airdrop Description</label>
                   <div class="col-sm-10">
                     <div class="panel-body">
-                      <textarea name="airdrop_description" id="summernote">value="<?php echo $post['airdrop_description']; ?>"</textarea>
+                      <textarea name="airdrop_description" id="summernote"> value="<?php echo $post['airdrop_description']; ?>"</textarea>
                     </div>
                   </div>
                 </div>
@@ -227,7 +227,7 @@ if (mysqli_num_rows($result) > 0) {
                <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Step by Step Guide</label>
                   <div class="col-sm-10">
-                      <textarea class="form-control" rows="3" name="step_by_step_guide" id="step_by_step_guide" placeholder="Type Step by Step Guide of Airdrop..."></textarea>
+                      <textarea class="form-control" rows="3" name="step_by_step_guide" id="step_by_step_guide" value="<?php echo $post['airdrop_steps']; ?>"></textarea>
                   </div>
                 </div>
 
