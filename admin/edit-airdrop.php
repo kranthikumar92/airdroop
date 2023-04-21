@@ -83,6 +83,7 @@
             <!--Retrieve data from db (Airdrops List) -->
     <?php
     $airdrop_id = $_GET['id'];
+    $update_id = $_GET['update'];
     // Establish a database connection
     $servername = "localhost";
     $username = "calix_web_user";
