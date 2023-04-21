@@ -101,14 +101,12 @@ $result = $conn->query($sql);
 // Create a table with the retrieved data
 if ($result->num_rows > 0) {
     echo "<table id='airdrop-listing' class='table display'>";
-    echo "<thead><tr><th>sno</th><th>Coin Name</th><th>Est Value</th><th>Referral available</th><th>End date</th><th>Status</th><th>Action</th></tr></thead>";
-    echo "<tfoot><tr><th>sno</th><th>Coin Name</th><th>Est Value</th><th>Referral available</th><th>End date</th><th>Status</th><th>Action</th></tr></tfoot>";
+    echo "<thead><tr><th>sno</th><th>Coin Name</th><th>Est Value</th><th>Referral available</th><th>End date</th><th>Status</th><th>Action</th><th>Exist in Social Table</th></tr></thead>";
+    echo "<tfoot><tr><th>sno</th><th>Coin Name</th><th>Est Value</th><th>Referral available</th><th>End date</th><th>Status</th><th>Action</th><th>Exist in Social Table</th></tr></tfoot>";
     echo "<tbody>";
 
-// Determine the CSS class for status
-
-
     while ($row = $result->fetch_assoc()) {
+        // Determine the CSS class for status
         $statusClass = ($row['status'] == 'active') ? 'green' : 'red';
         echo "<tr>";
         echo "<td>" . $row["sno"] . "</td>";
@@ -116,8 +114,18 @@ if ($result->num_rows > 0) {
         echo "<td>" . $row["est_value"] . "</td>";
         echo "<td>" . $row["referral_available"] . "</td>";
         echo "<td>" . $row["end_date"] . "</td>";
-        echo "<td  style='color:" . $statusClass . "'>" . $row["status"] . "</td>";
+        echo "<td style='color:" . $statusClass . "'>" . $row["status"] . "</td>";
         echo "<td><a href='edit-airdrop.php?id=" . $row["sno"] . "' class='btn btn-warning'>Edit</a> <a href='delete-airdrop.php?id=" . $row["sno"] . "' class='btn btn-danger'>Delete</a></td>";
+        
+        // Check if data exists in airdrop_coin_social table for the current coin
+        $socialTableSql = "SELECT * FROM airdrop_coin_social WHERE airdrop_coin_id='".$row["sno"]."'";
+        $socialTableResult = $conn->query($socialTableSql);
+        if ($socialTableResult->num_rows > 0) {
+            echo "<td>Yes</td>";
+        } else {
+            echo "<td>No</td>";
+        }
+        
         echo "</tr>";
     }
 
@@ -129,6 +137,7 @@ if ($result->num_rows > 0) {
 // Close database connection
 $conn->close();
 ?>
+
 
 
 
