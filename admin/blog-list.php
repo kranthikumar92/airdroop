@@ -112,12 +112,12 @@ if ($result->num_rows > 0) {
         $statusClass = ($row['status'] == 'active') ? 'green' : 'red';
         echo "<tr>";
         echo "<td>" . $row["sno"] . "</td>";
-        echo "<td>" . $row["coin_name"] . "</td>";
-        echo "<td>" . $row["est_value"] . "</td>";
-        echo "<td>" . $row["referral_available"] . "</td>";
-        echo "<td>" . $row["end_date"] . "</td>";
+        echo "<td>" . $row["title"] . "</td>";
+        echo "<td>" . $row["author"] . "</td>";
+        echo "<td>" . $row["created_at"] . "</td>";
+        echo "<td>" . $row["update_date"] . "</td>";
         echo "<td  style='color:" . $statusClass . "'>" . $row["status"] . "</td>";
-        echo "<td><a href='edit-airdrop.php?id=" . $row["sno"] . "' class='btn btn-warning'>Edit</a> <a href='delete-airdrop.php?id=" . $row["sno"] . "' class='btn btn-danger'>Delete</a></td>";
+        echo "<td><a href='edit-blog.php?id=" . $row["sno"] . "' class='btn btn-warning'>Edit</a> <a href='delete-blog.php?id=" . $row["sno"] . "' class='btn btn-danger'>Delete</a></td>";
         echo "</tr>";
     }
 
