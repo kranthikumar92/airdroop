@@ -113,7 +113,7 @@ $target_file = $target_dir . $new_filename;
 if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
 
   // Prepare the SQL statement
-  $sql = "UPDATE airdrops SET (coin_name, coin_img, coin_tagline, airdrop_description, airdrop_steps, whitepaper, tokens, est_value, end_date, referral_available, referral_link, blockchain, website_link, airdrop_join_link, publish_date, status) VALUES ('".$_POST['airdrop_title']."', '".$new_filename."', '".$_POST['airdrop_tagline']."', '".$_POST['airdrop_description']."', '".$_POST['step_by_step_guide']."', '".$_POST['whitepaper']."', '".$_POST['tokens']."', '".$_POST['est_value']."', '".$_POST['end_date']."', '".$_POST['referral_available']."', '".$_POST['referral_link']."', '".$_POST['blockchain']."', '".$_POST['website_link']."', '".$_POST['airdrop_join_link']."', '".$publist_date."', '".$_POST['status']."') WHERE sno='1'";
+  $sql = "UPDATE airdrops SET coin_name='".$_POST['airdrop_title']."', coin_img='".$new_filename."', coin_tagline='".$_POST['airdrop_tagline']."', airdrop_description='".$_POST['airdrop_description']."', airdrop_steps='".$_POST['step_by_step_guide']."', whitepaper='".$_POST['whitepaper']."', tokens='".$_POST['tokens']."', est_value='".$_POST['est_value']."', end_date='".$_POST['end_date']."', referral_available='".$_POST['referral_available']."', referral_link='".$_POST['referral_link']."', blockchain='".$_POST['blockchain']."', website_link='".$_POST['website_link']."', airdrop_join_link='".$_POST['airdrop_join_link']."', publish_date='".$publist_date."', status='".$_POST['status']."' WHERE sno='1'";
 
   // Execute the statement
   if (mysqli_query($conn, $sql)) {
