@@ -149,7 +149,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     echo "Error updating record: " . mysqli_error($conn);
   }
-}
+
 
 
 } else {
