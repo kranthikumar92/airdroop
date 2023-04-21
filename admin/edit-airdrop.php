@@ -102,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Define the directory where the images will be stored
 $target_dir = "../airdrop_imgs/";
 $publist_date = date('Y-m-d');
-$step_bystep = mysqli_real_escape_string($conn, .$_POST['step_by_step_guide']);
+$step_bystep = mysqli_real_escape_string($conn, $_POST['step_by_step_guide']);
 
 // Get the name of the uploaded file
 $original_filename = basename($_FILES["file"]["name"]);
