@@ -100,12 +100,10 @@ if ($conn->connect_error) {
 $_POST['publish_date'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-// Check if a file was uploaded
-if (!empty($_FILES['file']['name'])) {
-  // Define the directory where the images will be stored
+// Define the directory where the images will be stored
   $target_dir = "../airdrop_imgs/";
   $publist_date = $_POST['publish_date'];
-$step_bystep = mysqli_real_escape_string($conn, $_POST['step_by_step_guide']);
+  $step_bystep = mysqli_real_escape_string($conn, $_POST['step_by_step_guide']);
 
   // Get the name of the uploaded file
   $original_filename = basename($_FILES["file"]["name"]);
@@ -114,13 +112,7 @@ $step_bystep = mysqli_real_escape_string($conn, $_POST['step_by_step_guide']);
   $target_file = $target_dir . $new_filename;
 
   // Move the uploaded file to the target directory
-  if (!move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
-    echo "Sorry, there was an error uploading your file.";
-    exit();
-  }
-} else {
-  // No file was uploaded, use the existing filename
-  $new_filename = $post['coin_img'];
+  if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
 
   // Prepare the SQL statement
   $sql1 = "UPDATE airdrop_coins SET coin_name='".$_POST['airdrop_title']."', coin_img='".$new_filename."', coin_tagline='".$_POST['airdrop_tagline']."', airdrop_description='".$_POST['airdrop_description']."', airdrop_steps='".$step_bystep."', whitepaper='".$_POST['whitepaper']."', tokens='".$_POST['tokens']."', est_value='".$_POST['est_value']."', end_date='".$_POST['end_date']."', referral_available='".$_POST['referral_available']."', referral_link='".$_POST['referral_link']."', blockchain='".$_POST['blockchain']."', website_link='".$_POST['website_link']."', airdrop_join_link='".$_POST['airdrop_join_link']."', publish_date='".$publist_date."', status='".$_POST['status']."' WHERE sno='".$update_id."'";
