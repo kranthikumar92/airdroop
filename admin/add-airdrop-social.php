@@ -134,128 +134,91 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_tagline" class="col-sm-2 control-label form-label">Airdrop or Project Tagline</label>
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="airdrop_tagline" id="airdrop_tagline">
-                    <span id="helpBlock" class="help-block">Write Airdrop or Crypto Project Tagline in 50 letters.</span>
+                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="whitepaper" class="col-sm-2 control-label form-label">Whitepaper</label>
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="whitepaper" id="whitepaper">
+                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="tokens" class="col-sm-2 control-label form-label">Tokens</label>
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="tokens" id="tokens">
+                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
                   </div>
                 </div>
+
+                <div class="form-group">
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                  </div>
+                </div>
+                
 
               
-                <div class="form-group">
-                  <label for="est_value" class="col-sm-2 control-label form-label">Est Value</label>
-                  <div class="col-sm-10">
-                    <label class="sr-only" for="est_value">Amount (in dollars)</label>
-                    <div class="input-group">
-                      <div class="input-group-addon"><i class="fa fa-usd"></i></div>
-                      <input type="text" class="form-control" name="est_value" id="est_value" placeholder="Amount">
-                      
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="end_date" class="col-sm-2 control-label form-label">End Date</label>
-                  <div class="col-sm-10">
-                  <fieldset>
-                    <div class="control-group">
-                      <div class="controls">
-                       <div class="input-prepend input-group">
-                         <span class="add-on input-group-addon"><i class="fa fa-calendar"></i></span>
-                         <input type="text" name="end_date" id="end_date" class="form-control" value="04/20/2023"/> 
-                       </div>
-                      </div>
-                    </div>
-                   </fieldset>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">Referral Available</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker" name="referral_available" id="referral_available">
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                      </select>                  
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="referral_link" class="col-sm-2 control-label form-label">Referral Link</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" name="referral_link" id="referral_link">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="blockchain" class="col-sm-2 control-label form-label">Blockchain</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" name="blockchain" id="blockchain">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="website_link" class="col-sm-2 control-label form-label">Website Link</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" name="website_link" id="website_link">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="airdrop_join_link" class="col-sm-2 control-label form-label">Airdrop Join Link</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" name="airdrop_join_link" id="airdrop_join_link">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">Status</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker" name="status" id="status">
-                    <option value="active">Active</option>
-                    <option value="ended">Ended</option>
-                      </select>                  
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">Airdrop Description</label>
-                  <div class="col-sm-10">
-                    <div class="panel-body">
-                      <textarea name="airdrop_description" id="summernote">Write Description of Airdrop</textarea>
-                    </div>
-                  </div>
-                </div>
-
-               <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">Step by Step Guide</label>
-                  <div class="col-sm-10">
-                      <textarea class="form-control" rows="3" name="step_by_step_guide" id="step_by_step_guide" placeholder="Type Step by Step Guide of Airdrop..."></textarea>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">Select image to upload:</label>
-                  <div class="col-sm-10">
-                    <input type="file" class="form-control" name="file" id="file"><br>
-                  </div>
-                </div>
-
-
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label"></label>
                   <div class="col-sm-10">
