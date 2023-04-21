@@ -80,7 +80,7 @@
       <div class="panel panel-default">
             <div class="panel-body">
             <?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
     // Database connection parameters
     $servername = "localhost";
     $username = "calix_web_user";
@@ -97,7 +97,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Define the directory where the images will be stored
     $publist_date = date('Y-m-d');
-
+    
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Check if social data already exists
     $airdrop_id_chk = mysqli_real_escape_string($conn, $_POST['airdrop_sno']);
     $check_sql = "SELECT * FROM airdrop_coins WHERE coin_name = '$airdrop_id_chk'";
