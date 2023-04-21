@@ -111,7 +111,7 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $statusClass = ($row['status'] == 'active') ? 'green' : 'red';
         echo "<tr>";
-        echo "<td>" . $row["sno"] . "</td>";
+        echo "<td>" . $row["id"] . "</td>";
         echo "<td>" . $row["title"] . "</td>";
         echo "<td>" . $row["author"] . "</td>";
         echo "<td>" . $row["created_at"] . "</td>";
