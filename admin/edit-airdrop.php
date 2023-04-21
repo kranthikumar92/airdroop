@@ -119,7 +119,7 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="form-group">
                   <label for="airdrop_tagline" class="col-sm-2 control-label form-label">Airdrop or Project Tagline</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="airdrop_tagline" id="airdrop_tagline">
+                    <input type="text" class="form-control" value="<?php echo $post['coin_tagline']; ?>" name="airdrop_tagline" id="airdrop_tagline">
                     <span id="helpBlock" class="help-block">Write Airdrop or Crypto Project Tagline in 50 letters.</span>
                   </div>
                 </div>
@@ -127,7 +127,7 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="form-group">
                   <label for="whitepaper" class="col-sm-2 control-label form-label">Whitepaper</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="whitepaper" id="whitepaper">
+                    <input type="text" class="form-control" value="<?php echo $post['whitepaper']; ?>" name="whitepaper" id="whitepaper">
                   </div>
                 </div>
 
