@@ -102,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if (empty($_FILES['file']['name'])) {
     // Execute this block if the file is not selected or null
-    $new_filename = $post['coin_img_alt'];
+    $new_filename = $_POST['coin_img_alt'];
   } else {
     // Define the directory where the images will be stored
     $target_dir = "../airdrop_imgs/";
