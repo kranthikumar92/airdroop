@@ -56,10 +56,10 @@
 
   <!-- Start Page Header -->
   <div class="page-header">
-    <h1 class="title">Crypto Airdrops Listing</h1>
+    <h1 class="title">All Blog Posts</h1>
       <ol class="breadcrumb">
-        <li><a href="airdrops.php">Airdrop</a></li>
-        <li class="active">Airdrops List</li>
+        <li><a href="airdrops.php">Blog</a></li>
+        <li class="active">Posts List</li>
       </ol>
 
   </div>
