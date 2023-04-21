@@ -96,6 +96,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
+
 // Define the directory where the images will be stored
 $target_dir = "../airdrop_imgs/";
 $publist_date = date('Y-m-d');
