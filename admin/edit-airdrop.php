@@ -106,6 +106,7 @@ if (mysqli_num_rows($result) > 0) {
     // Fetch the first row as an associative array
     $post = mysqli_fetch_assoc($result);
     $status = $post['status'];
+    $ref_available = $post['referral_available'];
     
     ?>
 
@@ -172,8 +173,8 @@ if (mysqli_num_rows($result) > 0) {
                   <label class="col-sm-2 control-label form-label">Referral Available</label>
                   <div class="col-sm-8">
                     <select class="selectpicker" name="referral_available" id="referral_available">
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
+                        <option value="Yes" <?php if ($status == 'Yes') echo 'selected'; ?>>Yes</option>
+                        <option value="No" <?php if ($status == 'No') echo 'selected'; ?>>No</option>
                       </select>                  
                   </div>
                 </div>
