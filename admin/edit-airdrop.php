@@ -105,6 +105,7 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     // Fetch the first row as an associative array
     $post = mysqli_fetch_assoc($result);
+    $status = $row['status'];
     
     ?>
 
@@ -209,8 +210,8 @@ if (mysqli_num_rows($result) > 0) {
                   <label class="col-sm-2 control-label form-label">Status</label>
                   <div class="col-sm-8">
                     <select class="selectpicker" name="status" id="status">
-                    <option value="active">Active</option>
-                    <option value="ended">Ended</option>
+                    <option value="active" <?php if ($status == 'active') echo 'selected'; ?>>Active</option>
+                    <option value="ended" <?php if ($status == 'ended') echo 'selected'; ?>>Ended</option>
                       </select>                  
                   </div>
                 </div>
@@ -219,7 +220,7 @@ if (mysqli_num_rows($result) > 0) {
                   <label class="col-sm-2 control-label form-label">Airdrop Description</label>
                   <div class="col-sm-10">
                     <div class="panel-body">
-                      <textarea name="airdrop_description" id="summernote"> value="<?php echo $post['airdrop_description']; ?>"</textarea>
+                      <textarea name="airdrop_description" id="summernote"><?php echo $post['airdrop_description']; ?></textarea>
                     </div>
                   </div>
                 </div>
