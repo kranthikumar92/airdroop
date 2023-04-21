@@ -101,8 +101,8 @@ $result = $conn->query($sql);
 // Create a table with the retrieved data
 if ($result->num_rows > 0) {
     echo "<table id='airdrop-listing' class='table display'>";
-    echo "<thead><tr><th>id</th><th>Post Title</th><th>Author</th><th>Publish Date</th><th>Update date</th><th>Status</th><th>Action</th></tr></thead>";
-    echo "<tfoot><tr><th>id</th><th>Post Title</th><th>Author</th><th>Publish Date</th><th>Update date</th><th>Status</th><th>Action</th></tr></tfoot>";
+    echo "<thead><tr><th>Reference</th><th>Coin Name</th><th>Email</th><th>Airdrop Value</th><th>Coin Price</th><th>Status</th><th>Action</th></tr></thead>";
+    echo "<tfoot><tr><th>Reference</th><th>Coin Name</th><th>Email</th><th>Airdrop Value</th><th>Coin Price</th><th>Status</th><th>Action</th></tr></tfoot>";
     echo "<tbody>";
 
 // Determine the CSS class for status
@@ -111,13 +111,13 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $statusClass = ($row['status'] == 'active') ? 'green' : 'red';
         echo "<tr>";
-        echo "<td>" . $row["id"] . "</td>";
-        echo "<td>" . $row["title"] . "</td>";
-        echo "<td>" . $row["author"] . "</td>";
-        echo "<td>" . $row["created_at"] . "</td>";
-        echo "<td>" . $row["update_date"] . "</td>";
+        echo "<td>" . $row["reference"] . "</td>";
+        echo "<td>" . $row["coin_name"] . "</td>";
+        echo "<td>" . $row["email"] . "</td>";
+        echo "<td>" . $row["total_airdrop_value"] . "</td>";
+        echo "<td>" . $row["coin_rate_against_usd"] . "</td>";
         echo "<td  style='color:" . $statusClass . "'>" . $row["status"] . "</td>";
-        echo "<td><a href='edit-blog.php?id=" . $row["id"] . "' class='btn btn-warning'>Edit</a> <a href='delete-blog.php?id=" . $row["id"] . "' class='btn btn-danger'>Delete</a></td>";
+        echo "<td><a href='edit-airdrip-request.php?id=" . $row["reference"] . "' class='btn btn-warning'>Edit</a> <a href='delete-airdrip-request.php?id=" . $row["reference"] . "' class='btn btn-danger'>Delete</a></td>";
         echo "</tr>";
     }
 
