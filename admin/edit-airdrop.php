@@ -105,7 +105,7 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     // Fetch the first row as an associative array
     $post = mysqli_fetch_assoc($result);
-    $status = $row['status'];
+    $status = $post['status'];
     
     ?>
 
