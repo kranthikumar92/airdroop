@@ -118,7 +118,7 @@ if ($result->num_rows > 0) {
         echo "<td><a href='edit-airdrop.php?id=" . $row["sno"] . "' class='btn btn-warning'>Edit</a> <a href='delete-airdrop.php?id=" . $row["sno"] . "' class='btn btn-danger'>Delete</a></td>";
         
         // Check if data exists in airdrop_coin_social table for the current coin
-        $socialTableSql = "SELECT * FROM airdrop_coin_social WHERE airdrop_coin_id='".$row["sno"]."'";
+        $socialTableSql = "SELECT * FROM airdrop_coin_social WHERE airdrop_sno='".$row["sno"]."'";
         $socialTableResult = $conn->query($socialTableSql);
         if ($socialTableResult->num_rows > 0) {
             echo "<td>Yes</td>";
