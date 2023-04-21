@@ -97,6 +97,35 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+// Define the directory where the images will be stored
+$target_dir = "../airdrop_imgs/";
+$publist_date = date('Y-m-d');
+
+// Get the name of the uploaded file
+$original_filename = basename($_FILES["file"]["name"]);
+$file_extension = pathinfo($original_filename, PATHINFO_EXTENSION);
+$new_filename = uniqid() . "." . $file_extension; // Generate a unique filename
+$target_file = $target_dir . $new_filename;
+
+// Move the uploaded file to the target directory
+if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
+
+  // Prepare the SQL statement
+  $sql = "UPDATE airdrops SET (coin_name, coin_img, coin_tagline, airdrop_description, airdrop_steps, whitepaper, tokens, est_value, end_date, referral_available, referral_link, blockchain, website_link, airdrop_join_link, publish_date, status) VALUES ('".$_POST['airdrop_title']."', '".$new_filename."', '".$_POST['airdrop_tagline']."', '".$_POST['airdrop_description']."', '".$_POST['step_by_step_guide']."', '".$_POST['whitepaper']."', '".$_POST['tokens']."', '".$_POST['est_value']."', '".$_POST['end_date']."', '".$_POST['referral_available']."', '".$_POST['referral_link']."', '".$_POST['blockchain']."', '".$_POST['website_link']."', '".$_POST['airdrop_join_link']."', '".$publist_date."', '".$_POST['status']."') WHERE sno='1'";
+
+  // Execute the statement
+  if (mysqli_query($conn, $sql)) {
+      echo "<h2>Airdrop Listing Added Successfully.</h2>";
+  } else {
+      echo "" . mysqli_error($conn);
+  }
+
+}
+
+} else {
+
 // Query to retrieve blog post with ID 1
 $sql = "SELECT * FROM airdrop_coins WHERE sno = $airdrop_id";
 $result = mysqli_query($conn, $sql);
@@ -253,6 +282,7 @@ if (mysqli_num_rows($result) > 0) {
             } else {
     // No rows were returned, so display an error message
     echo "No Airdrop Data found";
+}
 }
 ?>
             </div>
