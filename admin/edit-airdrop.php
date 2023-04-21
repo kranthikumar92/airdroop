@@ -263,32 +263,13 @@ if (mysqli_num_rows($result) > 0) {
                       <textarea class="form-control" rows="3" name="step_by_step_guide" id="textarea1"><?php echo $post['airdrop_steps']; ?></textarea>
                   </div>
                 </div>
-  <!-- Testing 
+ 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Select image to upload:</label>
                   <div class="col-sm-10">
-                    <input type="file" class="form-control" value="<?php echo $post['coin_img']; ?>" name="file" id="file"><br>
+                    <input type="file" class="form-control" name="file" id="file"><?php echo $post['coin_img']; ?></input><br>
                   </div>
-                </div> -->
-
-                <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">Select image to upload:</label>
-                    <div class="col-sm-10">
-                      <?php
-                       // $default_file = $post['coin_img']; // set default file value to existing value in database
-                        if(isset($_FILES['file']['name']) && !empty($_FILES['file']['name'])) { // check if a file has been selected
-                          $file_name = $_FILES['file']['name'];
-                          $file_size = $_FILES['file']['size'];
-                          $file_tmp = $_FILES['file']['tmp_name'];
-                          $file_type = $_FILES['file']['type'];
-                          move_uploaded_file($file_tmp,"images/".$file_name);
-                          $default_file = "images/".$file_name; // update default file value with newly uploaded file
-                        }
-                        $default_file = $post['coin_img'];
-                      ?>
-                      <input type="file" class="form-control" name="file" id="file" value="<?php echo $default_file; ?>"><br>
-                    </div>
-                </div>
+                </div> 
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label"></label>
