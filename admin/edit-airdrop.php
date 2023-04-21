@@ -259,7 +259,9 @@ if (mysqli_num_rows($result) > 0) {
                <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Step by Step Guide</label>
                   <div class="col-sm-10">
-                      <textarea class="form-control" rows="3" value="<?php echo $post['airdrop_steps']; ?>" name="step_by_step_guide"></textarea>
+                  <div class="panel-body">
+                  <p><textarea class="textarea form-control wysihtml5-textarea" value="<?php echo $post['airdrop_steps']; ?>" name="step_by_step_guide" style="height:200px; width:100%;"></textarea></p>
+                    </div>
                   </div>
                 </div>
 
