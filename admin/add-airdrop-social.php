@@ -99,8 +99,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $publist_date = date('Y-m-d');
 
     // Check if social data already exists
-    $coin_name = mysqli_real_escape_string($conn, $_POST['airdrop_title']);
-    $check_sql = "SELECT * FROM airdrop_coins WHERE coin_name = '$coin_name'";
+    $airdrop_id_chk = mysqli_real_escape_string($conn, $_POST['airdrop_sno']);
+    $check_sql = "SELECT * FROM airdrop_coins WHERE coin_name = '$airdrop_id_chk'";
     $check_result = mysqli_query($conn, $check_sql);
 
     if (mysqli_num_rows($check_result) > 0) {
