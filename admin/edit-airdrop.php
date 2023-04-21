@@ -80,7 +80,7 @@
       <div class="panel panel-default">
             <div class="panel-body">
 
-            <!--Retrieve data from db (blog) -->
+            <!--Retrieve data from db (Airdrops List) -->
     <?php
     $airdrop_id = $_GET['id'];
     // Establish a database connection
@@ -98,7 +98,7 @@ if ($conn->connect_error) {
 }
 
 // Query to retrieve blog post with ID 1
-$sql = "SELECT * FROM airdrop_coins WHERE id = $airdrop_id";
+$sql = "SELECT * FROM airdrop_coins WHERE sno = $airdrop_id";
 $result = mysqli_query($conn, $sql);
 
 // Check if the query returned any rows
@@ -250,7 +250,7 @@ if (mysqli_num_rows($result) > 0) {
 <?php
             } else {
     // No rows were returned, so display an error message
-    echo "No blog post found";
+    echo "No Airdrop Data found";
 }
 ?>
             </div>
