@@ -117,7 +117,7 @@ if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
 
   // Execute the statement
   if (mysqli_query($conn, $sql)) {
-      echo "<h2>Airdrop Listing Added Successfully.</h2>";
+      echo "<h2>Airdrop Listing Updated Successfully.</h2>";
   } else {
       echo "" . mysqli_error($conn);
   }
