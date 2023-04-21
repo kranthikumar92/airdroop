@@ -100,32 +100,57 @@ if ($conn->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-// Define the directory where the images will be stored
-  $target_dir = "../airdrop_imgs/";
-  
-
-  // Get the name of the uploaded file
-  $original_filename = basename($_FILES["file"]["name"]);
-  $file_extension = pathinfo($original_filename, PATHINFO_EXTENSION);
-  $new_filename = uniqid() . "." . $file_extension; // Generate a unique filename
-  $target_file = $target_dir . $new_filename;
-
-  // Move the uploaded file to the target directory
-  if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
-
-    $publist_date = $_POST['publish_date'];
-    $step_bystep = mysqli_real_escape_string($conn, $_POST['step_by_step_guide']);
-  // Prepare the SQL statement
-  $sql1 = "UPDATE airdrop_coins SET coin_name='".$_POST['airdrop_title']."', coin_img='".$new_filename."', coin_tagline='".$_POST['airdrop_tagline']."', airdrop_description='".$_POST['airdrop_description']."', airdrop_steps='".$step_bystep."', whitepaper='".$_POST['whitepaper']."', tokens='".$_POST['tokens']."', est_value='".$_POST['est_value']."', end_date='".$_POST['end_date']."', referral_available='".$_POST['referral_available']."', referral_link='".$_POST['referral_link']."', blockchain='".$_POST['blockchain']."', website_link='".$_POST['website_link']."', airdrop_join_link='".$_POST['airdrop_join_link']."', publish_date='".$publist_date."', status='".$_POST['status']."' WHERE sno='".$update_id."'";
-
-  // Execute the statement
-  if (mysqli_query($conn, $sql1)) {
-      echo "<h2>Airdrop Listing Updated Successfully.</h2>";
+  if (empty($_FILES['file']['name'])) {
+    // Execute this block if the file is not selected or null
+    $new_filename = $post['coin_img_alt'];
   } else {
-      echo "" . mysqli_error($conn);
+    // Define the directory where the images will be stored
+    $target_dir = "../airdrop_imgs/";
+  
+    // Get the name of the uploaded file
+    $original_filename = basename($_FILES["file"]["name"]);
+    $file_extension = pathinfo($original_filename, PATHINFO_EXTENSION);
+    $new_filename = uniqid() . "." . $file_extension; // Generate a unique filename
+    $target_file = $target_dir . $new_filename;
+
+    // Move the uploaded file to the target directory
+    if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
+      // File uploaded successfully
+    } else {
+      // Error uploading file
+      echo "Error uploading image.";
+      exit;
+    }
   }
 
+  // Escape user inputs for security
+  $airdrop_title = mysqli_real_escape_string($conn, $_POST['airdrop_title']);
+  $airdrop_tagline = mysqli_real_escape_string($conn, $_POST['airdrop_tagline']);
+  $airdrop_description = mysqli_real_escape_string($conn, $_POST['airdrop_description']);
+  $step_bystep = mysqli_real_escape_string($conn, $_POST['step_by_step_guide']);
+  $whitepaper = mysqli_real_escape_string($conn, $_POST['whitepaper']);
+  $tokens = mysqli_real_escape_string($conn, $_POST['tokens']);
+  $est_value = mysqli_real_escape_string($conn, $_POST['est_value']);
+  $end_date = mysqli_real_escape_string($conn, $_POST['end_date']);
+  $referral_available = mysqli_real_escape_string($conn, $_POST['referral_available']);
+  $referral_link = mysqli_real_escape_string($conn, $_POST['referral_link']);
+  $blockchain = mysqli_real_escape_string($conn, $_POST['blockchain']);
+  $website_link = mysqli_real_escape_string($conn, $_POST['website_link']);
+  $airdrop_join_link = mysqli_real_escape_string($conn, $_POST['airdrop_join_link']);
+  $publist_date = mysqli_real_escape_string($conn, $_POST['publish_date']);
+  $status = mysqli_real_escape_string($conn, $_POST['status']);
+
+  // Prepare the SQL statement
+  $sql = "UPDATE airdrop_coins SET coin_name='$airdrop_title', coin_img='$new_filename', coin_tagline='$airdrop_tagline', airdrop_description='$airdrop_description', airdrop_steps='$step_bystep', whitepaper='$whitepaper', tokens='$tokens', est_value='$est_value', end_date='$end_date', referral_available='$referral_available', referral_link='$referral_link', blockchain='$blockchain', website_link='$website_link', airdrop_join_link='$airdrop_join_link', publish_date='$publist_date', status='$status' WHERE sno='$update_id'";
+
+  // Execute the statement
+  if (mysqli_query($conn, $sql)) {
+    echo "<h2>Airdrop Listing Updated Successfully.</h2>";
+  } else {
+    echo "Error updating record: " . mysqli_error($conn);
+  }
 }
+
 
 } else {
 
@@ -271,6 +296,13 @@ if (mysqli_num_rows($result) > 0) {
                     <input type="file" class="form-control" name="file" id="file"><br>
                   </div>
                 </div> 
+
+                <div class="form-group" hidden>
+                  <label for="airdrop_join_link" class="col-sm-2 control-label form-label">Hidden</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" value="<?php echo $post['coin_img']; ?>" name="coin_img_alt" id="coin_img_alt">
+                  </div>
+                </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label"></label>
