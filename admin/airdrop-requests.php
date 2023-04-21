@@ -95,7 +95,7 @@ if ($conn->connect_error) {
 }
 
 // Retrieve data from the airdrop_coins table
-$sql = "SELECT * FROM blog_posts";
+$sql = "SELECT * FROM new_airdrop_requests";
 $result = $conn->query($sql);
 
 // Create a table with the retrieved data
