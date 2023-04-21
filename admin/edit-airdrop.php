@@ -247,7 +247,12 @@ if (mysqli_num_rows($result) > 0) {
                 </div>
                 
               </form> 
-
+<?php
+            } else {
+    // No rows were returned, so display an error message
+    echo "No blog post found";
+}
+?>
             </div>
 
       </div>
