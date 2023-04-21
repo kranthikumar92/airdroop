@@ -57,10 +57,10 @@
 
   <!-- Start Page Header -->
   <div class="page-header">
-    <h1 class="title">Add New Airdrop Listing</h1>
+    <h1 class="title">Edit Airdrop Listing</h1>
       <ol class="breadcrumb">
         <li><a href="airdrops.php">Airdrop</a></li>
-        <li class="active">Add New Airdrop</li>
+        <li class="active">Edit Airdrop</li>
       </ol>
 
   </div>
