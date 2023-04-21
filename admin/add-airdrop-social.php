@@ -97,7 +97,7 @@
 
     // Define the directory where the images will be stored
     $publist_date = date('Y-m-d');
-    
+
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Check if social data already exists
     $airdrop_id_chk = mysqli_real_escape_string($conn, $_POST['airdrop_sno']);
@@ -128,91 +128,91 @@
     echo '
               <form action="add-airdrop-social.php" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Website Link</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Join Link</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Twitter Link</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Medium Link</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Youtube Link</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Facebook Link</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Instagram Link</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Discord Link</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Telegram Link</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Blog Link</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Github Link</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Reddit Link</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Linkedin Link</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
                   </div>
