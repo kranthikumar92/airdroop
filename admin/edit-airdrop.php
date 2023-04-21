@@ -134,7 +134,7 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="form-group">
                   <label for="tokens" class="col-sm-2 control-label form-label">Tokens</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="tokens" id="tokens">
+                    <input type="text" class="form-control" value="<?php echo $post['tokens']; ?>" name="tokens" id="tokens">
                   </div>
                 </div>
 
@@ -145,7 +145,7 @@ if (mysqli_num_rows($result) > 0) {
                     <label class="sr-only" for="est_value">Amount (in dollars)</label>
                     <div class="input-group">
                       <div class="input-group-addon"><i class="fa fa-usd"></i></div>
-                      <input type="text" class="form-control" name="est_value" id="est_value" placeholder="Amount">
+                      <input type="text" class="form-control" value="<?php echo $post['est_value']; ?>" name="est_value" id="est_value" placeholder="Amount">
                       
                     </div>
                   </div>
@@ -159,7 +159,7 @@ if (mysqli_num_rows($result) > 0) {
                       <div class="controls">
                        <div class="input-prepend input-group">
                          <span class="add-on input-group-addon"><i class="fa fa-calendar"></i></span>
-                         <input type="text" name="end_date" id="end_date" class="form-control" value="04/20/2023"/> 
+                         <input type="text" name="end_date" id="end_date" class="form-control" value="<?php echo $post['end_date']; ?>"/> 
                        </div>
                       </div>
                     </div>
@@ -180,28 +180,28 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="form-group">
                   <label for="referral_link" class="col-sm-2 control-label form-label">Referral Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="referral_link" id="referral_link">
+                    <input type="text" class="form-control" value="<?php echo $post['referral_link']; ?>" name="referral_link" id="referral_link">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="blockchain" class="col-sm-2 control-label form-label">Blockchain</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="blockchain" id="blockchain">
+                    <input type="text" class="form-control" value="<?php echo $post['blockchain']; ?>" name="blockchain" id="blockchain">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="website_link" class="col-sm-2 control-label form-label">Website Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="website_link" id="website_link">
+                    <input type="text" class="form-control" value="<?php echo $post['website_link']; ?>" name="website_link" id="website_link">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="airdrop_join_link" class="col-sm-2 control-label form-label">Airdrop Join Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="airdrop_join_link" id="airdrop_join_link">
+                    <input type="text" class="form-control" value="<?php echo $post['airdrop_join_link']; ?>" name="airdrop_join_link" id="airdrop_join_link">
                   </div>
                 </div>
 
