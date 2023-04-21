@@ -121,9 +121,9 @@ if ($result->num_rows > 0) {
         $socialTableSql = "SELECT * FROM airdrop_coin_social WHERE airdrop_sno='".$row["sno"]."'";
         $socialTableResult = $conn->query($socialTableSql);
         if ($socialTableResult->num_rows > 0) {
-            echo "<td>Yes</td>";
+            echo "<td><a href='update-airdrop-social.php?id=" . $row["sno"] . "' class='btn btn-warning'>Edit</a>";
         } else {
-            echo "<td>No</td>";
+            echo "<td><a href='add-airdrop-social.php?id=" . $row["sno"] . "' class='btn btn-warning'>Edit</a>";
         }
         
         echo "</tr>";
