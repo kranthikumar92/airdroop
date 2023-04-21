@@ -123,7 +123,7 @@ if ($result->num_rows > 0) {
         if ($socialTableResult->num_rows > 0) {
             echo "<td><a href='update-airdrop-social.php?id=" . $row["sno"] . "' class='btn btn-warning'>Edit</a>";
         } else {
-            echo "<td><a href='add-airdrop-social.php?id=" . $row["sno"] . "' class='btn btn-warning'>Edit</a>";
+            echo "<td><a href='add-airdrop-social.php?id=" . $row["sno"] . "' class='btn btn-warning'>Add</a>";
         }
         
         echo "</tr>";
