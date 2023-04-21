@@ -97,7 +97,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$_POST['publish_date'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Define the directory where the images will be stored
