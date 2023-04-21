@@ -145,7 +145,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // Execute the statement
   if (mysqli_query($conn, $sql)) {
+    echo "<div class='col-sm-10'>";
     echo "<h2>Airdrop Listing Updated Successfully.</h2>";
+    echo "<a href='edit-airdrop.php?id=" . $update_id . "' class='btn btn-default'>Back to Airdrop Editing</a>";
+    echo "<a href='airdrops.php' class='btn btn-default'>Back to Airdrops List</a>";
+    echo "</div>";
   } else {
     echo "Error updating record: " . mysqli_error($conn);
   }
