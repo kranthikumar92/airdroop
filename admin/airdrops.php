@@ -95,7 +95,7 @@ if ($conn->connect_error) {
 }
 
 // Retrieve data from the airdrop_coins table
-$sql = "SELECT * FROM airdrop_coins";
+$sql = "SELECT * FROM airdrop_coins ORDER BY sno DESC";
 $result = $conn->query($sql);
 
 // Create a table with the retrieved data

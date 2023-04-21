@@ -95,14 +95,14 @@ if ($conn->connect_error) {
 }
 
 // Retrieve data from the airdrop_coins table
-$sql = "SELECT * FROM airdrop_coins";
+$sql = "SELECT * FROM blog_posts";
 $result = $conn->query($sql);
 
 // Create a table with the retrieved data
 if ($result->num_rows > 0) {
     echo "<table id='airdrop-listing' class='table display'>";
-    echo "<thead><tr><th>sno</th><th>Coin Name</th><th>Est Value</th><th>Referral available</th><th>End date</th><th>Status</th><th>Action</th></tr></thead>";
-    echo "<tfoot><tr><th>sno</th><th>Coin Name</th><th>Est Value</th><th>Referral available</th><th>End date</th><th>Status</th><th>Action</th></tr></tfoot>";
+    echo "<thead><tr><th>id</th><th>Post Title</th><th>Author</th><th>Publish Date</th><th>Update date</th><th>Status</th><th>Action</th></tr></thead>";
+    echo "<tfoot><tr><th>id</th><th>Post Title</th><th>Author</th><th>Publish Date</th><th>Update date</th><th>Status</th><th>Action</th></tr></tfoot>";
     echo "<tbody>";
 
 // Determine the CSS class for status
