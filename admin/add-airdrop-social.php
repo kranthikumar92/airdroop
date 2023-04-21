@@ -80,8 +80,55 @@
       <div class="panel panel-default">
             <div class="panel-body">
             <?php
-              if (!isset($_POST['submit'])) { // Check if form has been submitted
-            ?>
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Database connection parameters
+    $servername = "localhost";
+    $username = "calix_web_user";
+    $password = "calixworldhhUUh383287HGSHhs";
+    $dbname = "calix_cry_world";
+
+    // Create database connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+    // Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    // Define the directory where the images will be stored
+    $publist_date = date('Y-m-d');
+
+    // Check if social data already exists
+    $coin_name = mysqli_real_escape_string($conn, $_POST['airdrop_title']);
+    $check_sql = "SELECT * FROM airdrop_coins WHERE coin_name = '$coin_name'";
+    $check_result = mysqli_query($conn, $check_sql);
+
+    if (mysqli_num_rows($check_result) > 0) {
+        echo "<h2 style='color:red'>Airdrop Social Links with the same Coin Name already exists.</h2>";
+        mysqli_close($conn);
+    } 
+    else {
+
+        // Prepare the SQL statement
+        $sql = "INSERT INTO airdrop_coin_social (coin_name, coin_img, coin_tagline, airdrop_description, airdrop_steps, whitepaper, tokens, est_value, end_date, referral_available, referral_link, blockchain, website_link, airdrop_join_link, publish_date, status) VALUES ('".$_POST['airdrop_title']."', '".$new_filename."', '".$_POST['airdrop_tagline']."', '".$_POST['airdrop_description']."', '".$_POST['step_by_step_guide']."', '".$_POST['whitepaper']."', '".$_POST['tokens']."', '".$_POST['est_value']."', '".$_POST['end_date']."', '".$_POST['referral_available']."', '".$_POST['referral_link']."', '".$_POST['blockchain']."', '".$_POST['website_link']."', '".$_POST['airdrop_join_link']."', '".$publist_date."', '".$_POST['status']."')";
+
+        // Execute the statement
+        if (mysqli_query($conn, $sql)) {
+            echo "<h2>Airdrop Social Links Added Successfully.</h2>";
+        } else {
+            echo "" . mysqli_error($conn);
+        }
+
+    } else {
+
+        echo "Error uploading image.";
+    }
+
+    // Close the connection
+    mysqli_close($conn);
+} else {
+    // Display the HTML form if no form was submitted
+    echo '
               <form action="add-airdrop-social.php" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <div class="form-group">
                   <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
@@ -220,12 +267,10 @@
                   </div>
                 </div>
                 
-              </form> 
-              <?php
-              } else {
-              echo "test";
-              }
-              ?>
+              </form> '
+}
+?>
+
             </div>
 
       </div>
