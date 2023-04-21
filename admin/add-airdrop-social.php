@@ -119,11 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "" . mysqli_error($conn);
         }
 
-    } else {
-
-        echo "Error uploading image.";
-    }
-
+    } 
     // Close the connection
     mysqli_close($conn);
 } else {
