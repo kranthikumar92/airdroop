@@ -115,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $linkedin_link = mysqli_real_escape_string($conn, $_POST['linkedin_link']);
 
   // Prepare the SQL statement
-  $sql = "UPDATE airdrop_coins SET website_link='$web_link', join_link='$airdrop_join_link', twitter_link='$twitter_link', medium_link='$medium_link', youtube_link='$youtube_link', facebook_link='$facebook_link', instagram_link='$insta_link', discord_link='$discord_link', telegram_link='$telegram_link', blog_link='$blog_link', github_link='$github_link', reddit_link='$reddit_link', linkedin_link='$linkedin_link' WHERE airdrop_sno='$airdrop_sno_id'";
+  $sql = "UPDATE airdrop_coin_social SET website_link='$web_link', join_link='$airdrop_join_link', twitter_link='$twitter_link', medium_link='$medium_link', youtube_link='$youtube_link', facebook_link='$facebook_link', instagram_link='$insta_link', discord_link='$discord_link', telegram_link='$telegram_link', blog_link='$blog_link', github_link='$github_link', reddit_link='$reddit_link', linkedin_link='$linkedin_link' WHERE airdrop_sno='$airdrop_sno_id'";
 
   // Execute the statement
   if (mysqli_query($conn, $sql)) {
