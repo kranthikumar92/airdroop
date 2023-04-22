@@ -235,8 +235,8 @@ if (mysqli_num_rows($result) > 0) {
                   <label class="col-sm-2 control-label form-label">Referral Available</label>
                   <div class="col-sm-8">
                     <select class="selectpicker" name="referral_available" id="referral_available">
-                        <option value="Yes" <?php if ($status == 'Yes') echo 'selected'; ?>>Yes</option>
-                        <option value="No" <?php if ($status == 'No') echo 'selected'; ?>>No</option>
+                        <option value="Yes" <?php if ($ref_available == 'Yes') echo 'selected'; ?>>Yes</option>
+                        <option value="No" <?php if ($ref_available == 'No') echo 'selected'; ?>>No</option>
                       </select>                  
                   </div>
                 </div>
