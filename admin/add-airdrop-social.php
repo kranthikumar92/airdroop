@@ -114,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql = "INSERT INTO airdrop_coin_social (airdrop_sno, website_link, join_link, twitter_link, medium_link, youtube_link, facebook_link, instagram_link, discord_link, telegram_link, blog_link, github_link, reddit_link, linkedin_link) VALUES ('".$airdrop_coin_id."', ";
 
         // Add non-empty values to the SQL statement
-        $fields = array('web_link', 'airdrop_join_link', 'twitter_link', 'medium_link', 'facebook_link', 'insta_link', 'discord_link', 'telegram_link', 'blog_link', 'github_link', 'reddit_link', 'linkedin_link');
+        $fields = array('web_link', 'airdrop_join_link', 'twitter_link', 'medium_link', 'youtube_link', 'facebook_link', 'insta_link', 'discord_link', 'telegram_link', 'blog_link', 'github_link', 'reddit_link', 'linkedin_link');
         $values = array();
         foreach ($fields as $field) {
             if (!empty($_POST[$field])) {
