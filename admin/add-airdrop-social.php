@@ -81,25 +81,25 @@
             <div class="panel-body">
             <?php
 
-    // Database connection parameters
-    $servername = "localhost";
-    $username = "calix_web_user";
-    $password = "calixworldhhUUh383287HGSHhs";
-    $dbname = "calix_cry_world";
+// Database connection parameters
+$servername = "localhost";
+$username = "calix_web_user";
+$password = "calixworldhhUUh383287HGSHhs";
+$dbname = "calix_cry_world";
 
-    // Create database connection
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
+// Create database connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
-    // Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 
-    // Define the directory where the images will be stored
-    $publist_date = date('Y-m-d');
-    $airdrop_coin_id = $_GET["id"];
+// Define the directory where the images will be stored
+$publist_date = date('Y-m-d');
+$airdrop_coin_id = $_GET["id"];
 
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Check if social data already exists
     //$airdrop_id_chk = mysqli_real_escape_string($conn, $_POST['airdrop_sno']);
     $check_sql = "SELECT * FROM airdrop_coin_social WHERE airdrop_sno = '$airdrop_coin_id'";
@@ -110,9 +110,20 @@
         mysqli_close($conn);
     } 
     else {
-
         // Prepare the SQL statement
-        $sql = "INSERT INTO airdrop_coin_social (airdrop_sno, website_link, join_link, twitter_link, medium_link, youtube_link, facebook_link, instagram_link, discord_link, telegram_link, blog_link, github_link, reddit_link, linkedin_link) VALUES ('".$airdrop_coin_id."', '".$_POST['web_link']."', '".$_POST['airdrop_join_link']."', '".$_POST['twitter_link']."', '".$_POST['medium_link']."', '".$_POST['facebook_link']."', '".$_POST['insta_link']."', '".$_POST['discord_link']."', '".$_POST['telegram_link']."', '".$_POST['blog_link']."', '".$_POST['github_link']."', '".$_POST['reddit_link']."', '".$_POST['linkedin_link']."')";
+        $sql = "INSERT INTO airdrop_coin_social (airdrop_sno, website_link, join_link, twitter_link, medium_link, youtube_link, facebook_link, instagram_link, discord_link, telegram_link, blog_link, github_link, reddit_link, linkedin_link) VALUES ('".$airdrop_coin_id."', ";
+
+        // Add non-empty values to the SQL statement
+        $fields = array('web_link', 'airdrop_join_link', 'twitter_link', 'medium_link', 'facebook_link', 'insta_link', 'discord_link', 'telegram_link', 'blog_link', 'github_link', 'reddit_link', 'linkedin_link');
+        $values = array();
+        foreach ($fields as $field) {
+            if (!empty($_POST[$field])) {
+                $values[] = "'".mysqli_real_escape_string($conn, $_POST[$field])."'";
+            } else {
+                $values[] = "NULL";
+            }
+        }
+        $sql .= implode(", ", $values) . ")";
 
         // Execute the statement
         if (mysqli_query($conn, $sql)) {
@@ -120,11 +131,12 @@
         } else {
             echo "" . mysqli_error($conn);
         }
-
     } 
+
     // Close the connection
     mysqli_close($conn);
-} else {
+} 
+else {
     // Display the HTML form if no form was submitted
     echo '
               <form action="add-airdrop-social.php?id=28" method="post" enctype="multipart/form-data" class="form-horizontal">
