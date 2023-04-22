@@ -127,7 +127,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Execute the statement
         if (mysqli_query($conn, $sql)) {
-            echo "<h2>Airdrop Social Links Added Successfully.</h2>";
+          echo "<div class='col-sm-10'>";
+          echo "<h2>Airdrop Social Links Added Successfully.</h2>";
+          echo "<a href='airdrops.php' class='btn btn-default'>Back to Airdrops List</a>";
+          echo "</div>";
         } else {
             echo "" . mysqli_error($conn);
         }
