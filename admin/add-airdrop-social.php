@@ -127,7 +127,7 @@
 } else {
     // Display the HTML form if no form was submitted
     echo '
-              <form action="add-airdrop-social.php?id=1" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <form action="add-airdrop-social.php?id=28" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <div class="form-group">
                   <label for="web_link" class="col-sm-2 control-label form-label">Website Link</label>
                   <div class="col-sm-10">
