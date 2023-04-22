@@ -97,11 +97,12 @@
 
     // Define the directory where the images will be stored
     $publist_date = date('Y-m-d');
+    $airdrop_coin_id = $_GET["id"];
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Check if social data already exists
-    $airdrop_id_chk = mysqli_real_escape_string($conn, $_POST['airdrop_sno']);
-    $check_sql = "SELECT * FROM airdrop_coins WHERE coin_name = '$airdrop_id_chk'";
+    //$airdrop_id_chk = mysqli_real_escape_string($conn, $_POST['airdrop_sno']);
+    $check_sql = "SELECT * FROM airdrop_coin_social WHERE airdrop_sno = '$airdrop_coin_id'";
     $check_result = mysqli_query($conn, $check_sql);
 
     if (mysqli_num_rows($check_result) > 0) {
@@ -111,7 +112,7 @@
     else {
 
         // Prepare the SQL statement
-        $sql = "INSERT INTO airdrop_coin_social (coin_name, coin_img, coin_tagline, airdrop_description, airdrop_steps, whitepaper, tokens, est_value, end_date, referral_available, referral_link, blockchain, website_link, airdrop_join_link, publish_date, status) VALUES ('".$_POST['airdrop_title']."', '".$new_filename."', '".$_POST['airdrop_tagline']."', '".$_POST['airdrop_description']."', '".$_POST['step_by_step_guide']."', '".$_POST['whitepaper']."', '".$_POST['tokens']."', '".$_POST['est_value']."', '".$_POST['end_date']."', '".$_POST['referral_available']."', '".$_POST['referral_link']."', '".$_POST['blockchain']."', '".$_POST['website_link']."', '".$_POST['airdrop_join_link']."', '".$publist_date."', '".$_POST['status']."')";
+        $sql = "INSERT INTO airdrop_coin_social (airdrop_sno, website_link, join_link, twitter_link, medium_link, youtube_link, facebook_link, instagram_link, discord_link, telegram_link, blog_link, github_link, reddit_link, linkedin_link) VALUES ('".$airdrop_coin_id."', '".$_POST['web_link']."', '".$_POST['airdrop_join_link']."', '".$_POST['twitter_link']."', '".$_POST['medium_link']."', '".$_POST['facebook_link']."', '".$_POST['insta_link']."', '".$_POST['discord_link']."', '".$_POST['telegram_link']."', '".$_POST['blog_link']."', '".$_POST['github_link']."', '".$_POST['reddit_link']."', '".$_POST['linkedin_link']."')";
 
         // Execute the statement
         if (mysqli_query($conn, $sql)) {
@@ -128,93 +129,93 @@
     echo '
               <form action="add-airdrop-social.php" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Website Link</label>
+                  <label for="web_link" class="col-sm-2 control-label form-label">Website Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                    <input type="text" class="form-control" name="web_link" id="web_link">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Join Link</label>
+                  <label for="airdrop_join_link" class="col-sm-2 control-label form-label">Airdrop Join Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                    <input type="text" class="form-control" name="airdrop_join_link" id="airdrop_join_link">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Twitter Link</label>
+                  <label for="twitter_link" class="col-sm-2 control-label form-label">Twitter Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                    <input type="text" class="form-control" name="twitter_link" id="twitter_link">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Medium Link</label>
+                  <label for="medium_link" class="col-sm-2 control-label form-label">Medium Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                    <input type="text" class="form-control" name="medium_link" id="medium_link">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Youtube Link</label>
+                  <label for="youtube_link" class="col-sm-2 control-label form-label">Youtube Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                    <input type="text" class="form-control" name="youtube_link" id="youtube_link">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Facebook Link</label>
+                  <label for="facebook_link" class="col-sm-2 control-label form-label">Facebook Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                    <input type="text" class="form-control" name="facebook_link" id="facebook_link">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Instagram Link</label>
+                  <label for="insta_link" class="col-sm-2 control-label form-label">Instagram Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                    <input type="text" class="form-control" name="insta_link" id="insta_link">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Discord Link</label>
+                  <label for="discord_link" class="col-sm-2 control-label form-label">Discord Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                    <input type="text" class="form-control" name="discord_link" id="discord_link">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Telegram Link</label>
+                  <label for="telegram_link" class="col-sm-2 control-label form-label">Telegram Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                    <input type="text" class="form-control" name="telegram_link" id="telegram_link">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Blog Link</label>
+                  <label for="blog_link" class="col-sm-2 control-label form-label">Blog Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                    <input type="text" class="form-control" name="blog_link" id="blog_link">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Github Link</label>
+                  <label for="github_link" class="col-sm-2 control-label form-label">Github Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                    <input type="text" class="form-control" name="github_link" id="github_link">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Reddit Link</label>
+                  <label for="reddit_link" class="col-sm-2 control-label form-label">Reddit Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                    <input type="text" class="form-control" name="reddit_link" id="reddit_link">
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Linkedin Link</label>
+                  <label for="linkedin_link" class="col-sm-2 control-label form-label">Linkedin Link</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="airdrop_title" id="airdrop_title">
+                    <input type="text" class="form-control" name="linkedin_link" id="linkedin_link">
                   </div>
                 </div>
                 
