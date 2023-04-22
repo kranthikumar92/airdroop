@@ -233,8 +233,6 @@ else {
                     <input type="text" class="form-control" name="linkedin_link" id="linkedin_link">
                   </div>
                 </div>
-                
-
               
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label"></label>
