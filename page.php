@@ -79,7 +79,7 @@
 <![endif]-->
 
 <?php
-//include('header.php');
+include('header.php');
 ?>
 
 <!--== Header Area End ==-->
@@ -111,7 +111,6 @@ include('ticker_extension.php');
                             <div class="col-lg-10">
                                 <div class="step-process-wrapper">
                                     <!-- Content Start -->
-
                                     <?php
                                     error_reporting(E_ALL);
                                     ini_set('display_errors', 1);
