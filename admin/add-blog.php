@@ -130,7 +130,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $status = 'active';
 
   // Prepare the SQL statement
-  $sql = "INSERT INTO blog_posts (title, feature_image, content, author, created_at, updated_at, tags, likes, status) VALUES ('".$_POST['blog_title']."', '".$new_filename."', '".$_POST['blog_content']."', '".$_POST['blog_author']."', '".$publist_date."', '".$publist_date."', '".$_POST['blog_tags']."', '".$likes."', '".$status."')";
+  $sql = "INSERT INTO blog_posts (title, feature_image, content, author, created_at, updated_at, tags, likes, status) 
+        VALUES ('".$blog_title."', '".$new_filename."', '".$blog_content."', '".$blog_author."', '".$publist_date."', '".$publist_date."', '".$blog_tags."', '".$likes."', '".$status."')";
+
 
   // Execute the statement
   if (mysqli_query($conn, $sql)) {
