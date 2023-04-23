@@ -128,7 +128,7 @@ if ($conn->connect_error) {
 
 // Retrieve data from info_pages table based on slug
 $page_slug = $_GET['slug'];
-$sql = "SELECT * FROM info_pages WHERE slug = '$page_slug'";
+$sql = "SELECT * FROM info_pages WHERE slug = '$page_slug' AND status = 'active'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
