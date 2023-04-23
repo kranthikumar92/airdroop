@@ -113,6 +113,9 @@ include('ticker_extension.php');
                                     <!-- Content Start -->
 
                                     <?php
+                                    error_reporting(E_ALL);
+                                    ini_set('display_errors', 1);
+                                    
 // Establish a database connection
 $servername = "localhost";
 $username = "calix_web_user";
