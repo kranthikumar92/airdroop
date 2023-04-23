@@ -117,7 +117,7 @@ if ($result->num_rows > 0) {
         echo "<td>" . $row["total_airdrop_value"] . "</td>";
         echo "<td>" . $row["coin_rate_against_usd"] . "</td>";
         echo "<td  style='color:" . $statusClass . "'>" . $row["status"] . "</td>";
-        echo "<td><a href='edit-airdrip-request.php?id=" . $row["reference"] . "' class='btn btn-warning'>Edit</a></td>";
+        echo "<td><a href='edit-airdrop-request.php?id=" . $row["reference"] . "' class='btn btn-warning'>Edit</a></td>";
         echo "</tr>";
     }
 
