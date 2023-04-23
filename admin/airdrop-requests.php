@@ -109,7 +109,27 @@ if ($result->num_rows > 0) {
 
 
     while ($row = $result->fetch_assoc()) {
-        $statusClass = ($row['status'] == 'Listed') ? 'green' : 'red';
+        
+        $statusClass = '';
+switch ($row['status']) {
+    case 'Submitted':
+        $statusClass = 'blue';
+        break;
+    case 'Processing':
+        $statusClass = 'orange';
+        break;
+    case 'Rejected':
+        $statusClass = 'red';
+        break;
+    case 'Listed':
+        $statusClass = 'green';
+        break;
+    default:
+        $statusClass = '';
+        break;
+}
+
+
         echo "<tr>";
         echo "<td>" . $row["reference"] . "</td>";
         echo "<td>" . $row["coin_name"] . "</td>";
