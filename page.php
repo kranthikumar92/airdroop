@@ -112,11 +112,6 @@ include('ticker_extension.php');
                                 <div class="step-process-wrapper">
                                     <!-- Content Start -->
                                     <?php
-// Turn on error reporting
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-
 // Establish a database connection
 $servername = "localhost";
 $username = "calix_web_user";
