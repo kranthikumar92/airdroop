@@ -112,9 +112,11 @@ include('ticker_extension.php');
                                 <div class="step-process-wrapper">
                                     <!-- Content Start -->
                                     <?php
-                                    error_reporting(E_ALL);
-                                    ini_set('display_errors', 1);
-                                    
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+ob_start(); // start output buffering
+
 // Establish a database connection
 $servername = "localhost";
 $username = "calix_web_user";
@@ -134,31 +136,26 @@ $sql = "SELECT * FROM info_pages WHERE slug = '$page_slug' AND status = 'active'
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    // Output data of each row
-    while($row = $result->fetch_assoc()) {
-      echo "<div class='step-process-item'>";
-      echo "<h3 class='step-number'>" . $row["page_title"] . "</h3>";
-      echo "<div class='registration-form airdrop-form'>";
-      echo "<p>" . $row["content"] . "</p>";
-      echo "</div>";
-      echo "</div>";
-    }
-  } else {
-    // Start output buffering
-    ob_start();
-    
-    // Output generation here
-    header("Location: https://www.calixworld.com/airdroop/index.php");
-    
-    // End output buffering and send output to browser
-    ob_end_flush();
-  
-    exit();
+  // Output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "<div class='step-process-item'>";
+    echo "<h3 class='step-number'>" . $row["page_title"] . "</h3>";
+    echo "<div class='registration-form airdrop-form'>";
+    echo "<p>" . $row["content"] . "</p>";
+    echo "</div>";
+    echo "</div>";
   }
-  
+} else {
+  // Redirect to index.php page
+  header("Location: https://www.calixworld.com/airdroop/index.php");
+  exit();
+}
+
+ob_end_flush(); // end output buffering and send the output to the browser
 
 $conn->close();
 ?>
+
                                     <!-- Content End -->
 
                                 </div>
