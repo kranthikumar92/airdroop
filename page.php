@@ -81,7 +81,7 @@
 <?php
 include('header.php');
 ?>
-</header>
+
 <!--== Header Area End ==-->
 
 <!--== Currency Rate Area Start ==-->
