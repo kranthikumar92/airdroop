@@ -192,7 +192,7 @@ if (mysqli_num_rows($result) > 0) {
                     <select class="selectpicker" name="message_status" id="message_status">
                         <option value="Submitted" <?php if ($status == 'Submitted') echo 'selected'; ?>>Submitted</option>
                         <option value="Processing" <?php if ($status == 'Processing') echo 'selected'; ?>>Processing</option>
-                        <option value="Completed" <?php if ($status == 'Completed') echo 'selected'; ?>>Completed</option>
+                        <option value="Resolved" <?php if ($status == 'Resolved') echo 'selected'; ?>>Resolved</option>
                       </select>                  
                   </div>
                 </div>
