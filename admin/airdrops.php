@@ -114,7 +114,7 @@ if ($result->num_rows > 0) {
         echo "<td>" . $row["est_value"] . "</td>";
         echo "<td>" . $row["referral_available"] . "</td>";
         echo "<td>" . $row["end_date"] . "</td>";
-        echo "<td style='color:" . $statusClass . "'>" . $row["status"] . "</td>";
+        echo "<td style='color:" . $statusClass . "'><strong>" . $row["status"] . "</strong></td>";
         echo "<td><a href='edit-airdrop.php?id=" . $row["sno"] . "' class='btn btn-warning'>Edit</a> <a href='delete-airdrop.php?id=" . $row["sno"] . "' class='btn btn-danger'>Delete</a></td>";
         
         // Check if data exists in airdrop_coin_social table for the current coin
