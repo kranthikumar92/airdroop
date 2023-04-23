@@ -101,8 +101,8 @@ $result = $conn->query($sql);
 // Create a table with the retrieved data
 if ($result->num_rows > 0) {
     echo "<table id='airdrop-listing' class='table display'>";
-    echo "<thead><tr><th>Reference</th><th>Full Name</th><th>Email</th><th>Receive Date</th><th>Update Date</th><th>Status</th><th>Action</th></tr></thead>";
-    echo "<tfoot><tr><th>Reference</th><th>Full Name</th><th>Email</th><th>Receive Date</th><th>Update Date</th><th>Status</th><th>Action</th></tr></tfoot>";
+    echo "<thead><tr><th>#</th><th>Reference</th><th>Full Name</th><th>Email</th><th>Receive Date</th><th>Update Date</th><th>Status</th><th>Action</th></tr></thead>";
+    echo "<tfoot><tr><th>#</th><th>Reference</th><th>Full Name</th><th>Email</th><th>Receive Date</th><th>Update Date</th><th>Status</th><th>Action</th></tr></tfoot>";
     echo "<tbody>";
 
 // Determine the CSS class for status
@@ -111,6 +111,7 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $statusClass = ($row['status'] == 'resolved') ? 'green' : 'red';
         echo "<tr>";
+        echo "<td>" . $row["sno"] . "</td>";
         echo "<td>" . $row["reference"] . "</td>";
         echo "<td>" . $row["full_name"] . "</td>";
         echo "<td>" . $row["email"] . "</td>";
