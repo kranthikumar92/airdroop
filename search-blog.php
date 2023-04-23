@@ -167,7 +167,7 @@ if ($result->num_rows > 0) {
         <div class="col-lg-4 col-md-6">
         <article class="single-latest-news-wrap">
             <figure class="news-thumbnail">
-                <a href="single-news.php?id=<?php echo $post_id ?>"><img src="<?php echo $image ?>" alt="News" class="img-fluid"/></a>
+                <a href="single-news.php?id=<?php echo $post_id ?>"><img src="blog_imgs/<?php echo $image ?>" alt="<?php echo $title ?>" class="img-fluid"/></a>
             </figure>
             <div class="news-content">
                 <a href="single-news.php?id=<?php echo $post_id ?>" class="post-time"><?php echo $created_at ?></a>
