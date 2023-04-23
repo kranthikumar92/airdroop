@@ -167,7 +167,14 @@ if (mysqli_num_rows($result) > 0) {
                   <div class="col-sm-10">
                     <p class="form-control-static"><?php echo $post['social_link']; ?></p>
                   </div>
-                </div> 
+                </div>
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label form-label">Publish Date</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><?php echo $post['publish_date']; ?></p>
+                  </div>
+                </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Update Status</label>
