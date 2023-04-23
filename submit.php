@@ -197,9 +197,14 @@ include('ticker_extension.php');
 
                                             <div class="input-row">
                                                 <div class="row">
-                                                    <div class="col-md-6">
+                                                   <div class="col-md-6">
                                                         <div class="single-input-item">
-                                                            <input type="text" placeholder="Referral Bonus" name="referral_bonus" id="referral_bonus"/>
+                                                            <select name="referral_bonus" id="referral_bonus" class="wide">
+                                                                <option disabled selected>Select One
+                                                                </option>
+                                                                <option value="Yes">Yes</option>
+                                                                <option value="No">No</option>
+                                                            </select>
                                                         </div>
                                                     </div>
 
