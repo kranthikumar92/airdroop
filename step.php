@@ -116,8 +116,7 @@ include('ticker_extension.php');
                                         <h3 class="step-number">Terms & Conditions</h3>
 
                                         <div class="registration-form airdrop-form">
-                                            <h2 class="h3 step-title">Registration Form</h2>
-                                            <p>Looking for the best website content to engage your audience and boost your online presence? Look no further than our expert team of content writers! We specialize in creating high-quality, SEO-friendly content that will help your website rank higher on search engines and attract more traffic. From blog posts and articles to product descriptions and landing pages, we have the skills and experience to deliver top-notch content that resonates with your target audience. So whether you're a small business owner, a startup founder, or a marketing professional, trust us to take your online content to the next level. Contact us today to learn more! </p>
+                                            <p> <?php echo "$content";?> </p>
                                         </div>
                                     </div>
                                     <!-- First Process End -->
