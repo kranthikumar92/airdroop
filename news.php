@@ -143,7 +143,7 @@ $offset = ($page - 1) * $items_per_page;
                 
     <?php
     // Establish a database connection
-    $sql = "SELECT * FROM blog_posts WHERE status = 'Inactive' ORDER BY created_at DESC LIMIT $items_per_page OFFSET $offset";
+    $sql = "SELECT * FROM blog_posts WHERE status = 'Active' ORDER BY created_at DESC LIMIT $items_per_page OFFSET $offset";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
