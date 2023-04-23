@@ -139,9 +139,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (mysqli_query($conn, $sql)) {
     echo "<div class='col-sm-10'>";
     echo "<h2>Blog Post Updated Successfully.</h2>";
-    echo "<a href='edit-blog.php?id=" . $blog_id . "' class='btn btn-default'>Back to Airdrop Editing</a>";
+    echo "<a href='edit-blog.php?id=" . $blog_id . "' class='btn btn-default'>Back to Blog Editing</a>";
     echo "&nbsp;";
-    echo "<a href='blog-list.php' class='btn btn-default'>Back to Airdrops List</a>";
+    echo "<a href='blog-list.php' class='btn btn-default'>Back to Blog List</a>";
     echo "</div>";
   } else {
     echo "Error updating record: " . mysqli_error($conn);
