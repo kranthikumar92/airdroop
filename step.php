@@ -228,12 +228,7 @@ include('ticker_extension.php');
                                 </div>
                             </div>
 
-                            <div class="col-lg-2 d-none d-lg-block">
-                                <div class="step-page -adsvisement">
-                                    <a href="#"><img src="assets/img/images/advisement-vertical.jpg" alt="Advisement"
-                                                     class="img-fluid"/></a>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                     <!-- Step Page Content End -->
