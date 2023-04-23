@@ -147,7 +147,7 @@ if (mysqli_num_rows($result) > 0) {
     <article class="single-news-content-wrap">
         <header class="article-head">
             <figure class="single-news-thumb">
-                <img src="<?php echo $post['feature_image']; ?>" class="img-fluid"
+                <img src="blog_imgs/<?php echo $post['feature_image']; ?>" class="img-fluid"
                      alt="<?php echo $post['title']; ?>">
             </figure>
             <div class="single-news-meta">
