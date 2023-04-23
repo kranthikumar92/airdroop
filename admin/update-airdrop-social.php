@@ -57,10 +57,10 @@
 
   <!-- Start Page Header -->
   <div class="page-header">
-    <h1 class="title">Add Social Links to Airdrop Listing</h1>
+    <h1 class="title">Update Social Links to Airdrop Listing</h1>
       <ol class="breadcrumb">
         <li><a href="airdrops.php">Airdrop</a></li>
-        <li class="active">Add Social Links</li>
+        <li class="active">Update Social Links</li>
       </ol>
 
   </div>
