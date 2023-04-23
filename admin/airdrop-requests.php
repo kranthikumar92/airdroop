@@ -56,10 +56,10 @@
 
   <!-- Start Page Header -->
   <div class="page-header">
-    <h1 class="title">All Airdrop Listing Requests</h1>
+    <h1 class="title">Airdrop Listing Requests</h1>
       <ol class="breadcrumb">
         <li><a href="airdrops-requests.php">Airdrop Requests</a></li>
-        <li class="active">All Airdrop Requests</li>
+        <li class="active">Listing Requests</li>
       </ol>
 
   </div>
