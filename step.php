@@ -98,15 +98,7 @@ include('ticker_extension.php');
                 <div class="col-lg-12">
                     <!-- Step Page Content Start -->
                     <div class="step-page-content-wrap">
-                        <div class="row">
-                            <div class="col-lg-10 m-auto text-center">
-                                <div class="step-page-header">
-                                    <h2>Welcome to the Etharium Airdrop Campaign</h2>
-                                    <p>Promises advanced end-to-end encrypted chat messaging, decentralized storage,
-                                        calling, video calling, inbox, voice messages etc.</p>
-                                </div>
-                            </div>
-                        </div>
+                        
 
                         <div class="row">
                             <div class="col-lg-2 d-none d-lg-block">
