@@ -129,7 +129,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
 
 // Query to retrieve blog post with ID 1
-$sql = "SELECT * FROM contact_form WHERE sno = $message_id";
+$sql = "SELECT * FROM contact_form WHERE reference = $message_id";
 $result = mysqli_query($conn, $sql);
 
 // Check if the query returned any rows
