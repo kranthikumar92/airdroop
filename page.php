@@ -116,8 +116,6 @@ include('ticker_extension.php');
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Start output buffering
-ob_start();
 
 // Establish a database connection
 $servername = "localhost";
@@ -148,14 +146,15 @@ if ($result->num_rows > 0) {
     echo "</div>";
   }
 } else {
-  // Redirect to index.php page
-  ob_clean(); // Clear the output buffer
-  header("Location: https://www.calixworld.com/airdroop/index.php");
-  exit();
+    // Print 404 Page
+    echo "<div class='step-process-item'>";
+    echo "<h3 class='step-number'>Error 404</h3>";
+    echo "<div class='registration-form airdrop-form'>";
+    echo "<p>Error 404 not found. Please <a href='index.php'>click here</a> to go back to the homepage.</p>";
+    echo "</div>";
+    echo "</div>";
 }
 
-// End output buffering and flush the output
-ob_end_flush();
 
 // Close the database connection
 $conn->close();
