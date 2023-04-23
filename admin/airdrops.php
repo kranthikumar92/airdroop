@@ -101,8 +101,8 @@ $result = $conn->query($sql);
 // Create a table with the retrieved data
 if ($result->num_rows > 0) {
     echo "<table id='airdrop-listing' class='table display'>";
-    echo "<thead><tr><th>sno</th><th>Coin Name</th><th>Est Value</th><th>Referral available</th><th>End date</th><th>Status</th><th>Action</th><th>Social Links</th></tr></thead>";
-    echo "<tfoot><tr><th>sno</th><th>Coin Name</th><th>Est Value</th><th>Referral available</th><th>End date</th><th>Status</th><th>Action</th><th>Social Links</th></tr></tfoot>";
+    echo "<thead><tr><th>sno</th><th>Airdrop Title</th><th>Est Value</th><th>Referral available</th><th>End date</th><th>Status</th><th>Action</th><th>Social Links</th></tr></thead>";
+    echo "<tfoot><tr><th>sno</th><th>Airdrop Title</th><th>Est Value</th><th>Referral available</th><th>End date</th><th>Status</th><th>Action</th><th>Social Links</th></tr></tfoot>";
     echo "<tbody>";
 
     while ($row = $result->fetch_assoc()) {
