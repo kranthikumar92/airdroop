@@ -134,6 +134,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
 
 // Query to retrieve blog post with ID 1
+$sql_name = "SELECT * FROM airdrop_coins WHERE sno = $airdrop_sno_id";
+$result_name = mysqli_query($conn, $sql_name);
+$post_name = mysqli_fetch_assoc($result_name);
+
+// Query to retrieve blog post with ID
 $sql = "SELECT * FROM airdrop_coin_social WHERE airdrop_sno = $airdrop_sno_id";
 $result = mysqli_query($conn, $sql);
 
@@ -144,6 +149,13 @@ if (mysqli_num_rows($result) > 0) {
     
     ?>
               <form action="update-airdrop-social.php?id=<?php echo $airdrop_sno_id; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+                <div class="form-group">
+                  <label for="web_link" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static">#<?php echo $post_name['coin_name']; ?></p>
+                  </div>
+                </div>
+
                 <div class="form-group">
                   <label for="web_link" class="col-sm-2 control-label form-label">Website Link</label>
                   <div class="col-sm-10">
