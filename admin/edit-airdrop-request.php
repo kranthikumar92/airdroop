@@ -138,16 +138,30 @@ if (mysqli_num_rows($result) > 0) {
 
               <form action="edit-airdrop-request.php?id=<?php echo $post['reference']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <div class="form-group">
-                  <label for="blog_reference" class="col-sm-2 control-label form-label">Reference</label>
+                  <label for="request_reference" class="col-sm-2 control-label form-label">Reference</label>
                   <div class="col-sm-10">
                     <p class="form-control-static">#<?php echo $post['reference']; ?></p>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="full_name" class="col-sm-2 control-label form-label">Full Name</label>
+                  <label for="designation" class="col-sm-2 control-label form-label">Posted by</label>
                   <div class="col-sm-10">
-                    <p class="form-control-static"><?php echo $post['full_name']; ?></p>
+                    <p class="form-control-static"><?php echo $post['designation']; ?></p>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label form-label">Coin Name</label>
+                  <div class="col-sm-10">
+                     <p class="form-control-static"><?php echo $post['coin_name']; ?></p>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label form-label">Project Name</label>
+                  <div class="col-sm-10">
+                     <p class="form-control-static"><?php echo $post['project_name']; ?></p>
                   </div>
                 </div>
 
@@ -159,40 +173,62 @@ if (mysqli_num_rows($result) > 0) {
                 </div>
 
                <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">Social Link</label>
+                  <label class="col-sm-2 control-label form-label">ICO Start Date</label>
                   <div class="col-sm-10">
-                    <p class="form-control-static"><?php echo $post['social_link']; ?></p>
+                    <p class="form-control-static"><?php echo $post['ico_start_date']; ?></p>
                   </div>
                 </div>
                 
                 <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">Publish Date</label>
+                  <label class="col-sm-2 control-label form-label">ICO End Date</label>
                   <div class="col-sm-10">
-                    <p class="form-control-static"><?php echo $post['publish_date']; ?></p>
+                    <p class="form-control-static"><?php echo $post['ico_end_date']; ?></p>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">Update Date</label>
+                  <label class="col-sm-2 control-label form-label">Referral Available</label>
                   <div class="col-sm-10">
-                    <p class="form-control-static"><?php echo $post['update_date']; ?></p>
+                    <p class="form-control-static"><?php echo $post['referral_bonus']; ?></p>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">Message</label>
+                  <label class="col-sm-2 control-label form-label">Total Airdrop Value</label>
                   <div class="col-sm-10">
-                    <p class="form-control-static"><?php echo $post['description_contact']; ?></p>
+                    <p class="form-control-static">$<?php echo $post['total_airdrop_value']; ?></p>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label form-label">Individual Reward Value</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static">$<?php echo $post['individual_reward_value']; ?></p>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label form-label">Coin Price</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static">$<?php echo $post['coin_rate_against_usd']; ?></p>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label form-label">Description</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><?php echo $post['more_information']; ?></p>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Update Status</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker" name="message_status" id="message_status">
+                    <select class="selectpicker" name="request_status" id="request_status">
                         <option value="Submitted" <?php if ($status == 'Submitted') echo 'selected'; ?>>Submitted</option>
                         <option value="Processing" <?php if ($status == 'Processing') echo 'selected'; ?>>Processing</option>
-                        <option value="Resolved" <?php if ($status == 'Resolved') echo 'selected'; ?>>Resolved</option>
+                        <option value="Rejected" <?php if ($status == 'Rejected') echo 'Rejected'; ?>>Resolved</option>
+                        <option value="Listed" <?php if ($status == 'Listed') echo 'Listed'; ?>>Resolved</option>
                       </select>                  
                   </div>
                 </div>
