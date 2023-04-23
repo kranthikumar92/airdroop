@@ -123,7 +123,7 @@ if ($result->num_rows > 0) {
 
     echo "</tbody></table>";
 } else {
-    echo "No data found.";
+    echo "No Airdrop Request data found.";
 }
 
 // Close database connection
