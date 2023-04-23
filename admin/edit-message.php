@@ -101,22 +101,18 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // Escape user inputs for security
-  $blog_title = mysqli_real_escape_string($conn, $_POST['blog_title']);
-  $blog_author = mysqli_real_escape_string($conn, $_POST['blog_author']);
-  $blog_tags = mysqli_real_escape_string($conn, $_POST['blog_tags']);
-  $blog_content = mysqli_real_escape_string($conn, $_POST['blog_content']);
-  $blog_status = mysqli_real_escape_string($conn, $_POST['blog_status']);
+  $message_status = mysqli_real_escape_string($conn, $_POST['message_status']);
   $update_date = date('Y-m-d');
 
 
   // Prepare the SQL statement
-  $sql = "UPDATE contact_form SET title='$blog_title', feature_image='$new_filename', content='$blog_content', author='$blog_author', updated_at='$update_date', tags='$blog_tags', status='$blog_status' WHERE sno='$message_id'";
+  $sql = "UPDATE contact_form SET update_date='$update_date', status='$message_status' WHERE sno='$message_id'";
 
   // Execute the statement
   if (mysqli_query($conn, $sql)) {
     echo "<div class='col-sm-10'>";
     echo "<h2>Message Updated Successfully.</h2>";
-    echo "<a href='edit-message.php?id=" . $blog_id . "' class='btn btn-default'>Back to Message Editing</a>";
+    echo "<a href='edit-message.php?id=" . $message_id . "' class='btn btn-default'>Back to Message Editing</a>";
     echo "&nbsp;";
     echo "<a href='contact-messages.php' class='btn btn-default'>Back to Messages List</a>";
     echo "</div>";
@@ -140,7 +136,7 @@ if (mysqli_num_rows($result) > 0) {
     
     ?>
 
-              <form action="edit-message.php?id=<?php echo $post['sno']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <form action="edit-message.php?id=<?php echo $post['reference']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <div class="form-group">
                   <label for="blog_reference" class="col-sm-2 control-label form-label">Reference</label>
                   <div class="col-sm-10">
