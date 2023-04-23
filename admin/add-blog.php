@@ -136,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (mysqli_query($conn, $sql)) {
     echo "<div class='col-sm-10'>";
     echo "<h2>Blog Post Added Successfully.</h2>";
-    echo "<a href='blog-post.php' class='btn btn-default'>Back to Blog Post List</a>";
+    echo "<a href='blog-list.php' class='btn btn-default'>Back to Blog Post List</a>";
     echo "</div>";
   } else {
     echo "Error updating record: " . mysqli_error($conn);
