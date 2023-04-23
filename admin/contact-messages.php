@@ -132,7 +132,7 @@ switch ($row['status']) {
         echo "<td>" . $row["email"] . "</td>";
         echo "<td>" . $row["publish_date"] . "</td>";
         echo "<td>" . $row["update_date"] . "</td>";
-        echo "<td  style='color:" . $statusClass . "'>" . $row["status"] . "</td>";
+        echo "<td  style='color:" . $statusClass . "'><strong>" . $row["status"] . "</strong></td>";
         echo "<td><a href='edit-message.php?id=" . $row["reference"] . "' class='btn btn-warning'>Edit</a></td>";
         echo "</tr>";
     }
