@@ -100,29 +100,6 @@ if ($conn->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-  if (empty($_FILES['file']['name'])) {
-    // Execute this block if the file is not selected or null
-    $new_filename = $_POST['blog_img_alt'];
-  } else {
-    // Define the directory where the images will be stored
-    $target_dir = "../blog_imgs/";
-  
-    // Get the name of the uploaded file
-    $original_filename = basename($_FILES["file"]["name"]);
-    $file_extension = pathinfo($original_filename, PATHINFO_EXTENSION);
-    $new_filename = uniqid() . "." . $file_extension; // Generate a unique filename
-    $target_file = $target_dir . $new_filename;
-
-    // Move the uploaded file to the target directory
-    if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
-      // File uploaded successfully
-    } else {
-      // Error uploading file
-      echo "Error uploading image.";
-      exit;
-    }
-  }
-
   // Escape user inputs for security
   $blog_title = mysqli_real_escape_string($conn, $_POST['blog_title']);
   $blog_author = mysqli_real_escape_string($conn, $_POST['blog_author']);
@@ -138,10 +115,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Execute the statement
   if (mysqli_query($conn, $sql)) {
     echo "<div class='col-sm-10'>";
-    echo "<h2>Blog Post Updated Successfully.</h2>";
-    echo "<a href='edit-blog.php?id=" . $blog_id . "' class='btn btn-default'>Back to Blog Editing</a>";
+    echo "<h2>Message Updated Successfully.</h2>";
+    echo "<a href='edit-message.php?id=" . $blog_id . "' class='btn btn-default'>Back to Message Editing</a>";
     echo "&nbsp;";
-    echo "<a href='blog-list.php' class='btn btn-default'>Back to Blog List</a>";
+    echo "<a href='contact-messages.php' class='btn btn-default'>Back to Messages List</a>";
     echo "</div>";
   } else {
     echo "Error updating record: " . mysqli_error($conn);
@@ -195,21 +172,15 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Update Status</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker" name="blog_status" id="blog_status">
-                        <option value="Active" <?php if ($status == 'Active') echo 'selected'; ?>>Active</option>
-                        <option value="Inactive" <?php if ($status == 'Inactive') echo 'selected'; ?>>Inactive</option>
+                    <select class="selectpicker" name="message_status" id="message_status">
+                        <option value="Submitted" <?php if ($status == 'Submitted') echo 'selected'; ?>>Submitted</option>
+                        <option value="Processing" <?php if ($status == 'Processing') echo 'selected'; ?>>Processing</option>
+                        <option value="Completed" <?php if ($status == 'Completed') echo 'selected'; ?>>Completed</option>
                       </select>                  
                   </div>
                 </div>
 
-                <div class="form-group" hidden>
-                  <label for="blog_img_alt" class="col-sm-2 control-label form-label">Hidden</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" value="<?php echo $post['feature_image']; ?>" name="blog_img_alt" id="blog_img_alt">
-                  </div>
-                </div>
-
-                <div class="form-group">
+               <div class="form-group">
                   <label class="col-sm-2 control-label form-label"></label>
                   <div class="col-sm-10">
                     <button type="submit" class="btn btn-default">Submit</button> <a href="blog-list.php" class="btn btn-default">Back</a>
@@ -221,7 +192,7 @@ if (mysqli_num_rows($result) > 0) {
 <?php
             } else {
     // No rows were returned, so display an error message
-    echo "No Blog Data found";
+    echo "No Message Data found";
 }
 }
 ?>
