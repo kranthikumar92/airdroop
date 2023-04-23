@@ -109,7 +109,22 @@ if ($result->num_rows > 0) {
 
 
     while ($row = $result->fetch_assoc()) {
-        $statusClass = ($row['status'] == 'Resolved') ? 'green' : 'red';
+        //Status Color Settings    
+        $statusClass = '';
+switch ($row['status']) {
+    case 'Submitted':
+        $statusClass = 'blue';
+        break;
+    case 'Processing':
+        $statusClass = 'orange';
+        break;
+    case 'Resolved':
+        $statusClass = 'green';
+        break;
+    default:
+        $statusClass = '';
+        break;
+}
         echo "<tr>";
         echo "<td>" . $row["sno"] . "</td>";
         echo "<td>" . $row["reference"] . "</td>";
