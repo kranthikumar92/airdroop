@@ -177,6 +177,13 @@ if (mysqli_num_rows($result) > 0) {
                 </div>
 
                 <div class="form-group">
+                  <label class="col-sm-2 control-label form-label">Update Date</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static"><?php echo $post['update_date']; ?></p>
+                  </div>
+                </div>
+
+                <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Update Status</label>
                   <div class="col-sm-8">
                     <select class="selectpicker" name="message_status" id="message_status">
