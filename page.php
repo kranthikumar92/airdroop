@@ -89,7 +89,29 @@ include('header.php');
 include('ticker_extension.php');
 ?>
 <!--== Currency Rate Area End ==-->
-<!--Retrieve data from db (blog) -->
+
+<!--== Page Content Wrapper Start ==-->
+<div id="page-content-wrapper">
+    <div class="step-page-wrapper section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Page Content Start -->
+                    <div class="step-page-content-wrap">
+                        
+
+                        <div class="row">
+                            <div class="col-lg-2 d-none d-lg-block">
+                                <div class="step-page-adsvisement">
+                                    <a href="#"><img src="assets/img/images/advisement-vertical.jpg" alt="Advisement"
+                                                     class="img-fluid"/></a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-10">
+                                <div class="step-process-wrapper">
+                                    <!-- Content Start -->
+                                    <!--Retrieve data from db (blog) -->
 <?php
     $blog_id = $_GET['id'];
     // Establish a database connection
@@ -123,27 +145,6 @@ if (mysqli_num_rows($result) > 0) {
         mysqli_query($conn, $update_sql);
     }
     ?>
-<!--== Page Content Wrapper Start ==-->
-<div id="page-content-wrapper">
-    <div class="step-page-wrapper section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Page Content Start -->
-                    <div class="step-page-content-wrap">
-                        
-
-                        <div class="row">
-                            <div class="col-lg-2 d-none d-lg-block">
-                                <div class="step-page-adsvisement">
-                                    <a href="#"><img src="assets/img/images/advisement-vertical.jpg" alt="Advisement"
-                                                     class="img-fluid"/></a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-10">
-                                <div class="step-process-wrapper">
-                                    <!-- Content Start -->
                                     <div class="step-process-item">
 
                                         <h3 class="step-number">Terms & Conditions</h3>
@@ -152,6 +153,14 @@ if (mysqli_num_rows($result) > 0) {
                                             <p> <?php echo "$content";?> </p>
                                         </div>
                                     </div>
+                                    <?php
+} else {
+    // No rows were returned, so display an error message
+    //echo "No blog post found";
+    // No rows were returned, so redirect to index.php
+    header("Location: index.php");
+}
+?>
                                     <!-- Content End -->
 
                                 </div>
@@ -167,14 +176,7 @@ if (mysqli_num_rows($result) > 0) {
     </div>
 </div>
 <!--== Page Content Wrapper End ==-->
-<?php
-} else {
-    // No rows were returned, so display an error message
-    //echo "No blog post found";
-    // No rows were returned, so redirect to index.php
-    header("Location: index.php");
-}
-?>
+
 
 <!--== Footer Area Start ==-->
 <?php
