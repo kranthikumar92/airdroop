@@ -183,7 +183,7 @@ if (mysqli_num_rows($result) > 0) {
                <div class="form-group">
                   <label class="col-sm-2 control-label form-label"></label>
                   <div class="col-sm-10">
-                    <button type="submit" class="btn btn-default">Submit</button> <a href="blog-list.php" class="btn btn-default">Back</a>
+                    <button type="submit" class="btn btn-default">Submit</button> <a href="contact-messages.php" class="btn btn-default">Back</a>
                   </div>
                 </div>
 
