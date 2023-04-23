@@ -82,7 +82,7 @@
 
             <!--Retrieve data from db (Airdrops List) -->
     <?php
-    $message_id = $_GET['id'];
+    $req_reference = $_GET['id'];
     //$update_id = $_GET['update'];
     // Establish a database connection
     $servername = "localhost";
@@ -125,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
 
 // Query to retrieve blog post with ID 1
-$sql = "SELECT * FROM contact_form WHERE reference = $message_id";
+$sql = "SELECT * FROM new_airdrop_requests WHERE reference = $req_reference";
 $result = mysqli_query($conn, $sql);
 
 // Check if the query returned any rows
@@ -136,7 +136,7 @@ if (mysqli_num_rows($result) > 0) {
     
     ?>
 
-              <form action="edit-message.php?id=<?php echo $post['reference']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <form action="edit-airdrop-request.php?id=<?php echo $post['reference']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <div class="form-group">
                   <label for="blog_reference" class="col-sm-2 control-label form-label">Reference</label>
                   <div class="col-sm-10">
