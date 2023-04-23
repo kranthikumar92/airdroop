@@ -150,14 +150,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $projectContactTelegramID = $_POST["project_contact_telegram_id"];
     $moreInformation = $_POST["more_information"];
     $publish_date = date('Y-m-d');
+    $status = 'Submitted';
 
     // Generate unique reference number with 8 digits
     $reference = mt_rand(10000000, 99999999);
 
     // Insert form data into database
-    $sql = "INSERT INTO new_airdrop_requests (reference, coin_name, project_name, email, designation, ico_start_date, ico_end_date, total_airdrop_value, individual_reward_value, referral_bonus, coin_rate_against_usd, project_telegram_link, project_twitter_link, project_discord_link, project_contact_telegram_id, more_information, create_date, update_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO new_airdrop_requests (reference, coin_name, project_name, email, designation, ico_start_date, ico_end_date, total_airdrop_value, individual_reward_value, referral_bonus, coin_rate_against_usd, project_telegram_link, project_twitter_link, project_discord_link, project_contact_telegram_id, more_information, create_date, update_date, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($conn, $sql);
-    mysqli_stmt_bind_param($stmt, "dssssssddsdsssssss", $reference, $coinName, $projectName, $email, $designation, $icoStartDate, $icoEndDate, $totalAirdropValue, $individualRewardValue, $referralBonus, $coinRateAgainstUSD, $projectTelegramLink, $projectTwitterLink, $projectDiscordLink, $projectContactTelegramID, $moreInformation, $publish_date, $publish_date);
+    mysqli_stmt_bind_param($stmt, "dssssssddsdssssssss", $reference, $coinName, $projectName, $email, $designation, $icoStartDate, $icoEndDate, $totalAirdropValue, $individualRewardValue, $referralBonus, $coinRateAgainstUSD, $projectTelegramLink, $projectTwitterLink, $projectDiscordLink, $projectContactTelegramID, $moreInformation, $publish_date, $publish_date, $status);
     $result = mysqli_stmt_execute($stmt);
     if ($result) {
         echo "Airdrop listing submitted successfully. Reference number: " . $reference;
