@@ -150,10 +150,10 @@ include('ticker_extension.php');
                                                             <select name="designation" id="designation" class="wide">
                                                                 <option disabled selected>Designation at Project
                                                                 </option>
-                                                                <option value="founder">Founder</option>
-                                                                <option value="cofounder">Co-Founder</option>
-                                                                <option value="it-team">IT Team</option>
-                                                                <option value="manager">Manager</option>
+                                                                <option value="Founder">Founder</option>
+                                                                <option value="Co-Founder">Co-Founder</option>
+                                                                <option value="IT-Team">IT Team</option>
+                                                                <option value="Manager">Manager</option>
                                                                 
                                                             </select>
                                                         </div>
