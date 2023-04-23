@@ -112,10 +112,12 @@ include('ticker_extension.php');
                                 <div class="step-process-wrapper">
                                     <!-- Content Start -->
                                     <?php
+// Turn on error reporting
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-ob_start(); // start output buffering
+// Start output buffering
+ob_start();
 
 // Establish a database connection
 $servername = "localhost";
@@ -147,14 +149,18 @@ if ($result->num_rows > 0) {
   }
 } else {
   // Redirect to index.php page
+  ob_clean(); // Clear the output buffer
   header("Location: https://www.calixworld.com/airdroop/index.php");
   exit();
 }
 
-ob_end_flush(); // end output buffering and send the output to the browser
+// End output buffering and flush the output
+ob_end_flush();
 
+// Close the database connection
 $conn->close();
 ?>
+
 
                                     <!-- Content End -->
 
