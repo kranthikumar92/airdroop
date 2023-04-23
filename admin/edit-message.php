@@ -106,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
   // Prepare the SQL statement
-  $sql = "UPDATE contact_form SET update_date='$update_date', status='$message_status' WHERE sno='$message_id'";
+  $sql = "UPDATE contact_form SET update_date='$update_date', status='$message_status' WHERE reference='$message_id'";
 
   // Execute the statement
   if (mysqli_query($conn, $sql)) {
