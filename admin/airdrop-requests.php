@@ -109,7 +109,7 @@ if ($result->num_rows > 0) {
 
 
     while ($row = $result->fetch_assoc()) {
-        $statusClass = ($row['status'] == 'Completed') ? 'green' : 'red';
+        $statusClass = ($row['status'] == 'Listed') ? 'green' : 'red';
         echo "<tr>";
         echo "<td>" . $row["reference"] . "</td>";
         echo "<td>" . $row["coin_name"] . "</td>";
