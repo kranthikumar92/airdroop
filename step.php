@@ -116,7 +116,7 @@ include('ticker_extension.php');
                                 </div>
                             </div>
 
-                            <div class="col-lg-8">
+                            <div class="col-lg-10">
                                 <div class="step-process-wrapper">
                                     <!-- First Process Start -->
                                     <div class="step-process-item">
