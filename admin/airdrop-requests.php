@@ -134,6 +134,8 @@ switch ($row['status']) {
         echo "<td>" . $row["email"] . "</td>";
         echo "<td>" . $row["total_airdrop_value"] . "</td>";
         echo "<td>" . $row["coin_rate_against_usd"] . "</td>";
+        echo "<td>" . $row["create_date"] . "</td>";
+        echo "<td>" . $row["update_date"] . "</td>";
         echo "<td  style='color:" . $statusClass . "'>" . $row["status"] . "</td>";
         echo "<td><a href='edit-airdrop-request.php?id=" . $row["reference"] . "' class='btn btn-warning'>Edit</a></td>";
         echo "</tr>";
