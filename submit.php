@@ -200,7 +200,7 @@ include('ticker_extension.php');
                                                    <div class="col-md-6">
                                                         <div class="single-input-item">
                                                             <select name="referral_bonus" id="referral_bonus" class="wide">
-                                                                <option disabled selected>Select One
+                                                                <option disabled selected>Referral Available?
                                                                 </option>
                                                                 <option value="Yes">Yes</option>
                                                                 <option value="No">No</option>
