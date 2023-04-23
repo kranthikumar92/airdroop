@@ -124,32 +124,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   // Escape user inputs for security
-  $airdrop_title = mysqli_real_escape_string($conn, $_POST['airdrop_title']);
-  $airdrop_tagline = mysqli_real_escape_string($conn, $_POST['airdrop_tagline']);
-  $airdrop_description = mysqli_real_escape_string($conn, $_POST['airdrop_description']);
-  $step_bystep = mysqli_real_escape_string($conn, $_POST['step_by_step_guide']);
-  $whitepaper = mysqli_real_escape_string($conn, $_POST['whitepaper']);
-  $tokens = mysqli_real_escape_string($conn, $_POST['tokens']);
-  $est_value = mysqli_real_escape_string($conn, $_POST['est_value']);
-  $end_date = mysqli_real_escape_string($conn, $_POST['end_date']);
-  $referral_available = mysqli_real_escape_string($conn, $_POST['referral_available']);
-  $referral_link = mysqli_real_escape_string($conn, $_POST['referral_link']);
-  $blockchain = mysqli_real_escape_string($conn, $_POST['blockchain']);
-  $website_link = mysqli_real_escape_string($conn, $_POST['website_link']);
-  $airdrop_join_link = mysqli_real_escape_string($conn, $_POST['airdrop_join_link']);
-  $publist_date = mysqli_real_escape_string($conn, $_POST['publish_date']);
-  $status = mysqli_real_escape_string($conn, $_POST['status']);
+  $blog_title = mysqli_real_escape_string($conn, $_POST['blog_title']);
+  $blog_author = mysqli_real_escape_string($conn, $_POST['blog_author']);
+  $blog_tags = mysqli_real_escape_string($conn, $_POST['blog_tags']);
+  $blog_content = mysqli_real_escape_string($conn, $_POST['blog_content']);
+  $blog_status = mysqli_real_escape_string($conn, $_POST['blog_status']);
+  $update_date = date('Y-m-d');
+
 
   // Prepare the SQL statement
-  $sql = "UPDATE airdrop_coins SET coin_name='$airdrop_title', coin_img='$new_filename', coin_tagline='$airdrop_tagline', airdrop_description='$airdrop_description', airdrop_steps='$step_bystep', whitepaper='$whitepaper', tokens='$tokens', est_value='$est_value', end_date='$end_date', referral_available='$referral_available', referral_link='$referral_link', blockchain='$blockchain', website_link='$website_link', airdrop_join_link='$airdrop_join_link', publish_date='$publist_date', status='$status' WHERE sno='$update_id'";
+  $sql = "UPDATE blog_posts SET title='$airdrop_title', feature_image='$new_filename', content='$blog_content', author='$blog_author', updated_at='$update_date', tags='$blog_tags', status='$blog_status' WHERE id='$blog_id'";
 
   // Execute the statement
   if (mysqli_query($conn, $sql)) {
     echo "<div class='col-sm-10'>";
-    echo "<h2>Airdrop Listing Updated Successfully.</h2>";
-    echo "<a href='edit-airdrop.php?id=" . $update_id . "' class='btn btn-default'>Back to Airdrop Editing</a>";
+    echo "<h2>Blog Post Updated Successfully.</h2>";
+    echo "<a href='edit-blog.php?id=" . $blog_id . "' class='btn btn-default'>Back to Airdrop Editing</a>";
     echo "&nbsp;";
-    echo "<a href='airdrops.php' class='btn btn-default'>Back to Airdrops List</a>";
+    echo "<a href='blog-list.php' class='btn btn-default'>Back to Airdrops List</a>";
     echo "</div>";
   } else {
     echo "Error updating record: " . mysqli_error($conn);
