@@ -111,56 +111,46 @@ include('ticker_extension.php');
                             <div class="col-lg-10">
                                 <div class="step-process-wrapper">
                                     <!-- Content Start -->
-                                    <!--Retrieve data from db (blog) -->
-<?php
-    $blog_id = $_GET['id'];
-    // Establish a database connection
-    $servername = "localhost";
-    $username = "calix_web_user";
-    $password = "calixworldhhUUh383287HGSHhs";
-    $dbname = "calix_cry_world";
 
-    // Create database connection
+                                    <?php
+// Establish a database connection
+$servername = "localhost";
+$username = "calix_web_user";
+$password = "calixworldhhUUh383287HGSHhs";
+$dbname = "calix_cry_world";
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+  die("Connection failed: " . $conn->connect_error);
 }
 
-// Query to retrieve blog post with ID 1
-$sql = "SELECT * FROM blog_posts WHERE id = $blog_id";
-$result = mysqli_query($conn, $sql);
+// Retrieve data from info_pages table based on slug
+$page_slug = $_GET['slug'];
+$sql = "SELECT * FROM info_pages WHERE slug = '$page_slug'";
+$result = $conn->query($sql);
 
-// Check if the query returned any rows
-if (mysqli_num_rows($result) > 0) {
-    // Fetch the first row as an associative array
-    $post = mysqli_fetch_assoc($result);
-    $likes = $post['likes'];
-    // Check if the user clicked the like button
-    if (isset($_POST['like'])) {
-        $likes++;
-        // Update the likes count in the database
-        $update_sql = "UPDATE blog_posts SET likes = $likes WHERE id = $blog_id";
-        mysqli_query($conn, $update_sql);
-    }
-    ?>
-                                    <div class="step-process-item">
-
-                                        <h3 class="step-number">Terms & Conditions</h3>
-
-                                        <div class="registration-form airdrop-form">
-                                            <p> <?php echo "$content";?> </p>
-                                        </div>
-                                    </div>
-                                    <?php
+if ($result->num_rows > 0) {
+  // Output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "<div class='step-process-item'>";
+    echo "<h3 class='step-number'>" . $row["title"] . "</h3>";
+    echo "<div class='registration-form airdrop-form'>";
+    echo "<p>" . $row["content"] . "</p>";
+    echo "</div>";
+    echo "</div>";
+  }
 } else {
-    // No rows were returned, so display an error message
-    //echo "No blog post found";
-    // No rows were returned, so redirect to index.php
-    header("Location: index.php");
+  // Redirect to index.php page
+  header("Location: index.php");
+  exit();
 }
+
+$conn->close();
 ?>
+
+
                                     <!-- Content End -->
 
                                 </div>
