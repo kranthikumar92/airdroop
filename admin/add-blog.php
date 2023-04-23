@@ -100,51 +100,49 @@ if ($conn->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-  if (empty($_FILES['file']['name'])) {
     // Define the directory where the images will be stored
-    $target_dir = "../blog_imgs/";
-    
-  
-    // Get the name of the uploaded file
-    $original_filename = basename($_FILES["file"]["name"]);
-    $file_extension = pathinfo($original_filename, PATHINFO_EXTENSION);
-    $new_filename = uniqid() . "." . $file_extension; // Generate a unique filename
-    $target_file = $target_dir . $new_filename;
+$target_dir = "../blog_imgs/";
+$publist_date = date('Y-m-d');
 
-    // Move the uploaded file to the target directory
-    if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
-      // File uploaded successfully
-    } else {
-      // Error uploading file
-      echo "Error uploading image.";
-      exit;
-    }
-  }
+// Get the name of the uploaded file
+$original_filename = basename($_FILES["file"]["name"]);
+$file_extension = pathinfo($original_filename, PATHINFO_EXTENSION);
+$new_filename = uniqid() . "." . $file_extension; // Generate a unique filename
+$target_file = $target_dir . $new_filename;
 
-  // Escape user inputs for security
-  $blog_title = mysqli_real_escape_string($conn, $_POST['blog_title']);
-  $blog_author = mysqli_real_escape_string($conn, $_POST['blog_author']);
-  $blog_tags = mysqli_real_escape_string($conn, $_POST['blog_tags']);
-  $blog_content = mysqli_real_escape_string($conn, $_POST['blog_content']);
-  $likes = '0';
-  $status = 'active';
-  $publish_date = date('Y-m-d');
+// Escape user inputs for security
+$blog_title = mysqli_real_escape_string($conn, $_POST['blog_title']);
+$blog_author = mysqli_real_escape_string($conn, $_POST['blog_author']);
+$blog_tags = mysqli_real_escape_string($conn, $_POST['blog_tags']);
+$blog_content = mysqli_real_escape_string($conn, $_POST['blog_content']);
+$likes = '0';
+$status = 'active';
+//$publish_date = date('Y-m-d');
 
-  // Prepare the SQL statement
-  $sql = "INSERT INTO blog_posts (title, feature_image, content, author, created_at, updated_at, tags, likes, status) 
+// Move the uploaded file to the target directory
+if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
+
+    // Prepare the SQL statement
+    $sql = "INSERT INTO blog_posts (title, feature_image, content, author, created_at, updated_at, tags, likes, status) 
         VALUES ('".$blog_title."', '".$new_filename."', '".$blog_content."', '".$blog_author."', '".$publish_date."', '".$publish_date."', '".$blog_tags."', '".$likes."', '".$status."')";
 
+    // Execute the statement
+    if (mysqli_query($conn, $sql)) {
+        echo "<div class='col-sm-10'>";
+        echo "<h2>Blog Post Added Successfully.</h2>";
+        echo "<a href='blog-list.php' class='btn btn-default'>Back to Blog Post List</a>";
+        echo "</div>";
+    } else {
+        echo "" . mysqli_error($conn);
+    }
 
-  // Execute the statement
-  if (mysqli_query($conn, $sql)) {
-    echo "<div class='col-sm-10'>";
-    echo "<h2>Blog Post Added Successfully.</h2>";
-    echo "<a href='blog-list.php' class='btn btn-default'>Back to Blog Post List</a>";
-    echo "</div>";
-  } else {
-    echo "Error updating record: " . mysqli_error($conn);
-  }
+} else {
 
+    echo "Error uploading image.";
+}
+
+// Close the connection
+mysqli_close($conn);
 
 
 } else {
