@@ -102,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Define the directory where the images will be stored
 $target_dir = "../blog_imgs/";
-$publist_date = date('Y-m-d');
+//$publist_date = date('Y-m-d');
 
 // Get the name of the uploaded file
 $original_filename = basename($_FILES["file"]["name"]);
@@ -117,7 +117,7 @@ $blog_tags = mysqli_real_escape_string($conn, $_POST['blog_tags']);
 $blog_content = mysqli_real_escape_string($conn, $_POST['blog_content']);
 $likes = '0';
 $status = 'active';
-//$publish_date = date('Y-m-d');
+$publish_date = date('Y-m-d');
 
 // Move the uploaded file to the target directory
 if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
