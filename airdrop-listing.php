@@ -205,7 +205,7 @@ $days = $dateInterval->days;
     </div>
     <div class="airdrop-pricing-area">
         <div class="price-unit ">
-            <h3 class="price-currency d-inline-block align-middle"><?php echo $row['est_value']; ?></h3>
+            <h3 class="price-currency d-inline-block align-middle">$<?php echo $row['est_value']; ?></h3>
            
         </div>
         <div class="price-name">Reward</div>
