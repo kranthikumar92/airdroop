@@ -144,8 +144,12 @@ if ($result->num_rows > 0) {
     echo "</div>";
   }
 } else {
-  // Redirect to index.php page
-  header("Location: index.php");
+    // Redirect to index.php page
+    ob_start();
+    // Output generation here
+    header("Location: https://www.calixworld.com/airdroop/index.php");
+    ob_end_flush();
+
   exit();
 }
 
