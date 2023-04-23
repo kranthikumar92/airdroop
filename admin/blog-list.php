@@ -115,7 +115,7 @@ if ($result->num_rows > 0) {
         echo "<td>" . $row["title"] . "</td>";
         echo "<td>" . $row["author"] . "</td>";
         echo "<td>" . $row["created_at"] . "</td>";
-        echo "<td>" . $row["update_date"] . "</td>";
+        echo "<td>" . $row["updated_at"] . "</td>";
         echo "<td  style='color:" . $statusClass . "'>" . $row["status"] . "</td>";
         echo "<td><a href='edit-blog.php?id=" . $row["id"] . "' class='btn btn-warning'>Edit</a> <a href='delete-blog.php?id=" . $row["id"] . "' class='btn btn-danger'>Delete</a></td>";
         echo "</tr>";

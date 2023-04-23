@@ -129,11 +129,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $likes = '0';
   $status = 'active';
   $publish_date = date('Y-m-d');
-  $update_date = date('Y-m-d');
 
   // Prepare the SQL statement
   $sql = "INSERT INTO blog_posts (title, feature_image, content, author, created_at, updated_at, tags, likes, status) 
-        VALUES ('".$blog_title."', '".$new_filename."', '".$blog_content."', '".$blog_author."', '".$publish_date."', '".$update_date."', '".$blog_tags."', '".$likes."', '".$status."')";
+        VALUES ('".$blog_title."', '".$new_filename."', '".$blog_content."', '".$blog_author."', '".$publish_date."', '".$publish_date."', '".$blog_tags."', '".$likes."', '".$status."')";
 
 
   // Execute the statement
