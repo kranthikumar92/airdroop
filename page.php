@@ -96,7 +96,7 @@ include('ticker_extension.php');
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <!-- Step Page Content Start -->
+                    <!-- Page Content Start -->
                     <div class="step-page-content-wrap">
                         
 
@@ -127,7 +127,7 @@ include('ticker_extension.php');
                             
                         </div>
                     </div>
-                    <!-- Step Page Content End -->
+                    <!-- Page Content End -->
                 </div>
             </div>
         </div>
