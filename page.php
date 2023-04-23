@@ -145,7 +145,7 @@ if ($result->num_rows > 0) {
     echo "<div class='step-process-item'>";
     echo "<h3 class='step-number'>Error 404</h3>";
     echo "<div class='registration-form airdrop-form'>";
-    echo "<p>Error 404 not found. Please <a href='index.php'>click here</a> to go back to the homepage.</p>";
+    echo "<p><strong>Error 404 Page Not Found.</strong> Please <a href='index.php'>click here</a> to go back to the homepage.</p>";
     echo "</div>";
     echo "</div>";
 }
