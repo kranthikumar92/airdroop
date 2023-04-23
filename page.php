@@ -138,7 +138,7 @@ if ($result->num_rows > 0) {
   // Output data of each row
   while($row = $result->fetch_assoc()) {
     echo "<div class='step-process-item'>";
-    echo "<h3 class='step-number'>" . $row["title"] . "</h3>";
+    echo "<h3 class='step-number'>" . $row["page_title"] . "</h3>";
     echo "<div class='registration-form airdrop-form'>";
     echo "<p>" . $row["content"] . "</p>";
     echo "</div>";
