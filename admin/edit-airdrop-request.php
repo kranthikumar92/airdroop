@@ -215,6 +215,48 @@ if (mysqli_num_rows($result) > 0) {
                 </div>
 
                 <div class="form-group">
+                  <label class="col-sm-2 control-label form-label">Project Telegram Link</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static">$<?php echo $post['project_telegram_link']; ?></p>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label form-label">Project Twitter Link</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static">$<?php echo $post['project_twitter_link']; ?></p>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label form-label">Project Discord Link</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static">$<?php echo $post['project_discord_link']; ?></p>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label form-label">Contact Telegram Link</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static">$<?php echo $post['project_contact_telegram_id']; ?></p>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label form-label">Request Submit Date</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static">$<?php echo $post['create_date']; ?></p>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label form-label">Update Date</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static">$<?php echo $post['update_date']; ?></p>
+                  </div>
+                </div>
+
+                <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Description</label>
                   <div class="col-sm-10">
                     <p class="form-control-static"><?php echo $post['more_information']; ?></p>
