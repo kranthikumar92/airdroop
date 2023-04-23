@@ -128,8 +128,6 @@ switch ($row['status']) {
         $statusClass = '';
         break;
 }
-
-
         echo "<tr>";
         echo "<td>" . $row["reference"] . "</td>";
         echo "<td>" . $row["coin_name"] . "</td>";
