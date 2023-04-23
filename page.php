@@ -79,7 +79,7 @@
 <![endif]-->
 
 <?php
-require('header.php');
+include('header.php');
 ?>
 
 <!--== Header Area End ==-->
@@ -134,24 +134,28 @@ $sql = "SELECT * FROM info_pages WHERE slug = '$page_slug' AND status = 'active'
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-  // Output data of each row
-  while($row = $result->fetch_assoc()) {
-    echo "<div class='step-process-item'>";
-    echo "<h3 class='step-number'>" . $row["page_title"] . "</h3>";
-    echo "<div class='registration-form airdrop-form'>";
-    echo "<p>" . $row["content"] . "</p>";
-    echo "</div>";
-    echo "</div>";
-  }
-} else {
-    // Redirect to index.php page
+    // Output data of each row
+    while($row = $result->fetch_assoc()) {
+      echo "<div class='step-process-item'>";
+      echo "<h3 class='step-number'>" . $row["page_title"] . "</h3>";
+      echo "<div class='registration-form airdrop-form'>";
+      echo "<p>" . $row["content"] . "</p>";
+      echo "</div>";
+      echo "</div>";
+    }
+  } else {
+    // Start output buffering
     ob_start();
+    
     // Output generation here
     header("Location: https://www.calixworld.com/airdroop/index.php");
+    
+    // End output buffering and send output to browser
     ob_end_flush();
-
-  exit();
-}
+  
+    exit();
+  }
+  
 
 $conn->close();
 ?>
