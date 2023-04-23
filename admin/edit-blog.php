@@ -163,7 +163,7 @@ if (mysqli_num_rows($result) > 0) {
     
     ?>
 
-              <form action="edit-airdrop.php?id=<?php echo $post['id']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <form action="edit-blog.php?id=<?php echo $post['id']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <div class="form-group">
                   <label for="blog_title" class="col-sm-2 control-label form-label">Blog Post Title</label>
                   <div class="col-sm-10">
