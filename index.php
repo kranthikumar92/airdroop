@@ -176,7 +176,7 @@ $statusClass = ($row['status'] == 'active') ? 'running' : 'popular';
                     <div class="airdrop-info-wrap">
                         <h2 class="h4"><a href="single-airdrop.php?id='.$sno.'">'.$name.'</a></h2>
                         <p>'.$tagline_sub.'</p>
-                        <p class="giveway-text">Giveaway Worth '.$giveaway_worth.'</p>
+                        <p class="giveway-text">Giveaway Worth $'.$giveaway_worth.'</p>
                     </div>
                 </div>
             </div>
