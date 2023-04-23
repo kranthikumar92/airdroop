@@ -101,8 +101,8 @@ $result = $conn->query($sql);
 // Create a table with the retrieved data
 if ($result->num_rows > 0) {
     echo "<table id='airdrop-listing' class='table display'>";
-    echo "<thead><tr><th>Reference</th><th>Coin Name</th><th>Email</th><th>Airdrop Value</th><th>Coin Price</th><th>Status</th><th>Action</th></tr></thead>";
-    echo "<tfoot><tr><th>Reference</th><th>Coin Name</th><th>Email</th><th>Airdrop Value</th><th>Coin Price</th><th>Status</th><th>Action</th></tr></tfoot>";
+    echo "<thead><tr><th>Reference</th><th>Coin Name</th><th>Email</th><th>Airdrop Value</th><th>Coin Price</th><th>Submit Date</th><th>Update Date</th><th>Status</th><th>Action</th></tr></thead>";
+    echo "<tfoot><tr><th>Reference</th><th>Coin Name</th><th>Email</th><th>Airdrop Value</th><th>Coin Price</th><th>Submit Date</th><th>Update Date</th><th>Status</th><th>Action</th></tr></tfoot>";
     echo "<tbody>";
 
 // Determine the CSS class for status
