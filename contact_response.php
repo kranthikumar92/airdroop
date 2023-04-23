@@ -138,7 +138,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $socialLink = $_POST["social_link"];
     $descriptionContact = $_POST["description_contact"];
     $publishDate = date("Y-m-d");
-    $status_cur = "submitted";
+    $status_cur = "Submitted";
 
     // Generate unique reference number with 8 digits
     $reference = mt_rand(10000000, 99999999);
