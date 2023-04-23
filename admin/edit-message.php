@@ -151,21 +151,21 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="form-group">
                   <label for="full_name" class="col-sm-2 control-label form-label">Full Name</label>
                   <div class="col-sm-10">
-                    <p class="form-control-static">#<?php echo $post['full_name']; ?></p>
+                    <p class="form-control-static"><?php echo $post['full_name']; ?></p>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Email Address</label>
                   <div class="col-sm-10">
-                     <p class="form-control-static">#<?php echo $post['email']; ?></p>
+                     <p class="form-control-static"><?php echo $post['email']; ?></p>
                   </div>
                 </div>
 
                <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Social Link</label>
                   <div class="col-sm-10">
-                    <p class="form-control-static">#<?php echo $post['social_link']; ?></p>
+                    <p class="form-control-static"><?php echo $post['social_link']; ?></p>
                   </div>
                 </div> 
 
