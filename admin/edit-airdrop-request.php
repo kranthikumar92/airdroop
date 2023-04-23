@@ -101,20 +101,20 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // Escape user inputs for security
-  $message_status = mysqli_real_escape_string($conn, $_POST['message_status']);
+  $request_status = mysqli_real_escape_string($conn, $_POST['request_status']);
   $update_date = date('Y-m-d');
 
 
   // Prepare the SQL statement
-  $sql = "UPDATE contact_form SET update_date='$update_date', status='$message_status' WHERE reference='$message_id'";
+  $sql = "UPDATE new_airdrop_requests SET update_date='$update_date', status='$request_status' WHERE reference='$req_reference'";
 
   // Execute the statement
   if (mysqli_query($conn, $sql)) {
     echo "<div class='col-sm-10'>";
-    echo "<h2>Message Updated Successfully.</h2>";
-    echo "<a href='edit-message.php?id=" . $message_id . "' class='btn btn-default'>Back to Message Editing</a>";
+    echo "<h2>Airdrop Request Status Updated Successfully.</h2>";
+    echo "<a href='edit-airdrop-request.php?id=" . $req_reference . "' class='btn btn-default'>Back to Message Editing</a>";
     echo "&nbsp;";
-    echo "<a href='contact-messages.php' class='btn btn-default'>Back to Messages List</a>";
+    echo "<a href='airdrop-requests.php' class='btn btn-default'>Back to Airdrop Request List</a>";
     echo "</div>";
   } else {
     echo "Error updating record: " . mysqli_error($conn);
