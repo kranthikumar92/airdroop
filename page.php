@@ -79,7 +79,7 @@
 <![endif]-->
 
 <?php
-include('header.php');
+//include('header.php');
 ?>
 
 <!--== Header Area End ==-->
