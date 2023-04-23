@@ -152,7 +152,7 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="form-group">
                   <label for="web_link" class="col-sm-2 control-label form-label">Airdrop Title</label>
                   <div class="col-sm-10">
-                    <p class="form-control-static">#<?php echo $post_name['coin_name']; ?></p>
+                    <p class="form-control-static"><?php echo $post_name['coin_name']; ?></p>
                   </div>
                 </div>
 
