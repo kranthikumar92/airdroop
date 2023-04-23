@@ -89,7 +89,40 @@ include('header.php');
 include('ticker_extension.php');
 ?>
 <!--== Currency Rate Area End ==-->
+<!--Retrieve data from db (blog) -->
+<?php
+    $blog_id = $_GET['id'];
+    // Establish a database connection
+    $servername = "localhost";
+    $username = "calix_web_user";
+    $password = "calixworldhhUUh383287HGSHhs";
+    $dbname = "calix_cry_world";
 
+    // Create database connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Query to retrieve blog post with ID 1
+$sql = "SELECT * FROM blog_posts WHERE id = $blog_id";
+$result = mysqli_query($conn, $sql);
+
+// Check if the query returned any rows
+if (mysqli_num_rows($result) > 0) {
+    // Fetch the first row as an associative array
+    $post = mysqli_fetch_assoc($result);
+    $likes = $post['likes'];
+    // Check if the user clicked the like button
+    if (isset($_POST['like'])) {
+        $likes++;
+        // Update the likes count in the database
+        $update_sql = "UPDATE blog_posts SET likes = $likes WHERE id = $blog_id";
+        mysqli_query($conn, $update_sql);
+    }
+    ?>
 <!--== Page Content Wrapper Start ==-->
 <div id="page-content-wrapper">
     <div class="step-page-wrapper section-padding">
@@ -134,7 +167,14 @@ include('ticker_extension.php');
     </div>
 </div>
 <!--== Page Content Wrapper End ==-->
-
+<?php
+} else {
+    // No rows were returned, so display an error message
+    //echo "No blog post found";
+    // No rows were returned, so redirect to index.php
+    header("Location: index.php");
+}
+?>
 
 <!--== Footer Area Start ==-->
 <?php
