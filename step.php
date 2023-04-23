@@ -113,7 +113,7 @@ include('ticker_extension.php');
                                     <!-- First Process Start -->
                                     <div class="step-process-item">
 
-                                        <h3 class="step-number">1st Step</h3>
+                                        <h3 class="step-number">Terms & Conditions</h3>
 
                                         <div class="registration-form airdrop-form">
                                             <h2 class="h3 step-title">Registration Form</h2>
