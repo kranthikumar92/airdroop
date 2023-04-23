@@ -14,7 +14,7 @@
   <li><a href="#"><span class="icon color9"><i class="fa fa-th"></i></span>Blog<span class="caret"></span></a>
     <ul>
       <li><a href="blog-list.php">Posts List</a></li>
-      <li><a href="#">Add New Post</a></li>
+      <li><a href="add-blog.php">Add New Post</a></li>
     </ul>
   </li>
   <li><a href="#"><span class="icon color10"><i class="fa fa-check-square-o"></i></span>Information<span class="caret"></span></a>
