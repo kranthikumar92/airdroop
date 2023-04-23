@@ -189,14 +189,14 @@ $days = $dateInterval->days;
 <div class="single-listing-airdrop d-block d-sm-flex">
     <div class="airdrop-details-area d-flex">
         <figure class="airdrop-currency-thumb">
-            <a href="single-airdrop.php?id=<?php echo $row['sno']; ?>"><img src="airdrop_imgs/<?php echo $row['coin_img']; ?>" alt="Airdrop"/></a>
+            <a href="single-airdrop.php?id=<?php echo $row['sno']; ?>"><img src="airdrop_imgs/<?php echo $row['coin_img']; ?>" alt="<?php echo $row['coin_name']; ?>"/></a>
         </figure>
         <div class="airdrop-currency-info">
             <h2 class="h6"><a href="single-airdrop.php?id=<?php echo $row['sno']; ?>"><?php echo $row['coin_name']; ?></a></h2>
             <p class="offer-time"><?php echo $days; ?> days</p>
         </div>
     </div>
-    <div class="airdrop-social-icons d-sm-none d-md-block" style="text-align: right;">
+    <div class="airdrop-social-icons d-sm-none d-md-block" style="text-align: right">
         <?php if ($row_social['website_link']): ?><a href="<?php echo $row_social['website_link']; ?>" target="_blank"><i class="fa fa-chrome"></i></a><?php endif; ?>
         <?php if ($row_social['facebook_link']): ?><a href="<?php echo $row_social['facebook_link']; ?>" target="_blank"><i class="fa fa-facebook-official"></i></a><?php endif; ?>
         <?php if ($row_social['twitter_link']): ?><a href="<?php echo $row_social['twitter_link']; ?>" target="_blank"><i class="fa fa-twitter"></i></a><?php endif; ?>
