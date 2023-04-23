@@ -269,8 +269,8 @@ if (mysqli_num_rows($result) > 0) {
                     <select class="selectpicker" name="request_status" id="request_status">
                         <option value="Submitted" <?php if ($status == 'Submitted') echo 'selected'; ?>>Submitted</option>
                         <option value="Processing" <?php if ($status == 'Processing') echo 'selected'; ?>>Processing</option>
-                        <option value="Rejected" <?php if ($status == 'Rejected') echo 'Rejected'; ?>>Resolved</option>
-                        <option value="Listed" <?php if ($status == 'Listed') echo 'Listed'; ?>>Resolved</option>
+                        <option value="Rejected" <?php if ($status == 'Rejected') echo 'selected'; ?>>Rejected</option>
+                        <option value="Listed" <?php if ($status == 'Listed') echo 'selected'; ?>>Listed</option>
                       </select>                  
                   </div>
                 </div>
