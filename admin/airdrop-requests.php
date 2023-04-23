@@ -132,7 +132,7 @@ switch ($row['status']) {
         echo "<td>" . $row["reference"] . "</td>";
         echo "<td>" . $row["coin_name"] . "</td>";
         echo "<td>" . $row["email"] . "</td>";
-        echo "<td>" . $row["total_airdrop_value"] . "</td>";
+        echo "<td>"$ . $row["total_airdrop_value"] . "</td>";
         echo "<td>" . $row["coin_rate_against_usd"] . "</td>";
         echo "<td>" . $row["create_date"] . "</td>";
         echo "<td>" . $row["update_date"] . "</td>";
