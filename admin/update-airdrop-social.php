@@ -150,7 +150,7 @@ if (mysqli_num_rows($result) > 0) {
     ?>
               <form action="update-airdrop-social.php?id=<?php echo $airdrop_sno_id; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <div class="form-group">
-                  <label for="web_link" class="col-sm-2 control-label form-label">Airdrop Title</label>
+                  <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
                   <div class="col-sm-10">
                     <p class="form-control-static"><?php echo $post_name['coin_name']; ?></p>
                   </div>
