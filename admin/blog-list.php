@@ -109,7 +109,7 @@ if ($result->num_rows > 0) {
 
 
     while ($row = $result->fetch_assoc()) {
-        $statusClass = ($row['status'] == 'active') ? 'green' : 'red';
+        $statusClass = ($row['status'] == 'Active') ? 'green' : 'red';
         echo "<tr>";
         echo "<td>" . $row["id"] . "</td>";
         echo "<td>" . $row["title"] . "</td>";
