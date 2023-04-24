@@ -30,8 +30,8 @@
 
 <ul class="sidebar-panel nav">
   <li class="sidetitle">MORE</li>
-  <li><a href="#"><span class="icon color15"><i class="fa fa-columns"></i></span>Profile</a></li>
-  <li><a href="users.php"><span class="icon color7"><i class="fa fa-map-marker"></i></span>Users</a></li>
+  <li><a href="users.php"><span class="icon color15"><i class="fa fa-columns"></i></span>Users</a></li>
+  <li><a href="add-user.php"><span class="icon color7"><i class="fa fa-map-marker"></i></span>Add User</a></li>
 </ul>
 
 <div class="sidebar-plan">
