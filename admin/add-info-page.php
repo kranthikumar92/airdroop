@@ -117,8 +117,8 @@ $publish_date = date('Y-m-d');
     // Execute the statement
     if (mysqli_query($conn, $sql)) {
         echo "<div class='col-sm-10'>";
-        echo "<h2>Blog Post Added Successfully.</h2>";
-        echo "<a href='blog-list.php' class='btn btn-default'>Back to Blog Post List</a>";
+        echo "<h2>New Page Added Successfully.</h2>";
+        echo "<a href='info-pages.php' class='btn btn-default'>Back to Info Pages List</a>";
         echo "</div>";
     } else {
         echo "" . mysqli_error($conn);
