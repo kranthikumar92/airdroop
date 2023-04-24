@@ -108,7 +108,7 @@ $user_status = mysqli_real_escape_string($conn, $_POST['user_status']);
 
 
   // Prepare the SQL statement
-  $sql = "UPDATE info_pages SET username='$username', full_name='$full_name', password='$password', status='$user_status' WHERE sno='$user_id'";
+  $sql = "UPDATE users SET username='$username', full_name='$full_name', password='$password', status='$user_status' WHERE sno='$user_id'";
 
   // Execute the statement
   if (mysqli_query($conn, $sql)) {
