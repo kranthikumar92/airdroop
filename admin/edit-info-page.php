@@ -142,7 +142,7 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="form-group">
                   <label for="page_title" class="col-sm-2 control-label form-label">Page Title</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="page_title" id="page_title">
+                    <input type="text" class="form-control" value="<?php echo $post['page_title']; ?>" name="page_title" id="page_title">
                     <span id="helpBlock" class="help-block">Write Page Title upto 60 letters.</span>
                   </div>
                 </div>
@@ -150,7 +150,7 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="form-group">
                   <label for="page_slug" class="col-sm-2 control-label form-label">Page Slug</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="page_slug" id="page_slug">
+                    <input type="text" class="form-control" value= "<?php echo $post['slug']; ?>" name="page_slug" id="page_slug">
                     <span id="helpBlock" class="help-block">Slug is used for url, use "-" between words.</span>
                   </div>
                 </div>
@@ -159,7 +159,7 @@ if (mysqli_num_rows($result) > 0) {
                   <label class="col-sm-2 control-label form-label">Blog Content</label>
                   <div class="col-sm-10">
                     <div class="panel-body">
-                      <textarea name="page_content" id="summernote">Write Page Content Here.</textarea>
+                      <textarea name="page_content" id="summernote"><?php echo $post['content']; ?></textarea>
                     </div>
                   </div>
                 </div>
