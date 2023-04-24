@@ -123,7 +123,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // Escape user inputs for security
   $ads_location = mysqli_real_escape_string($conn, $_POST['ads_location']);
-  $banner_title = mysqli_real_escape_string($conn, $_POST['banner_title']);
+  $banner_title = mysqli_real_escape_string($conn, $_POST['summernote']);
   $banner_link = mysqli_real_escape_string($conn, $_POST['banner_link']);
   $ads_status = mysqli_real_escape_string($conn, $_POST['ads_status']);
 
@@ -166,10 +166,11 @@ if (mysqli_num_rows($result) > 0) {
                 </div>
               
                 <div class="form-group">
-                  <label for="banner_title" class="col-sm-2 control-label form-label">Banner Title</label>
+                  <label class="col-sm-2 control-label form-label">Banner Title</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" value="<?php echo $post['banner_title']; ?>" name="banner_title" id="banner_title">
-                    <span id="helpBlock" class="help-block">Write Banner Title upto 60 letters which will be used for alt text.</span>
+                    <div class="panel-body">
+                      <textarea name="banner_title" id="summernote"><?php echo $post['banner_title']; ?></textarea>
+                    </div>
                   </div>
                 </div>
 
