@@ -36,7 +36,12 @@
 
 <ul class="sidebar-panel nav">
   <li class="sidetitle">MORE</li>
-  <li><a href="users.php"><span class="icon color15"><i class="fa fa-users"></i></span>Users</a></li>
+  <li><a href="#"><span class="icon color15"><i class="fa fa-users"></i></span>Users<span class="caret"></span></a>
+  <ul>
+      <li><a href="users.php">Users</a></li>
+      <li><a href="add-user.php">Add User</a></li>
+    </ul>
+  </li>
   <li><a href="add-user.php"><span class="icon color7"><i class="fa fa-user"></i></span>Add User</a></li>
 </ul>
 
