@@ -122,14 +122,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   // Escape user inputs for security
-  $ads_location = mysqli_real_escape_string($conn, $_POST['ads_location']);
-  $banner_title = mysqli_real_escape_string($conn, $_POST['summernote']);
+  $banner_title = mysqli_real_escape_string($conn, $_POST['banner_title']);
   $banner_link = mysqli_real_escape_string($conn, $_POST['banner_link']);
   $ads_status = mysqli_real_escape_string($conn, $_POST['ads_status']);
 
 
   // Prepare the SQL statement
-  $sql = "UPDATE preheader_ads SET ads_location='$ads_location', banner_title='$banner_title', banner_img='$new_filename', banner_link='$banner_link', status='$ads_status' WHERE sno='1'";
+  $sql = "UPDATE preheader_ads SET banner_title='$banner_title', banner_img='$new_filename', banner_link='$banner_link', status='$ads_status' WHERE sno='1'";
 
   // Execute the statement
   if (mysqli_query($conn, $sql)) {
