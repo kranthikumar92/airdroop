@@ -268,10 +268,12 @@ include('ticker_extension.php');
                             </div>
 
                             <div class="col-lg-2 d-none d-lg-block">
-                                <div class="step-page -adsvisement">
-                                    <a href="#"><img src="assets/img/images/advisement-vertical.jpg" alt="Advisement"
-                                                     class="img-fluid"/></a>
-                                </div>
+                                <!-- Advertise Airdrop Desc Start -->
+                                <?php
+                                    include ('advertise_req_contact_right.php');
+
+                                ?>
+                                <!-- Advertise Airdrop Desc End -->
                             </div>
                         </div>
                     </div>
