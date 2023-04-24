@@ -57,10 +57,10 @@
 
   <!-- Start Page Header -->
   <div class="page-header">
-    <h1 class="title">Add Blog Post</h1>
+    <h1 class="title">Add New User</h1>
       <ol class="breadcrumb">
-        <li><a href="blog-list.php">Airdrop</a></li>
-        <li class="active">Add New Post</li>
+        <li><a href="users.php">Users</a></li>
+        <li class="active">Add User</li>
       </ol>
 
   </div>
