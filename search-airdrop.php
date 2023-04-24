@@ -203,7 +203,6 @@ $days = $dateInterval->days;
         <?php if ($row_social['website_link']): ?><a href="<?php echo $row_social['website_link']; ?>" target="_blank"><i class="fa fa-chrome"></i></a><?php endif; ?>
         <?php if ($row_social['facebook_link']): ?><a href="<?php echo $row_social['facebook_link']; ?>" target="_blank"><i class="fa fa-facebook-official"></i></a><?php endif; ?>
         <?php if ($row_social['twitter_link']): ?><a href="<?php echo $row_social['twitter_link']; ?>" target="_blank"><i class="fa fa-twitter"></i></a><?php endif; ?>
-        <?php if ($row_social['github_link']): ?><a href="<?php echo $row_social['github_link']; ?>" target="_blank"><i class="fa fa-github"></i></a><?php endif; ?>
         <?php if ($row_social['telegram_link']): ?><a href="<?php echo $row_social['telegram_link']; ?>" target="_blank"><i class="fa fa-telegram"></i></a><?php endif; ?>
     </div>
     <div class="airdrop-pricing-area">
