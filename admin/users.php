@@ -112,7 +112,7 @@ if ($result->num_rows > 0) {
         $statusClass = ($row['status'] == 'active') ? 'green' : 'red';
         echo "<tr>";
         echo "<td>" . $row["sno"] . "</td>";
-        echo "<td>" . $row["user_name"] . "</td>";
+        echo "<td>" . $row["username"] . "</td>";
         echo "<td>" . $row["full_name"] . "</td>";
         echo "<td>" . $row["register_date"] . "</td>";
         echo "<td  style='color:" . $statusClass . "'>" . $row["status"] . "</td>";
