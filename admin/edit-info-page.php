@@ -114,7 +114,7 @@ $page_status = mysqli_real_escape_string($conn, $_POST['page_status']);
   if (mysqli_query($conn, $sql)) {
     echo "<div class='col-sm-10'>";
     echo "<h2>Page Details Updated Successfully.</h2>";
-    echo "<a href='edit-info-page.php?id=" . $page_id . "' class='btn btn-default'>Back to Message Editing</a>";
+    echo "<a href='edit-info-page.php?id=" . $page_id . "' class='btn btn-default'>Back to Page Editing</a>";
     echo "&nbsp;";
     echo "<a href='info-pages.php' class='btn btn-default'>Back to Info Pages List</a>";
     echo "</div>";
