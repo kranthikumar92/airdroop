@@ -174,6 +174,7 @@ $offset = ($page - 1) * $items_per_page;
     }
     ?>
     
+    a
                 <!-- Single Latest Blog End -->
 
                 

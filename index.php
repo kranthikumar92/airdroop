@@ -243,57 +243,76 @@ $total_active = $row_total_rows['total_active'];
         <div class="latest-news-content">
             <div class="row">
                 <!-- Single Latest Blog Start -->
-                <div class="col-lg-4 col-md-6">
-                    <article class="single-latest-news-wrap">
-                        <figure class="news-thumbnail">
-                            <a href="single-news.php"><img src="assets/img/images/latest-news-1.jpg" alt="News"
-                                             class="img-fluid"/></a>
-                        </figure>
-                        <div class="news-content">
-                            <a href="single-news.php" class="post-time">2 hour Ago</a>
-                            <h2 class="h5"><a href="single-news.php">BitCoin Anaounce 50k Free Coin</a></h2>
-                            <p>This is a big project of our company, we are happy to completed this type projec which
-                                are get world famous award</p>
-                            <a href="single-news.php" class="btn btn-gradiant">More</a>
-                        </div>
-                    </article>
-                </div>
-                <!-- Single Latest Blog End -->
+                <?php
+// Retrieve the 'page' and 'id' parameter from the URL
+$page = isset($_GET['page']) ? $_GET['page'] : 1;
 
-                <!-- Single Latest Blog Start -->
-                <div class="col-lg-4 col-md-6">
-                    <article class="single-latest-news-wrap">
-                        <figure class="news-thumbnail">
-                            <a href="single-news.php"><img src="assets/img/images/latest-news-2.jpg" alt="News"
-                                             class="img-fluid"/></a>
-                        </figure>
-                        <div class="news-content">
-                            <a href="single-news.php" class="post-time">3 hour Ago</a>
-                            <h2 class="h5"><a href="single-news.php">BitCoin Anaounce 50k Free Coin</a></h2>
-                            <p>This is a big project of our company, we are happy to completed this type projec which
-                                are get world famous award</p>
-                            <a href="single-news.php" class="btn btn-gradiant">More</a>
-                        </div>
-                    </article>
-                </div>
-                <!-- Single Latest Blog End -->
+// Set the number of items per page
+$items_per_page = 3;
 
+// Database connection parameters
+$servername = "localhost";
+$username = "calix_web_user";
+$password = "calixworldhhUUh383287HGSHhs";
+$dbname = "calix_cry_world";
+
+// Create database connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch total number of rows in the table
+$sql_total_rows = "SELECT COUNT(*) as total_rows FROM blog_posts WHERE status = 'active'";
+$result_total_rows = mysqli_query($conn, $sql_total_rows);
+$row_total_rows = mysqli_fetch_assoc($result_total_rows);
+$total_rows = $row_total_rows['total_rows'];
+
+// Calculate total number of pages
+$total_pages = ceil($total_rows / $items_per_page);
+
+// Calculate the offset for the query based on the current page number
+$offset = ($page - 1) * $items_per_page;
+?>
+<!-- Pagination Php Code Area End -->
+        <div class="latest-news-content">
+            <div class="row">
                 <!-- Single Latest Blog Start -->
-                <div class="col-lg-4 col-md-6">
-                    <article class="single-latest-news-wrap">
-                        <figure class="news-thumbnail">
-                            <a href="single-news.php"><img src="assets/img/images/latest-news-3.jpg" alt="News"
-                                             class="img-fluid"/></a>
-                        </figure>
-                        <div class="news-content">
-                            <a href="single-news.php" class="post-time">5 hour Ago</a>
-                            <h2 class="h5"><a href="single-news.php">BitCoin Anaounce 50k Free Coin</a></h2>
-                            <p>This is a big project of our company, we are happy to completed this type projec which
-                                are get world famous award</p>
-                            <a href="single-news.php" class="btn btn-gradiant">More</a>
-                        </div>
-                    </article>
+                
+    <?php
+    // Establish a database connection
+    $sql = "SELECT * FROM blog_posts WHERE status = 'Active' ORDER BY created_at DESC LIMIT $items_per_page OFFSET $offset";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $post_id = $row['id'];
+            $title = $row['title'];
+            $content = $row['content'];
+            $image = $row['feature_image'];
+            $created_at = $row['created_at'];
+            $content_sub = (strlen($content) > 90) ? substr($content, 0, 100).'...' : $content;
+    ?>
+            <div class="col-lg-4 col-md-6">
+            <article class="single-latest-news-wrap">
+                <figure class="news-thumbnail">
+                    <a href="single-news.php?id=<?php echo $post_id ?>"><img src="blog_imgs/<?php echo $image ?>" alt="<?php echo $title ?>" class="img-fluid"/></a>
+                </figure>
+                <div class="news-content">
+                    <a href="single-news.php?id=<?php echo $post_id ?>" class="post-time"><?php echo $created_at ?></a>
+                    <h2 class="h5"><a href="single-news.php?id=<?php echo $post_id ?>"><?php echo $title ?></a></h2>
+                    <p><?php echo $content_sub ?></p>
+                    <a href="single-news.php?id=<?php echo $post_id ?>" class="btn btn-gradiant">More</a>
                 </div>
+            </article>
+            </div>
+    <?php
+        }
+    } else {
+        echo "No posts found.";
+    }
+    ?>
                 <!-- Single Latest Blog End -->
 
                 <!-- Single Latest Blog Start -->
