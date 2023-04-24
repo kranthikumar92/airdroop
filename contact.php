@@ -108,12 +108,14 @@ include('ticker_extension.php');
                         </div>
 
                         <div class="row">
-                            <!-- Advertise Airdrop Desc Start -->
-                            <?php
-                                include ('advertise_req_contact_left.php');
+                            <div class="col-lg-2 d-none d-lg-block">
+                                <!-- Advertise Airdrop Desc Start -->
+                                <?php
+                                    include ('advertise_req_contact_right.php');
 
-                            ?>
-                            <!-- Advertise Airdrop Desc End -->
+                                ?>
+                                <!-- Advertise Airdrop Desc End -->
+                            </div>
 
                             <div class="col-lg-8">
                                 <div class="airdrop-submit-form-area">
