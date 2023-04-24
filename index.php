@@ -318,7 +318,7 @@ $offset = ($page - 1) * $items_per_page;
                 <!-- Latest Airdrop Offer Start -->
                 <div class="col-lg-4 col-md-6">
                     <div class="single-latest-news-wrap latest-airdrop-offer">
-                        <h2 class="h3">Are you looking to list token for airdrop offer?</h2>
+                        <h2 class="h3">Are you looking to list Airdrop Offer?</h2>
                         <a href="submit.php" class="btn btn-offer">Get Listed</a>
                         <p>You Also Can List Your Airdrop Offer, If you Want Please <a href="submit.php">Click Here</a></p>
                     </div>
