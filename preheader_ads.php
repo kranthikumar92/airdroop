@@ -24,7 +24,6 @@ if (mysqli_num_rows($result) > 0) {
     $post = mysqli_fetch_assoc($result);
 
 ?>
-
 <div class="preheader-content-wrap d-flex">
     <img src="assets/img/images/pre-ads-logo.png" alt="Ads Logo"/>
     <h2 class="h5">JOIN WITH US & GET <span>20% - 50% BONUS</span></h2>
