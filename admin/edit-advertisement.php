@@ -157,6 +157,7 @@ if (mysqli_num_rows($result) > 0) {
     // Fetch the first row as an associative array
     $post = mysqli_fetch_assoc($result);
     $status = $post['status'];
+    $ads_location = $post['ads_location'];
     
     ?>
 
@@ -165,12 +166,12 @@ if (mysqli_num_rows($result) > 0) {
                   <label class="col-sm-2 control-label form-label">Advertisement Location</label>
                   <div class="col-sm-8">
                     <select class="selectpicker" name="ads_location" id="ads_location">
-                        <option value="top_banner">Top Banner</option>
-                        <option value="bottom_banner">Bottom Banner</option>
-                        <option value="airdrop_desc">Airdrop Description</option>
-                        <option value="airdrop_list_blog">Airdrop List & Blog</option>
-                        <option value="req_contact_left">Request & Contact (Left)</option>
-                        <option value="req_contact_right">Request & Contact (Right)</option>
+                        <option value="top_banner" <?php if ($ads_location == 'top_banner') echo 'selected'; ?>>Top Banner</option>
+                        <option value="bottom_banner" <?php if ($ads_location == 'bottom_banner') echo 'selected'; ?>>Bottom Banner</option>
+                        <option value="airdrop_desc" <?php if ($ads_location == 'airdrop_desc') echo 'selected'; ?>>Airdrop Description</option>
+                        <option value="airdrop_list_blog" <?php if ($ads_location == 'airdrop_list_blog') echo 'selected'; ?>>Airdrop List & Blog</option>
+                        <option value="req_contact_left" <?php if ($ads_location == 'req_contact_left') echo 'selected'; ?>>Request & Contact (Left)</option>
+                        <option value="req_contact_right" <?php if ($ads_location == 'req_contact_right') echo 'selected'; ?>>Request & Contact (Right)</option>
                       </select>                  
                   </div>
                 </div>
