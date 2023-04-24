@@ -301,12 +301,12 @@ $statusClass = ($row_airdrop['status'] == 'active') ? 'running' : 'popular';
                                 <!-- Single Sidebar End -->
                             </div>
                                 <!-- Advertsiment Single Sidebar End -->
-                                <!-- Advertise List Start -->
+                                <!-- Advertise Blog Start -->
                                 <?php
                                         include ('advertise_list_blog.php');
-
+        a
                                 ?>
-                                <!-- Advertise List End -->
+                                <!-- Advertise Blog End -->
                                 <!-- Advertsiment Single Sidebar Start -->
 
 
