@@ -26,11 +26,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class="preheader-content-wrap d-flex">
-                        <img src="assets/img/images/pre-ads-logo.png" alt="Ads Logo"/>
-                        <h2 class="h5">JOIN WITH US & GET <span>20% - 50% BONUS</span></h2>
-                        <a href="#" class="btn btn-green">Join</a>
-                    </div>
+                    <!--== Advertise Bottom Start ==-->
+                    <?php
+                        include('preheader_ads.php');
+                    ?>
+                    <!--== Advertise Bottom End ==-->
                 </div>
             </div>
         </div>
