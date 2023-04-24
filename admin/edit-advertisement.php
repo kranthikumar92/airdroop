@@ -178,7 +178,7 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="form-group">
                   <label for="banner_title" class="col-sm-2 control-label form-label">Banner Title</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="banner_title" id="banner_title">
+                    <input type="text" class="form-control" value="<?php echo $post['banner_title']; ?>" name="banner_title" id="banner_title">
                     <span id="helpBlock" class="help-block">Write Banner Title upto 60 letters which will be used for alt text.</span>
                   </div>
                 </div>
@@ -186,7 +186,7 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="form-group">
                   <label for="airdrop_join_link" class="col-sm-2 control-label form-label">Banner Preview</label>
                   <div class="col-sm-10">
-                    <img src="ads_img/<?php echo $post['banner_img']; ?>" alt="preview" width="300">
+                    <img src="ads_imgs/<?php echo $post['banner_img']; ?>" alt="preview" width="300">
                   </div>
                 </div>
 
