@@ -101,18 +101,15 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Escape user inputs for security
-$blog_title = mysqli_real_escape_string($conn, $_POST['blog_title']);
-$blog_author = mysqli_real_escape_string($conn, $_POST['blog_author']);
-$blog_tags = mysqli_real_escape_string($conn, $_POST['blog_tags']);
-$blog_content = mysqli_real_escape_string($conn, $_POST['blog_content']);
-$likes = '0';
+$page_title = mysqli_real_escape_string($conn, $_POST['page_title']);
+$page_content = mysqli_real_escape_string($conn, $_POST['page_content']);
+$page_slug = mysqli_real_escape_string($conn, $_POST['page_slug']);
 $status = 'active';
-$publish_date = date('Y-m-d');
 
 
     // Prepare the SQL statement
-    $sql = "INSERT INTO blog_posts (title, feature_image, content, author, created_at, updated_at, tags, likes, status) 
-        VALUES ('".$blog_title."', '".$new_filename."', '".$blog_content."', '".$blog_author."', '".$publish_date."', '".$publish_date."', '".$blog_tags."', '".$likes."', '".$status."')";
+    $sql = "INSERT INTO info_pages (page_title, content, slug, status) 
+        VALUES ('".$page_title."', '".$page_content."', '".$page_slug."', '".$status."')";
 
     // Execute the statement
     if (mysqli_query($conn, $sql)) {
