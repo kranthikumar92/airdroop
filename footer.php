@@ -125,7 +125,7 @@ document.getElementById("subscribe-form").addEventListener("submit", (event) => 
 
     // Create a new AJAX request to insert the email into the database
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "subscribe.php", true);
+    xhr.open("POST", "footer.php", true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.onload = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
