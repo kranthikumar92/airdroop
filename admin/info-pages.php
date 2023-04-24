@@ -56,10 +56,10 @@
 
   <!-- Start Page Header -->
   <div class="page-header">
-    <h1 class="title">All Blog Posts</h1>
+    <h1 class="title">All Information Pages</h1>
       <ol class="breadcrumb">
-        <li><a href="airdrops.php">Blog</a></li>
-        <li class="active">Posts List</li>
+        <li><a href="info-pages.php">Information Pages</a></li>
+        <li class="active">Pages List</li>
       </ol>
 
   </div>
