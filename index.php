@@ -248,7 +248,7 @@ $total_active = $row_total_rows['total_active'];
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 
 // Set the number of items per page
-$items_per_page = 3;
+$items_per_page = 2;
 
 // Database connection parameters
 $servername = "localhost";
