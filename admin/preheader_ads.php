@@ -160,7 +160,7 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Advertisement Location</label>
                   <div class="col-sm-8">
-                    <p class="form-control-static"><?php echo $post['ads_location']; ?></p>                
+                    <p class="form-control-static">Pre Header</p>                
                   </div>
                 </div>
               
