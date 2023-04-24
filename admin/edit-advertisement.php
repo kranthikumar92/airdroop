@@ -126,11 +126,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Escape user inputs for security
   $ads_location = mysqli_real_escape_string($conn, $_POST['ads_location']);
   $banner_title = mysqli_real_escape_string($conn, $_POST['banner_title']);
+  $banner_link = mysqli_real_escape_string($conn, $_POST['banner_link']);
   $ads_status = mysqli_real_escape_string($conn, $_POST['ads_status']);
 
 
   // Prepare the SQL statement
-  $sql = "UPDATE advertisement SET ads_location='$ads_location', banner_title='$banner_title', banner_img='$new_filename', status='$ads_status' WHERE sno='$ads_id'";
+  $sql = "UPDATE advertisement SET ads_location='$ads_location', banner_title='$banner_title', banner_img='$new_filename', banner_link='$banner_link', status='$ads_status' WHERE sno='$ads_id'";
 
   // Execute the statement
   if (mysqli_query($conn, $sql)) {
@@ -181,6 +182,13 @@ if (mysqli_num_rows($result) > 0) {
                   <div class="col-sm-10">
                     <input type="text" class="form-control" value="<?php echo $post['banner_title']; ?>" name="banner_title" id="banner_title">
                     <span id="helpBlock" class="help-block">Write Banner Title upto 60 letters which will be used for alt text.</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="banner_link" class="col-sm-2 control-label form-label">Banner Link</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" value="<?php echo $post['banner_link']; ?>" name="banner_link" id="banner_link">
                   </div>
                 </div>
 
