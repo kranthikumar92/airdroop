@@ -102,10 +102,12 @@ include('ticker_extension.php');
 
                         <div class="row">
                             <div class="col-lg-2 d-none d-lg-block">
-                                <div class="step-page-adsvisement">
-                                    <a href="#"><img src="assets/img/images/advisement-vertical.jpg" alt="Advisement"
-                                                     class="img-fluid"/></a>
-                                </div>
+                                 <!-- Advertise Page Start -->
+                                 <?php
+                                    include ('advertise_req_contact_left.php');
+
+                                ?>
+                                <!-- Advertise Page End -->
                             </div>
 
                             <div class="col-lg-10">
