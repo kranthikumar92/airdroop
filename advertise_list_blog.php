@@ -25,7 +25,7 @@ if (mysqli_num_rows($result) > 0) {
 
 ?>
     <div class="sidebar-advisement d-none d-lg-block">
-        <a href="<?php echo $post['banner_link']; ?>"><img src="ads_imgs/<?php echo $post['banner_img']; ?>" alt="<?php echo $post['banner_title']; ?>"/></a>
+        <a href="<?php echo $post['banner_link']; ?>" target="_blank"><img src="ads_imgs/<?php echo $post['banner_img']; ?>" alt="<?php echo $post['banner_title']; ?>"/></a>
     </div>
 <?php
 }

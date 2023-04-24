@@ -24,7 +24,7 @@ if (mysqli_num_rows($result) > 0) {
     $post = mysqli_fetch_assoc($result);
 
 ?>
-<a href="<?php echo $post['banner_link']; ?>" class="d-block"><img src="ads_imgs/<?php echo $post['banner_img']; ?>" class="img-fluid" alt="<?php echo $post['banner_title']; ?>"/></a>
+<a href="<?php echo $post['banner_link']; ?>" target="_blank" class="d-block"><img src="ads_imgs/<?php echo $post['banner_img']; ?>" class="img-fluid" alt="<?php echo $post['banner_title']; ?>"/></a>
 <?php
 }
 ?>

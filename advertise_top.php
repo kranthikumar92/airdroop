@@ -27,7 +27,7 @@ if (mysqli_num_rows($result) > 0) {
 <div class="row">
     <div class="col-md-12 m-auto">
         <div class="ads-content-wrap">
-            <a href="<?php echo $post['banner_link']; ?>" class="d-block"><img src="ads_imgs/<?php echo $post['banner_img']; ?>" class="img-fluid" alt="<?php echo $post['banner_title']; ?>"/></a>
+            <a href="<?php echo $post['banner_link']; ?>" target="_blank" class="d-block"><img src="ads_imgs/<?php echo $post['banner_img']; ?>" class="img-fluid" alt="<?php echo $post['banner_title']; ?>"/></a>
         </div>
     </div>
 </div>
