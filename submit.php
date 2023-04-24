@@ -115,6 +115,7 @@ include('ticker_extension.php');
                                                      class="img-fluid"/></a>
                                 </div>
                             </div>
+                            a
 
                             <div class="col-lg-8">
                                 <div class="airdrop-submit-form-area">
