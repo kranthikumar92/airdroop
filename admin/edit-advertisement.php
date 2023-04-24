@@ -130,7 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
   // Prepare the SQL statement
-  $sql = "UPDATE advertisement SET ads_location='$blog_title', banner_title='$banner_title', banner_img='$new_filename', status='$ads_status' WHERE sno='$ads_id'";
+  $sql = "UPDATE advertisement SET ads_location='$ads_location', banner_title='$banner_title', banner_img='$new_filename', status='$ads_status' WHERE sno='$ads_id'";
 
   // Execute the statement
   if (mysqli_query($conn, $sql)) {
