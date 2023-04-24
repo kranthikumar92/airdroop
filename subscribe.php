@@ -18,13 +18,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Insert the email address and the current date and time into the "subscribers" table
-    $sql = "INSERT INTO subscribers (email, date_time) VALUES ('$email', NOW())";
+    // Check if the email address already exists in the "subscribers" table
+    $sql = "SELECT * FROM subscribers WHERE email = '$email'";
+    $result = $conn->query($sql);
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Success";
+    if ($result->num_rows > 0) {
+        // If the email address already exists, display an error message
+        echo "This email address is already subscribed.";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        // If the email address does not exist, insert it into the "subscribers" table
+        $sql = "INSERT INTO subscribers (email, date_time) VALUES ('$email', NOW())";
+        if ($conn->query($sql) === TRUE) {
+            echo "Success";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
     }
 
     // Close the database connection
