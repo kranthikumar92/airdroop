@@ -116,7 +116,7 @@ if ($result->num_rows > 0) {
         echo "<td>" . $row["full_name"] . "</td>";
         echo "<td>" . $row["register_date"] . "</td>";
         echo "<td  style='color:" . $statusClass . "'>" . $row["status"] . "</td>";
-        echo "<td><a href='edit-user.php?id=" . $row["sno"] . "' class='btn btn-warning'>Edit</a> <a href='delete-user.php?id=" . $row["sno"] . "' class='btn btn-danger'>Edit</a></td>";
+        echo "<td><a href='edit-user.php?id=" . $row["sno"] . "' class='btn btn-warning'>Edit</a> <a href='delete-user.php?id=" . $row["sno"] . "' class='btn btn-danger'>Delete</a></td>";
         echo "</tr>";
     }
 
