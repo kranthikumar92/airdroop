@@ -109,10 +109,12 @@ include('advertise_top.php');
                 <div class="airdrop-listing-page-wrap">
                     <div class="row">
                         <!-- Advertise List Start -->
+                        <div class="col-lg-4">
                         <?php
                                 include ('advertise_list_blog.php');
-
+a
                         ?>
+                        </div>
                         <!-- Advertise List End -->
 
                         <div class="col-lg-8">
