@@ -113,7 +113,7 @@ $target_file = $target_dir . $new_filename;
 // Escape user inputs for security
 $ads_location = mysqli_real_escape_string($conn, $_POST['ads_location']);
 $banner_title = mysqli_real_escape_string($conn, $_POST['banner_title']);
-$status = 'active';
+$status = 'Active';
 //$publish_date = date('Y-m-d');
 
 // Move the uploaded file to the target directory
