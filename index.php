@@ -315,42 +315,6 @@ $offset = ($page - 1) * $items_per_page;
     ?>
                 <!-- Single Latest Blog End -->
 
-                <!-- Single Latest Blog Start -->
-                <div class="col-lg-4 col-md-6">
-                    <article class="single-latest-news-wrap">
-                        <figure class="news-thumbnail">
-                            <a href="single-news.php"><img src="assets/img/images/latest-news-4.jpg" alt="News"
-                                             class="img-fluid"/></a>
-                        </figure>
-                        <div class="news-content">
-                            <a href="single-news.php" class="post-time">5 hour Ago</a>
-                            <h2 class="h5"><a href="single-news.php">BitCoin Anaounce 50k Free Coin</a></h2>
-                            <p>This is a big project of our company, we are happy to completed this type projec which
-                                are get world famous award</p>
-                            <a href="single-news.php" class="btn btn-gradiant">More</a>
-                        </div>
-                    </article>
-                </div>
-                <!-- Single Latest Blog End -->
-
-                <!-- Single Latest Blog Start -->
-                <div class="col-lg-4 col-md-6">
-                    <article class="single-latest-news-wrap">
-                        <figure class="news-thumbnail">
-                            <a href="single-news.php"><img src="assets/img/images/latest-news-5.jpg" alt="News"
-                                             class="img-fluid"/></a>
-                        </figure>
-                        <div class="news-content">
-                            <a href="single-news.php" class="post-time">7 hour Ago</a>
-                            <h2 class="h5"><a href="single-news.php">BitCoin Anaounce 50k Free Coin</a></h2>
-                            <p>This is a big project of our company, we are happy to completed this type projec which
-                                are get world famous award</p>
-                            <a href="single-news.php" class="btn btn-gradiant">More</a>
-                        </div>
-                    </article>
-                </div>
-                <!-- Single Latest Blog End -->
-
                 <!-- Latest Airdrop Offer Start -->
                 <div class="col-lg-4 col-md-6">
                     <div class="single-latest-news-wrap latest-airdrop-offer">
