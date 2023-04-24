@@ -104,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $page_title = mysqli_real_escape_string($conn, $_POST['page_title']);
 $page_content = mysqli_real_escape_string($conn, $_POST['page_content']);
 $page_slug = mysqli_real_escape_string($conn, $_POST['page_slug']);
-$status = 'active';
+$status = 'Active';
 
 
     // Prepare the SQL statement

@@ -114,7 +114,7 @@ if ($result->num_rows > 0) {
         echo "<td>" . $row["sno"] . "</td>";
         echo "<td>" . $row["page_title"] . "</td>";
         echo "<td>" . $row["slug"] . "</td>";
-        echo "<td  style='color:" . $statusClass . "'>" . $row["status"] . "</td>";
+        echo "<td  style='color:" . $statusClass . "'><strong>" . $row["status"] . "</strong></td>";
         echo "<td><a href='edit-info-page.php?id=" . $row["sno"] . "' class='btn btn-warning'>Edit</a> <a href='delete-info-page.php?id=" . $row["sno"] . "' class='btn btn-danger'>Delete</a></td>";
         echo "</tr>";
     }

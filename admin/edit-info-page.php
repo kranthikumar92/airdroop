@@ -108,7 +108,7 @@ $page_status = mysqli_real_escape_string($conn, $_POST['page_status']);
 
 
   // Prepare the SQL statement
-  $sql = "UPDATE info_pages SET update_date='$update_date', status='$message_status' WHERE sno='$page_id'";
+  $sql = "UPDATE info_pages SET page_title='$page_title', content='$page_content', slug='$page_slug', status='$page_status' WHERE sno='$page_id'";
 
   // Execute the statement
   if (mysqli_query($conn, $sql)) {
