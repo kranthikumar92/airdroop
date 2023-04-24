@@ -139,4 +139,28 @@ document.getElementById("subscribe-form").addEventListener("submit", (event) => 
     xhr.send(`email=${email}`); // Send the email address to the PHP script
 });
 </script>
+<?php
+// Get the email address from the AJAX request
+$email = $_POST["email"];
+
+// Create a new database connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check the connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Insert the email address and the current date and time into the "subscribers" table
+$sql = "INSERT INTO subscribers (email, date_time) VALUES ('$email', NOW())";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Success";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+// Close the database connection
+$conn->close();
+?>
 </footer>
