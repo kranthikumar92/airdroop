@@ -177,7 +177,7 @@ mysqli_close($conn);
                   </div>
                 </div>
 
-               <div class="form-group">
+                <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Select image to upload:</label>
                   <div class="col-sm-10">
                     <input type="file" class="form-control" name="file" id="file"><br>
