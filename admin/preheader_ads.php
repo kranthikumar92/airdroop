@@ -82,8 +82,6 @@
 
             <!--Retrieve data from db (Airdrops List) -->
             <?php
-    $ads_id = $_GET['id'];
-    //$update_id = $_GET['update'];
     // Establish a database connection
     $servername = "localhost";
     $username = "calix_web_user";
@@ -131,7 +129,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
   // Prepare the SQL statement
-  $sql = "UPDATE advertisement SET ads_location='$ads_location', banner_title='$banner_title', banner_img='$new_filename', banner_link='$banner_link', status='$ads_status' WHERE sno='$ads_id'";
+  $sql = "UPDATE preheader_ads SET ads_location='$ads_location', banner_title='$banner_title', banner_img='$new_filename', banner_link='$banner_link', status='$ads_status' WHERE sno='1'";
 
   // Execute the statement
   if (mysqli_query($conn, $sql)) {
@@ -150,7 +148,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
 
 // Query to retrieve blog post with ID 1
-$sql = "SELECT * FROM advertisement WHERE sno = $ads_id";
+$sql = "SELECT * FROM preheader_ads WHERE sno = '1'";
 $result = mysqli_query($conn, $sql);
 
 // Check if the query returned any rows
@@ -158,22 +156,14 @@ if (mysqli_num_rows($result) > 0) {
     // Fetch the first row as an associative array
     $post = mysqli_fetch_assoc($result);
     $status = $post['status'];
-    $ads_location = $post['ads_location'];
     
     ?>
 
-              <form action="edit-advertisement.php?id=<?php echo $post['sno']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <form action="edit-advertisement.php" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Advertisement Location</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker" name="ads_location" id="ads_location">
-                        <option value="top_banner" <?php if ($ads_location == 'top_banner') echo 'selected'; ?>>Top Banner</option>
-                        <option value="bottom_banner" <?php if ($ads_location == 'bottom_banner') echo 'selected'; ?>>Bottom Banner</option>
-                        <option value="airdrop_desc" <?php if ($ads_location == 'airdrop_desc') echo 'selected'; ?>>Airdrop Description</option>
-                        <option value="airdrop_list_blog" <?php if ($ads_location == 'airdrop_list_blog') echo 'selected'; ?>>Airdrop List & Blog</option>
-                        <option value="req_contact_left" <?php if ($ads_location == 'req_contact_left') echo 'selected'; ?>>Request & Contact (Left)</option>
-                        <option value="req_contact_right" <?php if ($ads_location == 'req_contact_right') echo 'selected'; ?>>Request & Contact (Right)</option>
-                      </select>                  
+                    <p class="form-control-static"><?php echo $post['ads_location']; ?></p>                
                   </div>
                 </div>
               
@@ -235,7 +225,7 @@ if (mysqli_num_rows($result) > 0) {
               <?php
             } else {
     // No rows were returned, so display an error message
-    echo "No Advertisement Data found";
+    echo "No Pre Header Data found";
 }
 }
 ?>
