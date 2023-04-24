@@ -26,7 +26,7 @@ if (mysqli_num_rows($result) > 0) {
 ?>
 <div class="preheader-content-wrap d-flex">
     <img src="assets/img/images/pre-ads-logo.png" alt="Ads Logo"/>
-    <h2 class="h5">JOIN WITH US & GET <span>20% - 50% BONUS</span></h2>
+    <?php echo $post['banner_title']; ?>
     <a href="<?php echo $post['banner_link']; ?>" class="btn btn-green">Join</a>
 </div>
 <?php
