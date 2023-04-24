@@ -27,7 +27,7 @@
 
             $change_class = ($change_24h > 0) ? 'groth-up' : 'groth-down';
 
-            echo "<a href='#' class='single-currency-rate'>
+            echo "<a class='single-currency-rate'>
                     <p><strong>{$symbol}:</strong> \$ {$price} <span class='{$change_class}'>({$change_24h}%)</span></p>
                   </a>";
         }
