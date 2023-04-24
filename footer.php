@@ -100,4 +100,60 @@
         </div>
     </div>
     <!-- Footer Bottom Area -->
+
+    <script>
+// Define the database connection parameters
+const servername = "localhost";
+const username = "calix_web_user";
+const password = "calixworldhhUUh383287HGSHhs";
+const dbname = "calix_cry_world";
+
+// Add an event listener to the subscribe button
+document.getElementById("subscribe-btn").addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent the form from submitting and the page from reloading
+
+    // Get the email address from the input field
+    const email = document.getElementById("email-input").value;
+
+    // Create a new AJAX request to insert the email into the database
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "subscribe.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onload = () => {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            // Display a success message
+            document.getElementById("subscribe-msg").innerHTML = "Thank you for subscribing!";
+        } else {
+            // Display an error message
+            document.getElementById("subscribe-msg").innerHTML = "Sorry, there was an error subscribing. Please try again later.";
+        }
+    };
+    xhr.send(`email=${email}`); // Send the email address to the PHP script
+});
+</script>
+
+<?php
+// Get the email address from the AJAX request
+$email = $_POST["email"];
+
+// Create a new database connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check the connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Insert the email address and the current date and time into the "subscribers" table
+$sql = "INSERT INTO subscribers (email, date_time) VALUES ('$email', NOW())";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Success";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+// Close the database connection
+$conn->close();
+?>
 </footer>
