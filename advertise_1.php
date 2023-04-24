@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 }
 
 // Query to retrieve blog post with ID 1
-$sql = "SELECT * FROM advertisement WHERE ads_location = 'top_banner'";
+$sql = "SELECT * FROM advertisement WHERE ads_location = 'top_banner' AND status = 'Active'";
 $result = mysqli_query($conn, $sql);
 
 // Check if the query returned any rows
@@ -27,7 +27,7 @@ if (mysqli_num_rows($result) > 0) {
 <div class="row">
     <div class="col-md-12 m-auto">
         <div class="ads-content-wrap">
-            <a href="#" class="d-block"><img src="ads_imgs/<?php echo $post['banner_img']; ?>" class="img-fluid" alt="Ads"/></a>
+            <a href="<?php echo $post['banner_link']; ?>" class="d-block"><img src="ads_imgs/<?php echo $post['banner_img']; ?>" class="img-fluid" alt="<?php echo $post['banner_title']; ?>"/></a>
         </div>
     </div>
 </div>
