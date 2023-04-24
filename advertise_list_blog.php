@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 }
 
 // Query to retrieve blog post with ID 1
-$sql = "SELECT * FROM advertisement WHERE ads_location = 'airdrop_desc' AND status = 'Active'";
+$sql = "SELECT * FROM advertisement WHERE ads_location = 'airdrop_list_blog' AND status = 'Active'";
 $result = mysqli_query($conn, $sql);
 
 // Check if the query returned any rows
