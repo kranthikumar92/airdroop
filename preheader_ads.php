@@ -25,7 +25,7 @@ if (mysqli_num_rows($result) > 0) {
 
 ?>
 <div class="preheader-content-wrap d-flex">
-    <img src="assets/img/images/pre-ads-logo.png" alt="Ads Logo"/>
+    <img src="ads_imgs/<?php echo $post['banner_img']; ?>" alt="Ads Logo"/>
     <?php echo $post['banner_title']; ?>
     <a href="<?php echo $post['banner_link']; ?>" class="btn btn-green">Join</a>
 </div>
