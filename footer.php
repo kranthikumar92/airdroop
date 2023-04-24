@@ -93,7 +93,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="copyright">
-                        <p>© 2010-2018 Demo Company .  All rights reserved.</p>
+                        <p>© 2023 Demo Content .  All rights reserved.</p>
                     </div>
                 </div>
             </div>
