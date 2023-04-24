@@ -148,19 +148,20 @@ mysqli_close($conn);
     ?>
 
               <form action="add-advertisement.php" method="post" enctype="multipart/form-data" class="form-horizontal">
-                <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">Advertisement Location</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker" name="ads_location" id="ads_location">
-                        <option value="top_banner">Top Banner</option>
-                        <option value="bottom_banner">Bottom Banner</option>
-                        <option value="airdrop_desc">Airdrop Description</option>
-                        <option value="airdrop_list_blog">Airdrop List & Blog</option>
-                        <option value="req_contact_left">Request & Contact (Left)</option>
-                        <option value="req_contact_right">Request & Contact (Right)</option>
-                      </select>                  
-                  </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label form-label">Advertisement Location</label>
+                <div class="col-sm-8">
+                  <select class="selectpicker" name="ads_location" id="ads_location" onchange="showText()">
+                    <option value="top_banner">Top Banner</option>
+                    <option value="bottom_banner">Bottom Banner</option>
+                    <option value="airdrop_desc">Airdrop Description</option>
+                    <option value="airdrop_list_blog">Airdrop List & Blog</option>
+                    <option value="req_contact_left">Request & Contact (Left)</option>
+                    <option value="req_contact_right">Request & Contact (Right)</option>
+                  </select>
+                  <div id="text"></div>
                 </div>
+              </div>
               
                 <div class="form-group">
                   <label for="banner_title" class="col-sm-2 control-label form-label">Banner Title</label>
@@ -313,6 +314,42 @@ Summernote
   $(document).ready(function() {
   $('#summernote').summernote();
 });
+</script>
+
+<script>
+function showText() {
+  var selectElement = document.getElementById("ads_location");
+  var selectedValue = selectElement.value;
+  var textElement = document.getElementById("text");
+  
+  // Clear previous text
+  textElement.innerHTML = "";
+  
+  // Add text based on selected value
+  switch (selectedValue) {
+    case "top_banner":
+      textElement.innerHTML = "This is the top banner location.";
+      break;
+    case "bottom_banner":
+      textElement.innerHTML = "This is the bottom banner location.";
+      break;
+    case "airdrop_desc":
+      textElement.innerHTML = "This is the airdrop description location.";
+      break;
+    case "airdrop_list_blog":
+      textElement.innerHTML = "This is the airdrop list & blog location.";
+      break;
+    case "req_contact_left":
+      textElement.innerHTML = "This is the request & contact (left) location.";
+      break;
+    case "req_contact_right":
+      textElement.innerHTML = "This is the request & contact (right) location.";
+      break;
+    default:
+      // No text to display
+      break;
+  }
+}
 </script>
 
 </body>
