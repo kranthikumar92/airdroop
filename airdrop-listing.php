@@ -108,12 +108,12 @@ include('advertise_top.php');
                 <!-- Airdrop Listing Page Content Start -->
                 <div class="airdrop-listing-page-wrap">
                     <div class="row">
-                        <div class="col-lg-4">
+                        <!-- Advertise List Start -->
+                        <?php
+                                include ('advertise_list_blog.php');
 
-                            <div class="sidebar-advisement d-none d-lg-block">
-                                <a href="#"><img src="assets/img/images/slidebar-ads.jpg" alt="Advisement"/></a>
-                            </div>
-                        </div>
+                        ?>
+                        <!-- Advertise List End -->
 
                         <div class="col-lg-8">
                             <div class="listing-airdrop-wrap">

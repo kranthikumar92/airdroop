@@ -279,11 +279,12 @@ if ($result1->num_rows > 0) {
                                 $conn->close();
                                 ?>
                                 <br>
-
+                                <!-- Advertise Airdrop Desc Start -->
                                 <?php
                                 include ('advertise_airdrop_desc.php');
 
                                 ?>
+                                <!-- Advertise Airdrop Desc End -->
                                     
                                 </div>
                             </article>
