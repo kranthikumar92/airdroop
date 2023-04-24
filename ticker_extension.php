@@ -1,87 +1,38 @@
 <div id="currency-rate-area">
     <div class="currency-rate-slider">
-        <!-- Single Currency Rate Start -->
-        <a href="#" class="single-currency-rate">
-            <p><strong>BTC:</strong>$ 9,953.72 <span class="groth-up">(+5.33%)</span></p>
-        </a>
-        <!-- Single Currency Rate End -->
+        <?php
+        $curl = curl_init();
 
-        <!-- Single Currency Rate Start -->
-        <a  href="#" class="single-currency-rate">
-            <p><strong>ETH:</strong>$ 9,953.72 <span class="groth-up">(+1.33%)</span></p>
-        </a>
-        <!-- Single Currency Rate End -->
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=12&convert=USD',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'GET',
+            CURLOPT_HTTPHEADER => array(
+                'X-CMC_PRO_API_KEY: dd7eacc4-930e-44b9-8047-a1ddccf2ac82'
+            ),
+        ));
 
-        <!-- Single Currency Rate Start -->
-        <a href="#" class="single-currency-rate">
-            <p><strong>BNB:</strong>$ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
-        </a>
-        <!-- Single Currency Rate End -->
+        $response = curl_exec($curl);
+        $data = json_decode($response, true);
 
-        <!-- Single Currency Rate Start -->
-        <a href="#" class="single-currency-rate">
-            <p><strong>XRP:</strong>$ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
-        </a>
-        <!-- Single Currency Rate End -->
+        foreach ($data['data'] as $coin) {
+            $symbol = $coin['symbol'];
+            $price = number_format($coin['quote']['USD']['price'], 2);
+            $change_24h = $coin['quote']['USD']['percent_change_24h'];
 
-        <!-- Single Currency Rate Start -->
-        <a href="#" class="single-currency-rate">
-            <p><strong>DOGE:</strong>$ 9,953.72 <span class="groth-up">(+1.33%)</span></p>
-        </a>
-        <!-- Single Currency Rate End -->
+            $change_class = ($change_24h > 0) ? 'groth-up' : 'groth-down';
 
-        <!-- Single Currency Rate Start -->
-        <a href="#" class="single-currency-rate">
-            <p><strong>MATIC:</strong>$ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
-        </a>
-        <!-- Single Currency Rate End -->
+            echo "<a href='#' class='single-currency-rate'>
+                    <p><strong>{$symbol}:</strong> \$ {$price} <span class='{$change_class}'>({$change_24h}%)</span></p>
+                  </a>";
+        }
 
-        <!-- Single Currency Rate Start -->
-        <a href="#" class="single-currency-rate">
-            <p><strong>LTC:</strong>$ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
-        </a>
-        <!-- Single Currency Rate End -->
-
-        <!-- Single Currency Rate Start -->
-        <a href="#" class="single-currency-rate">
-            <p><strong>TRX:</strong>$ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
-        </a>
-        <!-- Single Currency Rate End -->
-
-        <!-- Single Currency Rate Start -->
-        <a href="#" class="single-currency-rate">
-            <p><strong>AVAX:</strong>$ 9,953.72 <span class="groth-up">(+1.33%)</span></p>
-        </a>
-        <!-- Single Currency Rate End -->
-
-        <!-- Single Currency Rate Start -->
-        <a href="#" class="single-currency-rate">
-            <p><strong>XMR:</strong>$ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
-        </a>
-        <!-- Single Currency Rate End -->
-
-        <!-- Single Currency Rate Start -->
-        <a href="#" class="single-currency-rate">
-            <p><strong>XLM:</strong>$ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
-        </a>
-        <!-- Single Currency Rate End -->
-
-        <!-- Single Currency Rate Start -->
-        <a href="#" class="single-currency-rate">
-            <p><strong>SHIB:</strong>$ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
-        </a>
-        <!-- Single Currency Rate End -->
-
-        <!-- Single Currency Rate Start -->
-        <a href="#" class="single-currency-rate">
-            <p><strong>DAI:</strong>$ 9,953.72 <span class="groth-up">(+1.33%)</span></p>
-        </a>
-        <!-- Single Currency Rate End -->
-
-        <!-- Single Currency Rate Start -->
-        <a href="#" class="single-currency-rate">
-            <p><strong>UNI:</strong>$ 9,953.72 <span class="groth-down">(+1.33%)</span></p>
-        </a>
-        <!-- Single Currency Rate End -->
+        curl_close($curl);
+        ?>
     </div>
 </div>
