@@ -112,7 +112,6 @@ include('advertise_top.php');
                         <div class="col-lg-4">
                         <?php
                                 include ('advertise_list_blog.php');
-a
                         ?>
                         </div>
                         <!-- Advertise List End -->
