@@ -134,10 +134,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Execute the statement
   if (mysqli_query($conn, $sql)) {
     echo "<div class='col-sm-10'>";
-    echo "<h2>Advertisement Updated Successfully.</h2>";
-    echo "<a href='edit-advertisement.php?id=" . $ads_id . "' class='btn btn-default'>Back to Ads Editing</a>";
-    echo "&nbsp;";
-    echo "<a href='ads-corner.php' class='btn btn-default'>Back to Ads Corner</a>";
+    echo "<h2>Pre Header Content Updated Successfully.</h2>";
+    echo "<a href='preheader_ads.php' class='btn btn-default'>Back to Pre Header</a>";
     echo "</div>";
   } else {
     echo "Error updating record: " . mysqli_error($conn);
@@ -183,7 +181,7 @@ if (mysqli_num_rows($result) > 0) {
                 </div>
 
                 <div class="form-group">
-                  <label for="airdrop_join_link" class="col-sm-2 control-label form-label">Banner Preview</label>
+                  <label for="airdrop_join_link" class="col-sm-2 control-label form-label">Image Preview</label>
                   <div class="col-sm-10">
                     <img src="../ads_imgs/<?php echo $post['banner_img']; ?>" alt="preview" width="400">
                   </div>
