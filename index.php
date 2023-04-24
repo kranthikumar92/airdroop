@@ -344,13 +344,9 @@ $total_active = $row_total_rows['total_active'];
             <!-- Latest Airdrop Offer End -->
         </div>
 
-        <div class="row">
-            <div class="col-lg-12 mt-5">
-                <div class="ads-content-wrap">
-                    <a href="#" class="d-block"><img src="assets/img/images/advisement.jpg" alt="advisement" class="img-fluid" /></a>
-                </div>
-            </div>
-        </div>
+        <?php
+            include('advertise_bottom.php');
+        ?>
     </div>
 </section>
 <!--== Latest News Area End == -->
