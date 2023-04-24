@@ -113,6 +113,7 @@ $target_file = $target_dir . $new_filename;
 // Escape user inputs for security
 $ads_location = mysqli_real_escape_string($conn, $_POST['ads_location']);
 $banner_title = mysqli_real_escape_string($conn, $_POST['banner_title']);
+$banner_link = mysqli_real_escape_string($conn, $_POST['banner_link']);
 $status = 'Active';
 //$publish_date = date('Y-m-d');
 
@@ -120,8 +121,8 @@ $status = 'Active';
 if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
 
     // Prepare the SQL statement
-    $sql = "INSERT INTO advertisement (ads_location, banner_title, banner_img, status) 
-        VALUES ('".$ads_location."', '".$banner_title."', '".$new_filename."', '".$status."')";
+    $sql = "INSERT INTO advertisement (ads_location, banner_title, banner_img, banner_link, status) 
+        VALUES ('".$ads_location."', '".$banner_title."', '".$new_filename."', '".$banner_link."', '".$status."')";
 
     // Execute the statement
     if (mysqli_query($conn, $sql)) {
@@ -166,6 +167,13 @@ mysqli_close($conn);
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="banner_title" id="banner_title">
                     <span id="helpBlock" class="help-block">Write Banner Title upto 60 letters which will be used for alt text.</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="banner_link" class="col-sm-2 control-label form-label">Banner Link</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="banner_link" id="banner_link">
                   </div>
                 </div>
 
