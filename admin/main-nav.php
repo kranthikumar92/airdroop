@@ -26,8 +26,8 @@
   <li><a href="airdrop-requests.php"><span class="icon color14"><i class="fa fa-futbol-o"></i></span>Airdrop Requests</a></li>
   <li><a href="#"><span class="icon color8"><i class="fa fa-gears"></i></span>Ads Corner<span class="caret"></span></a>
     <ul>
-      <li><a href="info-pages.php">All Pages</a></li>
-      <li><a href="add-info-page.php">Add New Page</a></li>
+      <li><a href="ads-corner.php">Ads List</a></li>
+      <li><a href="add-advertisement.php">Add New Ads</a></li>
     </ul>
   </li>
   
