@@ -183,7 +183,7 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="form-group">
                   <label for="airdrop_join_link" class="col-sm-2 control-label form-label">Image Preview</label>
                   <div class="col-sm-10">
-                    <img src="../ads_imgs/<?php echo $post['banner_img']; ?>" alt="preview" width="200">
+                    <img src="../ads_imgs/<?php echo $post['banner_img']; ?>" alt="preview" style="max-width: 200px;">
                   </div>
                 </div>
 
