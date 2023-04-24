@@ -24,11 +24,8 @@ if (mysqli_num_rows($result) > 0) {
     $post = mysqli_fetch_assoc($result);
 
 ?>
-
-<div class="col-lg-2 d-none d-lg-block">
-    <div class="step-page-adsvisement">
-        <a href="<?php echo $post['banner_link']; ?>" class="d-block"><img src="ads_imgs/<?php echo $post['banner_img']; ?>" class="img-fluid" alt="<?php echo $post['banner_title']; ?>"/></a>
-    </div>
+<div class="step-page-adsvisement">
+    <a href="<?php echo $post['banner_link']; ?>" class="d-block"><img src="ads_imgs/<?php echo $post['banner_img']; ?>" class="img-fluid" alt="<?php echo $post['banner_title']; ?>"/></a>
 </div>
 <?php
 }
