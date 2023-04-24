@@ -281,7 +281,7 @@ if ($result1->num_rows > 0) {
                                 <br>
 
                                 <?php
-                                include ('advertise_airdrop_page.php');
+                                include ('advertise_airdrop_desc.php');
 
                                 ?>
                                     
