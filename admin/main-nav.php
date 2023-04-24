@@ -20,7 +20,7 @@
   <li><a href="#"><span class="icon color10"><i class="fa fa-check-square-o"></i></span>Information<span class="caret"></span></a>
     <ul>
       <li><a href="info-pages.php">All Pages</a></li>
-      <li><a href="#">Add New Page</a></li>
+      <li><a href="add-info-page.php">Add New Page</a></li>
     </ul>
   </li>
   <li><a href="airdrop-requests.php"><span class="icon color14"><i class="fa fa-paper-plane-o"></i></span>Airdrop Requests</a></li>
