@@ -19,7 +19,7 @@
   </li>
   <li><a href="#"><span class="icon color10"><i class="fa fa-check-square-o"></i></span>Information<span class="caret"></span></a>
     <ul>
-      <li><a href="#">All Pages</a></li>
+      <li><a href="info-pages.php">All Pages</a></li>
       <li><a href="#">Add New Page</a></li>
     </ul>
   </li>
