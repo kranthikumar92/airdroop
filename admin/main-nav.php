@@ -24,7 +24,7 @@
     </ul>
   </li>
   <li><a href="airdrop-requests.php"><span class="icon color14"><i class="fa-futbol-o"></i></span>Airdrop Requests</a></li>
-  <li><a href="#"><span class="icon color8"><i class="fa-gears"></i></span>Ads Corner<span class="label label-danger">NEW</span></a></li>
+  <li><a href="#"><span class="icon color8"><i class="fa fa-gears"></i></span>Ads Corner<span class="label label-danger">NEW</span></a></li>
   
 </ul>
 
