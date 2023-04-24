@@ -157,7 +157,7 @@ if (mysqli_num_rows($result) > 0) {
     
     ?>
 
-              <form action="edit-advertisement.php" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <form action="preheader_ads.php" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Advertisement Location</label>
                   <div class="col-sm-8">
