@@ -71,9 +71,9 @@
                             <div class="widget-body">
                                 <p>Subscribe to get latest updates on airdrops!</p>
                                 <div class="subscribe-form">
-                                    <form id="subscribe-form" method="post">
+                                    <form id="subscribe-form">
                                         <input id="email-input" type="email" placeholder="Enter your email" required />
-                                        <button id="subscribe-btn" class="btn-subscribe"><i class="fa fa-send"></i></button>
+                                        <button id="subscribe-btn" type="submit" class="btn-subscribe"><i class="fa fa-send"></i></button>
                                     </form>
                                     <div id="subscribe-msg"></div>
                                 </div>
@@ -108,12 +108,20 @@ const username = "calix_web_user";
 const password = "calixworldhhUUh383287HGSHhs";
 const dbname = "calix_cry_world";
 
-// Add an event listener to the subscribe button
-document.getElementById("subscribe-btn").addEventListener("click", (event) => {
+// Add an event listener to the subscribe form
+document.getElementById("subscribe-form").addEventListener("submit", (event) => {
     event.preventDefault(); // Prevent the form from submitting and the page from reloading
 
     // Get the email address from the input field
     const email = document.getElementById("email-input").value;
+
+    // Validate the email address format
+    const emailRegex = /^\S+@\S+\.\S+$/;
+    if (!emailRegex.test(email)) {
+        // Display an error message if the email address is invalid
+        document.getElementById("subscribe-msg").innerHTML = "Please enter a valid email address.";
+        return;
+    }
 
     // Create a new AJAX request to insert the email into the database
     const xhr = new XMLHttpRequest();
@@ -131,29 +139,4 @@ document.getElementById("subscribe-btn").addEventListener("click", (event) => {
     xhr.send(`email=${email}`); // Send the email address to the PHP script
 });
 </script>
-
-<?php
-// Get the email address from the AJAX request
-$email = $_POST["email"];
-
-// Create a new database connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check the connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Insert the email address and the current date and time into the "subscribers" table
-$sql = "INSERT INTO subscribers (email, date_time) VALUES ('$email', NOW())";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Success";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-// Close the database connection
-$conn->close();
-?>
 </footer>
