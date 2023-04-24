@@ -24,11 +24,9 @@ if (mysqli_num_rows($result) > 0) {
     $post = mysqli_fetch_assoc($result);
 
 ?>
-<div class="col-lg-4">
     <div class="sidebar-advisement d-none d-lg-block">
         <a href="<?php echo $post['banner_link']; ?>"><img src="ads_imgs/<?php echo $post['banner_img']; ?>" alt="<?php echo $post['banner_title']; ?>"/></a>
     </div>
-</div>
 <?php
 }
 ?>
