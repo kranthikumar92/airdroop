@@ -57,10 +57,10 @@
 
   <!-- Start Page Header -->
   <div class="page-header">
-    <h1 class="title">Add Blog Post</h1>
+    <h1 class="title">Update Info Pages</h1>
       <ol class="breadcrumb">
-        <li><a href="blog-list.php">Airdrop</a></li>
-        <li class="active">Add New Post</li>
+        <li><a href="info-pages.php">Information Pages</a></li>
+        <li class="active">Edit Info Page</li>
       </ol>
 
   </div>
@@ -143,7 +143,7 @@ if (mysqli_num_rows($result) > 0) {
                   <label for="page_title" class="col-sm-2 control-label form-label">Page Title</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" value="<?php echo $post['page_title']; ?>" name="page_title" id="page_title">
-                    <span id="helpBlock" class="help-block">Write Page Title upto 60 letters.</span>
+                    <span id="helpBlock" class="help-block">Update Page Title upto 60 letters.</span>
                   </div>
                 </div>
 
