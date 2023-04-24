@@ -69,12 +69,13 @@
                         <div class="single-widget-wrap">
                             <h2 class="h5 widget-title">Subscribe</h2>
                             <div class="widget-body">
-                                <p>We need to massive amount money to running this company</p>
+                                <p>Subscribe to get latest updates on airdrops!</p>
                                 <div class="subscribe-form">
-                                    <form action="#" method="post">
-                                        <input type="email" placeholder="Enter your email" required />
-                                        <button class="btn-subscribe"><i class="fa fa-send"></i></button>
+                                    <form id="subscribe-form" method="post">
+                                        <input id="email-input" type="email" placeholder="Enter your email" required />
+                                        <button id="subscribe-btn" class="btn-subscribe"><i class="fa fa-send"></i></button>
                                     </form>
+                                    <div id="subscribe-msg"></div>
                                 </div>
                             </div>
                         </div>
