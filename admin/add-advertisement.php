@@ -151,8 +151,12 @@ mysqli_close($conn);
                   <label class="col-sm-2 control-label form-label">Advertisement Location</label>
                   <div class="col-sm-8">
                     <select class="selectpicker" name="ads_location" id="ads_location">
-                        <option value="Admin">Admin</option>
-                        <option value="Employee">Employee</option>
+                        <option value="top_banner">Top Banner</option>
+                        <option value="bottom_banner">Bottom Banner</option>
+                        <option value="airdrop_desc">Airdrop Description</option>
+                        <option value="airdrop_list_blog">Airdrop List & Blog</option>
+                        <option value="req_contact_left">Request & Contact (Left)</option>
+                        <option value="req_contact_right">Request & Contact (Right)</option>
                       </select>                  
                   </div>
                 </div>
