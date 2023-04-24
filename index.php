@@ -94,11 +94,11 @@ include('ticker_extension.php');
     <div class="container">
         <!--== Header Ads Start ==-->
 
-<!--== Advertise 1 Start ==-->
+<!--== Advertise top Start ==-->
 <?php
-include('advertise_1.php');
+include('advertise_top.php');
 ?>
-<!--== Advertise 1 End ==-->
+<!--== Advertise top End ==-->
 
 <!--== Header Ads End ==-->
 
@@ -343,10 +343,11 @@ $total_active = $row_total_rows['total_active'];
             </div>
             <!-- Latest Airdrop Offer End -->
         </div>
-
+        <!--== Advertise Bottom Start ==-->
         <?php
             include('advertise_bottom.php');
         ?>
+        <!--== Advertise Bottom End ==-->
     </div>
 </section>
 <!--== Latest News Area End == -->
