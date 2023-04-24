@@ -57,10 +57,10 @@
 
   <!-- Start Page Header -->
   <div class="page-header">
-    <h1 class="title">Add Advertisement</h1>
+    <h1 class="title">Pre Header Advertisement</h1>
       <ol class="breadcrumb">
-        <li><a href="ads-corner.php">Ads Corner</a></li>
-        <li class="active">Add Advertisement</li>
+        <li><a href="preheader_ads.php">Pre Header</a></li>
+        <li class="active">Pre Header Content</li>
       </ol>
 
   </div>
