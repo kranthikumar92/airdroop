@@ -200,27 +200,61 @@ $conn->close();
     <!-- Airdrop Listing -->
 
     <!-- Start Subscribers -->
-    <div class="col-md-12 col-lg-3">
-      <div class="panel panel-widget">
-        <div class="panel-title">
-          Subscribers <span class="label label-danger">29</span>
-        </div>
-        <div class="panel-body">
+<div class="col-md-12 col-lg-3">
+  <div class="panel panel-widget">
+    <div class="panel-title">
+      Subscribers <?php
+        // Database connection
+        $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-          <ul class="basic-list">
-            <li>Google Chrome <span class="right label" style="color: black;">22/04/2023</span></li>
-            <li>Firefox <span class="right label" style="color: black;">22/04/2023</span></li>
-            <li>Safari <span class="right label" style="color: black;">22/04/2023</span></li>
-            <li>Opera <span class="right label" style="color: black;">22/04/2023</span></li>
-            <li>Internet Explorer <span class="right label" style="color: black;">22/04/2023</span></li>
-            <li>Mobile <span class="right label" style="color: black;">22/04/2023</span></li>
-            <li>Others <span class="right label" style="color: black;">22/04/2023</span></li>
-          </ul>
+        // Check connection
+        if (!$conn) {
+          die("Connection failed: " . mysqli_connect_error());
+        }
 
-        </div>
-      </div>
+        // SQL query to retrieve subscriber details
+        $sql = "SELECT email, date_time FROM subscribers
+                ORDER BY sno DESC 
+                LIMIT 7";
+
+        // Execute query
+        $result = mysqli_query($conn, $sql);
+
+        // Get number of subscribers
+        $num_rows = mysqli_num_rows($result);
+
+        // Display number of subscribers as a label
+        echo '<span class="label label-danger">' . $num_rows . '</span>';
+
+        // Close database connection
+        mysqli_close($conn);
+      ?>
     </div>
-    <!-- End Subscribers -->
+    <div class="panel-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+            // Loop through query results and display subscriber details in a table row
+            while ($row = mysqli_fetch_assoc($result)) {
+              echo '<tr>';
+              echo '<td>' . $row['email'] . '</td>';
+              echo '<td>' . $row['date_time'] . '</td>';
+              echo '</tr>';
+            }
+          ?>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- End Subscribers -->
+
 
     <!-- Start Inbox -->
     <div class="col-md-12 col-lg-4">
