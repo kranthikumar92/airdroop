@@ -208,12 +208,12 @@ $conn->close();
         <div class="panel-body">
 
           <ul class="basic-list">
-            <li>Google Chrome <span class="right label label-default">22/04/2023</span></li>
-            <li>Firefox <span class="right label label-danger">22/04/2023</span></li>
-            <li>Safari <span class="right label label-success">22/04/2023</span></li>
-            <li>Opera <span class="right label label-primary">22/04/2023</span></li>
-            <li>Internet Explorer <span class="right label label-danger">22/04/2023</span></li>
-            <li>Mobile <span class="right label label-warning">22/04/2023</span></li>
+            <li>Google Chrome <span class="right label" style="color: black;">22/04/2023</span></li>
+            <li>Firefox <span class="right label" style="color: black;">22/04/2023</span></li>
+            <li>Safari <span class="right label" style="color: black;">22/04/2023</span></li>
+            <li>Opera <span class="right label" style="color: black;">22/04/2023</span></li>
+            <li>Internet Explorer <span class="right label" style="color: black;">22/04/2023</span></li>
+            <li>Mobile <span class="right label" style="color: black;">22/04/2023</span></li>
             <li>Others <span class="right label" style="color: black;">22/04/2023</span></li>
           </ul>
 
