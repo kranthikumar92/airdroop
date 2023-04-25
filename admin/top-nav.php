@@ -1,18 +1,3 @@
-    <!-- Start Top Menu -->
-    <ul class="topmenu">
-      <li><a href="#">Files</a></li>
-      <li><a href="#">Authors</a></li>
-      <li class="dropdown">
-        <a href="#" data-toggle="dropdown" class="dropdown-toggle">My Files <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Videos</a></li>
-          <li><a href="#">Pictures</a></li>
-          <li><a href="#">Blog Posts</a></li>
-        </ul>
-      </li>
-    </ul>
-    <!-- End Top Menu -->
-
     <!-- Start Top Right -->
     <ul class="top-right">
 
