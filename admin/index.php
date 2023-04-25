@@ -260,37 +260,7 @@ $conn->close();
     <div class="col-md-12 col-lg-4">
   <div class="panel panel-widget">
     <div class="panel-title">
-      Messages 
-      <?php
-        // Database connection parameters
-        $servername = "localhost";
-        $username = "calix_web_user";
-        $password = "calixworldhhUUh383287HGSHhs";
-        $dbname = "calix_cry_world";
-
-        // Create connection
-        $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-        // Check connection
-        if (!$conn) {
-          die("Connection failed: " . mysqli_connect_error());
-        }
-
-        // Count the number of rows in the contact_form table
-        $sql = "SELECT COUNT(*) as count FROM contact_form";
-        $result = mysqli_query($conn, $sql);
-
-        // Check if any rows were returned
-        if (mysqli_num_rows($result) > 0) {
-          $row = mysqli_fetch_assoc($result);
-          echo '<span class="label label-danger">' . $row["count"] . '</span>';
-        } else {
-          echo '<span class="label label-danger">0</span>';
-        }
-
-        // Close connection
-        mysqli_close($conn);
-      ?>
+      Messages
     </div>
     <div class="panel-body">
       <ul class="mailbox-inbox">
