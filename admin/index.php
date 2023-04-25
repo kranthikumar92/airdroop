@@ -15,7 +15,7 @@
   </head>
   <body>
   <!-- Start Page Loading -->
-  <div class="loading"><img src="img/loading.gif" alt="loading-img"></div>
+  
   <!-- End Page Loading -->
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
   <!-- START TOP -->
