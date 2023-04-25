@@ -161,32 +161,32 @@ $conn->close();
           <table class="table table-dic table-hover ">
             <tbody>
               <tr>
-                <td><i class="fa fa-folder-o"></i>Projects</td>
+                <td>Projects</td>
                 <td>Folder</td>
                 <td class="text-r">27/2/2015 12:34 AM</td>
               </tr>
               <tr>
-                <td><i class="fa fa-file-archive-o"></i>Backup</td>
+                <td>Backup</td>
                 <td>Zip</td>
                 <td class="text-r">27/2/2015 12:34 AM</td>
               </tr>
               <tr>
-                <td><i class="fa fa-file-code-o"></i>Kode Theme</td>
+                <td>Kode Theme</td>
                 <td>Html</td>
                 <td class="text-r">27/2/2015 12:34 AM</td>
               </tr>
               <tr>
-                <td><i class="fa fa-file-pdf-o"></i>Documents</td>
+                <td>Documents</td>
                 <td>Pdf</td>
                 <td class="text-r">27/2/2015 12:34 AM</td>
               </tr>
               <tr>
-                <td><i class="fa fa-folder-o"></i>Themes</td>
+                <td>Themes</td>
                 <td>Folder</td>
                 <td class="text-r">27/2/2015 12:34 AM</td>
               </tr>
               <tr>
-                <td><i class="fa fa-folder-o"></i>Uploaded Files</td>
+                <td>Uploaded Files</td>
                 <td>Folder</td>
                 <td class="text-r">27/2/2015 12:34 AM</td>
               </tr>
