@@ -226,6 +226,24 @@ $conn->close();
         // Execute query
         $result = mysqli_query($conn, $sql);
 
+        // Get number of subscribers
+        $num_rows = mysqli_num_rows($result);
+
+        // Display number of subscribers as a label
+       // echo '<span class="label label-danger">' . $num_rows . '</span>';
+
+        // Count the number of rows in the contact_form table
+        $sql_count_sub = "SELECT COUNT(*) as count FROM subscribers";
+        $result_count_sub = mysqli_query($conn, $sql_count_sub);
+
+        // Check if any rows were returned
+        if (mysqli_num_rows($result_count_sub) > 0) {
+          $row_sub = mysqli_fetch_assoc($result_count_sub);
+          echo '<span class="label label-danger">' . $row_sub["count"] . '</span>';
+        } else {
+          echo '<span class="label label-danger">0</span>';
+        }
+
         // Close database connection
         mysqli_close($conn);
       ?>
