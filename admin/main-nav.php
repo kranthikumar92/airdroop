@@ -46,7 +46,7 @@
 </ul>
 
 <div class="sidebar-plan">
-  Logout<a href="#" class="link">Click Here</a>  
+  Logout<a href="logout.php" class="link">Click Here</a>  
 </div>
 
 </div>
