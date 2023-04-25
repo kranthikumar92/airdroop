@@ -213,7 +213,7 @@ $conn->close();
 <div class="col-md-12 col-lg-3">
   <div class="panel panel-widget">
     <div class="panel-title">
-      Subscribers <?php
+      New Subscribers <?php
         // Database connection parameters
         $servername = "localhost";
         $username = "calix_web_user";
