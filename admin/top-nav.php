@@ -17,10 +17,6 @@ if(time() - $_SESSION['login_time'] > 7200) { // 2 hours in seconds
   exit();
 }
 ?>
-
-<!-- Your index.php page HTML code goes here -->
-
-
     
     <!-- Start Top Right -->
     <ul class="top-right">
