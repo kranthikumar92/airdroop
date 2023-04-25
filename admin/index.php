@@ -238,7 +238,6 @@ $conn->close();
             // Output data of each row
             while($row = mysqli_fetch_assoc($result)) {
               echo '<li><a href="#" class="item clearfix">';
-              //echo '<img src="img/profileimg.png" alt="img" class="img">';
               echo '<span class="from">' . $row["full_name"] . '</span>';
               echo $row["description_contact"];
               echo '<span class="date">' . $row["publish_date"] . '</span>';
