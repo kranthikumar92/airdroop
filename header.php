@@ -1,24 +1,3 @@
-<!--== Search Box Area Start ==-->
-<div class="search-box-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8  m-auto">
-                <div class="search-form-wrap">
-                    <form action="search-airdrop.php" method="get">
-                        <input type="search" name="search" placeholder="type keyword and hit enter" />
-                        <i class="cursor"></i>
-                        <button class="btn sr-only"><i class="fa fa-search"></i></button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="search-close-btn">
-        <a href="#" class="close-btn search-close-btn"><img src="assets/img/icons/cancel.png" alt="Cancel" /></a>
-    </div>
-</div>
-<!--== Search Box Area End ==-->
-
 <!--== Header Area Start ==-->
 <header id="header-area">
     <!-- Preheader Area Start -->
