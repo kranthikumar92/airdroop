@@ -150,6 +150,55 @@ $conn->close();
   <!-- Start First Row -->
   <div class="row">
 
+    <!-- Airdrop Listing -->
+    <div class="col-md-12 col-lg-5">
+      <div class="panel panel-widget" style="height:450px;">
+        <div class="panel-title">
+          Active Airdrop Listing <span class="label label-danger">29</span>
+        </div>
+        <div class="panel-body table-responsive">
+
+          <table class="table table-dic table-hover ">
+            <tbody>
+              <tr>
+                <td><i class="fa fa-folder-o"></i>Projects</td>
+                <td>Folder</td>
+                <td class="text-r">27/2/2015 12:34 AM</td>
+              </tr>
+              <tr>
+                <td><i class="fa fa-file-archive-o"></i>Backup</td>
+                <td>Zip</td>
+                <td class="text-r">27/2/2015 12:34 AM</td>
+              </tr>
+              <tr>
+                <td><i class="fa fa-file-code-o"></i>Kode Theme</td>
+                <td>Html</td>
+                <td class="text-r">27/2/2015 12:34 AM</td>
+              </tr>
+              <tr>
+                <td><i class="fa fa-file-pdf-o"></i>Documents</td>
+                <td>Pdf</td>
+                <td class="text-r">27/2/2015 12:34 AM</td>
+              </tr>
+              <tr>
+                <td><i class="fa fa-folder-o"></i>Themes</td>
+                <td>Folder</td>
+                <td class="text-r">27/2/2015 12:34 AM</td>
+              </tr>
+              <tr>
+                <td><i class="fa fa-folder-o"></i>Uploaded Files</td>
+                <td>Folder</td>
+                <td class="text-r">27/2/2015 12:34 AM</td>
+              </tr>
+              
+            </tbody>
+          </table>          
+
+        </div>
+      </div>
+    </div>
+    <!-- Airdrop Listing -->
+
     <!-- Start Browser Stats -->
     <div class="col-md-12 col-lg-3">
       <div class="panel panel-widget">
@@ -258,54 +307,7 @@ $conn->close();
     <!-- End Inbox -->
 
 
-    <!-- Start Files -->
-    <div class="col-md-12 col-lg-5">
-      <div class="panel panel-widget" style="height:450px;">
-        <div class="panel-title">
-          Active Airdrop Listing <span class="label label-danger">29</span>
-        </div>
-        <div class="panel-body table-responsive">
-
-          <table class="table table-dic table-hover ">
-            <tbody>
-              <tr>
-                <td><i class="fa fa-folder-o"></i>Projects</td>
-                <td>Folder</td>
-                <td class="text-r">27/2/2015 12:34 AM</td>
-              </tr>
-              <tr>
-                <td><i class="fa fa-file-archive-o"></i>Backup</td>
-                <td>Zip</td>
-                <td class="text-r">27/2/2015 12:34 AM</td>
-              </tr>
-              <tr>
-                <td><i class="fa fa-file-code-o"></i>Kode Theme</td>
-                <td>Html</td>
-                <td class="text-r">27/2/2015 12:34 AM</td>
-              </tr>
-              <tr>
-                <td><i class="fa fa-file-pdf-o"></i>Documents</td>
-                <td>Pdf</td>
-                <td class="text-r">27/2/2015 12:34 AM</td>
-              </tr>
-              <tr>
-                <td><i class="fa fa-folder-o"></i>Themes</td>
-                <td>Folder</td>
-                <td class="text-r">27/2/2015 12:34 AM</td>
-              </tr>
-              <tr>
-                <td><i class="fa fa-folder-o"></i>Uploaded Files</td>
-                <td>Folder</td>
-                <td class="text-r">27/2/2015 12:34 AM</td>
-              </tr>
-              
-            </tbody>
-          </table>          
-
-        </div>
-      </div>
-    </div>
-    <!-- End Files -->
+    
 
   </div>  
   <!-- End First Row -->
