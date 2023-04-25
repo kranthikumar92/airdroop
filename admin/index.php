@@ -90,7 +90,7 @@ if ($conn->connect_error) {
 $sql_airdrop_coins = "SELECT COUNT(*) AS num_active FROM airdrop_coins WHERE status = 'Active'";
 $sql_contact_form = "SELECT COUNT(*) AS num_active FROM contact_form";
 $sql_new_airdrop_requests = "SELECT COUNT(*) AS num_active FROM new_airdrop_requests";
-$sql_blog_posts = "SELECT COUNT(*) AS num_active FROM blog_posts";
+$sql_blog_posts = "SELECT COUNT(*) AS num_active FROM blog_posts WHERE status = 'Active'";
 $sql_users = "SELECT COUNT(*) AS num_active FROM users";
 $sql_subscribers = "SELECT COUNT(*) AS num_active FROM subscribers";
 
