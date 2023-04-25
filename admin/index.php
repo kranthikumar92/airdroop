@@ -199,7 +199,7 @@ $conn->close();
     </div>
     <!-- Airdrop Listing -->
 
-    <!-- Start Browser Stats -->
+    <!-- Start Subscribers -->
     <div class="col-md-12 col-lg-3">
       <div class="panel panel-widget">
         <div class="panel-title">
@@ -208,19 +208,19 @@ $conn->close();
         <div class="panel-body">
 
           <ul class="basic-list">
-            <li>Google Chrome <span class="right label label-default">42.8%</span></li>
-            <li>Firefox <span class="right label label-danger">16.9%</span></li>
-            <li>Safari <span class="right label label-success">15.5%</span></li>
-            <li>Opera <span class="right label label-primary">11.8%</span></li>
-            <li>Internet Explorer <span class="right label label-danger">3.2%</span></li>
-            <li>Mobile <span class="right label label-warning">3%</span></li>
-            <li>Others <span class="right label label-warning">0%</span></li>
+            <li>Google Chrome <span class="right label label-default">22/04/2023</span></li>
+            <li>Firefox <span class="right label label-danger">22/04/2023</span></li>
+            <li>Safari <span class="right label label-success">22/04/2023</span></li>
+            <li>Opera <span class="right label label-primary">22/04/2023</span></li>
+            <li>Internet Explorer <span class="right label label-danger">22/04/2023</span></li>
+            <li>Mobile <span class="right label label-warning">22/04/2023</span></li>
+            <li>Others <span class="right label">22/04/2023</span></li>
           </ul>
 
         </div>
       </div>
     </div>
-    <!-- End Browser Stats -->
+    <!-- End Subscribers -->
 
     <!-- Start Inbox -->
     <div class="col-md-12 col-lg-4">
