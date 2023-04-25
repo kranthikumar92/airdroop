@@ -175,56 +175,84 @@ $conn->close();
 
     <!-- Start Inbox -->
     <div class="col-md-12 col-lg-4">
-      <div class="panel panel-widget">
-        <div class="panel-title">
-          Inbox <span class="label label-danger">9</span>
-        </div>
-        <div class="panel-body">
+  <div class="panel panel-widget">
+    <div class="panel-title">
+      Messages 
+      <?php
+        // Database connection parameters
+        $servername = "localhost";
+        $username = "calix_web_user";
+        $password = "calixworldhhUUh383287HGSHhs";
+        $dbname = "calix_cry_world";
 
-        <ul class="mailbox-inbox">
+        // Create connection
+        $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-            <li>
-              <a href="#" class="item clearfix">
-                <img src="img/profileimg.png" alt="img" class="img">
-                <span class="from">Jonathan Doe</span>
-                Hello, m8 how is goin ?
-                <span class="date">22 May</span>
-              </a>
-            </li>
+        // Check connection
+        if (!$conn) {
+          die("Connection failed: " . mysqli_connect_error());
+        }
 
-            <li>
-              <a href="#" class="item clearfix">
-                <img src="img/profileimg2.png" alt="img" class="img">
-                <span class="from">Egemem Ka</span>
-                Problems look mighty small...
-                <span class="date">22 May</span>
-              </a>
-            </li>
+        // Count the number of rows in the contact_form table
+        $sql = "SELECT COUNT(*) as count FROM contact_form";
+        $result = mysqli_query($conn, $sql);
 
-            <li>
-              <a href="#" class="item clearfix">
-                <img src="img/profileimg3.png" alt="img" class="img">
-                <span class="from">James Throwing</span>
-                New job offer ?
-                <span class="date">22 May</span>
-              </a>
-            </li>
+        // Check if any rows were returned
+        if (mysqli_num_rows($result) > 0) {
+          $row = mysqli_fetch_assoc($result);
+          echo '<span class="label label-danger">' . $row["count"] . '</span>';
+        } else {
+          echo '<span class="label label-danger">0</span>';
+        }
 
-            <li>
-              <a href="#" class="item clearfix">
-                <img src="img/profileimg4.png" alt="img" class="img">
-                <span class="from">Timmy Jefsin</span>
-                Tonight Party
-                <span class="date">22 May</span>
-              </a>
-            </li>
-
-
-        </ul>
-
-        </div>
-      </div>
+        // Close connection
+        mysqli_close($conn);
+      ?>
     </div>
+    <div class="panel-body">
+      <ul class="mailbox-inbox">
+        <?php
+          // Database connection parameters
+          $servername = "localhost";
+          $username = "calix_web_user";
+          $password = "calixworldhhUUh383287HGSHhs";
+          $dbname = "calix_cry_world";
+
+          // Create connection
+          $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+          // Check connection
+          if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+          }
+
+          // Select data from contact_form table
+          $sql = "SELECT full_name, publish_date, SUBSTRING(description_contact, 1, 28) AS description_contact FROM contact_form";
+          $result = mysqli_query($conn, $sql);
+
+          // Check if any rows were returned
+          if (mysqli_num_rows($result) > 0) {
+            // Output data of each row
+            while($row = mysqli_fetch_assoc($result)) {
+              echo '<li><a href="#" class="item clearfix">';
+              echo '<img src="img/profileimg.png" alt="img" class="img">';
+              echo '<span class="from">' . $row["full_name"] . '</span>';
+              echo $row["description_contact"];
+              echo '<span class="date">' . $row["publish_date"] . '</span>';
+              echo '</a></li>';
+            }
+          } else {
+            echo "0 results";
+          }
+
+          // Close connection
+          mysqli_close($conn);
+        ?>
+      </ul>
+    </div>
+  </div>
+</div>
+
     <!-- End Inbox -->
 
 
