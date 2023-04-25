@@ -270,7 +270,7 @@ $conn->close();
     <div class="col-md-12 col-lg-4">
   <div class="panel panel-widget">
     <div class="panel-title">
-      Messages
+      New Messages
     </div>
     <div class="panel-body">
       <ul class="mailbox-inbox">
