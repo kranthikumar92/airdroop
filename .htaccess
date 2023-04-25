@@ -10,7 +10,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Redirect /single-airdrop.php?id={id} to /airdrop/{id}
 RewriteCond %{QUERY_STRING} ^id=([0-9]+)$
-RewriteRule ^single-airdrop\.php$ /airdroop/airdrop/%1? [R=301,L]
+RewriteRule ^/airdroop/single-airdrop\.php$ /airdroop/airdrop/%1? [R=301,L]
 
 # Rewrite /airdrop/{id} to /airdrop.php?id={id}
 RewriteRule ^airdrop/([0-9]+)/?$ /airdrop.php?id=$1 [L,QSA]
