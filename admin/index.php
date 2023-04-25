@@ -120,12 +120,12 @@ $conn->close();
     <li class="arrow"></li>
     <li class="col-xs-6 col-lg-2">
       <span class="title"><i class="fa fa-rocket"></i> Active Airdrops</span>
-      <h3<?php echo $num_active_airdrop_coins; ?></h3>
+      <h3>$<?php echo $num_active_airdrop_coins; ?></h3>
       <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 26%</b> from yesterday</span>
     </li>
     <li class="col-xs-6 col-lg-2">
       <span class="title"><i class="fa fa-envelope-o"></i> Contact Msgs</span>
-      <h3><?php echo $num_active_contact_form; ?></h3>
+      <h3>$<?php echo $num_active_contact_form; ?></h3>
       <span class="diff"><b class="color-up"><i class="fa fa-caret-up"></i> 26%</b> from last week</span>
     </li>
     <li class="col-xs-6 col-lg-2">
@@ -135,17 +135,17 @@ $conn->close();
     </li>
     <li class="col-xs-6 col-lg-2">
     <span class="title"><i class="fa fa-file-text-o"></i> Blog Posts</span>
-    <h3><?php echo $num_active_blog_posts; ?></h3>
+    <h3>$<?php echo $num_active_blog_posts; ?></h3>
     <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 15%</b> from last week</span>
     </li>
     <li class="col-xs-6 col-lg-2">
     <span class="title"><i class="fa fa-users"></i> Active Users</span>
-    <h3><?php echo $num_active_users; ?></h3>
+    <h3>$<?php echo $num_active_users; ?></h3>
     <span class="diff"><b class="color-up"><i class="fa fa-caret-up"></i> 34%</b> from yesterday</span>
     </li>
     <li class="col-xs-6 col-lg-2">
     <span class="title"><i class="fa fa-rss"></i> Subscribers</span>
-    <h3><?php echo $num_active_subscribers; ?></h3>
+    <h3>$<?php echo $num_active_subscribers; ?></h3>
     <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 7%</b> from last week</span>
     </li>
     </ul>
