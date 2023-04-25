@@ -227,7 +227,10 @@ $conn->close();
           }
 
           // Select data from contact_form table
-          $sql = "SELECT full_name, publish_date, SUBSTRING(description_contact, 1, 28) AS description_contact FROM contact_form ORDER BY date DESC LIMIT 5";
+          $sql = "SELECT full_name, publish_date, SUBSTRING(description_contact, 1, 28) AS description_contact 
+                  FROM contact_form 
+                  ORDER BY publish_date DESC 
+                  LIMIT 5";
           $result = mysqli_query($conn, $sql);
 
           // Check if any rows were returned
