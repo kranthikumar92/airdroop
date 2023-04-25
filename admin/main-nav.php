@@ -3,7 +3,7 @@
 
 <ul class="sidebar-panel nav">
   <li class="sidetitle">MAIN</li>
-  <li><a href="index.html"><span class="icon color5"><i class="fa fa-home"></i></span>Dashboard<span class="label label-default"></span></a></li>
+  <li><a href="index.php"><span class="icon color5"><i class="fa fa-home"></i></span>Dashboard<span class="label label-default"></span></a></li>
   <li><a href="contact-messages.php"><span class="icon color6"><i class="fa fa-envelope-o"></i></span>Contact Messages<span class="label label-default"></span></a></li>
   <li><a href="#"><span class="icon color7"><i class="fa fa-rocket"></i></span>Airdrop<span class="caret"></span></a>
     <ul>
