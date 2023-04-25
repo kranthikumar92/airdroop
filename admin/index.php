@@ -40,18 +40,11 @@
     <!-- End Searchbox -->
 
     <!-- Start Top Menu -->
-    <ul class="topmenu">
-      <li><a href="#">Files</a></li>
-      <li><a href="#">Authors</a></li>
-      <li class="dropdown">
-        <a href="#" data-toggle="dropdown" class="dropdown-toggle">My Files <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Videos</a></li>
-          <li><a href="#">Pictures</a></li>
-          <li><a href="#">Blog Posts</a></li>
-        </ul>
-      </li>
-    </ul>
+    <!--== Top Nav Start ==-->
+    <?php
+        include('top-nav.php');
+    ?>
+    <!--== Top Nav End ==-->
     <!-- End Top Menu -->
 
     <!-- Start Sidepanel Show-Hide Button -->
