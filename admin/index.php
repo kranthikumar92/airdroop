@@ -155,7 +155,6 @@ $conn->close();
       <div class="panel panel-widget">
         <div class="panel-title">
           Browser Stats
-          
         </div>
         <div class="panel-body">
 
@@ -179,7 +178,6 @@ $conn->close();
       <div class="panel panel-widget">
         <div class="panel-title">
           Inbox <span class="label label-danger">9</span>
-          
         </div>
         <div class="panel-body">
 
@@ -235,7 +233,6 @@ $conn->close();
       <div class="panel panel-widget" style="height:450px;">
         <div class="panel-title">
           My Files <span class="label label-danger">29</span>
-          
         </div>
         <div class="panel-body table-responsive">
 
