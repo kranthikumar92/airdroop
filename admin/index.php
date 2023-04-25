@@ -75,7 +75,7 @@
   <ul class="topstats clearfix">
     <li class="arrow"></li>
     <li class="col-xs-6 col-lg-2">
-      <span class="title"><i class="fa fa-dot-circle-o"></i> Active Airdrop</span>
+      <span class="title"><i class="fa fa-dot-circle-o"></i> Active Airdrops</span>
       <h3>$36.45</h3>
       <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 26%</b> from yesterday</span>
     </li>
@@ -95,12 +95,12 @@
       <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 26%</b> from yesterday</span>
     </li>
     <li class="col-xs-6 col-lg-2">
-      <span class="title"><i class="fa fa-eye"></i> Users</span>
+      <span class="title"><i class="fa fa-user"></i> Users</span>
       <h3 class="color-up">46.230</h3>
       <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 26%</b> from yesterday</span>
     </li>
     <li class="col-xs-6 col-lg-2">
-      <span class="title"><i class="fa fa-clock-o"></i> Subscribers</span>
+      <span class="title"><i class="fa fa-users"></i> Subscribers</span>
       <h3 class="color-down">2:10<small>min</small></h3>
       <span class="diff"><b class="color-up"><i class="fa fa-caret-up"></i> 26%</b> from last week</span>
     </li>
