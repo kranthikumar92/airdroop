@@ -1,20 +1,5 @@
     <!-- Start Top Right -->
     <ul class="top-right">
-
-    <li class="dropdown link">
-      <a href="#" data-toggle="dropdown" class="dropdown-toggle hdbutton">Create New <span class="caret"></span></a>
-        <ul class="dropdown-menu dropdown-menu-list">
-          <li><a href="#"><i class="fa falist fa-paper-plane-o"></i>Product or Item</a></li>
-          <li><a href="#"><i class="fa falist fa-font"></i>Blog Post</a></li>
-          <li><a href="#"><i class="fa falist fa-file-image-o"></i>Image Gallery</a></li>
-          <li><a href="#"><i class="fa falist fa-file-video-o"></i>Video Gallery</a></li>
-        </ul>
-    </li>
-
-    <li class="link">
-      <a href="#" class="notifications">6</a>
-    </li>
-
     <li class="dropdown link">
       <a href="#" data-toggle="dropdown" class="dropdown-toggle profilebox"><img src="img/profileimg.png" alt="img"><b>Jonathan Doe</b><span class="caret"></span></a>
         <ul class="dropdown-menu dropdown-menu-list dropdown-menu-right">
