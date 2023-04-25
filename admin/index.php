@@ -120,7 +120,7 @@ $conn->close();
     <li class="arrow"></li>
     <li class="col-xs-6 col-lg-2">
       <span class="title"><i class="fa fa-rocket"></i> Active Airdrops</span>
-      <h3>$<?php echo $num_active_airdrop_coins; ?></h3>
+      <h3><?php echo $num_active_airdrop_coins; ?></h3>
       <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 26%</b> from yesterday</span>
     </li>
     <li class="col-xs-6 col-lg-2">
