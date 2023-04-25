@@ -1,3 +1,27 @@
+<?php
+session_start();
+
+// Check if user is not logged in, redirect to login.php
+if(!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
+  header("Location: login.php");
+  exit();
+}
+
+// Check if session has expired, redirect to login.php
+if(time() - $_SESSION['login_time'] > 7200) { // 2 hours in seconds
+  session_unset();
+  session_destroy();
+  setcookie("username", "", time()-3600); // delete cookie
+  setcookie("password", "", time()-3600); // delete cookie
+  header("Location: login.php");
+  exit();
+}
+?>
+
+<!-- Your index.php page HTML code goes here -->
+
+
+    
     <!-- Start Top Right -->
     <ul class="top-right">
     <li class="dropdown link">
