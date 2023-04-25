@@ -153,7 +153,7 @@ $conn->close();
     <!-- Airdrop Listing -->
 <div class="col-md-12 col-lg-5">
   <div class="panel panel-widget" style="height:450px;">
-    <div class="panel-title">
+    <div class="panel-title" style="color: green;">
       Active Airdrop Listing
     </div>
     <div class="panel-body table-responsive">
@@ -212,7 +212,7 @@ $conn->close();
     <!-- Start Subscribers -->
 <div class="col-md-12 col-lg-3">
   <div class="panel panel-widget">
-    <div class="panel-title">
+    <div class="panel-title" style="color: blue;">
       New Subscribers <?php
         // Database connection parameters
         $servername = "localhost";
