@@ -59,7 +59,7 @@
   <div class="page-header">
     <h1 class="title">Dashboard</h1>
       <ol class="breadcrumb">
-        <li class="active">This is a quick overview details</li>
+        <li class="active">This is a quick overview of important details</li>
     </ol>
 
   </div>
