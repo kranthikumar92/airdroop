@@ -69,14 +69,55 @@
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
 <!-- START CONTAINER -->
 <div class="container-widget">
+<?php
+// Database connection parameters
+$servername = "localhost";
+$username = "calix_web_user";
+$password = "calixworldhhUUh383287HGSHhs";
+$dbname = "calix_cry_world";
 
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+// Query to get number of active rows in each table
+$sql_airdrop_coins = "SELECT COUNT(*) AS num_active FROM airdrop_coins WHERE active = 1";
+$sql_contact_form = "SELECT COUNT(*) AS num_active FROM contact_form WHERE active = 1";
+$sql_new_airdrop_requests = "SELECT COUNT(*) AS num_active FROM new_airdrop_requests WHERE active = 1";
+$sql_blog_posts = "SELECT COUNT(*) AS num_active FROM blog_posts WHERE active = 1";
+$sql_users = "SELECT COUNT(*) AS num_active FROM users WHERE active = 1";
+$sql_subscribers = "SELECT COUNT(*) AS num_active FROM subscribers WHERE active = 1";
+
+// Execute queries
+$result_airdrop_coins = $conn->query($sql_airdrop_coins);
+$result_contact_form = $conn->query($sql_contact_form);
+$result_new_airdrop_requests = $conn->query($sql_new_airdrop_requests);
+$result_blog_posts = $conn->query($sql_blog_posts);
+$result_users = $conn->query($sql_users);
+$result_subscribers = $conn->query($sql_subscribers);
+
+// Retrieve number of active rows from each query result
+$num_active_airdrop_coins = $result_airdrop_coins->fetch_assoc()['num_active'];
+$num_active_contact_form = $result_contact_form->fetch_assoc()['num_active'];
+$num_active_new_airdrop_requests = $result_new_airdrop_requests->fetch_assoc()['num_active'];
+$num_active_blog_posts = $result_blog_posts->fetch_assoc()['num_active'];
+$num_active_users = $result_users->fetch_assoc()['num_active'];
+$num_active_subscribers = $result_subscribers->fetch_assoc()['num_active'];
+
+// Close connection
+$conn->close();
+?>
   <!-- Start Top Stats -->
   <div class="col-md-12">
   <ul class="topstats clearfix">
     <li class="arrow"></li>
     <li class="col-xs-6 col-lg-2">
       <span class="title"><i class="fa fa-rocket"></i> Active Airdrops</span>
-      <h3>$36.45</h3>
+      <h3><?php echo $num_active_airdrop_coins; ?></h3>
       <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 26%</b> from yesterday</span>
     </li>
     <li class="col-xs-6 col-lg-2">
