@@ -15,7 +15,7 @@
   </head>
   <body>
   <!-- Start Page Loading -->
-  
+  <div class="loading"><img src="img/loading.gif" alt="loading-img"></div>
   <!-- End Page Loading -->
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
   <!-- START TOP -->
@@ -69,7 +69,9 @@
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
 <!-- START CONTAINER -->
 <div class="container-widget">
-<?php
+
+  <!-- Start Top Stats -->
+  <?php
 // Database connection parameters
 $servername = "localhost";
 $username = "calix_web_user";
@@ -85,12 +87,12 @@ if ($conn->connect_error) {
 }
 
 // Query to get number of active rows in each table
-$sql_airdrop_coins = "SELECT COUNT(*) AS num_active FROM airdrop_coins WHERE active = Active'";
-$sql_contact_form = "SELECT COUNT(*) AS num_active FROM contact_form";
-$sql_new_airdrop_requests = "SELECT COUNT(*) AS num_active FROM new_airdrop_requests";
-$sql_blog_posts = "SELECT COUNT(*) AS num_active FROM blog_posts";
-$sql_users = "SELECT COUNT(*) AS num_active FROM users";
-$sql_subscribers = "SELECT COUNT(*) AS num_active FROM subscribers";
+$sql_airdrop_coins = "SELECT COUNT(*) AS num_active FROM airdrop_coins WHERE active = 1";
+$sql_contact_form = "SELECT COUNT(*) AS num_active FROM contact_form WHERE active = 1";
+$sql_new_airdrop_requests = "SELECT COUNT(*) AS num_active FROM new_airdrop_requests WHERE active = 1";
+$sql_blog_posts = "SELECT COUNT(*) AS num_active FROM blog_posts WHERE active = 1";
+$sql_users = "SELECT COUNT(*) AS num_active FROM users WHERE active = 1";
+$sql_subscribers = "SELECT COUNT(*) AS num_active FROM subscribers WHERE active = 1";
 
 // Execute queries
 $result_airdrop_coins = $conn->query($sql_airdrop_coins);
@@ -111,43 +113,45 @@ $num_active_subscribers = $result_subscribers->fetch_assoc()['num_active'];
 // Close connection
 $conn->close();
 ?>
-  <!-- Start Top Stats -->
-  <div class="col-md-12">
+
+<!-- Start Top Stats -->
+<div class="col-md-12">
   <ul class="topstats clearfix">
     <li class="arrow"></li>
     <li class="col-xs-6 col-lg-2">
       <span class="title"><i class="fa fa-rocket"></i> Active Airdrops</span>
-      <h3><?php echo $num_active_airdrop_coins; ?></h3>
+      <h3>$<?php echo $num_active_airdrop_coins; ?></h3>
       <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 26%</b> from yesterday</span>
     </li>
     <li class="col-xs-6 col-lg-2">
       <span class="title"><i class="fa fa-envelope-o"></i> Contact Msgs</span>
-      <h3>$96.25</h3>
+      <h3>$<?php echo $num_active_contact_form; ?></h3>
       <span class="diff"><b class="color-up"><i class="fa fa-caret-up"></i> 26%</b> from last week</span>
     </li>
     <li class="col-xs-6 col-lg-2">
       <span class="title"><i class="fa fa-futbol-o"></i> Airdrop Request</span>
-      <h3 class="color-up">696</h3>
-      <span class="diff"><b class="color-up"><i class="fa fa-caret-up"></i> 26%</b> from last month</span>
+      <h3><?php echo $num_active_new_airdrop_requests; ?></h3>
+      <span class="diff"><b class="color-up"><i class="fa fa-caret-up"></i> 9%</b> from yesterday</span>
     </li>
     <li class="col-xs-6 col-lg-2">
-      <span class="title"><i class="fa fa-rss-square"></i> Blog Posts</span>
-      <h3>960</h3>
-      <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 26%</b> from yesterday</span>
+    <span class="title"><i class="fa fa-file-text-o"></i> Blog Posts</span>
+    <h3>$<?php echo $num_active_blog_posts; ?></h3>
+    <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 15%</b> from last week</span>
     </li>
     <li class="col-xs-6 col-lg-2">
-      <span class="title"><i class="fa fa-user"></i> Users</span>
-      <h3 class="color-up">46.230</h3>
-      <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 26%</b> from yesterday</span>
+    <span class="title"><i class="fa fa-users"></i> Active Users</span>
+    <h3>$<?php echo $num_active_users; ?></h3>
+    <span class="diff"><b class="color-up"><i class="fa fa-caret-up"></i> 34%</b> from yesterday</span>
     </li>
     <li class="col-xs-6 col-lg-2">
-      <span class="title"><i class="fa fa-users"></i> Subscribers</span>
-      <h3 class="color-down">2:10<small>min</small></h3>
-      <span class="diff"><b class="color-up"><i class="fa fa-caret-up"></i> 26%</b> from last week</span>
+    <span class="title"><i class="fa fa-rss"></i> Subscribers</span>
+    <h3>$<?php echo $num_active_subscribers; ?></h3>
+    <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 7%</b> from last week</span>
     </li>
-  </ul>
-  </div>
-  <!-- End Top Stats -->
+
+      </ul>
+    </div>
+    <!-- End Top Stats -->
 
 
   <!-- Start First Row -->
