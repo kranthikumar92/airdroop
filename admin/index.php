@@ -227,7 +227,7 @@ $conn->close();
           }
 
           // Select data from contact_form table
-          $sql = "SELECT full_name, publish_date, SUBSTRING(description_contact, 1, 28) AS description_contact 
+          $sql = "SELECT reference, full_name, publish_date, SUBSTRING(description_contact, 1, 28) AS description_contact 
                   FROM contact_form 
                   ORDER BY publish_date DESC 
                   LIMIT 5";
@@ -237,7 +237,7 @@ $conn->close();
           if (mysqli_num_rows($result) > 0) {
             // Output data of each row
             while($row = mysqli_fetch_assoc($result)) {
-              echo '<li><a href="#" class="item clearfix">';
+              echo '<li><a href="edit-message.php?id=' . $row["reference"] . '" class="item clearfix">';
               echo '<span class="from">' . $row["full_name"] . '</span>';
               echo $row["description_contact"];
               echo '<span class="date">' . $row["publish_date"] . '</span>';
