@@ -25,7 +25,7 @@ if(time() - $_SESSION['login_time'] > 7200) { // 2 hours in seconds
     <!-- Start Top Right -->
     <ul class="top-right">
     <li class="dropdown link">
-      <a href="#" data-toggle="dropdown" class="dropdown-toggle profilebox"><img src="img/profileimg.png" alt="img"><b><?php echo . $_SESSION['username']; ?></b><span class="caret"></span></a>
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle profilebox"><img src="img/profileimg.png" alt="img"><b><?php echo $_SESSION['username']; ?></b><span class="caret"></span></a>
         <ul class="dropdown-menu dropdown-menu-list dropdown-menu-right">
           <li><a href="users.php"><i class="fa falist fa-user"></i>Users</a></li>
           <li class="divider"></li>
