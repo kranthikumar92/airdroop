@@ -269,7 +269,7 @@ $conn->close();
     <!-- Start Inbox -->
     <div class="col-md-12 col-lg-4">
   <div class="panel panel-widget">
-    <div class="panel-title">
+    <div class="panel-title" style="color: red;">
       New Messages
     </div>
     <div class="panel-body">
