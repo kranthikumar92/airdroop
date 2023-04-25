@@ -226,12 +226,6 @@ $conn->close();
         // Execute query
         $result = mysqli_query($conn, $sql);
 
-        // Get number of subscribers
-        $num_rows = mysqli_num_rows($result);
-
-        // Display number of subscribers as a label
-        echo '<span class="label label-danger">' . $num_rows . '</span>';
-
         // Close database connection
         mysqli_close($conn);
       ?>
