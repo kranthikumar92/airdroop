@@ -38,7 +38,7 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
 <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-<link rel="canonical" href="https://www.calixworld.com/airdroop" />
+
 
 
 <!-- Fallback For IE 9 [ Media Query and html5 Shim] -->
