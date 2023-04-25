@@ -244,10 +244,7 @@ $conn->close();
       <div class="panel panel-widget" style="height:450px;">
         <div class="panel-title">
           My Files <span class="label label-danger">29</span>
-          <ul class="panel-tools">
-            <li><a class="icon"><i class="fa fa-refresh"></i></a></li>
-            <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
-          </ul>
+          
         </div>
         <div class="panel-body table-responsive">
 
