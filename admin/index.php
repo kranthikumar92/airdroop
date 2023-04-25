@@ -283,11 +283,7 @@ $conn->close();
                 <td>Folder</td>
                 <td class="text-r">27/2/2015 12:34 AM</td>
               </tr>
-              <tr>
-                <td><i class="fa fa-folder-o"></i>Personal Files</td>
-                <td>Folder</td>
-                <td class="text-r">27/2/2015 12:34 AM</td>
-              </tr>
+              
             </tbody>
           </table>          
 
