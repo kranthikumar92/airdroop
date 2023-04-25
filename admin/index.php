@@ -154,7 +154,7 @@ $conn->close();
 <div class="col-md-12 col-lg-5">
   <div class="panel panel-widget" style="height:450px;">
     <div class="panel-title">
-      Active Airdrop Listing <span class="label label-danger">29</span>
+      Active Airdrop Listing
     </div>
     <div class="panel-body table-responsive">
 
