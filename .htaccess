@@ -1,7 +1,16 @@
 RewriteEngine On
-RewriteCond %{HTTP_HOST} !^www\.calixworld\.com$ [NC,OR]
-RewriteCond %{REQUEST_URI} !^/airdroop/
-RewriteRule ^(.*)$ https://www.calixworld.com/airdroop/$1 [L,R=301]
-RewriteCond %{THE_REQUEST} \ /+single-airdrop\.php\?id=([0-9]+) [NC]
-RewriteRule ^ /airdroop/airdrop/%1? [R=301,L]
 
+# Redirect non-www to www
+RewriteCond %{HTTP_HOST} !^www\.calixworld\.com$ [NC]
+RewriteRule ^(.*)$ https://www.calixworld.com/$1 [L,R=301]
+
+# Redirect http to https
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect /single-airdrop.php?id={id} to /airdrop/{id}
+RewriteCond %{QUERY_STRING} ^id=([0-9]+)$
+RewriteRule ^single-airdrop\.php$ /airdrop/%1? [R=301,L]
+
+# Rewrite /airdrop/{id} to /airdrop.php?id={id}
+RewriteRule ^airdrop/([0-9]+)/?$ /airdrop.php?id=$1 [L,QSA]
