@@ -86,11 +86,11 @@ if ($conn->connect_error) {
 
 // Query to get number of active rows in each table
 $sql_airdrop_coins = "SELECT COUNT(*) AS num_active FROM airdrop_coins WHERE active = Active'";
-$sql_contact_form = "SELECT COUNT(*) AS num_active FROM contact_form WHERE active = 1";
-$sql_new_airdrop_requests = "SELECT COUNT(*) AS num_active FROM new_airdrop_requests WHERE active = 1";
-$sql_blog_posts = "SELECT COUNT(*) AS num_active FROM blog_posts WHERE active = 1";
-$sql_users = "SELECT COUNT(*) AS num_active FROM users WHERE active = 1";
-$sql_subscribers = "SELECT COUNT(*) AS num_active FROM subscribers WHERE active = 1";
+$sql_contact_form = "SELECT COUNT(*) AS num_active FROM contact_form";
+$sql_new_airdrop_requests = "SELECT COUNT(*) AS num_active FROM new_airdrop_requests";
+$sql_blog_posts = "SELECT COUNT(*) AS num_active FROM blog_posts";
+$sql_users = "SELECT COUNT(*) AS num_active FROM users";
+$sql_subscribers = "SELECT COUNT(*) AS num_active FROM subscribers";
 
 // Execute queries
 $result_airdrop_coins = $conn->query($sql_airdrop_coins);
