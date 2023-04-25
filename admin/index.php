@@ -75,32 +75,32 @@
   <ul class="topstats clearfix">
     <li class="arrow"></li>
     <li class="col-xs-6 col-lg-2">
-      <span class="title"><i class="fa fa-dot-circle-o"></i> Today Profit</span>
+      <span class="title"><i class="fa fa-dot-circle-o"></i> Active Airdrop</span>
       <h3>$36.45</h3>
       <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 26%</b> from yesterday</span>
     </li>
     <li class="col-xs-6 col-lg-2">
-      <span class="title"><i class="fa fa-calendar-o"></i> This Week</span>
+      <span class="title"><i class="fa fa-calendar-o"></i> Contact Msgs</span>
       <h3>$96.25</h3>
       <span class="diff"><b class="color-up"><i class="fa fa-caret-up"></i> 26%</b> from last week</span>
     </li>
     <li class="col-xs-6 col-lg-2">
-      <span class="title"><i class="fa fa-shopping-cart"></i> Total Sales</span>
+      <span class="title"><i class="fa fa-shopping-cart"></i> Airdrop Request</span>
       <h3 class="color-up">696</h3>
       <span class="diff"><b class="color-up"><i class="fa fa-caret-up"></i> 26%</b> from last month</span>
     </li>
     <li class="col-xs-6 col-lg-2">
-      <span class="title"><i class="fa fa-users"></i> Visitors</span>
+      <span class="title"><i class="fa fa-users"></i> Blog Posts</span>
       <h3>960</h3>
       <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 26%</b> from yesterday</span>
     </li>
     <li class="col-xs-6 col-lg-2">
-      <span class="title"><i class="fa fa-eye"></i> Page View</span>
+      <span class="title"><i class="fa fa-eye"></i> Users</span>
       <h3 class="color-up">46.230</h3>
       <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 26%</b> from yesterday</span>
     </li>
     <li class="col-xs-6 col-lg-2">
-      <span class="title"><i class="fa fa-clock-o"></i> Avarage Time</span>
+      <span class="title"><i class="fa fa-clock-o"></i> Subscribers</span>
       <h3 class="color-down">2:10<small>min</small></h3>
       <span class="diff"><b class="color-up"><i class="fa fa-caret-up"></i> 26%</b> from last week</span>
     </li>
