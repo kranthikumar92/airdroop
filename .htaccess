@@ -2,5 +2,6 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} !^www\.calixworld\.com$ [NC,OR]
 RewriteCond %{REQUEST_URI} !^/airdroop/
 RewriteRule ^(.*)$ https://www.calixworld.com/airdroop/$1 [L,R=301]
-RewriteCond %{QUERY_STRING} ^id=([0-9]+)$
-RewriteRule ^single-airdrop\.php$ /airdroop/airdrop/%1? [R=301,L]
+RewriteCond %{THE_REQUEST} \ /+single-airdrop\.php\?id=([0-9]+) [NC]
+RewriteRule ^ /airdroop/airdrop/%1? [R=301,L]
+
