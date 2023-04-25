@@ -150,30 +150,93 @@ $conn->close();
   <!-- Start First Row -->
   <div class="row">
 
-    <!-- Start Chart Daily -->
-    <div class="col-md-12 col-lg-7">
-      <div class=" panel-widget widget chart-with-stats clearfix" style="height:450px;">
-
-        <div class="col-sm-12" style="height:450px;">
-          <h4 class="title">TODAY SALES<small>Last update: 1 Hours ago</small></h4>
-          <div class="top-label"><h2>11.291</h2><h4>Today Total</h4></div>
-          <div class="bigchart" id="todaysales"></div>
-        </div>
-        <div class="right" style="height:450px;">
-          <h4 class="title">PAGE VIEW</h4>
-          <!-- start stats -->
-          <ul class="widget-inline-list clearfix">
-            <li class="col-12"><span>962</span>Themeforest<i class="chart sparkline-green"></i></li>
-            <li class="col-12"><span>367</span>Codecanyon<i class="chart sparkline-blue"></i></li>
-            <li class="col-12"><span>92</span>Photodune<i class="chart sparkline-red"></i></li>
+    <!-- Start Browser Stats -->
+    <div class="col-md-12 col-lg-3">
+      <div class="panel panel-widget">
+        <div class="panel-title">
+          Browser Stats
+          <ul class="panel-tools panel-tools-hover">
+            <li><a class="icon"><i class="fa fa-refresh"></i></a></li>
+            <li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
+            <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+            <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
           </ul>
-          <!-- end stats -->
         </div>
+        <div class="panel-body">
 
+          <ul class="basic-list">
+            <li>Google Chrome <span class="right label label-default">42.8%</span></li>
+            <li>Firefox <span class="right label label-danger">16.9%</span></li>
+            <li>Safari <span class="right label label-success">15.5%</span></li>
+            <li>Opera <span class="right label label-primary">11.8%</span></li>
+            <li>Internet Explorer <span class="right label label-danger">3.2%</span></li>
+            <li>Mobile <span class="right label label-warning">3%</span></li>
+            <li>Others <span class="right label label-warning">0%</span></li>
+          </ul>
 
+        </div>
       </div>
     </div>
-    <!-- End Chart Daily -->
+    <!-- End Browser Stats -->
+
+    <!-- Start Inbox -->
+    <div class="col-md-12 col-lg-4">
+      <div class="panel panel-widget">
+        <div class="panel-title">
+          Inbox <span class="label label-danger">9</span>
+          <ul class="panel-tools">
+            <li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
+            <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+            <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+          </ul>
+        </div>
+        <div class="panel-body">
+
+        <ul class="mailbox-inbox">
+
+            <li>
+              <a href="#" class="item clearfix">
+                <img src="img/profileimg.png" alt="img" class="img">
+                <span class="from">Jonathan Doe</span>
+                Hello, m8 how is goin ?
+                <span class="date">22 May</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="item clearfix">
+                <img src="img/profileimg2.png" alt="img" class="img">
+                <span class="from">Egemem Ka</span>
+                Problems look mighty small...
+                <span class="date">22 May</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="item clearfix">
+                <img src="img/profileimg3.png" alt="img" class="img">
+                <span class="from">James Throwing</span>
+                New job offer ?
+                <span class="date">22 May</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="item clearfix">
+                <img src="img/profileimg4.png" alt="img" class="img">
+                <span class="from">Timmy Jefsin</span>
+                Tonight Party
+                <span class="date">22 May</span>
+              </a>
+            </li>
+
+
+        </ul>
+
+        </div>
+      </div>
+    </div>
+    <!-- End Inbox -->
 
 
     <!-- Start Files -->
