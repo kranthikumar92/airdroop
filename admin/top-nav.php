@@ -1,10 +1,3 @@
-<!-- Start Searchbox -->
-    <form class="searchform">
-      <input type="text" class="searchbox" id="searchbox" placeholder="Search">
-      <span class="searchbutton"><i class="fa fa-search"></i></span>
-    </form>
-    <!-- End Searchbox -->
-
     <!-- Start Top Menu -->
     <ul class="topmenu">
       <li><a href="#">Files</a></li>
