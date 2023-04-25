@@ -151,53 +151,63 @@ $conn->close();
   <div class="row">
 
     <!-- Airdrop Listing -->
-    <div class="col-md-12 col-lg-5">
-      <div class="panel panel-widget" style="height:450px;">
-        <div class="panel-title">
-          Active Airdrop Listing <span class="label label-danger">29</span>
-        </div>
-        <div class="panel-body table-responsive">
-
-          <table class="table table-dic table-hover ">
-            <tbody>
-              <tr>
-                <td>Projects</td>
-                <td>Folder</td>
-                <td class="text-r">27/2/2015 12:34 AM</td>
-              </tr>
-              <tr>
-                <td>Backup</td>
-                <td>Zip</td>
-                <td class="text-r">27/2/2015 12:34 AM</td>
-              </tr>
-              <tr>
-                <td>Kode Theme</td>
-                <td>Html</td>
-                <td class="text-r">27/2/2015 12:34 AM</td>
-              </tr>
-              <tr>
-                <td>Documents</td>
-                <td>Pdf</td>
-                <td class="text-r">27/2/2015 12:34 AM</td>
-              </tr>
-              <tr>
-                <td>Themes</td>
-                <td>Folder</td>
-                <td class="text-r">27/2/2015 12:34 AM</td>
-              </tr>
-              <tr>
-                <td>Uploaded Files</td>
-                <td>Folder</td>
-                <td class="text-r">27/2/2015 12:34 AM</td>
-              </tr>
-              
-            </tbody>
-          </table>          
-
-        </div>
-      </div>
+<div class="col-md-12 col-lg-5">
+  <div class="panel panel-widget" style="height:450px;">
+    <div class="panel-title">
+      Active Airdrop Listing <span class="label label-danger">29</span>
     </div>
-    <!-- Airdrop Listing -->
+    <div class="panel-body table-responsive">
+
+      <table class="table table-dic table-hover ">
+        <thead>
+          <tr>
+            <th>Coin Name</th>
+            <th>Estimated Value</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+            // Database connection parameters
+            $servername = "localhost";
+            $username = "calix_web_user";
+            $password = "calixworldhhUUh383287HGSHhs";
+            $dbname = "calix_cry_world";
+
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            // Check connection
+            if ($conn->connect_error) {
+              die("Connection failed: " . $conn->connect_error);
+            }
+
+            // SQL query to retrieve data from airdrop_coins table with coin_name, est_value, status
+            $sql = "SELECT coin_name, est_value, status FROM airdrop_coins";
+
+            // Execute query and retrieve data
+            $result = $conn->query($sql);
+
+            // Display data in table
+            if ($result->num_rows > 0) {
+              while($row = $result->fetch_assoc()) {
+                echo "<tr><td>".$row["coin_name"]."</td><td>".$row["est_value"]."</td><td>".$row["status"]."</td></tr>";
+              }
+            } else {
+              echo "<tr><td colspan='3'>No data available</td></tr>";
+            }
+
+            // Close database connection
+            $conn->close();
+          ?>
+        </tbody>
+      </table>          
+
+    </div>
+  </div>
+</div>
+<!-- End Airdrop Listing -->
+
 
     <!-- Start Subscribers -->
 <div class="col-md-12 col-lg-3">
