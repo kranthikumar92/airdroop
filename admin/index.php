@@ -80,7 +80,7 @@
       <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 26%</b> from yesterday</span>
     </li>
     <li class="col-xs-6 col-lg-2">
-      <span class="title"><i class="fa fa-calendar-o"></i> Contact Msgs</span>
+      <span class="title"><i class="fa fa-envelope-o"></i> Contact Msgs</span>
       <h3>$96.25</h3>
       <span class="diff"><b class="color-up"><i class="fa fa-caret-up"></i> 26%</b> from last week</span>
     </li>
