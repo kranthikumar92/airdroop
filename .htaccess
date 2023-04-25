@@ -1,4 +1,4 @@
 RewriteEngine On
 RewriteRule ^airdroop/([0-9]+)$ /airdroop/single-airdrop.php?id=$1 [L]
-RewriteCond %{HTTP_HOST} !^www\.example\.com$ [NC]
-RewriteRule ^(.*)$ https://www.example.com/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} !^www\.calixworld\.com/airdroop$ [NC]
+RewriteRule ^(.*)$ https://www.calixworld.com/airdroop/$1 [L,R=301]
