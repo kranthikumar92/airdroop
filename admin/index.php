@@ -155,12 +155,7 @@ $conn->close();
       <div class="panel panel-widget">
         <div class="panel-title">
           Browser Stats
-          <ul class="panel-tools panel-tools-hover">
-            <li><a class="icon"><i class="fa fa-refresh"></i></a></li>
-            <li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
-            <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
-            <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
-          </ul>
+          
         </div>
         <div class="panel-body">
 
@@ -184,11 +179,7 @@ $conn->close();
       <div class="panel panel-widget">
         <div class="panel-title">
           Inbox <span class="label label-danger">9</span>
-          <ul class="panel-tools">
-            <li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
-            <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
-            <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
-          </ul>
+          
         </div>
         <div class="panel-body">
 
