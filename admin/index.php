@@ -85,12 +85,12 @@
       <span class="diff"><b class="color-up"><i class="fa fa-caret-up"></i> 26%</b> from last week</span>
     </li>
     <li class="col-xs-6 col-lg-2">
-      <span class="title"><i class="fa fa-shopping-cart"></i> Airdrop Request</span>
+      <span class="title"><i class="fa fa-futbol-o"></i> Airdrop Request</span>
       <h3 class="color-up">696</h3>
       <span class="diff"><b class="color-up"><i class="fa fa-caret-up"></i> 26%</b> from last month</span>
     </li>
     <li class="col-xs-6 col-lg-2">
-      <span class="title"><i class="fa fa-users"></i> Blog Posts</span>
+      <span class="title"><i class="fa fa-rss-square"></i> Blog Posts</span>
       <h3>960</h3>
       <span class="diff"><b class="color-down"><i class="fa fa-caret-down"></i> 26%</b> from yesterday</span>
     </li>
