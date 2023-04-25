@@ -204,7 +204,13 @@ $conn->close();
   <div class="panel panel-widget">
     <div class="panel-title">
       Subscribers <?php
-        // Database connection
+        // Database connection parameters
+        $servername = "localhost";
+        $username = "calix_web_user";
+        $password = "calixworldhhUUh383287HGSHhs";
+        $dbname = "calix_cry_world";
+
+        // Create connection
         $conn = mysqli_connect($servername, $username, $password, $dbname);
 
         // Check connection
