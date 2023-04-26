@@ -112,14 +112,15 @@ include('ticker_extension.php');
                             <div class="col-lg-8">
                                 <div class="airdrop-submit-form-area">
                                     <div class="airdrop-form">
-                                        <h2 class="h3 step-title"><?php
+                                        <h2 class="h3 step-title">
+                                        <?php
 // Connect to the database
 $servername = "localhost";
 $username = "calix_web_user";
 $password = "calixworldhhUUh383287HGSHhs";
 $dbname = "calix_cry_world";
 
-$conn = mysqli_connect("localhost", $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
@@ -148,22 +149,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Generate unique reference number with 8 digits
     $reference = mt_rand(10000000, 99999999);
 
-    // Insert form data into database
-    $sql = "INSERT INTO new_airdrop_requests (reference, coin_name, project_name, email, designation, ico_start_date, ico_end_date, total_airdrop_value, individual_reward_value, referral_bonus, coin_rate_against_usd, project_telegram_link, project_twitter_link, project_discord_link, project_contact_telegram_id, more_information, create_date, update_date, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    $stmt = mysqli_prepare($conn, $sql);
+    // Prepare statement
+    $stmt = mysqli_prepare($conn, "INSERT INTO new_airdrop_requests (reference, coin_name, project_name, email, designation, ico_start_date, ico_end_date, total_airdrop_value, individual_reward_value, referral_bonus, coin_rate_against_usd, project_telegram_link, project_twitter_link, project_discord_link, project_contact_telegram_id, more_information, create_date, update_date, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     mysqli_stmt_bind_param($stmt, "dssssssddsdssssssss", $reference, $coinName, $projectName, $email, $designation, $icoStartDate, $icoEndDate, $totalAirdropValue, $individualRewardValue, $referralBonus, $coinRateAgainstUSD, $projectTelegramLink, $projectTwitterLink, $projectDiscordLink, $projectContactTelegramID, $moreInformation, $publish_date, $publish_date, $status);
-    $result = mysqli_stmt_execute($stmt);
-    if ($result) {
+
+    // Execute statement
+    if (mysqli_stmt_execute($stmt)) {
         echo "Airdrop listing submitted successfully. Reference number: " . $reference;
     } else {
         echo "Error: " . mysqli_stmt_error($stmt);
     }
+
+    // Close statement
     mysqli_stmt_close($stmt);
 }
 
 // Close database connection
 mysqli_close($conn);
 ?>
+
 </h2>
                                             <div class="submit-btn">
                                             <a href="airdrop-listing.php"><button class="btn btn-gradiant">Back to Airdrops List</button></a>
