@@ -9,16 +9,16 @@ $airdrop_id = $_GET['id'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title>Airdroop - Airdrop Listing Html Template</title>
+    <title>Airdrops | Airdrop Listo - Crypto Airdrop Listing Template</title>
 
-    <meta name="description" content="simple description for your site" />
-<meta name="keywords" content="keyword1, keyword2" />
-<meta name="author" content="ThemeMarshal" />
+    <meta name="description" content="Crypto Airdrop Listing Website is your one-stop destination to find and participate in the latest cryptocurrency airdrops. Get access to the hottest and most promising airdrops." />
+<meta name="keywords" content="Crypto Airdrop, Cryptocurrency, Airdrops, Free Coins, Tokens, Crypto Community, Blockchain, ICO, Crypto Rewards, Crypto Giveaways" />
+
 
 <!-- desktop bookmark -->
-<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileColor" content="#000000">
 <meta name="msapplication-TileImage" content="assets/img/favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#000000">
 
 <!-- icons & favicons -->
 <link rel="shortcut icon" type="image/x-icon"  href="assets/img/favicon/favicon.ico"/>  <!-- this icon shows in browser toolbar -->
