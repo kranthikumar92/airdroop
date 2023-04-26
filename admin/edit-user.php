@@ -168,6 +168,16 @@
               </div>
 
               <div class="form-group">
+                  <label class="col-sm-2 control-label form-label">Update Status</label>
+                  <div class="col-sm-8">
+                    <select class="selectpicker" name="user_status" id="user_status">
+                        <option value="Active" <?php if ($status == 'Active') echo 'selected'; ?>>Active</option>
+                        <option value="Inactive" <?php if ($status == 'Inactive') echo 'selected'; ?>>Inactive</option>
+                      </select>                  
+                  </div>
+                </div>
+
+              <div class="form-group">
                   <div class="col-sm-offset-2 col-sm-10">
                       <button type="submit" class="btn btn-primary" name="update_user">Update User</button>
                   </div>
