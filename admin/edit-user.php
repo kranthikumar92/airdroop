@@ -91,54 +91,51 @@
     $dbname = "calix_cry_world";
 
     // Create database connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        // Escape user inputs for security
-        $user_status = mysqli_real_escape_string($conn, $_POST['user_status']);
+  // Escape user inputs for security
+$username = mysqli_real_escape_string($conn, $_POST['username']);
+$full_name = mysqli_real_escape_string($conn, $_POST['full_name']);
+$password = mysqli_real_escape_string($conn, $_POST['password']);
+$user_status = mysqli_real_escape_string($conn, $_POST['user_status']);
 
-        // Check if password is given, update password otherwise update only status
-        if (!empty($_POST['password'])) {
-            // Hash the password using Argon2
-            $password = password_hash($_POST['password'], PASSWORD_ARGON2ID);
 
-            // Prepare the SQL statement
-            $sql = "UPDATE users SET password='$password', status='$user_status' WHERE sno='$user_id'";
-        } else {
-            // Prepare the SQL statement
-            $sql = "UPDATE users SET status='$user_status' WHERE sno='$user_id'";
-        }
+  // Prepare the SQL statement
+  $sql = "UPDATE users SET username='$username', full_name='$full_name', password='$password', status='$user_status' WHERE sno='$user_id'";
 
-        // Execute the statement
-        if (mysqli_query($conn, $sql)) {
-            echo "<div class='col-sm-10'>";
-            echo "<h2>User Details Updated Successfully.</h2>";
-            echo "<a href='edit-user.php?id=" . $user_id . "' class='btn btn-default'>Back to User Editing</a>";
-            echo "&nbsp;";
-            echo "<a href='users.php' class='btn btn-default'>Back to Users List</a>";
-            echo "</div>";
-        } else {
-            echo "Error updating record: " . mysqli_error($conn);
-        }
-    } else {
+  // Execute the statement
+  if (mysqli_query($conn, $sql)) {
+    echo "<div class='col-sm-10'>";
+    echo "<h2>User Details Updated Successfully.</h2>";
+    echo "<a href='edit-user.php?id=" . $user_id . "' class='btn btn-default'>Back to User Editing</a>";
+    echo "&nbsp;";
+    echo "<a href='users.php' class='btn btn-default'>Back to Users List</a>";
+    echo "</div>";
+  } else {
+    echo "Error updating record: " . mysqli_error($conn);
+  }
 
-        // Query to retrieve blog post with ID 1
-        $sql = "SELECT * FROM users WHERE sno = $user_id";
-        $result = mysqli_query($conn, $sql);
 
-        // Check if the query returned any rows
-        if (mysqli_num_rows($result) > 0) {
-            // Fetch the first row as an associative array
-            $post = mysqli_fetch_assoc($result);
-            $status = $post['status'];
-        }
 
+} else {
+
+// Query to retrieve blog post with ID 1
+$sql = "SELECT * FROM users WHERE sno = $user_id";
+$result = mysqli_query($conn, $sql);
+
+// Check if the query returned any rows
+if (mysqli_num_rows($result) > 0) {
+    // Fetch the first row as an associative array
+    $post = mysqli_fetch_assoc($result);
+    $status = $post['status'];
+    
     ?>
 
               <form action="edit-user.php?id=<?php echo $post['sno']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
@@ -190,10 +187,12 @@
                 
               </form> 
               <?php
-            } else {
-    // No rows were returned, so display an error message
-    echo "No User Data found";
-}
+    }
+    else {
+        echo "No user found with ID " . $user_id;
+    }
+
+    mysqli_close($conn);
 }
 ?>
             </div>
