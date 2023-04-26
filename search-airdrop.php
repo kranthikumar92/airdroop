@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
+    <?php
+include ('db_config.php');
+
+// Retrieve the 'page' parameter from the URL
+$page = isset($_GET['page']) ? $_GET['page'] : 1;
+// Set the number of items per page
+$items_per_page = 10;
+// If a tag is provided in the URL, search for blog posts with that tag
+$tag = $_GET['search'];
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -95,7 +105,7 @@ include('advertise_top.php');
 <!--== Advertise 1 End ==-->
 
 <!--== Header Ads End ==-->
-<h3>Search results for keyword " <?php echo $_GET['search'];?> "</h3>
+<h3>Search results for keyword " <?php echo $tag;?> "</h3>
         <div class="row">
             <div class="col-lg-12">
                 <!-- Airdrop Listing Page Content Start -->
@@ -113,25 +123,6 @@ include('advertise_top.php');
                             <div class="listing-airdrop-wrap">
 <!-- Pagination PHP code Area Start -->
                             <?php
-// Retrieve the 'page' parameter from the URL
-$page = isset($_GET['page']) ? $_GET['page'] : 1;
-
-// Set the number of items per page
-$items_per_page = 10;
-
-// Database connection parameters
-$servername = "localhost";
-$username = "calix_web_user";
-$password = "calixworldhhUUh383287HGSHhs";
-$dbname = "calix_cry_world";
-
-// Create database connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 // Fetch total number of rows in the table
 $sql_total_rows = "SELECT COUNT(*) as total_rows FROM airdrop_coins WHERE coin_name LIKE '%$tag%'";
@@ -150,8 +141,7 @@ $offset = ($page - 1) * $items_per_page;
 
                                 <!-- Airdrop List Start -->
                                 <?php
-                                // If a tag is provided in the URL, search for blog posts with that tag
-                                $tag = $_GET['search'];
+                                
 
 $sql = "SELECT * FROM airdrop_coins WHERE coin_name LIKE '%$tag%' ORDER BY sno DESC LIMIT $items_per_page OFFSET $offset";
 $result = mysqli_query($conn, $sql);
