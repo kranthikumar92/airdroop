@@ -57,10 +57,10 @@
 
   <!-- Start Page Header -->
   <div class="page-header">
-    <h1 class="title">Update Info Pages</h1>
+    <h1 class="title">Edit User</h1>
       <ol class="breadcrumb">
-        <li><a href="info-pages.php">Information Pages</a></li>
-        <li class="active">Edit Info Page</li>
+        <li><a href="users.php">Users</a></li>
+        <li class="active">Edit Users</li>
       </ol>
 
   </div>
@@ -143,16 +143,14 @@ if (mysqli_num_rows($result) > 0) {
                   <label for="username" class="col-sm-2 control-label form-label">Username</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" value="<?php echo $post['username']; ?>" name="username" id="username">
-                    <span id="helpBlock" class="help-block">Update Page Title upto 60 letters.</span>
-                  </div>
+                    </div>
                 </div>
 
                 <div class="form-group">
                   <label for="full_name" class="col-sm-2 control-label form-label">Full Name</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" value= "<?php echo $post['full_name']; ?>" name="full_name" id="full_name">
-                    <span id="helpBlock" class="help-block">Slug is used for url, use "-" between words.</span>
-                  </div>
+                    </div>
                 </div>
 
                 <div class="form-group">
