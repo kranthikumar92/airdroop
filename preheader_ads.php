@@ -1,18 +1,6 @@
 <!--Retrieve data from db -->
 <?php
-    // Establish a database connection
-    $servername = "localhost";
-    $username = "calix_web_user";
-    $password = "calixworldhhUUh383287HGSHhs";
-    $dbname = "calix_cry_world";
-
-    // Create database connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include ('db_config.php');
 
 // Query to retrieve blog post with ID 1
 $sql = "SELECT * FROM preheader_ads WHERE sno = '1' AND status = 'Active'";

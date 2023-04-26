@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
+<?php
+include ('db_config.php');
+
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -108,18 +112,6 @@ include('ticker_extension.php');
                                 <div class="step-process-wrapper">
                                     <!-- Content Start -->
                                     <?php
-// Establish a database connection
-$servername = "localhost";
-$username = "calix_web_user";
-$password = "calixworldhhUUh383287HGSHhs";
-$dbname = "calix_cry_world";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
 
 // Retrieve data from info_pages table based on slug
 $page_slug = $_GET['slug'];
