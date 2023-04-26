@@ -137,14 +137,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Generate unique reference number with 8 digits
     $reference = mt_rand(10000000, 99999999);
 
-    // Insert form data into database
-    $sql = "INSERT INTO contact_form (reference, full_name, email, social_link, description_contact, publish_date, update_date, status) VALUES ($reference, '$fullName', '$email', '$socialLink', '$descriptionContact', '$publishDate', '$publishDate', '$status_cur')";
-    $result = mysqli_query($conn, $sql);
+    // Prepare and bind the statement
+    $stmt = mysqli_prepare($conn, "INSERT INTO contact_form (reference, full_name, email, social_link, description_contact, publish_date, update_date, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+    mysqli_stmt_bind_param($stmt, "dsssssss", $reference, $fullName, $email, $socialLink, $descriptionContact, $publishDate, $publishDate, $status_cur);
+    $result = mysqli_stmt_execute($stmt);
+
     if ($result) {
         echo "Contact form submitted successfully. Reference number: C" . $reference;
     } else {
         echo "Error: " . mysqli_error($conn);
     }
+    mysqli_stmt_close($stmt);
 }
 
 // Close database connection
