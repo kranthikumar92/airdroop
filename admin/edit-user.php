@@ -83,7 +83,7 @@
             <!--Retrieve data from db (Airdrops List) -->
             <?php
     $user_id = $_GET['id'];
-    //$update_id = $_GET['update'];
+
     // Establish a database connection
     $servername = "localhost";
     $username = "calix_web_user";
@@ -128,18 +128,21 @@
         }
     } else {
 
-        // Query to retrieve blog post with ID 1
+        // Query to retrieve user with given ID
         $sql = "SELECT * FROM users WHERE sno = $user_id";
         $result = mysqli_query($conn, $sql);
 
         // Check if the query returned any rows
         if (mysqli_num_rows($result) > 0) {
             // Fetch the first row as an associative array
-            $post = mysqli_fetch_assoc($result);
-            $status = $post['status'];
+            $user = mysqli_fetch_assoc($result);
+            $status = $user['status'];
+        } else {
+            // No user found with given ID
+            echo "No user found with ID " . $user_id;
+            exit;
         }
-
-    ?>
+?>
 
               <form action="edit-user.php?id=<?php echo $post['sno']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <div class="form-group">
@@ -164,13 +167,6 @@
                   </div>
                 </div>
 
-                <div class="form-group" hidden>
-                  <label for="password_old" class="col-sm-2 control-label form-label">Password</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" value= "<?php echo $post['password']; ?>" name="password_old" id="password_old">
-                    </div>
-                </div>
-
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Update Status</label>
                   <div class="col-sm-8">
@@ -189,15 +185,7 @@
                 </div>
                 
               </form> 
-              <?php
-    }
-    else {
-        echo "No user found with ID " . $user_id;
-    }
-
-    mysqli_close($conn);
-
-?>
+              
             </div>
 
       </div>
