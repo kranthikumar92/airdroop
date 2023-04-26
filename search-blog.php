@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
+<?php
+include ('db_config.php');
+
+// Retrieve the 'page' and 'id' parameter from the URL
+$page = isset($_GET['page']) ? $_GET['page'] : 1;
+
+// Set the number of items per page
+$items_per_page = 6;
+$tag = $_GET['tag'];
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -100,25 +110,6 @@ include('advertise_top.php');
 <br>
 <!-- Pagination PHP code Area Start -->
 <?php
-// Retrieve the 'page' and 'id' parameter from the URL
-$page = isset($_GET['page']) ? $_GET['page'] : 1;
-
-// Set the number of items per page
-$items_per_page = 6;
-
-// Database connection parameters
-$servername = "localhost";
-$username = "calix_web_user";
-$password = "calixworldhhUUh383287HGSHhs";
-$dbname = "calix_cry_world";
-
-// Create database connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 // Fetch total number of rows in the table
 $sql_total_rows = "SELECT COUNT(*) as total_rows FROM blog_posts WHERE status = 'active' AND tags LIKE '%$tag%'";
@@ -141,7 +132,7 @@ $offset = ($page - 1) * $items_per_page;
 // Establish a database connection
 if (isset($_GET['tag'])) {
     // If a tag is provided in the URL, search for blog posts with that tag
-    $tag = $_GET['tag'];
+    
     $sql = "SELECT * FROM blog_posts WHERE status = 'active' AND tags LIKE '%$tag%' ORDER BY created_at DESC LIMIT $items_per_page OFFSET $offset";
 } else {
     // Otherwise, show all active blog posts
