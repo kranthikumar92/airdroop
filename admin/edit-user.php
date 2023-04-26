@@ -179,7 +179,7 @@
 
               <div class="form-group">
                   <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-primary" name="update_user">Update User</button>
+                      <button type="submit" class="btn btn-primary" name="update_user">Update User</button> <a href="users.php" class="btn btn-default">Back</a>
                   </div>
               </div>
           </form> 
