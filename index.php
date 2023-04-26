@@ -223,20 +223,6 @@ $page = isset($_GET['page']) ? $_GET['page'] : 1;
 // Set the number of items per page
 $items_per_page = 2;
 
-// Database connection parameters
-$servername = "localhost";
-$username = "calix_web_user";
-$password = "calixworldhhUUh383287HGSHhs";
-$dbname = "calix_cry_world";
-
-// Create database connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
 // Fetch total number of rows in the table
 $sql_total_rows = "SELECT COUNT(*) as total_rows FROM blog_posts WHERE status = 'active'";
 $result_total_rows = mysqli_query($conn, $sql_total_rows);
