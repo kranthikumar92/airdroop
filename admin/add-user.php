@@ -81,9 +81,7 @@
             <div class="panel-body">
 
             <!--Retrieve data from db (Airdrops List) -->
-    <?php
-    //$airdrop_id = $_GET['id'];
-    //$update_id = $_GET['update'];
+            <?php
     // Establish a database connection
     $servername = "localhost";
     $username = "calix_web_user";
@@ -91,41 +89,47 @@
     $dbname = "calix_cry_world";
 
     // Create database connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-// Escape user inputs for security
-$username = mysqli_real_escape_string($conn, $_POST['username']);
-$full_name = mysqli_real_escape_string($conn, $_POST['full_name']);
-$password = mysqli_real_escape_string($conn, $_POST['password']);
-$status = 'Active';
-$publish_date = date('Y-m-d');
-
-    // Prepare the SQL statement
-    $sql = "INSERT INTO users (username, full_name, password, register_date, status) 
-        VALUES ('".$username."', '".$full_name."', '".$password."', '".$publish_date."', '".$status."')";
-
-    // Execute the statement
-    if (mysqli_query($conn, $sql)) {
-        echo "<div class='col-sm-10'>";
-        echo "<h2>New User Added Successfully.</h2>";
-        echo "<a href='users.php' class='btn btn-default'>Back to Users List</a>";
-        echo "</div>";
-    } else {
-        echo "" . mysqli_error($conn);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
     }
 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+        // Escape user inputs for security
+        $username = mysqli_real_escape_string($conn, $_POST['username']);
+        $full_name = mysqli_real_escape_string($conn, $_POST['full_name']);
+        $password = mysqli_real_escape_string($conn, $_POST['password']);
+        $status = 'Active';
+        $publish_date = date('Y-m-d');
 
-} else {
-    
-    ?>
+        // Hash the password using Argon2
+        $options = [
+            'memory_cost' => 2048,
+            'time_cost' => 4,
+            'threads' => 2,
+        ];
+        $hashed_password = password_hash($password, PASSWORD_ARGON2ID, $options);
+
+        // Prepare the SQL statement
+        $sql = "INSERT INTO users (username, full_name, password, register_date, status) 
+            VALUES ('".$username."', '".$full_name."', '".$hashed_password."', '".$publish_date."', '".$status."')";
+
+        // Execute the statement
+        if (mysqli_query($conn, $sql)) {
+            echo "<div class='col-sm-10'>";
+            echo "<h2>New User Added Successfully.</h2>";
+            echo "<a href='users.php' class='btn btn-default'>Back to Users List</a>";
+            echo "</div>";
+        } else {
+            echo "" . mysqli_error($conn);
+        }
+
+    } else {
+
+?>
 
               <form action="add-user.php" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <div class="form-group">
