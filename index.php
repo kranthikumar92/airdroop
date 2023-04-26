@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
+<?php
+include ('db_config.php');
+
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -102,19 +106,6 @@ include('advertise_top.php');
             <div class="row">
                 <!-- Single Airdrop Start -->
                 <?php
-// Database connection parameters
-$servername = "localhost";
-$username = "calix_web_user";
-$password = "calixworldhhUUh383287HGSHhs";
-$dbname = "calix_cry_world";
-
-// Create database connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 // Fetch data from the airdrop table
 $sql = "SELECT * FROM airdrop_coins WHERE status='active' ORDER BY sno DESC LIMIT 9";
