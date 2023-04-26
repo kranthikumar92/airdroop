@@ -145,50 +145,34 @@
       
 ?>
 
-<form action="edit-user.php?id=<?php echo $user['sno']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
-    <div class="form-group">
-        <label for="username" class="col-sm-2 control-label form-label">Username</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" value="<?php echo $user['username']; ?>" name="username" id="username" disabled>
-        </div>
-    </div>
+          <form action="edit-user.php?id=<?php echo $user['sno']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <div class="form-group">
+                  <label for="username" class="col-sm-2 control-label form-label">Username</label>
+                  <div class="col-sm-10">
+                      <input type="text" class="form-control" value="<?php echo $user['username']; ?>" name="username" id="username" disabled>
+                  </div>
+              </div>
 
-    <div class="form-group">
-        <label for="full_name" class="col-sm-2 control-label form-label">Full Name</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" value="<?php echo $user['full_name']; ?>" name="full_name" id="full_name" disabled>
-        </div>
-    </div>
+              <div class="form-group">
+                  <label for="full_name" class="col-sm-2 control-label form-label">Full Name</label>
+                  <div class="col-sm-10">
+                      <input type="text" class="form-control" value="<?php echo $user['full_name']; ?>" name="full_name" id="full_name" disabled>
+                  </div>
+              </div>
 
-    <div class="form-group">
-        <label for="password" class="col-sm-2 control-label form-label">Password</label>
-        <div class="col-sm-10">
-        <input type="password" class="form-control" placeholder="Enter new password" name="password" id="password">
-    </div>
-</div>
+              <div class="form-group">
+                  <label for="password" class="col-sm-2 control-label form-label">Password</label>
+                  <div class="col-sm-10">
+                  <input type="password" class="form-control" placeholder="Enter new password" name="password" id="password">
+              </div>
+              </div>
 
-<div class="form-group">
-    <label for="confirm_password" class="col-sm-2 control-label form-label">Confirm Password</label>
-    <div class="col-sm-10">
-        <input type="password" class="form-control" placeholder="Confirm new password" name="confirm_password" id="confirm_password">
-    </div>
-</div>
-
-<div class="form-group">
-    <label for="profile_pic" class="col-sm-2 control-label form-label">Profile Picture</label>
-    <div class="col-sm-10">
-        <input type="file" class="form-control" name="profile_pic" id="profile_pic">
-    </div>
-</div>
-
-<div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-primary" name="update_user">Update User</button>
-    </div>
-</div>
-
-                
-              </form> 
+              <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-primary" name="update_user">Update User</button>
+                  </div>
+              </div>
+          </form> 
               
               <?php
     }
