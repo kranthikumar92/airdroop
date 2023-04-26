@@ -142,7 +142,7 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="form-group">
                   <label for="username" class="col-sm-2 control-label form-label">Username</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" value="<?php echo $post['username']; ?>" name="username" id="username">
+                    <input type="text" class="form-control" value="<?php echo $post['username']; ?>" name="username" id="username" disabled>
                     </div>
                 </div>
 
