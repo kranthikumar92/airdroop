@@ -145,45 +145,48 @@
       
 ?>
 
-              <form action="edit-user.php?id=<?php echo $post['sno']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
-                <div class="form-group">
-                  <label for="username" class="col-sm-2 control-label form-label">Username</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" value="<?php echo $post['username']; ?>" name="username" id="username" disabled>
-                    </div>
-                </div>
+<form action="edit-user.php?id=<?php echo $user['sno']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+    <div class="form-group">
+        <label for="username" class="col-sm-2 control-label form-label">Username</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" value="<?php echo $user['username']; ?>" name="username" id="username" disabled>
+        </div>
+    </div>
 
-                <div class="form-group">
-                  <label for="full_name" class="col-sm-2 control-label form-label">Full Name</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" value= "<?php echo $post['full_name']; ?>" name="full_name" id="full_name" disabled>
-                    </div>
-                </div>
+    <div class="form-group">
+        <label for="full_name" class="col-sm-2 control-label form-label">Full Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" value="<?php echo $user['full_name']; ?>" name="full_name" id="full_name" disabled>
+        </div>
+    </div>
 
-                <div class="form-group">
-                  <label for="password" class="col-sm-2 control-label form-label">Password</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" name="password" id="password">
-                    <span id="helpBlock" class="help-block">Type New Password to Update.</span>
-                  </div>
-                </div>
+    <div class="form-group">
+        <label for="password" class="col-sm-2 control-label form-label">Password</label>
+        <div class="col-sm-10">
+        <input type="password" class="form-control" placeholder="Enter new password" name="password" id="password">
+    </div>
+</div>
 
-                <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">Update Status</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker" name="user_status" id="user_status">
-                        <option value="Active" <?php if ($status == 'Active') echo 'selected'; ?>>Active</option>
-                        <option value="Inactive" <?php if ($status == 'Inactive') echo 'selected'; ?>>Inactive</option>
-                      </select>                  
-                  </div>
-                </div>
+<div class="form-group">
+    <label for="confirm_password" class="col-sm-2 control-label form-label">Confirm Password</label>
+    <div class="col-sm-10">
+        <input type="password" class="form-control" placeholder="Confirm new password" name="confirm_password" id="confirm_password">
+    </div>
+</div>
 
-                <div class="form-group">
-                  <label class="col-sm-2 control-label form-label"></label>
-                  <div class="col-sm-10">
-                    <button type="submit" class="btn btn-default">Submit</button> <a href="users.php" class="btn btn-default">Back</a>
-                  </div>
-                </div>
+<div class="form-group">
+    <label for="profile_pic" class="col-sm-2 control-label form-label">Profile Picture</label>
+    <div class="col-sm-10">
+        <input type="file" class="form-control" name="profile_pic" id="profile_pic">
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary" name="update_user">Update User</button>
+    </div>
+</div>
+
                 
               </form> 
               
