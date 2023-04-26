@@ -189,10 +189,7 @@
               
               <?php
     }
-    else {
-        echo "No user found with ID " . $user_id;
-    }
-
+    
     mysqli_close($conn);
 
 ?>
