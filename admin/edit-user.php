@@ -156,7 +156,7 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="form-group">
                   <label for="password" class="col-sm-2 control-label form-label">Password</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" value= "<?php echo $post['password']; ?>" name="password" id="password">
+                    <input type="text" class="form-control" name="password" id="password">
                     <span id="helpBlock" class="help-block">Type New Password to Update.</span>
                   </div>
                 </div>
