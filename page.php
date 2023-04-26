@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
-
-<!-- Mirrored from codeboxr.net/themedemo/airdroop/step.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Apr 2023 10:30:32 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -73,10 +71,6 @@
 </head>
 <body>
 
-<!--[if lt IE 7]>
-<p class="browsehappy">We are Extreamly sorry, But the browser you are using is probably from when civilization started.
-    Which is way behind to view this site properly. Please update to a modern browser, At least a real browser. </p>
-<![endif]-->
 
 <?php
 include('header.php');
@@ -215,6 +209,4 @@ include('footer.php');
 
 
 </body>
-
-<!-- Mirrored from codeboxr.net/themedemo/airdroop/step.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Apr 2023 10:30:32 GMT -->
 </html>

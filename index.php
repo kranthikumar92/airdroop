@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
-
-<!-- Mirrored from codeboxr.net/themedemo/airdroop/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Apr 2023 10:29:53 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -75,10 +73,6 @@
 </head>
 <body>
 
-<!--[if lt IE 7]>
-<p class="browsehappy">We are Extreamly sorry, But the browser you are using is probably from when civilization started.
-    Which is way behind to view this site properly. Please update to a modern browser, At least a real browser. </p>
-<![endif]-->
 <?php
 include('header.php');
 ?>
@@ -374,10 +368,6 @@ include('footer.php');
 
 <!-- custom js: custom js file is added for easy custom js code  -->
  <script src="assets/js/custom.js"></script>
-
-<!-- custom js: custom scripts for theme style switcher for demo purpose  -->
-<!-- <script id="switcherhandle" src="assets/switcher/switcher.js"></script> -->
-
 
 </body>
 </html>

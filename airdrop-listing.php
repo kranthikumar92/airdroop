@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
-<!-- Mirrored from codeboxr.net/themedemo/airdroop/airdrop-listing.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Apr 2023 10:30:30 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -73,10 +72,6 @@
 </head>
 <body>
 
-<!--[if lt IE 7]>
-<p class="browsehappy">We are Extreamly sorry, But the browser you are using is probably from when civilization started.
-    Which is way behind to view this site properly. Please update to a modern browser, At least a real browser. </p>
-<![endif]-->
 
 <?php
 include('header.php');
@@ -229,8 +224,7 @@ $sql_page = "SELECT * FROM airdrop_coins LIMIT $items_per_page OFFSET $offset";
 $result_page = mysqli_query($conn, $sql_page);
 
 while ($row_page = mysqli_fetch_assoc($result_page)) {
-    // Your code to display the fetched data goes here
-    // ...
+    
 }
 
 // Display pagination links
@@ -302,8 +296,6 @@ include('footer.php');
 
 <!-- custom js: custom js file is added for easy custom js code  -->
  <script src="assets/js/custom.js"></script>
-
-
 
 </body>
 </html>
