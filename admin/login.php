@@ -29,40 +29,47 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
 }
 
-if(isset($_POST['login'])) {
-  // Retrieve username and password from form data
-  $username = $_POST['username'];
-  $password = $_POST['password'];
-  $remember = isset($_POST['remember']) ? true : false;
+if (isset($_POST['login'])) {
+    // Retrieve username and password from form data
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $remember = isset($_POST['remember']) ? true : false;
 
-  // Query database to check if user exists and password matches
-  $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password' AND status ='Active'";
-  $result = $conn->query($sql);
+    // Query database to check if user exists
+    $sql = "SELECT * FROM users WHERE username = '$username' AND status ='Active'";
+    $result = $conn->query($sql);
 
-  // If user exists and password matches, redirect to index.php
-  if ($result->num_rows > 0) {
-    session_start();
-    $_SESSION['username'] = $username;
-    $_SESSION['password'] = $password;
-    $_SESSION['login_time'] = time(); // set session login time
+    // If user exists, verify password hash
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $hash = $row['password'];
+        if (password_verify($password, $hash)) {
+            session_start();
+            $_SESSION['username'] = $username;
+            $_SESSION['password'] = $hash;
+            $_SESSION['login_time'] = time(); // set session login time
 
-    if ($remember) {
-      setcookie('username', $username, time() + (86400 * 30), "/"); // 30 days
-      setcookie('password', $password, time() + (86400 * 30), "/"); // 30 days
+            if ($remember) {
+                setcookie('username', $username, time() + (86400 * 30), "/"); // 30 days
+                setcookie('password', $hash, time() + (86400 * 30), "/"); // 30 days
+            }
+
+            header("Location: index.php");
+            exit();
+        } else {
+            echo "Invalid password";
+        }
+    } else {
+        echo "Invalid username or password";
     }
-
-    header("Location: index.php");
-    exit();
-  } else {
-    echo "Invalid username or password";
-  }
 }
 
 $conn->close();
 ?>
+
 <form action="login.php" method="POST">
   <div class="top">
     <img src="img/kode-icon.png" alt="icon" class="icon">
