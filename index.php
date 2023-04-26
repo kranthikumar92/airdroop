@@ -14,7 +14,7 @@
 <!-- desktop bookmark -->
 <meta name="msapplication-TileColor" content="#000000">
 <meta name="msapplication-TileImage" content="assets/img/favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#000000">
 
 <!-- icons & favicons -->
 <link rel="shortcut icon" type="image/x-icon"  href="assets/img/favicon/favicon.ico"/>  <!-- this icon shows in browser toolbar -->
