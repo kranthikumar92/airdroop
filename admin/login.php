@@ -4,10 +4,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kode is a Premium Bootstrap Admin Template, It's responsive, clean coded and mobile friendly">
-  <meta name="keywords" content="bootstrap, admin, dashboard, flat admin template, responsive," />
-  <title>Kode - Premium Bootstrap Admin Template</title>
-
+  <meta name="description" content="Crypto Airdrop Listing Website is your one-stop destination to find and participate in the latest cryptocurrency airdrops. Get access to the hottest and most promising airdrops.">
+  <meta name="keywords" content="Crypto Airdrop, Cryptocurrency, Airdrops, Free Coins, Tokens, Crypto Community, Blockchain, ICO, Crypto Rewards, Crypto Giveaways" />
+  <title>Admin | Airdrop Listo - Crypto Airdrop Listing Template</title>
+  <?php
+        include('db_config.php');
+    ?>
   <!-- ========== Css Files ========== -->
   <link href="css/root.css" rel="stylesheet">
   <style type="text/css">
@@ -18,19 +20,6 @@
 
     <div class="login-form">
     <?php
-// Database connection parameters
-$servername = "localhost";
-$username = "calix_web_user";
-$password = "calixworldhhUUh383287HGSHhs";
-$dbname = "calix_cry_world";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 if (isset($_POST['login'])) {
     // Retrieve username and password from form data

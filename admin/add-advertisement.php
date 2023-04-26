@@ -4,10 +4,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kode is a Premium Bootstrap Admin Template, It's responsive, clean coded and mobile friendly">
-  <meta name="keywords" content="bootstrap, admin, dashboard, flat admin template, responsive," />
-  <title>Kode - Premium Bootstrap Admin Template</title>
-
+  <meta name="description" content="Crypto Airdrop Listing Website is your one-stop destination to find and participate in the latest cryptocurrency airdrops. Get access to the hottest and most promising airdrops.">
+  <meta name="keywords" content="Crypto Airdrop, Cryptocurrency, Airdrops, Free Coins, Tokens, Crypto Community, Blockchain, ICO, Crypto Rewards, Crypto Giveaways" />
+  <title>Admin | Airdrop Listo - Crypto Airdrop Listing Template</title>
+  <?php
+        include('db_config.php');
+    ?>
   <!-- ========== Css Files ========== -->
   <link href="css/root.css" rel="stylesheet">
 
@@ -82,21 +84,6 @@
 
             <!--Retrieve data from db (Airdrops List) -->
     <?php
-    //$airdrop_id = $_GET['id'];
-    //$update_id = $_GET['update'];
-    // Establish a database connection
-    $servername = "localhost";
-    $username = "calix_web_user";
-    $password = "calixworldhhUUh383287HGSHhs";
-    $dbname = "calix_cry_world";
-
-    // Create database connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -184,13 +171,6 @@ mysqli_close($conn);
                     <input type="file" class="form-control" name="file" id="file"><br>
                   </div>
                 </div> 
-
-                <div class="form-group" hidden>
-                  <label for="airdrop_join_link" class="col-sm-2 control-label form-label">Hidden</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" value="<?php //echo $post['coin_img']; ?>" name="coin_img_alt" id="coin_img_alt">
-                  </div>
-                </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label"></label>

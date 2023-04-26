@@ -4,10 +4,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kode is a Premium Bootstrap Admin Template, It's responsive, clean coded and mobile friendly">
-  <meta name="keywords" content="bootstrap, admin, dashboard, flat admin template, responsive," />
-  <title>Kode - Premium Bootstrap Admin Template</title>
-
+  <meta name="description" content="Crypto Airdrop Listing Website is your one-stop destination to find and participate in the latest cryptocurrency airdrops. Get access to the hottest and most promising airdrops.">
+  <meta name="keywords" content="Crypto Airdrop, Cryptocurrency, Airdrops, Free Coins, Tokens, Crypto Community, Blockchain, ICO, Crypto Rewards, Crypto Giveaways" />
+  <title>Admin | Airdrop Listo - Crypto Airdrop Listing Template</title>
+  <?php
+        include('db_config.php');
+    ?>
   <!-- ========== Css Files ========== -->
   <link href="css/root.css" rel="stylesheet">
 
@@ -23,7 +25,7 @@
 
     <!-- Start App Logo -->
     <div class="applogo">
-      <a href="index.html" class="logo">kode</a>
+      <a href="index.php" class="logo">kode</a>
     </div>
     <!-- End App Logo -->
 
@@ -72,19 +74,6 @@
 
   <!-- Start Top Stats -->
   <?php
-// Database connection parameters
-$servername = "localhost";
-$username = "calix_web_user";
-$password = "calixworldhhUUh383287HGSHhs";
-$dbname = "calix_cry_world";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
 
 // Query to get number of active rows in each table
 $sql_airdrop_coins = "SELECT COUNT(*) AS num_active FROM airdrop_coins WHERE status = 'Active'";
@@ -110,8 +99,6 @@ $num_active_blog_posts = $result_blog_posts->fetch_assoc()['num_active'];
 $num_active_users = $result_users->fetch_assoc()['num_active'];
 $num_active_subscribers = $result_subscribers->fetch_assoc()['num_active'];
 
-// Close connection
-$conn->close();
 ?>
 
 <!-- Start Top Stats -->
@@ -168,19 +155,6 @@ $conn->close();
         </thead>
         <tbody>
           <?php
-            // Database connection parameters
-            $servername = "localhost";
-            $username = "calix_web_user";
-            $password = "calixworldhhUUh383287HGSHhs";
-            $dbname = "calix_cry_world";
-
-            // Create connection
-            $conn = new mysqli($servername, $username, $password, $dbname);
-
-            // Check connection
-            if ($conn->connect_error) {
-              die("Connection failed: " . $conn->connect_error);
-            }
 
             // SQL query to retrieve data from airdrop_coins table with coin_name, est_value, status
             $sql = "SELECT coin_name, est_value, status FROM airdrop_coins";
@@ -197,8 +171,6 @@ $conn->close();
               echo "<tr><td colspan='3'>No data available</td></tr>";
             }
 
-            // Close database connection
-            $conn->close();
           ?>
         </tbody>
       </table>          
@@ -214,19 +186,6 @@ $conn->close();
   <div class="panel panel-widget">
     <div class="panel-title" style="color: blue;">
       New Subscribers <?php
-        // Database connection parameters
-        $servername = "localhost";
-        $username = "calix_web_user";
-        $password = "calixworldhhUUh383287HGSHhs";
-        $dbname = "calix_cry_world";
-
-        // Create connection
-        $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-        // Check connection
-        if (!$conn) {
-          die("Connection failed: " . mysqli_connect_error());
-        }
 
         // SQL query to retrieve subscriber details
         $sql = "SELECT email, date_time FROM subscribers
@@ -236,8 +195,6 @@ $conn->close();
         // Execute query
         $result = mysqli_query($conn, $sql);
 
-        // Close database connection
-        mysqli_close($conn);
       ?>
     </div>
     <div class="panel-body">
@@ -275,19 +232,6 @@ $conn->close();
     <div class="panel-body">
       <ul class="mailbox-inbox">
         <?php
-          // Database connection parameters
-          $servername = "localhost";
-          $username = "calix_web_user";
-          $password = "calixworldhhUUh383287HGSHhs";
-          $dbname = "calix_cry_world";
-
-          // Create connection
-          $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-          // Check connection
-          if (!$conn) {
-            die("Connection failed: " . mysqli_connect_error());
-          }
 
           // Select data from contact_form table
           $sql = "SELECT reference, full_name, publish_date, SUBSTRING(description_contact, 1, 28) AS description_contact 
