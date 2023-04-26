@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 <?php
+include ('db_config.php');
+
 // Retrieve the 'id' parameter from the URL
 $airdrop_id = $_GET['id'];
 ?>
@@ -110,19 +112,6 @@ include('advertise_top.php');
                                 
 
                                 <?php
-// Database connection settings
-$servername = "localhost";
-$username = "calix_web_user";
-$password = "calixworldhhUUh383287HGSHhs";
-$dbname = "calix_cry_world";
-
-// Create a connection to the database
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check the connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 // Query to retrieve the details of the coin with sno = 1
 $sql = "SELECT * FROM airdrop_coins WHERE sno = '$airdrop_id'";
