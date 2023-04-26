@@ -142,6 +142,7 @@
             echo "No user found with ID " . $user_id;
             exit;
         }
+      
 ?>
 
               <form action="edit-user.php?id=<?php echo $post['sno']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
@@ -186,6 +187,15 @@
                 
               </form> 
               
+              <?php
+    }
+    else {
+        echo "No user found with ID " . $user_id;
+    }
+
+    mysqli_close($conn);
+
+?>
             </div>
 
       </div>
