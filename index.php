@@ -173,8 +173,6 @@ $statusClass = ($row['status'] == 'active') ? 'running' : 'popular';
     echo "No results found.";
 }
 
-// Close database connection
-$conn->close();
 ?>
 
                 <!-- Single Airdrop End -->
@@ -184,19 +182,7 @@ $conn->close();
 
         <!--Retrive Data from db (no of active listing) -->
         <?php
-        // Database connection parameters
-$servername = "localhost";
-$username = "calix_web_user";
-$password = "calixworldhhUUh383287HGSHhs";
-$dbname = "calix_cry_world";
 
-// Create database connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 // Query to retrieve total number of active airdrops
 $sql_total_rows = "SELECT COUNT(*) AS total_active FROM airdrop_coins WHERE status = 'active'";
 $result_total_rows = mysqli_query($conn, $sql_total_rows);
