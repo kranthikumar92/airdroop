@@ -5,18 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = $_POST["email"];
 
     // Define the database connection parameters
-    $servername = "localhost";
-    $username = "calix_web_user";
-    $password = "calixworldhhUUh383287HGSHhs";
-    $dbname = "calix_cry_world";
-
-    // Create a new database connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check the connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    include ('db_config.php');
 
     // Check if the email address already exists in the "subscribers" table
     $sql = "SELECT * FROM subscribers WHERE email = '$email'";
