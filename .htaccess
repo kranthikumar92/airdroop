@@ -9,8 +9,8 @@ RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Redirect /single-airdrop.php?id={id} to /airdrop/{id}
-RewriteCond %{QUERY_STRING} ^id=([0-9]+)$
-RewriteRule ^/airdroop/single-airdrop\.php$ /airdroop/airdrop/%1? [R=301,L]
+#RewriteCond %{QUERY_STRING} ^id=([0-9]+)$
+#RewriteRule ^/airdroop/single-airdrop\.php$ /airdroop/airdrop/%1? [R=301,L]
 
 # Rewrite /airdrop/{id} to /airdrop.php?id={id}
-RewriteRule ^airdroop/airdrop/([0-9]+)/?$ /airdroop/airdrop.php?id=$1 [L,QSA]
+#RewriteRule ^airdroop/airdrop/([0-9]+)/?$ /airdroop/airdrop.php?id=$1 [L,QSA]

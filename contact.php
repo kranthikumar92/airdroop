@@ -3,6 +3,10 @@
 <?php
 include ('db/db_config.php');
 
+//Canonical URL
+$fullurl = ($_SERVER['REQUEST_URI']);
+$trimmed = trim($fullurl, ".php");
+$canonical = rtrim($trimmed, '/') . '/';
 ?>
 <head>
     <meta charset="utf-8">
@@ -40,6 +44,7 @@ include ('db/db_config.php');
 
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
 <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+<link rel="canonical" href="https://www.calixworld.com<?php echo $canonical ?>" />
 
 <!-- Fallback For IE 9 [ Media Query and html5 Shim] -->
 <!--[if lt IE 9]>
