@@ -6,9 +6,11 @@ include ('db/db_config.php');
 // Retrieve the 'id' parameter from the URL
 //$airdrop_id = $_GET['id'];
 
+
 if (isset($_GET['id'])) {
-    $airdrop_id = $_GET['id'];
-    header("Location: single-airdrop/$airdrop_id");
+    $id = $_GET['id'];
+    $airdrop_id = $id;
+    header("Location: /single-airdrop/$id");
     exit();
 }
 
