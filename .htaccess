@@ -8,10 +8,18 @@ RewriteRule ^(.*)$ https://www.calixworld.com/$1 [L,R=301]
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Redirect /index.php to /index
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.*)\.php [NC]
+RewriteRule ^ %1 [R=301,L]
 
-# Redirect /single-airdrop.php?id={id} to /airdrop/{id}
-#RewriteCond %{QUERY_STRING} ^id=([0-9]+)$
-#RewriteRule ^/airdroop/single-airdrop\.php$ /airdroop/airdrop/%1? [R=301,L]
+# Rewrite /airdrop.php?id=28 to /airdrop/28
+#RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.*)\.php\?id=([0-9]+) [NC]
+#RewriteRule ^ %1/%2? [R=301,L]
 
-# Rewrite /airdrop/{id} to /airdrop.php?id={id}
-#RewriteRule ^airdroop/airdrop/([0-9]+)/?$ /airdroop/airdrop.php?id=$1 [L,QSA]
+# Rewrite /news.php?id=2 to /news/2
+#RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.*)\.php\?id=([0-9]+) [NC]
+#RewriteRule ^ %1/%2? [R=301,L]
+
+# Remove .php extension
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]
