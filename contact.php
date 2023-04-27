@@ -3,9 +3,6 @@
 <?php
 include ('db/db_config.php');
 
-//Canonical URL
-$url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . strtok($_SERVER['REQUEST_URI'], '?');
-echo '<link rel="canonical" href="' . $url . '" />';
 ?>
 <head>
     <meta charset="utf-8">
