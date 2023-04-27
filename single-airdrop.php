@@ -8,7 +8,7 @@ include ('db/db_config.php');
 
 if (isset($_GET['id'])) {
     $airdrop_id = $_GET['id'];
-    header("Location: /$airdrop_id");
+    header("Location: single-airdrop/$airdrop_id");
     exit();
 }
 
