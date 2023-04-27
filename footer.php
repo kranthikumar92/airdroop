@@ -8,7 +8,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="single-widget-wrap">
                             <a href="index-2.php">
-                                <img src="assets/img/logo-black.png" alt="Logo" />
+                                <img src="assets/img/logo.png" alt="Logo" />
                             </a>
                             <div class="about-widget">
                                 <p>Other chains became popular since then. We list hard forks for mostly informative purposes put.</p>
