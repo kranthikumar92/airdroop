@@ -123,7 +123,8 @@ include('ticker_extension.php');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if required fields are empty
     if(empty($_POST["coin_name"]) || empty($_POST["project_name"]) || empty($_POST["email"]) || empty($_POST["designation"]) || empty($_POST["ico_start_date"]) || empty($_POST["ico_end_date"]) || empty($_POST["total_airdrop_value"]) || empty($_POST["individual_reward_value"]) || empty($_POST["referral_bonus"]) || empty($_POST["coin_rate_against_usd"]) || empty($_POST["project_telegram_link"]) || empty($_POST["project_twitter_link"]) || empty($_POST["project_discord_link"]) || empty($_POST["project_contact_telegram_id"]) || empty($_POST["more_information"])) {
-        echo "Error: All fields are required. <a href='submit.php'><button class='btn btn-gradiant'>Back to Request Form</button></a>";
+        echo "Error: All fields are required.";
+        echo "<a href='submit.php'><button class='btn btn-gradiant'>Back to Request Form</button></a>";
     } else {
         // Get form data
         $coinName = $_POST["coin_name"];
