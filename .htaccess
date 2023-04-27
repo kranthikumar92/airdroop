@@ -8,6 +8,10 @@ RewriteRule ^(.*)$ https://www.calixworld.com/$1 [L,R=301]
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Redirect
+RewriteRule ^search/([^/]*)$ /airdroop/?id=$1 [L]
+RewriteRule ^about-us$ /airdroop/?slug=about-us [L]
+
 # Redirect /single-airdrop.php?id={id} to /airdrop/{id}
 #RewriteCond %{QUERY_STRING} ^id=([0-9]+)$
 #RewriteRule ^/airdroop/single-airdrop\.php$ /airdroop/airdrop/%1? [R=301,L]
