@@ -10,7 +10,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Remove .php extension
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.php [L,R=301]
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
 # Redirect /index.php to /index
 #RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.*)\.php [NC]
