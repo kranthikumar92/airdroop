@@ -11,7 +11,7 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     // Fetch the first row as an associative array
     $post = mysqli_fetch_assoc($result);
-s
+
 ?>
 <div class="row">
     <div class="col-lg-12 mt-5">
