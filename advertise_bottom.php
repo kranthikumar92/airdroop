@@ -1,7 +1,18 @@
 <!--Retrieve data from db -->
 <?php
-    // Define the database connection parameters
-    include ('db/db_config.php');
+    // Establish a database connection
+    $servername = "localhost";
+    $username = "calix_web_user";
+    $password = "calixworldhhUUh383287HGSHhs";
+    $dbname = "calix_cry_world";
+
+    // Create database connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 // Query to retrieve blog post with ID 1
 $sql = "SELECT * FROM advertisement WHERE ads_location = 'bottom_banner' AND status = 'Active'";
