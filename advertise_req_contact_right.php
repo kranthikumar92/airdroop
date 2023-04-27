@@ -1,7 +1,7 @@
 <!--Retrieve data from db -->
 <?php
     // Define the database connection parameters
-    include ('../db/db_config.php');
+    include ('db/db_config.php');
 
 // Query to retrieve blog post with ID 1
 $sql = "SELECT * FROM advertisement WHERE ads_location = 'req_contact_right' AND status = 'Active'";

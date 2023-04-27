@@ -1,6 +1,6 @@
 <!--Retrieve data from db -->
 <?php
-include ('db_config.php');
+include ('db/db_config.php');
 
 // Query to retrieve blog post with ID 1
 $sql = "SELECT * FROM preheader_ads WHERE sno = '1' AND status = 'Active'";
