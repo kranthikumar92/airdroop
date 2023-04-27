@@ -121,44 +121,50 @@ include('ticker_extension.php');
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get form data
-    $coinName = $_POST["coin_name"];
-    $projectName = $_POST["project_name"];
-    $email = $_POST["email"];
-    $designation = $_POST["designation"];
-    $icoStartDate = $_POST["ico_start_date"];
-    $icoEndDate = $_POST["ico_end_date"];
-    $totalAirdropValue = $_POST["total_airdrop_value"];
-    $individualRewardValue = $_POST["individual_reward_value"];
-    $referralBonus = $_POST["referral_bonus"];
-    $coinRateAgainstUSD = $_POST["coin_rate_against_usd"];
-    $projectTelegramLink = $_POST["project_telegram_link"];
-    $projectTwitterLink = $_POST["project_twitter_link"];
-    $projectDiscordLink = $_POST["project_discord_link"];
-    $projectContactTelegramID = $_POST["project_contact_telegram_id"];
-    $moreInformation = $_POST["more_information"];
-    $publish_date = date('Y-m-d');
-    $status = 'Submitted';
-
-    // Generate unique reference number with 8 digits
-    $reference = mt_rand(10000000, 99999999);
-
-    // Prepare statement
-    $stmt = mysqli_prepare($conn, "INSERT INTO new_airdrop_requests (reference, coin_name, project_name, email, designation, ico_start_date, ico_end_date, total_airdrop_value, individual_reward_value, referral_bonus, coin_rate_against_usd, project_telegram_link, project_twitter_link, project_discord_link, project_contact_telegram_id, more_information, create_date, update_date, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    mysqli_stmt_bind_param($stmt, "dssssssddsdssssssss", $reference, $coinName, $projectName, $email, $designation, $icoStartDate, $icoEndDate, $totalAirdropValue, $individualRewardValue, $referralBonus, $coinRateAgainstUSD, $projectTelegramLink, $projectTwitterLink, $projectDiscordLink, $projectContactTelegramID, $moreInformation, $publish_date, $publish_date, $status);
-
-    // Execute statement
-    if (mysqli_stmt_execute($stmt)) {
-        echo "Airdrop listing submitted successfully. Reference number: " . $reference;
+    // Check if required fields are empty
+    if(empty($_POST["coin_name"]) || empty($_POST["project_name"]) || empty($_POST["email"]) || empty($_POST["designation"]) || empty($_POST["ico_start_date"]) || empty($_POST["ico_end_date"]) || empty($_POST["total_airdrop_value"]) || empty($_POST["individual_reward_value"]) || empty($_POST["referral_bonus"]) || empty($_POST["coin_rate_against_usd"]) || empty($_POST["project_telegram_link"]) || empty($_POST["project_twitter_link"]) || empty($_POST["project_discord_link"]) || empty($_POST["project_contact_telegram_id"]) || empty($_POST["more_information"])) {
+        echo "Error: All fields are required. <a href='submit.php'><button class='btn btn-gradiant'>Back to Request Form</button></a>";
     } else {
-        echo "Error: " . mysqli_stmt_error($stmt);
-    }
+        // Get form data
+        $coinName = $_POST["coin_name"];
+        $projectName = $_POST["project_name"];
+        $email = $_POST["email"];
+        $designation = $_POST["designation"];
+        $icoStartDate = $_POST["ico_start_date"];
+        $icoEndDate = $_POST["ico_end_date"];
+        $totalAirdropValue = $_POST["total_airdrop_value"];
+        $individualRewardValue = $_POST["individual_reward_value"];
+        $referralBonus = $_POST["referral_bonus"];
+        $coinRateAgainstUSD = $_POST["coin_rate_against_usd"];
+        $projectTelegramLink = $_POST["project_telegram_link"];
+        $projectTwitterLink = $_POST["project_twitter_link"];
+        $projectDiscordLink = $_POST["project_discord_link"];
+        $projectContactTelegramID = $_POST["project_contact_telegram_id"];
+        $moreInformation = $_POST["more_information"];
+        $publish_date = date('Y-m-d');
+        $status = 'Submitted';
 
-    // Close statement
-    mysqli_stmt_close($stmt);
+        // Generate unique reference number with 8 digits
+        $reference = mt_rand(10000000, 99999999);
+
+        // Prepare statement
+        $stmt = mysqli_prepare($conn, "INSERT INTO new_airdrop_requests (reference, coin_name, project_name, email, designation, ico_start_date, ico_end_date, total_airdrop_value, individual_reward_value, referral_bonus, coin_rate_against_usd, project_telegram_link, project_twitter_link, project_discord_link, project_contact_telegram_id, more_information, create_date, update_date, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        mysqli_stmt_bind_param($stmt, "dssssssddsdssssssss", $reference, $coinName, $projectName, $email, $designation, $icoStartDate, $icoEndDate, $totalAirdropValue, $individualRewardValue, $referralBonus, $coinRateAgainstUSD, $projectTelegramLink, $projectTwitterLink, $projectDiscordLink, $projectContactTelegramID, $moreInformation, $publish_date, $publish_date, $status);
+
+        // Execute statement
+        if (mysqli_stmt_execute($stmt)) {
+            echo "Airdrop listing submitted successfully. Reference number: " . $reference;
+        } else {
+            echo "Error: " . mysqli_stmt_error($stmt);
+        }
+
+        // Close statement
+        mysqli_stmt_close($stmt);
+    }
 }
 
 ?>
+
 
 </h2>
                                             <div class="submit-btn">
