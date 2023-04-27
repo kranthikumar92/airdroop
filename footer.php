@@ -30,16 +30,12 @@
 
                             <div class="widget-body">
                                 <ul class="double-list">
-                                    <li><a href="#">Contact Us</a></li>
                                     <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Contact Us</a></li>
                                     <li><a href="#">FAQ</a></li>
                                     <li><a href="#">Advertising</a></li>
-                                    <li><a href="#">Legal</a></li>
-                                    <li><a href="#">Legal</a></li>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">FAQ</a></li>
-                                    <li><a href="#">Contact Us</a></li>
-                                    <li><a href="#">Advertising</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
                                 </ul>
                             </div>
                         </div>
