@@ -26,7 +26,7 @@
                     <!-- Single Widget Start -->
                     <div class="col-lg-3 col-sm-6">
                         <div class="single-widget-wrap">
-                            <h2 class="h5 widget-title">Slow Link</h2>
+                            <h2 class="h5 widget-title">Info Links</h2>
 
                             <div class="widget-body">
                                 <ul class="double-list">
