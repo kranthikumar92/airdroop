@@ -4,9 +4,7 @@
 include ('db/db_config.php');
 
 // Retrieve the 'id' parameter from the URL
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
-}
+$airdrop_id = $_GET['id'];
 ?>
 <head>
     <meta charset="utf-8">
