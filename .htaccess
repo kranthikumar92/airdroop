@@ -12,6 +12,13 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
+# Redirect single-airdrop?id=28 to single-airdrop/28
+RewriteCond %{QUERY_STRING} ^id=([0-9]+)$
+RewriteRule ^single-airdrop$ /single-airdrop/%1? [L,R=301]
+
+# Handle requests to /single-airdrop/28
+RewriteRule ^single-airdrop/([0-9]+)/?$ /single-airdrop?id=$1 [L,QSA]
+
 # Redirect /index.php to /index
 #RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.*)\.php [NC]
 #RewriteRule ^ %1 [R=301,L]
