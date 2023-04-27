@@ -101,7 +101,7 @@ include('ticker_extension.php');
 
 <!--== Advertise 1 Start ==-->
 <?php
-include('advertise/advertise_top.php');
+include('advertise_top.php');
 ?>
 <!--== Advertise 1 End ==-->
 
@@ -115,7 +115,7 @@ include('advertise/advertise_top.php');
                         <!-- Advertise List Start -->
                         <div class="col-lg-4">
                         <?php
-                                include ('advertise/advertise_list_blog.php');
+                                include ('advertise_list_blog.php');
                         ?>
                         </div>
                         <!-- Advertise List End -->
