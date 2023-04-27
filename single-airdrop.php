@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 <?php
-include ('db_config.php');
+include ('db/db_config.php');
 
 // Retrieve the 'id' parameter from the URL
 $airdrop_id = $_GET['id'];

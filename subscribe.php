@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = $_POST["email"];
 
     // Define the database connection parameters
-    include ('db_config.php');
+    include ('db/db_config.php');
 
     // Check if the email address already exists in the "subscribers" table
     $sql = "SELECT * FROM subscribers WHERE email = '$email'";

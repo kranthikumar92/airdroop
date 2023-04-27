@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 <?php
-include ('db_config.php');
+include ('db/db_config.php');
 
 // Retrieve the 'page' and 'id' parameter from the URL
 $page = isset($_GET['page']) ? $_GET['page'] : 1;

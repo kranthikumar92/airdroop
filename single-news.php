@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 <?php
-include ('db_config.php');
+include ('db/db_config.php');
 
 $blog_id = $_GET['id'];
 ?>
