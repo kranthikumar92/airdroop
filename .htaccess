@@ -16,6 +16,10 @@ RewriteRule ^/?(.*)\.php$ /$1 [L,R=301]
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^/?(.*)$ /$1.php [L]
 
+# Redirect single-airdrop?id=XX to single-airdrop/XX
+RewriteCond %{QUERY_STRING} !^id=
+RewriteRule ^root/pages/(.+)$ /root/pages/?id=$1 [L]
+
 # Remove .php extension
 #RewriteCond %{REQUEST_FILENAME} !-f
 #RewriteRule ^([^\.]+)$ $1.php [NC,L]
