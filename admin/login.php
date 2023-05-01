@@ -59,7 +59,7 @@ if (isset($_POST['login'])) {
 $conn->close();
 ?>
 
-<form action="login.php" method="POST">
+<form action="login" method="POST">
   <div class="top">
     <img src="img/kode-icon.png" alt="icon" class="icon">
     <h1>Kode</h1>
