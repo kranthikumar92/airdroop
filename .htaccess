@@ -12,9 +12,14 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{QUERY_STRING} ^id=([0-9]+)$
 RewriteRule ^single-airdrop$ /single-airdrop/%1? [R=301,L]
 
-# remove .php extension
+# Remove .php extension
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.php
+RewriteRule ^/?(.*)\.php$ /$1 [L,R=301]
+
+# Check to see if the request is for a PHP file
 RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^(.*)$ $1.php [L]
+RewriteRule ^/?(.*)$ /$1.php [L]
+
 
 # Remove .php extension
 #RewriteCond %{REQUEST_FILENAME} !-f
