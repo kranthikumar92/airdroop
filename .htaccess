@@ -9,12 +9,12 @@ RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # browser requests PHP
-#RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.php
-#RewriteRule ^/?(.*)\.php$ /$1 [L,R=301]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.php
+RewriteRule ^/?(.*)\.php$ /$1 [L,R=301]
 
 # check to see if the request is for a PHP file:
-#RewriteCond %{REQUEST_FILENAME}\.php -f
-#RewriteRule ^/?(.*)$ /$1.php [L]
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^/?(.*)$ /$1.php [L]
 
 # Remove .php extension
 #RewriteCond %{REQUEST_FILENAME} !-f
