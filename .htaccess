@@ -1,6 +1,5 @@
 RewriteEngine On
 Options -Multiviews
-RewriteOptions L
 
 # Redirect non-www to www
 RewriteCond %{HTTP_HOST} !^www\.calixworld\.com$ [NC]
@@ -23,10 +22,6 @@ RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^/?(.*)$ /$1.php [L]
 
 RewriteOptions MaxRedirects=20
-
-LogLevel debug
-RewriteLog "/var/log/apache2/rewrite.log"
-RewriteLogLevel 3
 
 
 # Remove .php extension
