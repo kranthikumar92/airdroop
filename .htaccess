@@ -8,20 +8,28 @@ RewriteRule ^(.*)$ https://www.calixworld.com/$1 [L,R=301]
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# browser requests PHP
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.php
+RewriteRule ^/?(.*)\.php$ /$1 [L,R=301]
+
+# check to see if the request is for a PHP file:
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^/?(.*)$ /$1.php [L]
+
 # Remove .php extension
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.php [NC,L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
 # Redirect single-airdrop?id=28 to single-airdrop/28
-RewriteCond %{QUERY_STRING} ^id=([0-9]+)$
-RewriteRule ^single-airdrop$ /single-airdrop/%1? [L,R=301]
+#RewriteCond %{QUERY_STRING} ^id=([0-9]+)$
+#RewriteRule ^single-airdrop$ /single-airdrop/%1? [L,R=301]
 
 # Handle requests to /single-airdrop/28
-RewriteRule ^single-airdrop/([0-9]+)/?$ /single-airdrop?id=$1 [L,QSA]
+#RewriteRule ^single-airdrop/([0-9]+)/?$ /single-airdrop?id=$1 [L,QSA]
 
 # Redirect /page?slug=about-us to /about-us
-RewriteCond %{QUERY_STRING} ^slug=about-us$
-RewriteRule ^page$ /about-us? [L,R=301]
+#RewriteCond %{QUERY_STRING} ^slug=about-us$
+#RewriteRule ^page$ /about-us? [L,R=301]
 
 # Redirect /index.php to /index
 #RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.*)\.php [NC]
