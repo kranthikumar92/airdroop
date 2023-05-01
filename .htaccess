@@ -22,6 +22,11 @@ RewriteRule ^/?(.*)$ /$1.php [L]
 
 RewriteOptions MaxRedirects=20
 
+LogLevel debug
+RewriteLog "/var/log/apache2/rewrite.log"
+RewriteLogLevel 3
+
+
 # Remove .php extension
 #RewriteCond %{REQUEST_FILENAME} !-f
 #RewriteRule ^([^\.]+)$ $1.php [NC,L]
