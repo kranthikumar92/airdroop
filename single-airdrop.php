@@ -98,7 +98,7 @@ include('ticker_extension.php');
         
 <!--== Advertise 1 Start ==-->
 <?php
-include('advertise_top.php');
+include('advertise_top');
 ?>
 <!--== Advertise 1 End ==-->
 
