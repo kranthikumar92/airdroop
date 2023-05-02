@@ -288,7 +288,7 @@ $statusClass = ($row_airdrop['status'] == 'active') ? 'running' : 'popular';
                                 <!-- Advertise Blog Start -->
                                 <?php
                                         include ('advertise_list_blog.php');
-        a
+        
                                 ?>
                                 <!-- Advertise Blog End -->
                                 <!-- Advertsiment Single Sidebar Start -->
