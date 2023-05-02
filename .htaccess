@@ -1,4 +1,6 @@
+<IfModule mod_rewrite.c>
 RewriteEngine On
+RewriteBase /
 Options -Multiviews
 LimitInternalRecursion 30
 
@@ -31,3 +33,4 @@ RewriteRule ^single-airdrop/([a-zA-Z0-9_-]+)$ /single-airdrop?id=$1 [L]
 
 #RewriteCond %{QUERY_STRING} ^id=([^&]+)$
 #RewriteRule ^single-airdrop/(.*)$ /single-airdrop/%1? [R=301,L]
+</IfModule>
