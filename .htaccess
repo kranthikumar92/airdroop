@@ -19,8 +19,8 @@ RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^/?(.*)$ /$1.php [L]
 
 # Redirect /page/id?=string to /page/string
-RewriteCond %{QUERY_STRING} ^id=(.+)$
-RewriteRule ^single-airdrop$ /single-airdrop/%1? [R=301,L]
+#RewriteCond %{QUERY_STRING} ^id=(.+)$
+#RewriteRule ^single-airdrop$ /single-airdrop/%1? [R=301,L]
 
 #RewriteCond %{QUERY_STRING} ^id=([^&]+)$
 #RewriteRule ^single-airdrop/(.*)$ /single-airdrop/%1? [R=301,L]
