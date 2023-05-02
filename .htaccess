@@ -1,7 +1,6 @@
 RewriteEngine On
 Options -Multiviews
 
-
 # Redirect non-www to www
 RewriteCond %{HTTP_HOST} !^www\.calixworld\.com$ [NC]
 RewriteRule ^(.*)$ https://www.calixworld.com/$1 [L,R=301]
@@ -17,6 +16,13 @@ RewriteRule ^/?(.*)\.php$ /$1 [L,R=301]
 # Check to see if the request is for a PHP file
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^/?(.*)$ /$1.php [L]
+
+# Redirect /single-airdrop?id=string to /single-airdrop/string
+RewriteCond %{QUERY_STRING} ^id=([a-zA-Z0-9_-]+)$
+RewriteRule ^single-airdrop$ /single-airdrop/%1? [R=301,L]
+
+# Rewrite /single-airdrop/string to /single-airdrop?id=string
+RewriteRule ^single-airdrop/([a-zA-Z0-9_-]+)$ /single-airdrop?id=$1 [L]
 
 # Redirect /page/id?=string to /page/string
 #RewriteCond %{QUERY_STRING} ^id=(.+)$
