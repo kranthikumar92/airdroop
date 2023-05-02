@@ -45,7 +45,7 @@ $airdrop_id = $_GET['id'];
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
 <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
 
-<link rel="canonical" href="https://calixworld.com/single-airdrop/<?php echo  $airdrop_id; ?>" />
+<link rel="canonical" href="https://calixworld.com/single-airdrop/<?php echo $airdrop_id; ?>" />
 
 <!-- Fallback For IE 9 [ Media Query and html5 Shim] -->
 <!--[if lt IE 9]>
