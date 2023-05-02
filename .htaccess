@@ -10,11 +10,6 @@ RewriteRule ^(.*)$ https://www.calixworld.com/$1 [L,R=301]
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Redirect /single-airdrop?id=XXX to /single-airdrop/XXX
-RewriteCond %{QUERY_STRING} ^id=([0-9]+)$
-RewriteCond %{REQUEST_URI} !^/single-airdrop/.*$
-RewriteRule ^single-airdrop$ /single-airdrop/%1/? [R=301,L]
-
 # Remove .php extension
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.php
 RewriteRule ^/?(.*)\.php$ /$1 [L,R=301]
@@ -22,3 +17,7 @@ RewriteRule ^/?(.*)\.php$ /$1 [L,R=301]
 # Check to see if the request is for a PHP file
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^/?(.*)$ /$1.php [L]
+
+# Redirect /page/id?=string to /page/string
+RewriteCond %{QUERY_STRING} ^id=([^&]+)$
+RewriteRule ^single-airdrop/(.*)$ /single-airdrop/%1? [R=301,L]
