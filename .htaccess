@@ -1,6 +1,7 @@
 RewriteEngine On
+RewriteBase /
 Options -Multiviews
-#LimitInternalRecursion 30
+LimitInternalRecursion 30
 
 # Redirect non-www to www
 RewriteCond %{HTTP_HOST} !^www\.calixworld\.com$ [NC]
