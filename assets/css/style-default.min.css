@@ -2827,7 +2827,12 @@ button.close:active,button.close:focus,button.close:hover{
     box-shadow:none
 }
 @media (max-width: 767px) {
-    .single-listing-airdrop .airdrop-social-icons .airdrop-pricing-area {
+    .single-listing-airdrop .airdrop-social-icons . {
+      display: none;
+    }
+  }
+  @media (max-width: 767px) {
+    .single-listing-airdrop .airdrop-pricing-area {
       display: none;
     }
   }
