@@ -120,7 +120,7 @@
 
 ?>
 
-              <form action="add-user.php" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <form action="add-user" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <div class="form-group">
                   <label for="username" class="col-sm-2 control-label form-label">Username</label>
                   <div class="col-sm-10">

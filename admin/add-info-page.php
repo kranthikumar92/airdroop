@@ -24,7 +24,7 @@
 
   	<!-- Start App Logo -->
   	<div class="applogo">
-  		<a href="index.html" class="logo">kode</a>
+  		<a href="index.php" class="logo">kode</a>
   	</div>
   	<!-- End App Logo -->
 
@@ -113,7 +113,7 @@ $status = 'Active';
     
     ?>
 
-              <form action="add-info-page.php" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <form action="add-info-page" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <div class="form-group">
                   <label for="page_title" class="col-sm-2 control-label form-label">Page Title</label>
                   <div class="col-sm-10">
