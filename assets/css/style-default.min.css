@@ -1308,7 +1308,7 @@ button.close:active,button.close:focus,button.close:hover{
     margin-right:0
 }
 #footer-area .footer-widget-area .footer-widget-content .single-widget-wrap .about-widget .footer-social-icons a i.fa{
-    background-color:#5d6a6b;
+    background-color:#7BC393;
     color:#fff;
     display:inline-block;
     height:40px;
@@ -1439,7 +1439,7 @@ button.close:active,button.close:focus,button.close:hover{
     right:0
 }
 #footer-area .footer-bottom-area{
-    background-color:#7BC393;
+    background-color:#5d6a6b;
     color:#fff;
     padding:25px 0
 }
