@@ -61,9 +61,9 @@ $conn->close();
 
 <form action="login" method="POST">
   <div class="top">
-    <img src="img/kode-icon.png" alt="icon" class="icon">
-    <h1>Kode</h1>
-    <h4>Bootstrap Admin Template</h4>
+  
+    <h1>Admin</h1>
+    <h4>CalixWorld.com</h4>
   </div>
   <div class="form-area">
     <div class="group">
