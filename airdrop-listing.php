@@ -188,7 +188,7 @@ $days = $dateInterval->days;
         <?php if ($row_social['twitter_link']): ?><a href="<?php echo $row_social['twitter_link']; ?>" target="_blank"><i class="fa fa-twitter"></i></a><?php endif; ?>
         <?php if ($row_social['telegram_link']): ?><a href="<?php echo $row_social['telegram_link']; ?>" target="_blank"><i class="fa fa-telegram"></i></a><?php endif; ?>
     </div>
-    <div class="airdrop-pricing-area">
+    <div class="airdrop-pricing-area d-sm-none d-md-block" style="text-align: middle">
         <div class="price-unit ">
             <h3 class="price-currency d-inline-block align-middle">$<?php echo $row['est_value']; ?></h3>
            

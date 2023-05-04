@@ -2826,12 +2826,3 @@ button.close:active,button.close:focus,button.close:hover{
     -moz-box-shadow:none;
     box-shadow:none
 }
-@media (max-width: 767px) {
-    .single-listing-airdrop .airdrop-social-icons . {
-      display: none;
-    }
-    .single-listing-airdrop .airdrop-pricing-area {
-      display: none;
-    }
-  }
-  
