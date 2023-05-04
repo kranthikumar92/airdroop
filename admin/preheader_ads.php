@@ -33,11 +33,11 @@
     <a href="#" class="sidebar-open-button-mobile"><i class="fa fa-bars"></i></a>
     <!-- End Sidebar Show Hide Button -->
 
-    <!--== Top Nav Start ==-->
-    <?php
-        include('top-nav.php');
-    ?>
-    <!--== Top Nav End ==-->
+    <!-- Start App Logo -->
+  	<div class="applogo">
+  		<a href="index.php" class="logo">Admin</a>
+  	</div>
+  	<!-- End App Logo -->
 
   </div>
   <!-- END TOP -->

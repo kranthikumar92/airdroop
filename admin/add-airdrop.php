@@ -22,7 +22,7 @@
 
   	<!-- Start App Logo -->
   	<div class="applogo">
-  		<a href="index.php" class="logo">kode</a>
+  		<a href="index.php" class="logo">Admin</a>
   	</div>
   	<!-- End App Logo -->
 

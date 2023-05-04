@@ -24,10 +24,10 @@
   <div id="top" class="clearfix">
 
     <!-- Start App Logo -->
-    <div class="applogo">
-      <a href="index.php" class="logo">kode</a>
-    </div>
-    <!-- End App Logo -->
+  	<div class="applogo">
+  		<a href="index.php" class="logo">Admin</a>
+  	</div>
+  	<!-- End App Logo -->
 
     <!-- Start Sidebar Show Hide Button -->
     <a href="#" class="sidebar-open-button"><i class="fa fa-bars"></i></a>
