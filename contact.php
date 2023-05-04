@@ -117,7 +117,7 @@ include('ticker_extension.php');
                             <div class="col-lg-8">
                                 <div class="airdrop-submit-form-area">
                                     <div class="airdrop-form">
-                                        <form action="contact_response.php" method="post">
+                                        <form action="contact_response" method="post">
                                             <div class="input-row">
                                                 <div class="row">
                                                     <div class="col-md-6">
