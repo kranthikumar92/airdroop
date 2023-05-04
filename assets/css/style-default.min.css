@@ -1717,6 +1717,7 @@ button.close:active,button.close:focus,button.close:hover{
     -o-transition:all .4s ease-out;
     transition:all .4s ease-out
 }
+
 .single-listing-airdrop .airdrop-social-icons a:hover{
     color:#7BC393
 }
@@ -2825,3 +2826,9 @@ button.close:active,button.close:focus,button.close:hover{
     -moz-box-shadow:none;
     box-shadow:none
 }
+@media (max-width: 767px) {
+    .single-listing-airdrop .airdrop-social-icons {
+      display: none;
+    }
+  }
+  
