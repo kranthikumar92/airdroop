@@ -182,7 +182,7 @@ $days = $dateInterval->days;
             <p class="offer-time"><?php echo $days; ?> days</p>
         </div>
     </div>
-    <div class="airdrop-social-icons d-sm-none d-md-block" style="text-align: right">
+    <div class="airdrop-social-icons d-sm-none d-md-block" style="text-align: middle">
         <?php if ($row_social['website_link']): ?><a href="<?php echo $row_social['website_link']; ?>" target="_blank"><i class="fa fa-chrome"></i></a><?php endif; ?>
         <?php if ($row_social['facebook_link']): ?><a href="<?php echo $row_social['facebook_link']; ?>" target="_blank"><i class="fa fa-facebook-official"></i></a><?php endif; ?>
         <?php if ($row_social['twitter_link']): ?><a href="<?php echo $row_social['twitter_link']; ?>" target="_blank"><i class="fa fa-twitter"></i></a><?php endif; ?>
