@@ -136,7 +136,7 @@ mysqli_close($conn);
     
     ?>
 
-              <form action="add-blog.php" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <form action="add-blog" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <div class="form-group">
                   <label for="blog_title" class="col-sm-2 control-label form-label">Blog Post Title</label>
                   <div class="col-sm-10">

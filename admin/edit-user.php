@@ -134,7 +134,7 @@
       
 ?>
 
-          <form action="edit-user.php?id=<?php echo $user['sno']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+          <form action="edit-user?id=<?php echo $user['sno']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
               <div class="form-group">
                   <label for="username" class="col-sm-2 control-label form-label">Username</label>
                   <div class="col-sm-10">

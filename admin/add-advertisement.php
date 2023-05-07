@@ -134,7 +134,7 @@ mysqli_close($conn);
     
     ?>
 
-              <form action="add-advertisement.php" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <form action="add-advertisement" method="post" enctype="multipart/form-data" class="form-horizontal">
               <div class="form-group">
                 <label class="col-sm-2 control-label form-label">Advertisement Location</label>
                 <div class="col-sm-8">
