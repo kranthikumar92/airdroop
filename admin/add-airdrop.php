@@ -79,7 +79,7 @@
     <div class="col-md-12">
       <div class="panel panel-default">
             <div class="panel-body">
-              <form action="airdrop-submit" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <form action="airdrop-submit.php" method="post" enctype="multipart/form-data" class="form-horizontal">
 
                 <div class="form-group">
                   <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>

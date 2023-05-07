@@ -137,7 +137,7 @@ if (mysqli_num_rows($result) > 0) {
     $post = mysqli_fetch_assoc($result);
     
     ?>
-              <form action="update-airdrop-social?id=<?php echo $airdrop_sno_id; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <form action="update-airdrop-social.php?id=<?php echo $airdrop_sno_id; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <div class="form-group">
                   <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
                   <div class="col-sm-10">

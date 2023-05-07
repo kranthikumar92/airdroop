@@ -124,7 +124,7 @@ if (mysqli_num_rows($result) > 0) {
     
     ?>
 
-              <form action="edit-airdrop-request?id=<?php echo $post['reference']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <form action="edit-airdrop-request.php?id=<?php echo $post['reference']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <div class="form-group">
                   <label for="request_reference" class="col-sm-2 control-label form-label">Reference</label>
                   <div class="col-sm-10">
