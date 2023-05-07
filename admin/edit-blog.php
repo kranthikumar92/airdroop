@@ -86,54 +86,75 @@
     <?php
     $blog_id = $_GET['id'];
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-  if (empty($_FILES['file']['name'])) {
-    // Execute this block if the file is not selected or null
-    $new_filename = $_POST['blog_img_alt'];
-  } else {
-    // Define the directory where the images will be stored
-    $target_dir = "../blog_imgs/";
-  
-    // Get the name of the uploaded file
-    $original_filename = basename($_FILES["file"]["name"]);
-    $file_extension = pathinfo($original_filename, PATHINFO_EXTENSION);
-    $new_filename = uniqid() . "." . $file_extension; // Generate a unique filename
-    $target_file = $target_dir . $new_filename;
-
-    // Move the uploaded file to the target directory
-    if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
-      // File uploaded successfully
-    } else {
-      // Error uploading file
-      echo "Error uploading image.";
-      exit;
-    }
-  }
-
-  // Escape user inputs for security
-  $blog_title = mysqli_real_escape_string($conn, $_POST['blog_title']);
-  $blog_author = mysqli_real_escape_string($conn, $_POST['blog_author']);
-  $blog_tags = mysqli_real_escape_string($conn, $_POST['blog_tags']);
-  $blog_content = mysqli_real_escape_string($conn, $_POST['blog_content']);
-  $blog_status = mysqli_real_escape_string($conn, $_POST['blog_status']);
-  $update_date = date('Y-m-d');
-
-
-  // Prepare the SQL statement
-  $sql = "UPDATE blog_posts SET title='$blog_title', feature_image='$new_filename', content='$blog_content', author='$blog_author', updated_at='$update_date', tags='$blog_tags', status='$blog_status' WHERE id='$blog_id'";
-
-  // Execute the statement
-  if (mysqli_query($conn, $sql)) {
-    echo "<div class='col-sm-10'>";
-    echo "<h2>Blog Post Updated Successfully.</h2>";
-    echo "<a href='edit-blog.php?id=" . $blog_id . "' class='btn btn-default'>Back to Blog Editing</a>";
-    echo "&nbsp;";
-    echo "<a href='blog-list.php' class='btn btn-default'>Back to Blog List</a>";
-    echo "</div>";
-  } else {
-    echo "Error updating record: " . mysqli_error($conn);
-  }
+      if (empty($_FILES['file']['name'])) {
+        // Execute this block if the file is not selected or null
+        $new_filename = $_POST['blog_img_alt'];
+      } else {
+        // Define the directory where the images will be stored
+        $target_dir = "../blog_imgs/";
+    
+        // Check if the target directory exists and is writable
+        if (!is_dir($target_dir)) {
+            echo "Target directory does not exist";
+            exit;
+        }
+        if (!is_writable($target_dir)) {
+            echo "Target directory is not writable";
+            exit;
+        }
+    
+        // Get the name of the uploaded file
+        $original_filename = basename($_FILES["file"]["name"]);
+    
+        // Check the file type and size
+        if ($_FILES["file"]["size"] > 500000) {
+            echo "File is too large";
+            exit;
+        }
+        if ($_FILES["file"]["type"] != "image/jpeg" && $_FILES["file"]["type"] != "image/png") {
+            echo "File type not allowed";
+            exit;
+        }
+    
+        $file_extension = pathinfo($original_filename, PATHINFO_EXTENSION);
+        $new_filename = uniqid() . "." . $file_extension; // Generate a unique filename
+        $target_file = $target_dir . $new_filename;
+    
+        // Move the uploaded file to the target directory
+        if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
+          // File uploaded successfully
+        } else {
+          // Error uploading file
+          echo "Error uploading image: " . $_FILES['file']['error'];
+          exit;
+        }
+      }
+    
+      // Escape user inputs for security
+      $blog_title = mysqli_real_escape_string($conn, $_POST['blog_title']);
+      $blog_author = mysqli_real_escape_string($conn, $_POST['blog_author']);
+      $blog_tags = mysqli_real_escape_string($conn, $_POST['blog_tags']);
+      $blog_content = mysqli_real_escape_string($conn, $_POST['blog_content']);
+      $blog_status = mysqli_real_escape_string($conn, $_POST['blog_status']);
+      $update_date = date('Y-m-d');
+    
+    
+      // Prepare the SQL statement
+      $sql = "UPDATE blog_posts SET title='$blog_title', feature_image='$new_filename', content='$blog_content', author='$blog_author', updated_at='$update_date', tags='$blog_tags', status='$blog_status' WHERE id='$blog_id'";
+    
+      // Execute the statement
+      if (mysqli_query($conn, $sql)) {
+        echo "<div class='col-sm-10'>";
+        echo "<h2>Blog Post Updated Successfully.</h2>";
+        echo "<a href='edit-blog.php?id=" . $blog_id . "' class='btn btn-default'>Back to Blog Editing</a>";
+        echo "&nbsp;";
+        echo "<a href='blog-list.php' class='btn btn-default'>Back to Blog List</a>";
+        echo "</div>";
+      } else {
+        echo "Error updating record: " . mysqli_error($conn);
+      }
 
 
 
