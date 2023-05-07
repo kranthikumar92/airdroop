@@ -161,7 +161,7 @@ if (mysqli_num_rows($result) > 0) {
     
     ?>
 
-              <form action="edit-airdrop.php?update=<?php echo $post['sno']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <form action="edit-airdrop?update=<?php echo $post['sno']; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <div class="form-group">
                   <label for="airdrop_title" class="col-sm-2 control-label form-label">Airdrop Title</label>
                   <div class="col-sm-10">
